@@ -27,15 +27,15 @@ so unnecessary Arjuna, are all scriptures to someone who has seen the truth.”<
 <br>
 `1`
 
-The self is not an illusion of the mind, in the way illusion is interpreted.
-Much like an axe is not an illusion of the mind, since it can cut and shape a real tree.
+The self is not an illusion of the mind, in the way illusion is interpreted.<br>
+Much like an axe is not an illusion of the mind, since it can cut and shape a real tree.<br>
 
 So is the illusion of the self, not an illusion - It can cut and shape reality itself.
 
 <br>
 `2`
 
-The universe is not a story - but the peception of it, most certainly is. 
+The universe is not a story - but the peception of it, most certainly is. <br>
 Thus the famous question goes: Why did the chicken cross the road? The answer? To get to the other side.
 
 <br>
@@ -43,49 +43,49 @@ Thus the famous question goes: Why did the chicken cross the road? The answer? T
 
 God is: 
 
-What bring order out of chaos.
-What brings cells and atoms to strive for their stable variations, i.e. homeostasis.
-God is the manliness in men.
-God is the the taste in water.
+What bring order out of chaos.<br>
+What brings cells and atoms to strive for their stable variations, i.e. homeostasis.<br>
+God is the manliness in men.<br>
+God is the the taste in water.<br>
 
-What God is not: 
+What God is not: <br>
 
-God is not chaos.
-God is not the mother of the universe.
-God is not quantum uncertainty.
-God is not the femininity in women.
-God is not the exsistance before God.
+God is not chaos.<br>
+God is not the mother of the universe.<br>
+God is not quantum uncertainty.<br>
+God is not the femininity in women.<br>
+God is not the exsistance before God.<br>
 
-The above is a profound truth. Yet the opposite of a profound truth is another profound truth. 
+The above is a profound truth. Yet the opposite of a profound truth is another profound truth. <br>
 
-There is no real name for the feminine representation of the divine. Goddess does not suffice, as it portrays the feminine in a masculine domain. 
-For the lack of a better word, the ancient Chinese called it the Tao.
-Yet much like the Tao that can be told is not the eternal Tao, the God that can be interpolated is not the eternal God.
+There is no real name for the feminine representation of the divine. Goddess does not suffice, as it portrays the feminine in a masculine domain. <br>
+For the lack of a better word, the ancient Chinese called it the Tao.<br>
+Yet much like the Tao that can be told is not the eternal Tao, the God that can be interpolated is not the eternal God.<br>
 
-God is masculine, as is order,
-Tao is feminine, as is chaos.
-When the masculine and feminine combine,
+God is masculine, as is order,<br>
+Tao is feminine, as is chaos.<br>
+When the masculine and feminine combine,<br>
 all things achieve harmony.
 
 <br>
 `4`
 
-The universe is certain.
+The universe is certain.<br>
 
-Even if in the quantum realm things really are uncertain in the final anaylsis of things, 
-their uncertainty is already integrated into the universe.
-The certainty encapsulating the uncertain, makes it certain.
-A certain uncertainty itself is certain. 
+Even if in the quantum realm things really are uncertain in the final anaylsis of things,<br>
+their uncertainty is already integrated into the universe.<br>
+The certainty encapsulating the uncertain, makes it certain.<br>
+A certain uncertainty itself is certain. <br>
 
-The Universe has already adjusted to this.
+The Universe has already adjusted to this.<br>
 You should, too.
 
 <br>
 `5`
 
-Whoever understands the origin of the Universe as hydrogen and heat, from which everything arose:
+Whoever understands the origin of the Universe as hydrogen and heat, from which everything arose:<br>
 
-understands that either everything is conscious - 
+understands that either everything is conscious - <br>
 or nothing is.
 
 <br>
