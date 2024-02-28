@@ -33,8 +33,13 @@ title: showroom
 <br>
 <br>
 <br>
-<br>
-this is where I will make a showroom of different kinds of code, pictures, etc.
+```python
+
+print(hello world)
+
+```
+
+---
 <br>
 <br>
 <br>

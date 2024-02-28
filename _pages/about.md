@@ -1,7 +1,7 @@
 ---
 layout: profiles
 permalink: /about/
-title: about the author
+title: about me
 description: 
 nav: true
 nav_order: 4
