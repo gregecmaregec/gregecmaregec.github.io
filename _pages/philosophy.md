@@ -148,10 +148,12 @@ Will you act according to your God’s ideals in this life, so that what comes n
 
 The meaning of life for a human being is found in exercising responsibility. Be it for a career, a plant, a repository of code, a child, a parent, a dog, to exercise, to improve, to meditate, to pray, to worship, or even to steal. Wherever responsibility presents itself for your eyes only, therein you have the opportunity, for the meaning of life to manifest itself inside of you.`
 
-
+<br>
+<br>
+<br>
+<br>
 ---
-
-<small><i>The writings in this page are not covered under the MIT licence. All rights are reserved. © Copyright Gregor Mihelac 2024</i></small>
-
+<small><i>The writings in this page are not covered under the MIT licence. All rights are reserved. © 2024 Gregor Mihelac</i></small>
 ---
-
+<br>
+<br>
