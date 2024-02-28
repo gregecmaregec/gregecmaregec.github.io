@@ -8,10 +8,6 @@ nav: true
 nav_order: 2
 
 ---
-<br>
-Below are some of the observations I have made. <br>
-These are the products of my mind, and in no way represent the views of any employer of mine - past, present, or future.<br>
-<br>
 ---
 <br>
 <br>
@@ -177,7 +173,10 @@ therein you have the opportunity, for the meaning of life to manifest itself ins
 <br>
 <br>
 ---
-<small><i>The writings in this page are not covered under the MIT licence. All rights reserved. © 2024 Gregor Mihelac</i></small>
+<br>
+<small><i>The writings are the products of my own mind, and in no way represent the views of any employer of mine - past, present, or future.<small></i>
+<small><i>The writings in this page are not covered under the MIT licence. All rights are reserved. © 2024 Gregor Mihelac</i></small>
+<br>
 ---
 <br>
 <br>
