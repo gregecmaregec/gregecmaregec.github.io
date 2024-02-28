@@ -7,21 +7,7 @@ description: some observations on the way things seem to be
 nav: true
 nav_order: 2
 
-
 ---
-
-<br>
-<br>
-<i>“As unnecessary as a well is to a village on the banks of a river,
-so unnecessary Arjuna, are all scriptures to someone who has seen the truth.”</i><br>
--The Bagavad Gita
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
 ---
 
 <br>
