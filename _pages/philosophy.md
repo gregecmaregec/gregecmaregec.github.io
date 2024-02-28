@@ -15,8 +15,10 @@ nav_order: 2
 <br>
 <br>
 <i>“As unnecessary as a well is to a village on the banks of a river,
-so unnecessary Arjuna, are all scriptures to someone who has seen the truth.”</i>
+so unnecessary Arjuna, are all scriptures to someone who has seen the truth.”</i><br>
 -The Bagavad Gita
+<br>
+<br>
 <br>
 <br>
 <br>
@@ -91,10 +93,12 @@ or nothing is.
 <br>
 `6`
 
-Only when you understand there is no free will, through both deep meditation and exploration of the scientific method and analysis of its results,
+Only when you understand there is no free will, 
+through both deep meditation and exploration of the scientific method and analysis of its results,
 only then can you notice your emotions arising from the darkness and willfully begin to steer them.
 
-Only when you realize with absolute certainty that there is no free will; that humans are but a biological algorithm for processing data,
+Only when you realize with absolute certainty that there is no free will; 
+that humans are but a biological algorithm for processing data,
 only then, can you experience free will for the first time.
 
 True words seem paradoxical.
@@ -102,9 +106,11 @@ True words seem paradoxical.
 <br>
 `7`
 
-The universe is filled with entropy. What exsists here on Earth however, behaves rather like a well oiled machine.
+The universe is filled with entropy. 
+What exsists here on Earth however, behaves rather like a well oiled machine.
 
-The cycles that seem to repeat themselves indefinitely, are divine. From the laws of physics to the Hero’s Journey.
+The cycles that seem to repeat indefinitely, are divine. 
+From the laws of physics, to the Hero’s Journey.
 
 Thus God is present on Earth,
 and wherever else in the Universe order manifests out of chaos.
@@ -144,7 +150,7 @@ it shows just how amazing humans are at interpreting.
 <br>
 `11`
 
-Intelligence seems not to be found exclusively in biological chemistry.
+Intelligence seems not to be found exclusively in life.
 
 <br>
 `12`
