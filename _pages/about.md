@@ -1,7 +1,7 @@
 ---
 layout: profiles
 permalink: /about/
-title: about me
+title: Student at Uni Mannheim. Focusing on IT and Finance.
 description: 
 nav: true
 nav_order: 4
