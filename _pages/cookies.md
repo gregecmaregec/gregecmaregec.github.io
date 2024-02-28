@@ -1,12 +1,11 @@
 ---
 layout: page
 permalink: /cookies/
-title: Cookies
 description: Privacy policy.
 nav: false
 ---
 
-Cookie Policy for https://gregecmaregec.github.io/
+# Cookie Policy for https://gregecmaregec.github.io/
 
 ## What Is a Cookie?
 
