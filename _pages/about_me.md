@@ -1,5 +1,5 @@
 <br>
-My full name is Gregor Mihelač.
+My full name is Gregor Mihelač.<br>
 <br>
 I grew up in a small village in the north of Slovenia.<br>
 <br>
