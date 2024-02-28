@@ -3,8 +3,8 @@ layout: page
 permalink: /cookies/
 title: cookies
 description: policy for cookies.
-nav: true
-nav_order: 9
+nav: false
+nav_order: 
 ---
 
 Cookie Policy for https://gregecmaregec.github.io/
