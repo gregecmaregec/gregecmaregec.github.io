@@ -7,6 +7,11 @@ nav: false
 
 # Cookie Policy for https://gregecmaregec.github.io/
 
+<br>
+<br>
+
+
+
 ## What Is a Cookie?
 
 As is common practice with almost all professional websites, this site uses cookies, which are tiny files that are downloaded to your computer to improve your experience. This page describes what information they gather, how I use it, and why I sometimes need to store these cookies. I will also share how you can prevent these cookies from being stored; however, this may downgrade or 'break' certain elements of the site's functionality.
