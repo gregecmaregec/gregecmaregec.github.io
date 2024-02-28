@@ -1,6 +1,6 @@
 ---
 layout: default
-permalink: /
+permalink: /philosophy/
 title: philosophy
 description: 
 nav: true

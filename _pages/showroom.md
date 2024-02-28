@@ -1,10 +1,8 @@
 ---
-layout: default
+layout: about
 permalink: /
 title: showroom
 description: 
-nav: true
-nav_order: 1
 
 ---
 
