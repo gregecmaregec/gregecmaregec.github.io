@@ -8,8 +8,13 @@ nav: true
 nav_order: 2
 
 ---
+<br>
+Below are some of the observations I have made. <br>
+These are the products of my mind, and in no way represent the views of any employer of mine - past, present, or future.<br>
+<br>
 ---
-
+<br>
+<br>
 <br>
 `1`
 
