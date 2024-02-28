@@ -1,5 +1,8 @@
-I grew up in a village in Slovenia.<br>
-Currently, I am a student at Uni Mannheim, Germany - focusing primarily on IT and Finance.<br>
+<br>
+My full name is Gregor Mihelač.
+<br>
+I grew up in a village in the north of Slovenia.<br>
+Currently, I am an M.Sc. student at Univeristy of Mannheim in Germany - focusing primarily on IT and Finance.<br>
 <br>
 <br>
 <i>e-mail: gregor.mihelac (at) outlook (dot) com
