@@ -11,7 +11,7 @@ nav_order: 3
 
 ```python
 
-print(hello world)
+print("hello world!")
 
 ```
 
