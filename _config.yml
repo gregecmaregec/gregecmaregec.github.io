@@ -8,8 +8,8 @@ middle_name:
 last_name: mihelac
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   Personal website of perhaps the only Gregor Mihelac ever to have lived
-footer_text: |
-  This website is open source under the MIT License. <a href="https://github.com/gregecmaregec/gregecmaregec.github.io">Find the source code here</a>.<br>
+footer_text: >
+  This website is open source under the MIT License. <a href="https://github.com/gregecmaregec/gregecmaregec.github.io">Find the source code here</a>+.
   By using this website, you agree to the <a href="/cookies">Cookies Policy</a>.
 keywords: jekyll, jekyll-theme, academic-website, portfolio-website # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
