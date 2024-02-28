@@ -3,7 +3,7 @@
 layout: profiles
 permalink: /about/
 title: about
-description: who is Gregor Mihelač?
+description:
 nav: true
 nav_order: 4
 
