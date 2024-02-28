@@ -1,6 +1,5 @@
 ---
 layout: about
-title: about
 permalink: /about/
 subtitle: impressum
 nav: true
@@ -12,11 +11,12 @@ profile:
 
 ---
 
-# Student at Uni Mannheim. Focusing on IT and Finance.
+Student at Uni Mannheim. Focusing on IT and Finance.
 
 you can contact me on these channels:
 
 e-mail: gregor.mihelac (at) outlook.com
+<br>
 linkedin: [in.com/gregormihelac](https://www.linkedin.com/in/gregormihelac/)
 github: [github.com/gregecmaregec](https://github.com/gregecmaregec)
 
