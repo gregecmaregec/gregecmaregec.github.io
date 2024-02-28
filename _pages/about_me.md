@@ -1,9 +1,9 @@
 <br>
 My full name is Gregor Mihelač.<br>
 <br>
-I grew up in a small village in the north of Slovenia.🇸🇮<br>
+I grew up in a small village in the north of Slovenia 🇸🇮<br>
 <br>
-Currently, I am an M.Sc. student at the Univeristy of Mannheim, Germany🇩🇪,<br>
+Currently, I am an M.Sc. student at the Univeristy of Mannheim, Germany 🇩🇪<br>
 focusing primarily on IT and Finance.<br>
 <br>
 <br>
