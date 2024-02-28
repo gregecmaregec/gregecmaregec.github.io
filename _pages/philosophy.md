@@ -1,24 +1,20 @@
 ---
 
-layout: page
+layout: profiles
 permalink: /philosophy/
-title: Philosophy
+title: philosophy
 description: Some observations on the way things seem to be
 nav: true
 nav_order: 2
 
+profiles:
+  - align: right
+    image: 
+    content: bhagavad_gita_quote.md
+    image_circular: false # crops the image to make it circular
+
 ---
 
-<br>
-<br>
-<br>
-<br>
-<i>“As unnecessary as a well is to a village on the banks of a river,
-so unnecessary are all scriptures, to someone who has seen the truth.”</i>
--The Bagavad Gita
-<br>
-<br>
-<br>
 <br>
 `1`
 

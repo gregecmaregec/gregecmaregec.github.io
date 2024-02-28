@@ -1,4 +1,4 @@
-##Student at Uni Mannheim. Focusing on IT and Finance.
+## Student at Uni Mannheim. Focusing on IT and Finance.
 <br>
 <br>
 e-mail: gregor.mihelac (at) outlook (dot) com
