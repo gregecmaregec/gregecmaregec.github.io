@@ -21,8 +21,6 @@ Disabling Cookies
 
 You can prevent the setting of cookies by adjusting the settings on your browser (see your browser Help for how to do this). Be aware that disabling cookies will affect the functionality of this and many other websites that you visit. Disabling cookies will usually result in also disabling certain functionality and features of this site. Therefore, it is recommended that you do not disable cookies. This Cookies Policy was created with the help of the Cookies Policy Generator.
 
-The Cookies I Set
-
 Site preferences cookies
 
 In order to provide you with a great experience on this site, I provide the functionality to set your preferences for how this site runs when you use it. In order to remember your preferences, I need to set cookies so that this information can be called whenever you interact with a page affected by your preferences.
