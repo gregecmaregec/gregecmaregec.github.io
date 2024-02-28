@@ -1,17 +1,26 @@
 ---
 
-layout: profiles
+layout: page
 permalink: /philosophy/
 title: philosophy
-description: Some observations on the way things seem to be
+description: some observations on the way things seem to be
 nav: true
 nav_order: 2
 
-profiles:
-  - align: right
-    image: 
-    content: bhagavad_gita_quote.md
-    image_circular: false # crops the image to make it circular
+
+---
+
+<br>
+<br>
+<br>
+<br>
+<i>“As unnecessary as a well is to a village on the banks of a river,
+so unnecessary Arjuna, are all scriptures to someone who has seen the truth.”</i>
+-The Bagavad Gita
+<br>
+<br>
+<br>
+<br>
 
 ---
 
@@ -176,5 +185,7 @@ therein you have the opportunity, for the meaning of life to manifest itself ins
 ---
 <small><i>The writings in this page are not covered under the MIT licence. All rights reserved. © 2024 Gregor Mihelac</i></small>
 ---
+<br>
+<br>
 <br>
 <br>
