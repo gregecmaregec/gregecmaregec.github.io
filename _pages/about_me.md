@@ -1,5 +1,5 @@
-I grew up in a village in Slovenia.
-Currently, I am a student at Uni Mannheim, Germany - focusing primarily on IT and Finance.
+I grew up in a village in Slovenia.<br>
+Currently, I am a student at Uni Mannheim, Germany - focusing primarily on IT and Finance.<br>
 <br>
 <br>
 <i>e-mail: gregor.mihelac (at) outlook (dot) com
