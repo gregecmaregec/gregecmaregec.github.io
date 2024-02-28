@@ -31,7 +31,7 @@ From time to time, I test new features and make subtle changes to the way that t
 
 ## More Information
 
-Hopefully, that has clarified thin  gs for you. And, as was previously mentioned, if there is something that you aren't sure whether you need or not, it's usually safer to leave cookies enabled in case they do interact with one of the features you use on my site.
+Hopefully, that has clarified things for you. And, as was previously mentioned, if there is something that you aren't sure whether you need or not, it's usually safer to leave cookies enabled in case they do interact with one of the features you use on my site.
 
 However, if you are still looking for more information, or you would like me to remove your data completely, then you can contact me through:
 
