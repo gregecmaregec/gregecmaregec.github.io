@@ -21,6 +21,27 @@ social: false # includes social icons at the bottom of the page
 Student at Uni Mannheim. Focusing on IT and Finance.
 
 <br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 
 
