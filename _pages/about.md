@@ -1,4 +1,5 @@
 ---
+
 layout: profiles
 permalink: /about/
 title: about
@@ -11,6 +12,7 @@ profiles:
     image: prof_pic.jpg
     content: about_me.md
     image_circular: false # crops the image to make it circular
+    
 ---
 
 

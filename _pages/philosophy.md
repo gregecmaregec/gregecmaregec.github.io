@@ -1,4 +1,5 @@
 ---
+
 layout: page
 permalink: /philosophy/
 title: Philosophy
