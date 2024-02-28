@@ -1,67 +1,16 @@
 ---
-
-layout: about
-title: about
+layout: profiles
 permalink: /about/
+title: about the author
+description: 
 nav: true
-nav_order: 0
-profile:
-  align: right
-  image: prof_pic.jpg
+nav_order: 4
 
+profiles:
+  - align: right
+    image: prof_pic.jpg
+    content: about_me.md
+    image_circular: false # crops the image to make it circular
 ---
 
 
-Student at Uni Mannheim. Focusing on IT and Finance.
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-e-mail: gregor.mihelac (at) outlook (dot) com
-<br>
-linkedin: [in.com/gregormihelac](https://www.linkedin.com/in/gregormihelac/)
-<br>
-github: [github.com/gregecmaregec](https://github.com/gregecmaregec)
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- This is an invisible piece of text. -->
