@@ -1,8 +1,8 @@
 ---
 layout: page
 permalink: /philosophy/
-title: Observations on the way things seem to be
-description: 
+title: Philosophy
+description: Some observations on the way things seem to be
 nav: true
 nav_order: 2
 
@@ -19,20 +19,19 @@ nav_order: 2
 <br>
 <br>
 <br>
-<br>
-	`1`
+`1`
 
 The self is not an illusion of the mind In the way illusion is interpreted, Much like an axe is not an illusion of the mind Since it can cut and shape a real tree
 
 So is the illusion of the self, not an illusion- It can cut and shape reality itself
-<br>
 
-	`2`
+<br>
+`2`
 
 The universe is not a story But the peception of it, most certainly is. Thus the famous question goes: Why did the chicken cross the road? The answer: To get to the other side.
 
 <br>
-	`3`
+`3`
 
 God is: What bring order out of chaos What brings cells and atoms to strive for their stable variations, I.e. homeostasis God is the manliness in men God is the the taste in water
 
@@ -47,7 +46,7 @@ God is masculine, as is order Tao is feminine, as is chaos
 When the masculine and feminine combine All things achieve harmony.
 
 <br>
-	`4`
+`4`
 
 The universe is certain
 
@@ -60,14 +59,14 @@ A certain uncertainty is itself certain. The Universe has already adjusted to th
 You should, too.
 
 <br>
-	`5`
+`5`
 
 Whoever understands the origin of the Universe as hydrogen and heat, from which everything arose
 
 Understands that either everything is conscious - or nothing is.
 
 <br>
-	`6`
+`6`
 
 Only when you understand there is no free will, through both deep meditation and exploration of the scientific method and analysis of its results,
 
@@ -79,7 +78,7 @@ only then, can you experience free will for the first time.
 True words seem paradoxical
 
 <br>
-	`7`
+`7`
 
 The universe is filled with entropy. What exsists here on Earth however, behaves rather like a well oiled machine.
 
@@ -89,7 +88,7 @@ Thus God is present on Earth,
 and wherever else in the Universe order manifests out of chaos.
 
 <br>
-	`8`
+`8`
 
 Every person extrapolates God to the best of their ability. A person cannot participate in society in any meaningful way unless they do.
 
@@ -104,26 +103,26 @@ You will never reach God, but through logos with other people, you will get clos
 No need to reinvent the wheel trying to create your own God. Nietzche was incorrect in assuming you ever could in the first place.
 
 <br>
-	`9`
+`9`
 
 Money, at its core, is a ritual representation of trust.
 
 What good is the currency of a country that no one trusts to see another day?
 
 <br>
-	`10`
+`10`
 
 All scriptures were written by humans.
 
 This fact doesn’t negate the divine, on the contrary- it shows just how amazing humans are at interpreting.
 
 <br>
-	`11`
+`11`
 
 Intelligence seems not to be found exclusively in life.
 
 <br>
-	`12`
+`12`
 
 Albert Einstein said: “I think the most important question facing humanity is, ‘Is the universe a friendly place?”
 
@@ -132,19 +131,26 @@ It is to the optimist. It isn’t to a cynic.
 Universe is what you make of it.
 
 <br>
-	`13`
+`13`
 
 Life is good. For you get to be the Universe experiencing itself. Even when you have a bad day, enjoy it- it is much more meaningful than being dead.
 
 <br>
-	`14`
+`14`
 
 Reincarnation, and heaven and hell are fundamentally the same idea, told in different ways.
 
 Will you act according to your God’s ideals in this life, so that what comes next will be better?
 
 <br>
-	`15`
+`15`
 
 The meaning of life for a human being is found in exercising responsibility. Be it for a career, a plant, a repository of code, a child, a parent, a dog, to exercise, to improve, to meditate, to pray, to worship, or even to steal. Wherever responsibility presents itself for your eyes only, therein you have the opportunity, for the meaning of life to manifest itself inside of you.`
+
+
+---
+
+<small><i>The writings in this page are not covered under the MIT licence. All rights are reserved. © Copyright Gregor Mihelac 2024</i></small>
+
+---
 
