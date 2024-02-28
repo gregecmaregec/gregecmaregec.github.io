@@ -28,31 +28,9 @@ Thus the famous question goes: Why did the chicken cross the road? The answer? T
 <br>
 `3`
 
-God is: 
+Money, at its core, is a ritual representation of trust.<br>
 
-What bring order out of chaos.<br>
-What brings cells and atoms to strive for their stable variations, i.e. homeostasis.<br>
-God is the manliness in men.<br>
-God is the the taste in water.<br>
-
-What God is not: <br>
-
-God is not chaos.<br>
-God is not the mother of the universe.<br>
-God is not quantum uncertainty.<br>
-God is not the femininity in women.<br>
-God is not the exsistance before God.<br>
-
-The above is a profound truth. Yet the opposite of a profound truth is another profound truth. <br>
-
-There is no real name for the feminine representation of the divine. Goddess does not suffice, as it portrays the feminine in a masculine domain. <br>
-For the lack of a better word, the ancient Chinese called it the Tao.<br>
-Yet much like the Tao that can be told is not the eternal Tao, the God that can be interpolated is not the eternal God.<br>
-
-God is masculine, as is order,<br>
-Tao is feminine, as is chaos.<br>
-When the masculine and feminine combine,<br>
-all things achieve harmony.
+What good is the currency of a country which no one trusts to see another day?
 
 <br>
 `4`
@@ -64,7 +42,7 @@ their uncertainty is already integrated into the universe.<br>
 The certainty encapsulating the uncertain, makes it certain.<br>
 A certain uncertainty itself is certain. <br>
 
-The Universe has already adjusted to this.<br>
+The universe has already adjusted to this.<br>
 You should, too.
 
 <br>
@@ -80,7 +58,8 @@ or nothing is.
 
 Only when you understand there is no free will, <br>
 through both deep meditation and exploration of the scientific method and analysis of its results,<br>
-only then can you notice your emotions arising from the darkness and willfully begin to steer them.<br>
+only then can you notice your thoughts arising from the darkness,<br>
+and willfully begin to steer them.<br>
 
 Only when you realize with absolute certainty that there is no free will; <br>
 that humans are but a biological algorithm for processing data,<br>
@@ -120,9 +99,31 @@ Nietzche was incorrect in assuming you ever could in the first place.
 <br>
 `9`
 
-Money, at its core, is a ritual representation of trust.<br>
+God is: 
 
-What good is the currency of a country that no one trusts to see another day?
+What bring order out of chaos.<br>
+What brings cells and atoms to strive for their stable variations, i.e. homeostasis.<br>
+God is the manliness in men.<br>
+God is the the taste in water.<br>
+
+What God is not: <br>
+
+God is not chaos.<br>
+God is not the mother of the universe.<br>
+God is not quantum uncertainty.<br>
+God is not the femininity in women.<br>
+God is not the exsistance before God.<br>
+
+The above is a profound truth. Yet the opposite of a profound truth is another profound truth. <br>
+
+There is no real name for the feminine representation of the divine. Goddess does not suffice, as it portrays the feminine in a masculine domain. <br>
+For the lack of a better word, the ancient Chinese called it the Tao.<br>
+Yet much like the Tao that can be told is not the eternal Tao, the God that can be interpolated is not the eternal God.<br>
+
+God is masculine, as is order,<br>
+Tao is feminine, as is chaos.<br>
+When the masculine and feminine combine,<br>
+all things achieve harmony.
 
 <br>
 `10`
