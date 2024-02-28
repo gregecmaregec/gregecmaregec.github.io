@@ -175,8 +175,8 @@ therein you have the opportunity, for the meaning of life to manifest itself ins
 <br>
 ---
 <br>
-<small><i>The writings are the products of my own mind, and in no way represent the views of any employer of mine - past, present, or future.<small></i>
-<small><i>The writings in this page are not covered under the MIT licence. All rights are reserved. © 2024 Gregor Mihelac</i></small>
+<small><small<i>The writings are the products of my own mind, and in no way represent the views of any employer of mine - past, present, or future.</i></small></small>
+<small><small<i>The writings in this page are not covered under the MIT licence. All rights are reserved. © 2024 Gregor Mihelac</i></small></small>
 <br>
 ---
 <br>
