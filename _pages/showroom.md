@@ -1,6 +1,6 @@
 ---
 
-layout: default
+layout: pages
 permalink: /
 title: showroom
 description: 

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: pages
 permalink: /philosophy/
 title: philosophy
 description: 

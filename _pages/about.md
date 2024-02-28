@@ -1,15 +1,16 @@
 ---
-layout: page
-permalink: /about/
-title: Impressum
-nav: true
-nav_order: 4
 
+layout: about
+title: about
+permalink: /about/
+nav: true
+nav_order: 0
 profile:
   align: right
   image: prof_pic.jpg
 
 ---
+
 
 Student at Uni Mannheim. Focusing on IT and Finance.
 <br>
