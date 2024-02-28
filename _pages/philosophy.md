@@ -13,8 +13,8 @@ nav_order: 2
 <br>
 <br>
 <br>
-“As unnecessary as a well is to a village on the banks of a river, so unnecessary are all scriptures to someone who has seen the truth.”
-
+<i>“As unnecessary as a well is to a village on the banks of a river,
+so unnecessary are all scriptures, to someone who has seen the truth.”</i>
 -The Bagavad Gita
 <br>
 <br>
@@ -22,61 +22,77 @@ nav_order: 2
 <br>
 `1`
 
-The self is not an illusion of the mind In the way illusion is interpreted, Much like an axe is not an illusion of the mind Since it can cut and shape a real tree
+The self is not an illusion of the mind, in the way illusion is interpreted.
+Much like an axe is not an illusion of the mind, since it can cut and shape a real tree.
 
-So is the illusion of the self, not an illusion- It can cut and shape reality itself
+So is the illusion of the self, not an illusion - It can cut and shape reality itself.
 
 <br>
 `2`
 
-The universe is not a story But the peception of it, most certainly is. Thus the famous question goes: Why did the chicken cross the road? The answer: To get to the other side.
+The universe is not a story - but the peception of it, most certainly is. 
+Thus the famous question goes: Why did the chicken cross the road? The answer? To get to the other side.
 
 <br>
 `3`
 
-God is: What bring order out of chaos What brings cells and atoms to strive for their stable variations, I.e. homeostasis God is the manliness in men God is the the taste in water
+God is: 
 
-What God is not: God is not chaos God is not the mother of the universe God is not quantum uncertainty God is not the femininity in women God didn’t exist before the existence of God.
+What bring order out of chaos.
+What brings cells and atoms to strive for their stable variations, i.e. homeostasis.
+God is the manliness in men.
+God is the the taste in water.
 
-The above is a profound truth. And so is it’s opposite. There is no real name for the feminine representation of the divine. Goddess does not suffice, as it portrays the feminine in a masculine domain. For the lack of a better word, the ancient Chinese however called it the Tao
+What God is not: 
 
-Yet much like the Tao that can be told is not the eternal Tao, the God that can be interpolated is not the eternal God
+God is not chaos.
+God is not the mother of the universe.
+God is not quantum uncertainty.
+God is not the femininity in women.
+God is not the exsistance before God.
 
-God is masculine, as is order Tao is feminine, as is chaos
+The above is a profound truth. Yet the opposite of a profound truth is another profound truth. 
 
-When the masculine and feminine combine All things achieve harmony.
+There is no real name for the feminine representation of the divine. Goddess does not suffice, as it portrays the feminine in a masculine domain. 
+For the lack of a better word, the ancient Chinese called it the Tao.
+Yet much like the Tao that can be told is not the eternal Tao, the God that can be interpolated is not the eternal God.
+
+God is masculine, as is order,
+Tao is feminine, as is chaos.
+When the masculine and feminine combine,
+all things achieve harmony.
 
 <br>
 `4`
 
-The universe is certain
+The universe is certain.
 
-Even if in the quantum realm things really are uncertain in the final anaylsis of things, Their uncertainty is already integrated into the universe.
-
+Even if in the quantum realm things really are uncertain in the final anaylsis of things, 
+their uncertainty is already integrated into the universe.
 The certainty encapsulating the uncertain, makes it certain.
+A certain uncertainty itself is certain. 
 
-A certain uncertainty is itself certain. The Universe has already adjusted to this.
-
+The Universe has already adjusted to this.
 You should, too.
 
 <br>
 `5`
 
-Whoever understands the origin of the Universe as hydrogen and heat, from which everything arose
+Whoever understands the origin of the Universe as hydrogen and heat, from which everything arose:
 
-Understands that either everything is conscious - or nothing is.
+understands that either everything is conscious - 
+or nothing is.
 
 <br>
 `6`
 
 Only when you understand there is no free will, through both deep meditation and exploration of the scientific method and analysis of its results,
+only then can you notice your emotions arising from the darkness and willfully begin to steer them.
 
-only then can you notice your emotions arising from the darkness - and willfully begin to steer them.
-
-Only when you realize with absolute certainty that there is no free will; that humans are but a biological algorithm for processing data:
+Only when you realize with absolute certainty that there is no free will; that humans are but a biological algorithm for processing data,
 only then, can you experience free will for the first time.
 
-True words seem paradoxical
+True words seem paradoxical.
 
 <br>
 `7`
@@ -91,17 +107,19 @@ and wherever else in the Universe order manifests out of chaos.
 <br>
 `8`
 
-Every person extrapolates God to the best of their ability. A person cannot participate in society in any meaningful way unless they do.
+Every person extrapolates God to the best of their ability. 
+A person cannot participate in society in any meaningful way unless they do.
 
-Who is your highest ideal? Does it approximate the socialist man, Arjuna, Jesus, or Lao Tzu’s Master? You can access God at any time by asking yourself this simple question: Is what I am doing right now what I should be doing?
+What represents your highest ideal? Is it the socialist man, Arjuna, Jesus, or Lao Tzu’s Master? 
+You can access God at any time by asking yourself this simple question: Is what I am doing right now what I should be doing?
+It is this simple. 
 
-It is this simple. To get in touch with this representation is to understand what God is for you.
-
+To get in touch with this representation is to understand what God is for you.
 It is advisable to continuously update your internal interpolation of God with the God that other people construct~
 
-You will never reach God, but through logos with other people, you will get closer to God as you could on your own.
-
-No need to reinvent the wheel trying to create your own God. Nietzche was incorrect in assuming you ever could in the first place.
+You will never reach God, but through logos with other people, you will get closer to God then you could on your own.
+No need to reinvent the wheel trying to create your own God. 
+Nietzche was incorrect in assuming you ever could in the first place.
 
 <br>
 `9`
@@ -115,12 +133,13 @@ What good is the currency of a country that no one trusts to see another day?
 
 All scriptures were written by humans.
 
-This fact doesn’t negate the divine, on the contrary- it shows just how amazing humans are at interpreting.
+This fact doesn’t negate the divine, on the contrary- 
+it shows just how amazing humans are at interpreting.
 
 <br>
 `11`
 
-Intelligence seems not to be found exclusively in life.
+Intelligence seems not to be found exclusively in biological chemistry.
 
 <br>
 `12`
@@ -134,26 +153,32 @@ Universe is what you make of it.
 <br>
 `13`
 
-Life is good. For you get to be the Universe experiencing itself. Even when you have a bad day, enjoy it- it is much more meaningful than being dead.
+Life is good. For you get to be the Universe experiencing itself. 
+Even when you have a bad day, enjoy it- it is much more meaningful than being dead.
 
 <br>
 `14`
 
 Reincarnation, and heaven and hell are fundamentally the same idea, told in different ways.
 
-Will you act according to your God’s ideals in this life, so that what comes next will be better?
+Will you act according to your God’s ideals in this life, 
+so that what comes next will be better?
 
 <br>
 `15`
 
-The meaning of life for a human being is found in exercising responsibility. Be it for a career, a plant, a repository of code, a child, a parent, a dog, to exercise, to improve, to meditate, to pray, to worship, or even to steal. Wherever responsibility presents itself for your eyes only, therein you have the opportunity, for the meaning of life to manifest itself inside of you.`
+The meaning of life for a human being is found in exercising responsibility. 
+Be it for a career, a plant, a repository of code, a child, a parent, a dog, to exercise, to improve, to meditate, to pray, to worship, or even to steal.
+
+Wherever responsibility presents itself to your eyes,
+therein you have the opportunity, for the meaning of life to manifest itself inside of you.
 
 <br>
 <br>
 <br>
 <br>
 ---
-<small><i>The writings in this page are not covered under the MIT licence. All rights are reserved. © 2024 Gregor Mihelac</i></small>
+<small><i>The writings in this page are not covered under the MIT licence. All rights reserved. © 2024 Gregor Mihelac</i></small>
 ---
 <br>
 <br>
