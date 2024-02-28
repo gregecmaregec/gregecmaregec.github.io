@@ -10,6 +10,7 @@ email: you@example.com
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
 footer_text: >
+  By using this website, you agree to the use of cookies as described in the <a href="/cookies">cookies policiy</a>.
   This website is open source under the MIT License.
   <a href="https://github.com/gregecmaregec/gregecmaregec.github.io">Find the source code here</a>.
 keywords: jekyll, jekyll-theme, academic-website, portfolio-website # add your own keywords or leave empty
