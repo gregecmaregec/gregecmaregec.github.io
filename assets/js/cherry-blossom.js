@@ -62,3 +62,7 @@ function animate() {
 
     requestAnimationFrame(animate);
 }
+
+
+createLeaves();
+animate();
