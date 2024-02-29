@@ -7,8 +7,31 @@ description: some observations on the way things seem to be
 nav: true
 nav_order: 2
 
+<style>
+    .centered {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+    }
+</style>
+
 ---
 
+<div class="centered">
+    <br>
+    <br>
+    Some observations on the way things seem to be
+    <br>
+    <br>
+</div>
+
+<br>
+<br>
+Some observations on the way things seem to be
+<br>
+<br>
 `1`
 
 The self is not an illusion of the mind, in the way illusion is interpreted.<br>
