@@ -1,6 +1,6 @@
 ---
 
-layout: page
+layout: philosophy
 permalink: /philosophy/
 title: philosophy
 description: some observations on the way things seem to be
