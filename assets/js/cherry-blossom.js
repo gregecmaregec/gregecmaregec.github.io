@@ -55,53 +55,41 @@ function createLeaves() {
 }
 
 // Function to animate the cherry blossom circles
-function animate() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    for (const leaf of leaves) {
-        leaf.update();
-    }
+(function () {
+    // Step 1: Reload the page immediately on page start
+    window.onload = function () {
+        location.reload(true);
+    };
 
-    requestAnimationFrame(animate);
-}
+    // Step 2: Scroll to the top of the page when the user hasn't scrolled
+    var scrolledByUser = false;
 
-window.addEventListener('load', () => {
-    // Set position on the very top of the screen
-    window.scrollTo(0, 0);
-
-    // Calculate the target scroll position
-    const targetScrollPosition = window.innerWidth / 2;
-
-    // Variable to track if the user has manually scrolled
-    let userScrolled = false;
-
-    // Function to handle smooth scrolling
-    function smoothScroll() {
-        if (!userScrolled) {
-            // Calculate the current scroll position
-            const currentScrollPosition = window.scrollX;
-
-            // Calculate the distance to scroll in this frame
-            const distance = (targetScrollPosition - currentScrollPosition) * 0.1;
-
-            // Scroll by the calculated distance
-            window.scrollBy(distance, 0);
-
-            // Check if the scroll position has reached the target position
-            if (Math.abs(targetScrollPosition - window.scrollX) < 1) {
-                // Stop smooth scrolling
-                clearInterval(scrollInterval);
-            }
+    function scrollToTop() {
+        if (!scrolledByUser) {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     }
 
-    // Start smooth scrolling
-    const scrollInterval = setInterval(smoothScroll, 16);
-
-    // Event listener to track if the user manually scrolls
-    window.addEventListener('scroll', () => {
-        userScrolled = true;
+    // Attach the scrollToTop function to the scroll event
+    window.addEventListener('scroll', function () {
+        scrolledByUser = true;
+        // Cancel any delayed scroll action
+        clearTimeout(scrollTimeout);
     });
-});
 
-createLeaves();
-animate();
+    // Step 3: Wait for 4 seconds
+    var scrollTimeout = setTimeout(function () {
+        // Step 4: Scroll down half the width of the vertical height of the display
+        var windowHeight = window.innerHeight;
+        var targetScroll = windowHeight / 2;
+
+        window.scrollBy({ top: targetScroll, behavior: 'smooth' });
+
+        // Reset scrolledByUser after the delayed scroll action
+        scrolledByUser = false;
+    }, 4000);
+
+    // Run the scrollToTop function immediately on page start
+    scrollToTop();
+})();
+
