@@ -27,7 +27,20 @@ class Leaf {
 
     update() {
         // Move the leaf downwards slowly
-        this.y += this.speed * 0.5;
+        this.y += this.speed * 0.1; // Adjust the speed factor to make the leaves fall slower
+
+        // Draw the leaf on the canvas with lower opacity
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(255, 192, 203, 0.2)'; // 50% lower opacity
+        ctx.fill();
+        ctx.closePath();
+
+        // Reset the leaf position if it goes off the screen
+        if (this.y > canvas.height + this.size) {
+            this.y = -this.size;
+        }
+    }
 
         // Draw the leaf on the canvas with lower opacity
         ctx.beginPath();
@@ -45,7 +58,7 @@ class Leaf {
 
 // Function to create cherry blossom leaves
 function createLeaves() {
-    for (let i = 0; i < 200; i++) { // Only create 20 leaves
+    for (let i = 0; i < 13; i++) { // Only create 20 leaves
         const x = Math.random() * canvas.width;
         const y = Math.random() * canvas.height;
         const size = Math.random() * 10 + 5;
