@@ -29,7 +29,9 @@ nav_order: 2
 
 <br>
 <br>
-Some observations on the way things seem to be
+
+## Some observations on the way things seem to be
+
 <br>
 <br>
 `1`
