@@ -8,9 +8,9 @@ const ctx = canvas.getContext('2d');
 // Create an array to store the cherry blossom leaves
 const leaves = [];
 
-// Set canvas size to cover half of the body
+// Set canvas size to cover half of the body initially
 canvas.width = window.innerWidth;
-canvas.height = window.innerHeight / 2;
+canvas.height = window.innerHeight / 1.5;
 
 // Create a class for the cherry blossom leaves
 class Leaf {
@@ -28,7 +28,7 @@ class Leaf {
         // Draw the leaf on the canvas with lower opacity
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(255, 192, 203, 0.2)'; // 20% lower opacity
+        ctx.fillStyle = 'rgba(255, 192, 203, 0.3)'; // 20% lower opacity
         ctx.fill();
         ctx.closePath();
 
@@ -73,10 +73,3 @@ createLeaves();
 
 // Call the animate function to start the animation
 animate();
-
-// Update canvas size on window resize
-window.addEventListener('resize', () => {
-    // Update the canvas size to cover half of the body
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight / 2;
-});
