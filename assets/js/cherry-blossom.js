@@ -10,8 +10,8 @@ const leaves = [];
 
 // Set canvas size to cover 99.95% of the window
 // this is due to the fact that the canvas will overflow the window if it's set to 100%
-canvas.width = window.innerWidth * 0.9995;
-canvas.height = window.innerHeight * 0.9995;
+canvas.width = window.innerWidth * 0.98;
+canvas.height = window.innerHeight * 0.98;
 
 class Leaf {
     constructor(x, y, size, speed) {
@@ -67,10 +67,15 @@ function animate() {
 // Function that scrolls down the website after a delay
 function scrollDownSmoothly() {
     const scrollHeight = window.innerHeight / 2;
-    const duration = 9000; // 9 seconds
+    const duration = 6000; // 6 seconds
     const delay = 3000; // 3 seconds
 
     let isUserScrolling = false;
+
+    // Reset scroll position to top on page reload
+    window.onbeforeunload = function () {
+        window.scrollTo(0, 0);
+    };
 
     // This is an attempt at smooth scrolling in js
     setTimeout(() => {
@@ -98,6 +103,11 @@ function scrollDownSmoothly() {
 
         requestAnimationFrame(scrollStep);
     }, delay);
+
+    // Stop the smooth scrolling if the user scrolls manually
+    window.addEventListener('scroll', () => {
+        isUserScrolling = true;
+    });
 }
 
 // Executing scrollDownSmoothly function only once at the startup of the page
