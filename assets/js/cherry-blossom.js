@@ -7,7 +7,7 @@ document.body.appendChild(canvas);
 canvas.style.position = 'absolute';
 canvas.style.top = '0';
 canvas.style.left = '0';
-canvas.style.width = '99%';
+canvas.style.width = '99.5%';
 canvas.style.height = '100%';
 
 // Get the 2D rendering context
@@ -45,9 +45,13 @@ class Leaf {
 
 // Function to create cherry blossom leaves
 function createLeaves() {
-    for (let i = 0; i < 20; i++) { // Only create 20 leaves
-        const x = Math.random() * canvas.width;
-        const y = Math.random() * canvas.height;
+    const screenWidth = window.innerWidth;
+    const screenHeight = window.innerHeight;
+    const leafCount = screenWidth >= 768 ? 20 * Math.ceil(screenHeight / screenHeight) : 5 * Math.ceil(screenHeight / screenHeight);
+
+    for (let i = 0; i < leafCount; i++) {
+        const x = Math.random() * screenWidth;
+        const y = Math.random() * screenHeight;
         const size = Math.random() * 10 + 5;
         const speed = Math.random() * 0.5 + 0.5; // Slow down the falling speed
         const leaf = new Leaf(x, y, size, speed);
