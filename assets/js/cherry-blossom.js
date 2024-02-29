@@ -4,6 +4,13 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 document.body.appendChild(canvas);
 
+// Set the canvas position to fixed and cover the entire body
+canvas.style.position = 'fixed';
+canvas.style.top = '0';
+canvas.style.left = '0';
+canvas.style.width = '100%';
+canvas.style.height = '100%';
+
 // Get the 2D rendering context
 const ctx = canvas.getContext('2d');
 
@@ -23,10 +30,10 @@ class Leaf {
         // Move the leaf downwards slowly
         this.y += this.speed * 0.5;
 
-        // Draw the leaf on the canvas with 50% transparency
+        // Draw the leaf on the canvas with lower opacity
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(255, 192, 203, 0.5)';
+        ctx.fillStyle = 'rgba(255, 192, 203, 0.3)'; // Lower opacity
         ctx.fill();
         ctx.closePath();
 
