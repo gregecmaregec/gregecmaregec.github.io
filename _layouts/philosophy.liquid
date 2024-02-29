@@ -50,67 +50,6 @@
     <!-- Footer -->
     {% include footer.liquid %}
 
-    <!-- Cherry Blossom Animation -->
-    <canvas id="cherryBlossomCanvas"></canvas>
-    </script>
-      document.addEventListener("DOMContentLoaded", function() {
-      const canvas = document.getElementById("cherryBlossomCanvas");
-      const ctx = canvas.getContext("2d");
-      const particles = [];
-
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-
-      function Particle() {
-        this.x = Math.random() * canvas.width;
-        this.y = 0;
-        this.radius = Math.random() * 5 + 2;
-        this.color = "rgba(255, 183, 197, 0.5)";
-
-        this.update = function() {
-          this.y += Math.random() * 2;
-          if (this.radius > 0.2) this.radius -= 0.1;
-        };
-
-        this.draw = function() {
-          ctx.beginPath();
-          ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
-          ctx.fillStyle = this.color;
-          ctx.fill();
-        };
-      }
-
-      function createParticles() {
-        for (let i = 0; i < 100; i++) {
-          particles.push(new Particle());
-        }
-      }
-
-      function animate() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-        particles.forEach((particle, index) => {
-          particle.update();
-          particle.draw();
-
-          if (particle.radius <= 0.2) {
-            particles.splice(index, 1);
-            particles.push(new Particle());
-          }
-        });
-
-        requestAnimationFrame(animate);
-      }
-
-      createParticles();
-      animate();
-
-      window.addEventListener("resize", function() {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-      });
-    });
-
     <!-- JavaScripts -->
     {% include scripts/jquery.liquid %}
     {% include scripts/bootstrap.liquid %}
@@ -129,5 +68,9 @@
     {% include scripts/progressBar.liquid %}
     {% include scripts/wechatModal.liquid %}
     {% include scripts/imageLayouts.liquid %}
+
+    <!-- Cherry Blossom Animation -->
+    <script src="{{ site.baseurl }}/assets/js/cherry-blossom.js"></script>
+
   </body>
 </html>
