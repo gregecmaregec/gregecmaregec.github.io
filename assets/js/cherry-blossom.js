@@ -64,55 +64,43 @@ function animate() {
     requestAnimationFrame(animate);
 }
 
-// Function that scrolls down the website after a delay
-function scrollDownSmoothly() {
-    const scrollHeight = window.innerHeight / 2;
-    const duration = 6000; // 6 seconds
-    const delay = 3000; // 3 seconds
+window.addEventListener('load', () => {
+    // Set position on the very top of the screen
+    window.scrollTo(0, 0);
 
-    let isUserScrolling = false;
+    // Calculate the target scroll position
+    const targetScrollPosition = window.innerWidth / 2;
 
-    // Reset scroll position to top on page reload
-    window.onbeforeunload = function () {
-        window.scrollTo(0, 0);
-    };
+    // Variable to track if the user has manually scrolled
+    let userScrolled = false;
 
-    // This is an attempt at smooth scrolling in js
-    setTimeout(() => {
-        const startTime = performance.now();
-        const startY = window.pageYOffset;
-        const endY = startY + scrollHeight;
+    // Function to handle smooth scrolling
+    function smoothScroll() {
+        if (!userScrolled) {
+            // Calculate the current scroll position
+            const currentScrollPosition = window.scrollX;
 
-        function scrollStep(timestamp) {
-            if (isUserScrolling) {
-                return; // Exit the function if the user scrolls on their own
-            }
+            // Calculate the distance to scroll in this frame
+            const distance = (targetScrollPosition - currentScrollPosition) * 0.1;
 
-            const currentTime = timestamp - startTime;
-            const progress = currentTime / duration;
+            // Scroll by the calculated distance
+            window.scrollBy(distance, 0);
 
-            const easeInOutCubic = t => t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1;
-            const easedProgress = easeInOutCubic(progress);
-
-            window.scrollTo(0, startY + (endY - startY) * easedProgress);
-
-            if (currentTime < duration) {
-                requestAnimationFrame(scrollStep);
+            // Check if the scroll position has reached the target position
+            if (Math.abs(targetScrollPosition - window.scrollX) < 1) {
+                // Stop smooth scrolling
+                clearInterval(scrollInterval);
             }
         }
+    }
 
-        requestAnimationFrame(scrollStep);
-    }, delay);
+    // Start smooth scrolling
+    const scrollInterval = setInterval(smoothScroll, 16);
 
-    // Stop the smooth scrolling if the user scrolls manually
+    // Event listener to track if the user manually scrolls
     window.addEventListener('scroll', () => {
-        isUserScrolling = true;
+        userScrolled = true;
     });
-}
-
-// Executing scrollDownSmoothly function only once at the startup of the page
-window.addEventListener('DOMContentLoaded', () => {
-    scrollDownSmoothly();
 });
 
 createLeaves();

@@ -4,6 +4,7 @@ layout: page
 permalink: /coderepository/
 title: code repository
 description: all code posted on this site is under the MIT licence.
+nav: true
 nav_order: 3
 
 ---
