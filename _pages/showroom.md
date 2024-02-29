@@ -25,14 +25,3 @@ print("hello world!")
 ```
 
 ---
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
