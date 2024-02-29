@@ -16,4 +16,118 @@
   </head>
 
   <!-- Body -->
+  <body class="{% if site.navbar_fixed %}fixed-top-nav{% endif %} {% unless site.footer_fixed %}sticky-bottom-footer{% endunless %}">
+    <!-- Header -->
+    {% include header.liquid %}
+
+    <!-- Content -->
+    <div class="container mt-5" role="main">
+      {% if page.toc and page.toc.sidebar %}
+        {% if page.toc.sidebar == 'right' %}
+          <div class="row">
+            <!-- main content area -->
+            <div class="col-sm-9">{{ content }}</div>
+            <!-- sidebar, which will move to the top on a small screen -->
+            <div class="col-sm-3">
+              <nav id="toc-sidebar" class="sticky-top"></nav>
+            </div>
+          </div>
+        {% else %}
+          <div class="row">
+            <!-- sidebar, which will move to the top on a small screen -->
+            <div class="col-sm-3">
+              <nav id="toc-sidebar" class="sticky-top"></nav>
+            </div>
+            <!-- main content area -->
+            <div class="col-sm-9">{{ content }}</div>
+          </div>
+        {% endif %}
+      {% else %}
+        {{ content }}
+      {% endif %}
+    </div>
+
+    <!-- Footer -->
+    {% include footer.liquid %}
+
+    <!-- Cherry Blossom Animation -->
+    <canvas id="cherryBlossomCanvas"></canvas>
+    </script>
+      document.addEventListener("DOMContentLoaded", function() {
+      const canvas = document.getElementById("cherryBlossomCanvas");
+      const ctx = canvas.getContext("2d");
+      const particles = [];
+
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+
+      function Particle() {
+        this.x = Math.random() * canvas.width;
+        this.y = 0;
+        this.radius = Math.random() * 5 + 2;
+        this.color = "rgba(255, 183, 197, 0.5)";
+
+        this.update = function() {
+          this.y += Math.random() * 2;
+          if (this.radius > 0.2) this.radius -= 0.1;
+        };
+
+        this.draw = function() {
+          ctx.beginPath();
+          ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+          ctx.fillStyle = this.color;
+          ctx.fill();
+        };
+      }
+
+      function createParticles() {
+        for (let i = 0; i < 100; i++) {
+          particles.push(new Particle());
+        }
+      }
+
+      function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        particles.forEach((particle, index) => {
+          particle.update();
+          particle.draw();
+
+          if (particle.radius <= 0.2) {
+            particles.splice(index, 1);
+            particles.push(new Particle());
+          }
+        });
+
+        requestAnimationFrame(animate);
+      }
+
+      createParticles();
+      animate();
+
+      window.addEventListener("resize", function() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      });
+    });
+
+    <!-- JavaScripts -->
+    {% include scripts/jquery.liquid %}
+    {% include scripts/bootstrap.liquid %}
+    {% include scripts/masonry.liquid %}
+    {% include scripts/mermaid.liquid %}
+    {% include scripts/diff2html.liquid %}
+    {% include scripts/leaflet.liquid %}
+    {% include scripts/chartjs.liquid %}
+    {% include scripts/echarts.liquid %}
+    {% include scripts/vega.liquid %}
+    {% include scripts/tikzjax.liquid %}
+    {% include scripts/misc.liquid %}
+    {% include scripts/badges.liquid %}
+    {% include scripts/mathjax.liquid %}
+    {% include scripts/analytics.liquid %}
+    {% include scripts/progressBar.liquid %}
+    {% include scripts/wechatModal.liquid %}
+    {% include scripts/imageLayouts.liquid %}
+  </body>
 </html>
