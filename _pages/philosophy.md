@@ -24,7 +24,8 @@ So is the illusion of the self, not an illusion - It can cut and shape reality i
 `2`
 
 The universe is not a story - but the peception of it, most certainly is. <br>
-Thus the famous question goes: Why did the chicken cross the road? The answer? To get to the other side.
+Thus the famous question goes: Why did the chicken cross the road? <br>
+The answer? To get to the other side.
 
 <br>
 `3`
