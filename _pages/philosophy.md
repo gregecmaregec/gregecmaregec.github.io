@@ -8,16 +8,7 @@ nav: true
 nav_order: 2
 
 ---
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
 `1`
 
 The self is not an illusion of the mind, in the way illusion is interpreted.<br>
