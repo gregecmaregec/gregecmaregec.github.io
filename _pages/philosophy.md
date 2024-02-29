@@ -8,7 +8,7 @@ nav: true
 nav_order: 2
 
 ---
-## Observations on the way things seem to be
+## some observations on the way things seem to be
 
 <br>
 <br>
