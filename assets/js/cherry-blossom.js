@@ -12,7 +12,6 @@ const leaves = [];
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-// Create a class for the cherry blossom leaves
 class Leaf {
     constructor(x, y, size, speed) {
         this.x = x;
@@ -43,9 +42,10 @@ class Leaf {
 function createLeaves() {
     const leafCount = 20;
 
+    // Blossoms spawn in the top half of the screen first because of const y
     for (let i = 0; i < leafCount; i++) {
         const x = Math.random() * window.innerWidth;
-        const y = Math.random() * (window.innerHeight / 2); // Blossoms spawn in the top half of the screen first
+        const y = Math.random() * (window.innerHeight / 2); 
         const size = Math.random() * 10 + 5;
         const speed = Math.random() * 0.5 + 0.5;
         const leaf = new Leaf(x, y, size, speed);
