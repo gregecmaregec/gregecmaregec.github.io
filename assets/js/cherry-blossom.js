@@ -1,77 +1,34 @@
-// Create a canvas element
-const canvas = document.createElement('canvas');
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-document.body.appendChild(canvas);
+// cherry-blossom.js
 
-// Set the canvas position to absolute and cover the entire body
-canvas.style.position = 'absolute';
-canvas.style.top = '0';
-canvas.style.left = '0';
-canvas.style.width = '100%';
-canvas.style.height = '100%';
-
-// Get the 2D rendering context
-const ctx = canvas.getContext('2d');
-
-// Create an array to store the cherry blossom leaves
-const leaves = [];
-
-// Create a class for the cherry blossom leaves
-class Leaf {
-    constructor(x, y, size, speed) {
-        this.x = x;
-        this.y = y;
-        this.size = size;
-        this.speed = speed;
+document.addEventListener("DOMContentLoaded", function () {
+    const numberOfLeaves = 50;
+  
+    for (let i = 0; i < numberOfLeaves; i++) {
+      createLeaf();
     }
-
-    update() {
-        // Move the leaf downwards slowly
-        this.y += this.speed * 0.2; // Adjust the falling speed
-
-        // Draw the leaf on the canvas with pink color and lower opacity
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(255, 192, 203, 0.3)'; // Pink color with lower opacity
-        ctx.fill();
-        ctx.closePath();
-
-        // Reset the leaf position if it goes off the screen
-        if (this.y > canvas.height + this.size) {
-            this.y = -this.size;
-        }
+  
+    function createLeaf() {
+      const leaf = document.createElement("div");
+      leaf.className = "leaf";
+      document.body.appendChild(leaf);
+  
+      const startPositionX = Math.random() * window.innerWidth;
+      const rotation = Math.random() * 360;
+  
+      leaf.style.position = "absolute";
+      leaf.style.width = "10px";
+      leaf.style.height = "10px";
+      leaf.style.backgroundColor = "rgba(255, 0, 0, 0.2)";
+      leaf.style.clipPath = "polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)";
+      leaf.style.zIndex = "999";
+      leaf.style.pointerEvents = "none";
+      leaf.style.left = startPositionX + "px";
+      leaf.style.animation = `fall linear infinite ${10 + Math.random() * 10}s`; // Increased duration
+      leaf.style.transform = "rotate(" + rotation + "deg)";
+  
+      leaf.addEventListener("animationiteration", () => {
+        leaf.style.left = Math.random() * window.innerWidth + "px";
+      });
     }
-}
-
-// Function to create cherry blossom leaves
-function createLeaves() {
-    for (let i = 0; i < 20; i++) { // Only create 20 leaves
-        const x = (Math.random() * canvas.width) / 2 + canvas.width / 4;
-        const y = Math.random() * canvas.height;
-        const size = Math.random() * 10 + 5;
-        const speed = Math.random() * 0.2 + 0.2; // Slow down the falling speed
-        const leaf = new Leaf(x, y, size, speed);
-        leaves.push(leaf);
-    }
-}
-
-// Function to animate the cherry blossom leaves
-function animate() {
-    // Clear the canvas
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-    // Update and draw each leaf
-    for (const leaf of leaves) {
-        leaf.update();
-    }
-
-    // Call the animate function recursively
-    requestAnimationFrame(animate);
-}
-
-// Call the createLeaves function to initialize the cherry blossom leaves
-createLeaves();
-
-// Call the animate function to start the animation
-animate();
+  });
+  
