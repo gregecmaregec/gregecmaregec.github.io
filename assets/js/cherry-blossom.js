@@ -10,7 +10,7 @@ const leaves = [];
 
 // Set canvas size to cover half of the body initially
 canvas.width = window.innerWidth;
-canvas.height = window.innerHeight / 1.3;
+canvas.height = window.innerHeight;
 
 // Create a class for the cherry blossom leaves
 class Leaf {
@@ -23,7 +23,7 @@ class Leaf {
 
     update() {
         // Move the leaf downwards slowly
-        this.y += this.speed * 0.1; // Adjust the speed factor to make the leaves fall slower
+        this.y += this.speed * 0.2; // Adjust the speed factor to make the leaves fall slower
 
         // Draw the leaf on the canvas with lower opacity
         ctx.beginPath();
