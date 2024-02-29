@@ -19,7 +19,7 @@ The self is not an illusion of the mind, in the way illusion is interpreted.<br>
 Much like an axe is not an illusion of the mind, since it can cut and shape a real tree.<br>
 
 So is the illusion of the self, not an illusion <br>
-- It can cut and shape reality itself.
+-it can cut and shape reality itself.
 
 <br>
 `2`
