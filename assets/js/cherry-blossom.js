@@ -4,11 +4,11 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 document.body.appendChild(canvas);
 
-canvas.style.position = 'absolute';
+canvas.style.position = 'fixed';
 canvas.style.top = '0';
 canvas.style.left = '0';
-canvas.style.width = '100%';
-canvas.style.height = '100%';
+canvas.style.width = '98%';
+canvas.style.height = '98%';
 
 // Get the 2D rendering context
 const ctx = canvas.getContext('2d');
