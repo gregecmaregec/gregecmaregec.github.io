@@ -4,8 +4,8 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 document.body.appendChild(canvas);
 
-// Set the canvas position to fixed and cover the entire body
-canvas.style.position = 'fixed';
+// Set the canvas position to absolute and cover the entire body
+canvas.style.position = 'absolute';
 canvas.style.top = '0';
 canvas.style.left = '0';
 canvas.style.width = '100%';
@@ -28,12 +28,12 @@ class Leaf {
 
     update() {
         // Move the leaf downwards slowly
-        this.y += this.speed * 0.5;
+        this.y += this.speed * 0.2; // Adjust the falling speed
 
-        // Draw the leaf on the canvas with lower opacity
+        // Draw the leaf on the canvas with green color and lower opacity
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(255, 192, 203, 0.3)'; // Lower opacity
+        ctx.fillStyle = 'rgba(0, 128, 0, 0.3)'; // Green color with lower opacity
         ctx.fill();
         ctx.closePath();
 
@@ -50,7 +50,7 @@ function createLeaves() {
         const x = Math.random() * canvas.width;
         const y = Math.random() * canvas.height;
         const size = Math.random() * 10 + 5;
-        const speed = Math.random() * 0.5 + 0.5; // Slow down the falling speed
+        const speed = Math.random() * 0.2 + 0.2; // Slow down the falling speed
         const leaf = new Leaf(x, y, size, speed);
         leaves.push(leaf);
     }
