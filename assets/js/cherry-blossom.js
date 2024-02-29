@@ -21,10 +21,10 @@ class Leaf {
     }
 
     update() {
-        // Move the leaf downwards slowly
+        // Move the circles downwards slowly
         this.y += this.speed * 0.2; // Adjust the speed factor to make the leaves fall slower
 
-        // Draw the leaf on the canvas
+        // Draw the circles on the canvas
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fillStyle = 'rgba(255, 192, 203, 0.3)'; // That 0.3 in the end means 30% opacity
@@ -38,7 +38,7 @@ class Leaf {
     }
 }
 
-// Function to create cherry blossom leaves
+// Function to create cherry blossom circles
 function createLeaves() {
     const leafCount = 20;
 
@@ -53,7 +53,7 @@ function createLeaves() {
     }
 }
 
-// Function to animate the cherry blossom leaves
+// Function to animate the cherry blossom circles
 function animate() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     for (const leaf of leaves) {
@@ -63,32 +63,39 @@ function animate() {
     requestAnimationFrame(animate);
 }
 
-// Function that scrolls down immediately and for half of the window
-function scrollDown() {
+// Function that scrolls down the website after a delay
+function scrollDownSmoothly() {
     const scrollHeight = window.innerHeight / 2;
-    const duration = 7000; // 7 seconds
+    const duration = 9000; // 9 seconds
+    const delay = 3000; // 3 seconds
 
-    const startTime = performance.now();
-    const startY = window.pageYOffset;
-    const endY = startY + scrollHeight;
+// This is an attempt at smooth scrolling in js
+    setTimeout(() => {
+        const startTime = performance.now();
+        const startY = window.pageYOffset;
+        const endY = startY + scrollHeight;
 
-    function scrollStep(timestamp) {
-        const currentTime = timestamp - startTime;
-        const progress = currentTime / duration;
+        function scrollStep(timestamp) {
+            const currentTime = timestamp - startTime;
+            const progress = currentTime / duration;
 
-        window.scrollTo(0, startY + (endY - startY) * progress);
+            const easeInOutCubic = t => t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1;
+            const easedProgress = easeInOutCubic(progress);
 
-        if (currentTime < duration) {
-            requestAnimationFrame(scrollStep);
+            window.scrollTo(0, startY + (endY - startY) * easedProgress);
+
+            if (currentTime < duration) {
+                requestAnimationFrame(scrollStep);
+            }
         }
-    }
 
-    requestAnimationFrame(scrollStep);
+        requestAnimationFrame(scrollStep);
+    }, delay);
 }
 
-// Executing scrollDown function only once at the start of the page
+// Executing scrollDownSmoothly function only once at the startup of the page
 window.addEventListener('DOMContentLoaded', () => {
-    scrollDown();
+    scrollDownSmoothly();
 });
 
 createLeaves();

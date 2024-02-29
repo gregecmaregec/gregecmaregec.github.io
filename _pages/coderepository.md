@@ -14,6 +14,10 @@ nav_order: 3
 
 
 `the blossom circles effect in /philosophy.`
+<br>
+<br>
+
+`javascript.`
 
 ```javascript
 
@@ -82,32 +86,39 @@ function animate() {
     requestAnimationFrame(animate);
 }
 
-// Function that scrolls down immediately and for half of the window
-function scrollDown() {
+// Function that scrolls down the website after a delay
+function scrollDownSmoothly() {
     const scrollHeight = window.innerHeight / 2;
-    const duration = 7000; // 7 seconds
+    const duration = 9000; // 9 seconds
+    const delay = 3000; // 3 seconds
 
-    const startTime = performance.now();
-    const startY = window.pageYOffset;
-    const endY = startY + scrollHeight;
+// This is an attempt at smooth scrolling in js
+    setTimeout(() => {
+        const startTime = performance.now();
+        const startY = window.pageYOffset;
+        const endY = startY + scrollHeight;
 
-    function scrollStep(timestamp) {
-        const currentTime = timestamp - startTime;
-        const progress = currentTime / duration;
+        function scrollStep(timestamp) {
+            const currentTime = timestamp - startTime;
+            const progress = currentTime / duration;
 
-        window.scrollTo(0, startY + (endY - startY) * progress);
+            const easeInOutCubic = t => t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1;
+            const easedProgress = easeInOutCubic(progress);
 
-        if (currentTime < duration) {
-            requestAnimationFrame(scrollStep);
+            window.scrollTo(0, startY + (endY - startY) * easedProgress);
+
+            if (currentTime < duration) {
+                requestAnimationFrame(scrollStep);
+            }
         }
-    }
 
-    requestAnimationFrame(scrollStep);
+        requestAnimationFrame(scrollStep);
+    }, delay);
 }
 
-// Executing scrollDown function only once at the start of the page
+// Executing scrollDownSmoothly function only once at the startup of the page
 window.addEventListener('DOMContentLoaded', () => {
-    scrollDown();
+    scrollDownSmoothly();
 });
 
 createLeaves();
