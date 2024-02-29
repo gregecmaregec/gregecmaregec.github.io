@@ -20,13 +20,13 @@ class Leaf {
     }
 
     update() {
-        // Move the leaf downwards
-        this.y += this.speed;
+        // Move the leaf downwards slowly
+        this.y += this.speed * 0.5;
 
-        // Draw the leaf on the canvas
+        // Draw the leaf on the canvas with 50% transparency
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.fillStyle = 'pink';
+        ctx.fillStyle = 'rgba(255, 192, 203, 0.5)';
         ctx.fill();
         ctx.closePath();
 
@@ -39,11 +39,11 @@ class Leaf {
 
 // Function to create cherry blossom leaves
 function createLeaves() {
-    for (let i = 0; i < 100; i++) {
+    for (let i = 0; i < 20; i++) { // Only create 20 leaves
         const x = Math.random() * canvas.width;
         const y = Math.random() * canvas.height;
         const size = Math.random() * 10 + 5;
-        const speed = Math.random() * 2 + 1;
+        const speed = Math.random() * 0.5 + 0.5; // Slow down the falling speed
         const leaf = new Leaf(x, y, size, speed);
         leaves.push(leaf);
     }
