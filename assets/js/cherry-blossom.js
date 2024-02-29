@@ -7,8 +7,8 @@ document.body.appendChild(canvas);
 canvas.style.position = 'fixed';
 canvas.style.top = '0';
 canvas.style.left = '0';
-canvas.style.width = '98%';
-canvas.style.height = '98%';
+canvas.style.width = '99%';
+canvas.style.height = '100%';
 
 // Get the 2D rendering context
 const ctx = canvas.getContext('2d');
@@ -58,7 +58,7 @@ class Leaf {
 
 // Function to create cherry blossom leaves
 function createLeaves() {
-    for (let i = 0; i < 13; i++) { // Only create 20 leaves
+    for (let i = 0; i < 20 ; i++) { // Only create 20 leaves
         const x = Math.random() * canvas.width;
         const y = Math.random() * canvas.height;
         const size = Math.random() * 10 + 5;
