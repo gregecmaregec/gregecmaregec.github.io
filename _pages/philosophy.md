@@ -8,11 +8,8 @@ nav: true
 nav_order: 2
 
 ---
-
 ## Observations on the way things seem to be
 
-<br>
-<br>
 `1`
 
 The self is not an illusion of the mind, in the way illusion is interpreted.<br>
