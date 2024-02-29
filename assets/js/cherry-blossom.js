@@ -8,9 +8,8 @@ const ctx = canvas.getContext('2d');
 // Create an array to store the cherry blossom leaves
 const leaves = [];
 
-// Set canvas size to cover half of the screen initially
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+canvas.width = window.innerWidth * 0.98;
+canvas.height = window.innerHeight * 0.98;
 
 class Leaf {
     constructor(x, y, size, speed) {
