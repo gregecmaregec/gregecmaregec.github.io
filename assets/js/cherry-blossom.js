@@ -41,24 +41,11 @@ class Leaf {
             this.y = -this.size;
         }
     }
-
-        // Draw the leaf on the canvas with lower opacity
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(255, 192, 203, 0.1)'; // Even lower opacity
-        ctx.fill();
-        ctx.closePath();
-
-        // Reset the leaf position if it goes off the screen
-        if (this.y > canvas.height + this.size) {
-            this.y = -this.size;
-        }
-    }
 }
 
 // Function to create cherry blossom leaves
 function createLeaves() {
-    for (let i = 0; i < 20 ; i++) { // Only create 20 leaves
+    for (let i = 0; i < 20; i++) { // Only create 20 leaves
         const x = Math.random() * canvas.width;
         const y = Math.random() * canvas.height;
         const size = Math.random() * 10 + 5;
