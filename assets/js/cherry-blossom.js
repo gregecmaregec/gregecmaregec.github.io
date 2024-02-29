@@ -1,14 +1,6 @@
 // Create a canvas element
 const canvas = document.createElement('canvas');
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
 document.body.appendChild(canvas);
-
-canvas.style.position = 'absolute';
-canvas.style.top = '0';
-canvas.style.left = '0';
-canvas.style.width = '99.5%';
-canvas.style.height = '100%';
 
 // Get the 2D rendering context
 const ctx = canvas.getContext('2d');
@@ -32,7 +24,7 @@ class Leaf {
         // Draw the leaf on the canvas with lower opacity
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(255, 192, 203, 0.2)'; // 50% lower opacity
+        ctx.fillStyle = 'rgba(255, 192, 203, 0.2)'; // 20% lower opacity
         ctx.fill();
         ctx.closePath();
 
@@ -45,13 +37,11 @@ class Leaf {
 
 // Function to create cherry blossom leaves
 function createLeaves() {
-    const screenWidth = window.innerWidth;
-    const screenHeight = window.innerHeight;
-    const leafCount = screenWidth >= 768 ? 20 * Math.ceil(screenHeight / screenHeight) : 5 * Math.ceil(screenHeight / screenHeight);
+    const leafCount = 20;
 
     for (let i = 0; i < leafCount; i++) {
-        const x = Math.random() * screenWidth;
-        const y = Math.random() * screenHeight;
+        const x = Math.random() * window.innerWidth;
+        const y = Math.random() * window.innerHeight;
         const size = Math.random() * 10 + 5;
         const speed = Math.random() * 0.5 + 0.5; // Slow down the falling speed
         const leaf = new Leaf(x, y, size, speed);
@@ -73,8 +63,18 @@ function animate() {
     requestAnimationFrame(animate);
 }
 
+// Set canvas size to cover the entire body
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
 // Call the createLeaves function to initialize the cherry blossom leaves
 createLeaves();
 
 // Call the animate function to start the animation
 animate();
+
+// Update canvas size on window resize
+window.addEventListener('resize', () => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+});
