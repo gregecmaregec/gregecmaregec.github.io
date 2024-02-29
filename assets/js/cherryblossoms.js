@@ -1,1 +1,0 @@
-document.addEventListener("DOMContentLoaded",function(){function n(){const n=document.createElement("div");n.className="cherry-blossom-leaf",document.body.appendChild(n);const t=Math.random()*window.innerWidth,e=5*Math.random()+5;n.style.left=`${t}px`,n.style.animationDuration=`${e}s`}for(let t=0;t<50;t++)n()});
