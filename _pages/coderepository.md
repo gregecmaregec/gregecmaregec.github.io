@@ -8,10 +8,9 @@ nav_order: 3
 
 ---
 
-[MIT Licence](https://github.com/gregecmaregec/gregecmaregec.github.io/blob/master/LICENSE)
-
 ---
 
+[MIT Licence](https://github.com/gregecmaregec/gregecmaregec.github.io/blob/master/LICENSE)
 
 `the blossom circles effect in /philosophy.`
 <br>
@@ -89,6 +88,10 @@ createLeaves();
 animate();
 
 ```
+
+---
+
+
 <br>
 <br>
 <br>
