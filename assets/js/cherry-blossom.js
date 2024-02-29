@@ -8,6 +8,10 @@ const ctx = canvas.getContext('2d');
 // Create an array to store the cherry blossom leaves
 const leaves = [];
 
+// Set canvas size to cover half of the body
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight / 2;
+
 // Create a class for the cherry blossom leaves
 class Leaf {
     constructor(x, y, size, speed) {
@@ -40,8 +44,9 @@ function createLeaves() {
     const leafCount = 20;
 
     for (let i = 0; i < leafCount; i++) {
+        // Ensure leaves spawn within the entire horizontal width and half of the height
         const x = Math.random() * window.innerWidth;
-        const y = Math.random() * window.innerHeight;
+        const y = Math.random() * (window.innerHeight / 2);
         const size = Math.random() * 10 + 5;
         const speed = Math.random() * 0.5 + 0.5; // Slow down the falling speed
         const leaf = new Leaf(x, y, size, speed);
@@ -63,10 +68,6 @@ function animate() {
     requestAnimationFrame(animate);
 }
 
-// Set canvas size to cover the entire body
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-
 // Call the createLeaves function to initialize the cherry blossom leaves
 createLeaves();
 
@@ -75,6 +76,7 @@ animate();
 
 // Update canvas size on window resize
 window.addEventListener('resize', () => {
+    // Update the canvas size to cover half of the body
     canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    canvas.height = window.innerHeight / 2;
 });
