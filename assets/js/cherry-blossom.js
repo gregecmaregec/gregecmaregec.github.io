@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
       document.body.appendChild(leaf);
   
       const startPositionX = Math.random() * window.innerWidth;
+      const startPositionY = -10; // Start above the viewport
       const rotation = Math.random() * 360;
   
       leaf.style.position = "absolute";
@@ -23,12 +24,13 @@ document.addEventListener("DOMContentLoaded", function () {
       leaf.style.zIndex = "999";
       leaf.style.pointerEvents = "none";
       leaf.style.left = startPositionX + "px";
-      leaf.style.animation = `fall linear infinite ${10 + Math.random() * 10}s`; // Increased duration
+      leaf.style.top = startPositionY + "px";
+      leaf.style.animation = `fall linear infinite ${10 + Math.random() * 10}s`;
       leaf.style.transform = "rotate(" + rotation + "deg)";
   
       leaf.addEventListener("animationiteration", () => {
         leaf.style.left = Math.random() * window.innerWidth + "px";
+        leaf.style.top = startPositionY + "px"; // Reset to the top
       });
     }
   });
-  
