@@ -10,7 +10,7 @@ const leaves = [];
 
 // Set canvas size to cover half of the body initially
 canvas.width = window.innerWidth;
-canvas.height = window.innerHeight / 2.5;
+canvas.height = window.innerHeight / 2;
 
 // Create a class for the cherry blossom leaves
 class Leaf {
