@@ -1,1 +1,1 @@
-function handleScroll(){hasScrolled=!0,window.removeEventListener("scroll",handleScroll)}window.scrollTo(0,0);let hasScrolled=!1;window.addEventListener("scroll",handleScroll),setTimeout(()=>{if(!hasScrolled){const e=window.innerWidth/2,o=e/(6e3/16.7);let n=0;function l(){n+=o,window.scrollTo(n,0),n<e&&requestAnimationFrame(l)}l()}},4e3);
+window.onload=(()=>{let n=!1;if(window.addEventListener("scroll",()=>{n=!0}),!n){const e=window.innerHeight/2,l=e/4e3*10;let o=0;const t=setInterval(()=>{o>=e||n?clearInterval(t):(o+=l,window.scrollBy(0,l))},10)}});
