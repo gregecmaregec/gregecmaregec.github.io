@@ -1,45 +1,25 @@
-// Place user at the top of the page
-window.scrollTo(0, 0);
+window.onload = () => {
+    // Check if the user has scrolled manually
+    let userScrolled = false;
+    window.addEventListener('scroll', () => {
+        userScrolled = true;
+    });
 
-// Variable to track if user has scrolled
-let hasScrolled = false;
+    // Scroll down half the width of the screen in 4 seconds
+    if (!userScrolled) {
+        const screenHeight = window.innerHeight;
+        const scrollDistance = screenHeight / 2;
+        const scrollDuration = 4000;
+        const scrollStep = scrollDistance / scrollDuration * 10;
 
-// Function to handle scroll event
-function handleScroll() {
-    hasScrolled = true;
-    window.removeEventListener('scroll', handleScroll);
-}
-
-// Add scroll event listener
-window.addEventListener('scroll', handleScroll);
-
-// Wait for 4 seconds
-setTimeout(() => {
-    // Check if user has scrolled
-    if (!hasScrolled) {
-        // Calculate the target position to scroll to
-        const targetPosition = window.innerWidth / 2;
-
-        // Calculate the duration of the scroll animation
-        const duration = 6000;
-
-        // Calculate the distance to scroll per frame
-        const distancePerFrame = targetPosition / (duration / 16.7); // Assuming 60 frames per second
-
-        // Variable to track the current scroll position
-        let currentPosition = 0;
-
-        // Function to perform smooth scrolling animation
-        function smoothScroll() {
-            currentPosition += distancePerFrame;
-            window.scrollTo(currentPosition, 0);
-
-            if (currentPosition < targetPosition) {
-                requestAnimationFrame(smoothScroll);
+        let scrollPosition = 0;
+        const scrollInterval = setInterval(() => {
+            if (scrollPosition >= scrollDistance || userScrolled) {
+                clearInterval(scrollInterval);
+            } else {
+                scrollPosition += scrollStep;
+                window.scrollBy(0, scrollStep);
             }
-        }
-
-        // Start the smooth scrolling animation
-        smoothScroll();
+        }, 10);
     }
-}, 4000);
+};
