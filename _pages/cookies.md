@@ -1,11 +1,11 @@
 ---
 layout: page
 permalink: /cookies/
-description: Privacy policy.
+description: Privacy policy
 nav: false
 ---
 
-# Cookie Policy for https://gregecmaregec.github.io/
+# Cookie Policy 
 
 <br>
 <br>
@@ -18,7 +18,7 @@ As is common practice with almost all professional websites, this site uses cook
 
 ## How I Use Cookies
 
-I use cookies for a variety of reasons (such as setting a dark/light theme, enabling certain code to execute etc.). Unfortunately, in most cases, there are no industry standard options for disabling cookies without completely disabling the functionality and features they add to this site. It is recommended that you leave on all cookies if you are not sure whether you need them or not in case they are used to provide a service that you use. You may delete cookies at any time after visiting my website.
+I use cookies for a variety of reasons, such as setting a dark/light theme, preventing glitchy autoscroll, allowing certain code to execute etc. Unfortunately, in most cases, there are no industry standard options for disabling cookies without completely disabling the functionality and features they add to this site. It is recommended that you leave on all cookies if you are not sure whether you need them or not in case they are used to provide a service that you use. You may delete cookies at any time after visiting my website.
 
 ## Disabling Cookies
 
@@ -38,6 +38,6 @@ From time to time, I test new features and make subtle changes to the way that t
 
 Hopefully, that has clarified things for you. And, as was previously mentioned, if there is something that you aren't sure whether you need or not, it's usually safer to leave cookies enabled in case they do interact with one of the features you use on my site.
 
-However, if you are still looking for more information, or you would like me to remove your data completely, then you can contact me through:
+However, if you are still looking for more information, or you would like help with remove your cookies on this website completely, then you can contact me through:
 
 Email: gregor.mihelac (at) outlook.com
