@@ -11,11 +11,11 @@
 <span class="c1">// create an array to store the cherry blossom leaves</span>
 <span class="kd">const</span> <span class="nx">leaves</span> <span class="o">=</span> <span class="p">[];</span>
 
-<span class="c1">// create an array to store the cherry blossom leaves</span>
-<span class="nx">canvas</span><span class="p">.</span><span class="nx">width</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">innerWidth</span> <span class="o">*</span> <span class="mf">0.98</span><span class="p">;</span>
-<span class="nx">canvas</span><span class="p">.</span><span class="nx">height</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">innerHeight</span> <span class="o">*</span> <span class="mf">0.98</span><span class="p">;</span>
+<span class="c1">// keeping canvas at 0.99 of the window size prevents overflow</span>
+<span class="nx">canvas</span><span class="p">.</span><span class="nx">width</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">innerWidth</span> <span class="o">*</span> <span class="mf">0.99</span><span class="p">;</span>
+<span class="nx">canvas</span><span class="p">.</span><span class="nx">height</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">innerHeight</span> <span class="o">*</span> <span class="mf">0.99</span><span class="p">;</span>
 
-<span class="c1">// 'balls' are called Leaf</span>
+<span class="c1">// balls are called Leaf</span>
 <span class="kd">class</span> <span class="nc">Leaf</span> <span class="p">{</span>
     <span class="nf">constructor</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">,</span> <span class="nx">size</span><span class="p">,</span> <span class="nx">speed</span><span class="p">)</span> <span class="p">{</span>
         <span class="k">this</span><span class="p">.</span><span class="nx">x</span> <span class="o">=</span> <span class="nx">x</span><span class="p">;</span>
@@ -62,7 +62,7 @@
 
 <span class="kd">let</span> <span class="nx">userHasScrolled</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
 
-<span class="c1">// detect user-initiated scroll actions to disable auto scroll feature</span>
+<span class="c1">// detech user-initiated scroll actions to disable auto scroll feature</span>
 <span class="nb">window</span><span class="p">.</span><span class="nf">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">wheel</span><span class="dl">'</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">userHasScrolled</span> <span class="o">=</span> <span class="kc">true</span><span class="p">);</span>
 <span class="nb">window</span><span class="p">.</span><span class="nf">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">touchmove</span><span class="dl">'</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">userHasScrolled</span> <span class="o">=</span> <span class="kc">true</span><span class="p">);</span>
 
@@ -92,7 +92,7 @@
         <span class="kd">const</span> <span class="nx">startY</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">scrollY</span><span class="p">;</span>
         <span class="nf">requestAnimationFrame</span><span class="p">(</span><span class="nx">scrollStep</span><span class="p">);</span>
     <span class="p">}</span>
-<span class="c1">// 4 seconds of inaction starts auto-scroll function</span>
+<span class="c1">// 4 seconds of inaction starts auto-scroll to complete</span>
 <span class="p">},</span> <span class="mi">4000</span><span class="p">);</span>
 
 <span class="c1">// a technique for auto-scrolling to be smooth</span>
