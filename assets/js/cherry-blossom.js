@@ -71,14 +71,14 @@ let scrolledByUser = false;
 setTimeout(() => {
     if (!scrolledByUser) {
         const scrollDistance = canvas.height / 2;
-        const scrollDuration = 5000;
+        const scrollDuration = 8000;
         const startTime = performance.now();
-        const startY = window.pageYOffset;
+        const startY = window.scrollY;
 
         function scrollStep(timestamp) {
             const currentTime = timestamp - startTime;
             const scrollProgress = currentTime / scrollDuration;
-            const scrollY = startY + scrollProgress * scrollDistance;
+            const scrollY = easeInOutQuad(currentTime, startY, scrollDistance, scrollDuration);
 
             window.scrollTo(0, scrollY);
 
@@ -95,3 +95,11 @@ setTimeout(() => {
 window.addEventListener('scroll', () => {
     scrolledByUser = true;
 });
+
+// Easing function for smooth scrolling
+function easeInOutQuad(t, b, c, d) {
+    t /= d / 2;
+    if (t < 1) return c / 2 * t * t + b;
+    t--;
+    return -c / 2 * (t * (t - 2) - 1) + b;
+}
