@@ -3,7 +3,7 @@
 layout: code
 permalink: /code/
 title: code showoff
-description: all code posted on this site is under the MIT licence.
+description: all code posted on this site is under the MIT license.
 nav: true
 nav_order: 3
 
@@ -11,7 +11,7 @@ nav_order: 3
 
 ---
 
-[MIT Licence](https://github.com/gregecmaregec/gregecmaregec.github.io/blob/master/LICENSE)
+[MIT License](https://github.com/gregecmaregec/gregecmaregec.github.io/blob/master/LICENSE)
 
 <br>
 <br>
