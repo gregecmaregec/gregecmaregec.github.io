@@ -62,6 +62,36 @@ function animate() {
     requestAnimationFrame(animate);
 }
 
-
 createLeaves();
 animate();
+
+let scrolledByUser = false;
+
+// Scroll down after 4 seconds if the user hasn't scrolled by themselves
+setTimeout(() => {
+    if (!scrolledByUser) {
+        const scrollDistance = canvas.height / 2;
+        const scrollDuration = 5000;
+        const startTime = performance.now();
+        const startY = window.pageYOffset;
+
+        function scrollStep(timestamp) {
+            const currentTime = timestamp - startTime;
+            const scrollProgress = currentTime / scrollDuration;
+            const scrollY = startY + scrollProgress * scrollDistance;
+
+            window.scrollTo(0, scrollY);
+
+            if (currentTime < scrollDuration) {
+                requestAnimationFrame(scrollStep);
+            }
+        }
+
+        requestAnimationFrame(scrollStep);
+    }
+}, 4000);
+
+// Event listener for scroll event
+window.addEventListener('scroll', () => {
+    scrolledByUser = true;
+});
