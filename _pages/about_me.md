@@ -16,5 +16,5 @@ github: [github.com/gregecmaregec](https://github.com/gregecmaregec)</i>
 <br>
 <br>
 <br>
-this website is built using:
+this website is built using:<br>
 html ; js ; jekyll ; liquid template language ; ruby ; css
