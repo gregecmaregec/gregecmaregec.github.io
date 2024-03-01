@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",function(){sessionStorage.getItem("visited")||(sessionStorage.setItem("visited",!0),window.scrollTo(0,0))});
