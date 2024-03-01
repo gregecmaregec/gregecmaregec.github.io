@@ -66,6 +66,7 @@ createLeaves();
 animate();
 
 let scrolledByUser = false;
+let scrollingActive = true; // Flag to track if automated scrolling is active
 
 // Scroll down after 4 seconds if the user hasn't scrolled by themselves
 setTimeout(() => {
@@ -76,6 +77,8 @@ setTimeout(() => {
         const startY = window.scrollY;
 
         function scrollStep(timestamp) {
+            if (!scrollingActive) return; // Stop scrolling if flag is false
+
             const currentTime = timestamp - startTime;
             const scrollProgress = currentTime / scrollDuration;
             const scrollY = easeInOutQuad(currentTime, startY, scrollDistance, scrollDuration);
@@ -94,6 +97,7 @@ setTimeout(() => {
 // Event listener for scroll event
 window.addEventListener('scroll', () => {
     scrolledByUser = true;
+    scrollingActive = false; // Disable automated scrolling when user starts scrolling
 });
 
 // Easing function for smooth scrolling
