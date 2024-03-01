@@ -40,8 +40,7 @@ function createLeaves() {
         const y = Math.random() * (window.innerHeight / 2);
         const size = Math.random() * 10 + 5;
         const speed = Math.random() * 0.5 + 0.5;
-        const leaf = new Leaf(x, y, size, speed);
-        leaves.push(leaf);
+        leaves.push(new Leaf(x, y, size, speed));
     }
 }
 
@@ -56,48 +55,42 @@ function animate() {
 createLeaves();
 animate();
 
-let scrolledByUser = false;
-let isScriptScrolling = false;
+let userHasScrolled = false;
+
+// Detect user-initiated scroll actions
+window.addEventListener('wheel', () => userHasScrolled = true);
+window.addEventListener('touchmove', () => userHasScrolled = true);
 
 setTimeout(() => {
-    if (!scrolledByUser) {
+    if (!userHasScrolled) {
         const scrollDistance = canvas.height / 2;
         const scrollDuration = 8000;
-        const startTime = performance.now();
-        const startY = window.scrollY;
+        let startTime = null;
 
         function scrollStep(timestamp) {
-            if (scrolledByUser) {
-                return;
-            }
+            if (userHasScrolled) return;
 
-            isScriptScrolling = true;
+            if (!startTime) startTime = timestamp;
+            const elapsedTime = timestamp - startTime;
+            const progress = elapsedTime / scrollDuration;
 
-            const currentTime = timestamp - startTime;
-            const scrollY = easeInOutQuad(currentTime, startY, scrollDistance, scrollDuration);
+            const scrollY = easeInOutQuad(progress) * scrollDistance;
+            window.scrollTo(0, startY + scrollY);
 
-            window.scrollTo(0, scrollY);
-
-            if (currentTime < scrollDuration) {
+            if (elapsedTime < scrollDuration) {
                 requestAnimationFrame(scrollStep);
-            } else {
-                isScriptScrolling = false;
             }
         }
 
+        const startY = window.scrollY;
         requestAnimationFrame(scrollStep);
     }
 }, 4000);
 
-window.addEventListener('scroll', () => {
-    if (!isScriptScrolling) {
-        scrolledByUser = true;
+function easeInOutQuad(progress) {
+    if (progress < 0.5) {
+        return 2 * progress * progress;
+    } else {
+        return -1 + (4 - 2 * progress) * progress;
     }
-});
-
-function easeInOutQuad(t, b, c, d) {
-    t /= d / 2;
-    if (t < 1) return c / 2 * t * t + b;
-    t--;
-    return -c / 2 * (t * (t - 2) - 1) + b;
 }
