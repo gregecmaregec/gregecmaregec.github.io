@@ -13,13 +13,17 @@ nav_order: 3
 
 [MIT Licence](https://github.com/gregecmaregec/gregecmaregec.github.io/blob/master/LICENSE)
 
-`the blossom circles effect in /philosophy.`
 <br>
 <br>
 
-`javascript.`
+## the blossom circles and scroll effect in /philosophy.
+
+<small>
 
 ```javascript
+
+// javascript
+
 // Create a canvas element
 const canvas = document.createElement('canvas');
 document.body.appendChild(canvas);
@@ -89,6 +93,8 @@ createLeaves();
 animate();
 
 ```
+
+</small>
 
 ---
 
