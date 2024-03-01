@@ -20,31 +20,24 @@ class Leaf {
     }
 
     update() {
-        // Move the circles downwards slowly
-        this.y += this.speed * 0.2; // Adjust the speed factor to make the leaves fall slower
-
-        // Draw the circles on the canvas
+        this.y += this.speed * 0.2;
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(255, 192, 203, 0.3)'; // That 0.3 in the end means 30% opacity
+        ctx.fillStyle = 'rgba(255, 192, 203, 0.3)';
         ctx.fill();
         ctx.closePath();
 
-        // Reset the leaf position if it goes off the screen
         if (this.y > canvas.height + this.size) {
             this.y = -this.size;
         }
     }
 }
 
-// Function to create cherry blossom circles
 function createLeaves() {
     const leafCount = 20;
-
-    // Blossoms spawn in the top half of the screen first because of const y
     for (let i = 0; i < leafCount; i++) {
         const x = Math.random() * window.innerWidth;
-        const y = Math.random() * (window.innerHeight / 2); 
+        const y = Math.random() * (window.innerHeight / 2);
         const size = Math.random() * 10 + 5;
         const speed = Math.random() * 0.5 + 0.5;
         const leaf = new Leaf(x, y, size, speed);
@@ -52,13 +45,11 @@ function createLeaves() {
     }
 }
 
-// Function to animate the cherry blossom circles
 function animate() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     for (const leaf of leaves) {
         leaf.update();
     }
-
     requestAnimationFrame(animate);
 }
 
@@ -66,8 +57,8 @@ createLeaves();
 animate();
 
 let scrolledByUser = false;
+let scrollAnimationRequest;
 
-// Scroll down after 4 seconds if the user hasn't scrolled by themselves
 setTimeout(() => {
     if (!scrolledByUser) {
         const scrollDistance = canvas.height / 2;
@@ -76,6 +67,11 @@ setTimeout(() => {
         const startY = window.scrollY;
 
         function scrollStep(timestamp) {
+            if (scrolledByUser) {
+                cancelAnimationFrame(scrollAnimationRequest);
+                return;
+            }
+
             const currentTime = timestamp - startTime;
             const scrollProgress = currentTime / scrollDuration;
             const scrollY = easeInOutQuad(currentTime, startY, scrollDistance, scrollDuration);
@@ -83,20 +79,21 @@ setTimeout(() => {
             window.scrollTo(0, scrollY);
 
             if (currentTime < scrollDuration) {
-                requestAnimationFrame(scrollStep);
+                scrollAnimationRequest = requestAnimationFrame(scrollStep);
             }
         }
 
-        requestAnimationFrame(scrollStep);
+        scrollAnimationRequest = requestAnimationFrame(scrollStep);
     }
 }, 4000);
 
-// Event listener for scroll event
 window.addEventListener('scroll', () => {
     scrolledByUser = true;
+    if (scrollAnimationRequest) {
+        cancelAnimationFrame(scrollAnimationRequest);
+    }
 });
 
-// Easing function for smooth scrolling
 function easeInOutQuad(t, b, c, d) {
     t /= d / 2;
     if (t < 1) return c / 2 * t * t + b;
