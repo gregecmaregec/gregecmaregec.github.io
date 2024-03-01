@@ -1,16 +1,20 @@
-// Create a canvas element
+// javascript
+
+// create a canvas element
 const canvas = document.createElement('canvas');
 document.body.appendChild(canvas);
 
-// Get the 2D rendering context
+// get the 2D rendering context
 const ctx = canvas.getContext('2d');
 
-// Create an array to store the cherry blossom leaves
+// create an array to store the cherry blossom leaves
 const leaves = [];
 
+// create an array to store the cherry blossom leaves
 canvas.width = window.innerWidth * 0.98;
 canvas.height = window.innerHeight * 0.98;
 
+// balls are called Leaf
 class Leaf {
     constructor(x, y, size, speed) {
         this.x = x;
@@ -57,14 +61,16 @@ animate();
 
 let userHasScrolled = false;
 
-// Detect user-initiated scroll actions
+// detech user-initiated scroll actions to disable auto scroll feature
 window.addEventListener('wheel', () => userHasScrolled = true);
 window.addEventListener('touchmove', () => userHasScrolled = true);
 
 setTimeout(() => {
     if (!userHasScrolled) {
+        // balls get generated at the bottom half first
         const scrollDistance = canvas.height / 2;
-        const scrollDuration = 8000;
+        // 10 seconds for the auto-scrolling to complete
+        const scrollDuration = 10000;
         let startTime = null;
 
         function scrollStep(timestamp) {
@@ -85,8 +91,10 @@ setTimeout(() => {
         const startY = window.scrollY;
         requestAnimationFrame(scrollStep);
     }
+// 4 seconds of inaction starts auto-scroll to complete
 }, 4000);
 
+// a technique for auto-scrolling to be smooth
 function easeInOutQuad(progress) {
     if (progress < 0.5) {
         return 2 * progress * progress;
