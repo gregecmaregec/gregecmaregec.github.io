@@ -6,7 +6,6 @@ title: showroom
 
 ---
 
-`expect a lot more to be here very soon`
 <br>
 <br>
 <br>
@@ -23,5 +22,7 @@ title: showroom
 print("hello world!")
 
 ```
+<br>
+`expect a lot more to be here very soon`
 
 ---
