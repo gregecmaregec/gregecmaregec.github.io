@@ -32,11 +32,11 @@ const ctx = canvas.getContext('2d');
 // create an array to store the cherry blossom leaves
 const leaves = [];
 
-// create an array to store the cherry blossom leaves
-canvas.width = window.innerWidth * 0.98;
-canvas.height = window.innerHeight * 0.98;
+// keeping canvas at 0.99 of the window size prevents overflow
+canvas.width = window.innerWidth * 0.99;
+canvas.height = window.innerHeight * 0.99;
 
-// 'balls' are called Leaf
+// balls are called Leaf
 class Leaf {
     constructor(x, y, size, speed) {
         this.x = x;
@@ -83,7 +83,7 @@ animate();
 
 let userHasScrolled = false;
 
-// detect user-initiated scroll actions to disable auto scroll feature
+// detech user-initiated scroll actions to disable auto scroll feature
 window.addEventListener('wheel', () => userHasScrolled = true);
 window.addEventListener('touchmove', () => userHasScrolled = true);
 
@@ -113,7 +113,7 @@ setTimeout(() => {
         const startY = window.scrollY;
         requestAnimationFrame(scrollStep);
     }
-// 4 seconds of inaction starts auto-scroll function
+// 4 seconds of inaction starts auto-scroll to complete
 }, 4000);
 
 // a technique for auto-scrolling to be smooth

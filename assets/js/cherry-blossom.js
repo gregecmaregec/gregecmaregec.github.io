@@ -10,9 +10,9 @@ const ctx = canvas.getContext('2d');
 // create an array to store the cherry blossom leaves
 const leaves = [];
 
-// create an array to store the cherry blossom leaves
-canvas.width = window.innerWidth * 0.98;
-canvas.height = window.innerHeight * 0.98;
+// keeping canvas at 0.99 of the window size prevents overflow
+canvas.width = window.innerWidth * 0.99;
+canvas.height = window.innerHeight * 0.99;
 
 // balls are called Leaf
 class Leaf {
