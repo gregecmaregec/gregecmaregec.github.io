@@ -57,7 +57,7 @@ createLeaves();
 animate();
 
 let scrolledByUser = false;
-let scrollAnimationRequest;
+let isScriptScrolling = false;
 
 setTimeout(() => {
     if (!scrolledByUser) {
@@ -68,29 +68,30 @@ setTimeout(() => {
 
         function scrollStep(timestamp) {
             if (scrolledByUser) {
-                cancelAnimationFrame(scrollAnimationRequest);
                 return;
             }
 
+            isScriptScrolling = true;
+
             const currentTime = timestamp - startTime;
-            const scrollProgress = currentTime / scrollDuration;
             const scrollY = easeInOutQuad(currentTime, startY, scrollDistance, scrollDuration);
 
             window.scrollTo(0, scrollY);
 
             if (currentTime < scrollDuration) {
-                scrollAnimationRequest = requestAnimationFrame(scrollStep);
+                requestAnimationFrame(scrollStep);
+            } else {
+                isScriptScrolling = false;
             }
         }
 
-        scrollAnimationRequest = requestAnimationFrame(scrollStep);
+        requestAnimationFrame(scrollStep);
     }
 }, 4000);
 
 window.addEventListener('scroll', () => {
-    scrolledByUser = true;
-    if (scrollAnimationRequest) {
-        cancelAnimationFrame(scrollAnimationRequest);
+    if (!isScriptScrolling) {
+        scrolledByUser = true;
     }
 });
 
