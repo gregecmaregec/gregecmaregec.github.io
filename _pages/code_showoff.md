@@ -164,8 +164,9 @@ if [ "$USER" = "serverguest" ]; then
      exit #drops the connection after the program is quit
 fi
 
-# save the script under /etc/profile.d/startup.sh
+# save the script under /etc/profile.d/ with the .sh extension
 # to have it run on every log-in (inlcuding root)
+
 # make serverguest have restricted bash by running
 chsh -s /bin/rbash serverguest
 # in the terminal as super user
