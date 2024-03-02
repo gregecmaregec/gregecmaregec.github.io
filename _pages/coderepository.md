@@ -84,7 +84,7 @@ animate();
 
 let userHasScrolled = false;
 
-// detech user-initiated scroll actions to disable auto scroll feature
+// detect user-initiated scroll actions to disable auto scroll feature
 window.addEventListener('wheel', () => userHasScrolled = true);
 window.addEventListener('touchmove', () => userHasScrolled = true);
 
