@@ -158,7 +158,7 @@ if [ "$USER" = "serverguest" ]; then
      welcome
      "
      yourprogram # this is the program that you want to execute
-     # it will basically run it in the terminal
+     # it will basically run as if typing yourprogram into the terminal
 
      exit #drops the connection after the program is quit
 fi
@@ -166,7 +166,7 @@ fi
 # save the script under /etc/profile.d/startup.sh
 # to have it run on every log-in (inlcuding root)
 # make serverguest have restricted bash by running
-sudo chsh -s /bin/rbash llmguest
+chsh -s /bin/rbash llmguest
 # in the terminal as super user
 
 ```
