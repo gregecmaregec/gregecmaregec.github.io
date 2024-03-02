@@ -16,9 +16,9 @@ All code shown explicitly on /code is under the [MIT License](https://github.com
 
 ### the blossom circles and scroll effect in /philosophy.
 
-```javascript
+`javascript`
 
-// javascript
+```javascript
 
 // create a canvas element
 const canvas = document.createElement('canvas');
@@ -128,12 +128,14 @@ function easeInOutQuad(progress) {
 
 ---
 
+<br>
+<br>
+
 ### bash script to load an ssh guest directly to a program
 
+`bash script`
+
 ```bash
-
-// bash
-
 
 #!/bin/bash
 
@@ -155,7 +157,10 @@ if [ "$USER" = "serverguest" ]; then
      echo -e "
      welcome
      "
-     neofetch # this is the program that you want to execute
+     yourprogram # this is the program that you want to execute
+     # it will basically run it in the terminal
+
+     exit #drops the connection after the program is quit
 fi
 
 # save the script under /etc/profile.d/startup.sh
