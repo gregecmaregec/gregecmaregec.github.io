@@ -6,14 +6,14 @@ document.body.appendChild(canvas);
 const ctx = canvas.getContext('2d');
 
 // define the number of blocks in X and Y directions
-const numBlocksX = 20;
-const numBlocksY = 20;
+const numBlocksX = 200;
+const numBlocksY = 200;
 
 // calculate the maximum dimension of the display
 const maxDimension = Math.min(window.innerWidth, window.innerHeight);
 
 // set the canvas size to be 400x400 pixels and centered horizontally
-const canvasSize = 400;
+const canvasSize = Math.min(maxDimension, 400);
 canvas.width = canvasSize;
 canvas.height = canvasSize;
 canvas.style.marginLeft = `${(window.innerWidth - canvasSize) / 2}px`;
@@ -109,10 +109,10 @@ function drawGrid() {
             const isAlive = grid[x][y] === 1;
 
             if (isAlive) {
-                ctx.fillStyle = 'white'; // Inverted color scheme: white for populated blocks
+                ctx.fillStyle = 'rgba(255, 192, 203, 0.9)'; // same color as cherry blossoms
             } else {
-                ctx.fillStyle = 'black'; // Inverted color scheme: black for unpopulated blocks
-            }
+                ctx.fillStyle = 'rgba(0, 0, 0, 0)'; // completely transparent for unpopulated blocks
+            
 
             const posX = x * blockSize;
             const posY = y * blockSize;
