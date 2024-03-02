@@ -6,5 +6,10 @@ title: showroom
 
 ---
 
-game of life simulation on a 200x200 block space<br>
-randomly assingining populated / unpopulated blocks
+```python
+
+print("hello world!")
+
+```
+
+`200x200 game of life sim`
