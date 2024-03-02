@@ -6,10 +6,8 @@ title: showroom
 
 ---
 
-```python
+<br>
 
-print("hello world!")
+`hello world!`
 
-```
-
-`200x200 game of life sim`
+enjoy a 200x200 game of life sim. reload the page to reload
