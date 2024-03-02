@@ -1,7 +1,7 @@
 ---
 
-layout: showroom
-permalink: /philosophy/
+layout: gameoflife
+permalink: /gameoflife/
 title: game of life sim
 description: 
 nav: true
