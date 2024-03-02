@@ -1,6 +1,6 @@
 ---
 
-layout: showroom
+layout: about
 permalink: /
 title: showroom
 
