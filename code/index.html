@@ -136,7 +136,7 @@
 chsh <span class="nt">-s</span> /bin/rbash serverguest
 <span class="c"># in the terminal as super user</span>
 
-</code></pre></div></div> <hr> <h3 id="game-of-life-simulation-under-my-conditions">game of life simulation under my conditions</h3> <p><code class="language-plaintext highlighter-rouge">javascript</code></p> <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// create a canvas element</span>
+</code></pre></div></div> <p><br> <br></p> <hr> <p><br> <br></p> <h3 id="game-of-life-simulation">game of life simulation</h3> <p><code class="language-plaintext highlighter-rouge">javascript</code></p> <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// create a canvas element</span>
 <span class="kd">const</span> <span class="nx">canvas</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nf">createElement</span><span class="p">(</span><span class="dl">'</span><span class="s1">canvas</span><span class="dl">'</span><span class="p">);</span>
 <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nf">appendChild</span><span class="p">(</span><span class="nx">canvas</span><span class="p">);</span>
 
@@ -214,6 +214,9 @@ chsh <span class="nt">-s</span> /bin/rbash serverguest
 
     <span class="nx">grid</span> <span class="o">=</span> <span class="nx">newGrid</span><span class="p">;</span>
 <span class="p">}</span>
+
+<span class="c1">// important feature of game of life is to count the neighbours</span>
+<span class="c1">// and update alive or dead in accordance</span>
 
 <span class="kd">function</span> <span class="nf">countNeighbors</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">)</span> <span class="p">{</span>
     <span class="kd">let</span> <span class="nx">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
