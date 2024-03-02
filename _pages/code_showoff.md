@@ -172,9 +172,15 @@ chsh -s /bin/rbash serverguest
 
 ```
 
+<br>
+<br>
+
 ---
 
-### game of life simulation under my conditions
+<br>
+<br>
+
+### game of life simulation
 `javascript`
 
 ```javascript
@@ -256,6 +262,9 @@ function updateGrid() {
 
     grid = newGrid;
 }
+
+// important feature of game of life is to count the neighbours
+// and update alive or dead in accordance
 
 function countNeighbors(x, y) {
     let count = 0;
