@@ -139,6 +139,7 @@ function easeInOutQuad(progress) {
 
 #!/bin/bash
 
+#let's assume your guest user is called 'serverguest'
 
 if [ "$USER" = "serverguest" ]; then
      trap '' SIGINT
@@ -166,7 +167,7 @@ fi
 # save the script under /etc/profile.d/startup.sh
 # to have it run on every log-in (inlcuding root)
 # make serverguest have restricted bash by running
-chsh -s /bin/rbash llmguest
+chsh -s /bin/rbash serverguest
 # in the terminal as super user
 
 ```
