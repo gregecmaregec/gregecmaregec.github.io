@@ -1,5 +1,3 @@
-// javascript
-
 // create a canvas element
 const canvas = document.createElement('canvas');
 document.body.appendChild(canvas);
@@ -7,19 +5,21 @@ document.body.appendChild(canvas);
 // get the 2D rendering context
 const ctx = canvas.getContext('2d');
 
-// calculate the maximum dimension of the display
-const maxDimension = Math.max(window.innerWidth, window.innerHeight);
+// define the number of blocks in X and Y directions
+const numBlocksX = 20;
+const numBlocksY = 20;
 
-// set the canvas size to be a square with the maximum dimension
-canvas.width = maxDimension;
-canvas.height = maxDimension;
+// calculate the maximum dimension of the display
+const maxDimension = Math.min(window.innerWidth, window.innerHeight);
+
+// set the canvas size to be 400x400 pixels and centered horizontally
+const canvasSize = 400;
+canvas.width = canvasSize;
+canvas.height = canvasSize;
+canvas.style.marginLeft = `${(window.innerWidth - canvasSize) / 2}px`;
 
 // calculate the size of each block in the grid based on the maximum dimension
-const blockSize = maxDimension / Math.max(numBlocksX, numBlocksY);
-
-// calculate the offset to center the grid on the canvas
-const offsetX = (canvas.width - numBlocksX * blockSize) / 2;
-const offsetY = (canvas.height - numBlocksY * blockSize) / 2;
+const blockSize = canvasSize / Math.max(numBlocksX, numBlocksY);
 
 // create a 2D array to store the grid state
 let grid = createGrid();
@@ -109,13 +109,13 @@ function drawGrid() {
             const isAlive = grid[x][y] === 1;
 
             if (isAlive) {
-                ctx.fillStyle = 'black';
+                ctx.fillStyle = 'white'; // Inverted color scheme: white for populated blocks
             } else {
-                ctx.fillStyle = 'white';
+                ctx.fillStyle = 'black'; // Inverted color scheme: black for unpopulated blocks
             }
 
-            const posX = offsetX + x * blockSize;
-            const posY = offsetY + y * blockSize;
+            const posX = x * blockSize;
+            const posY = y * blockSize;
 
             ctx.fillRect(posX, posY, blockSize, blockSize);
         }
