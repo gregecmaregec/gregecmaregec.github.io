@@ -5,17 +5,17 @@ document.body.appendChild(canvas);
 // get the 2D rendering context
 const ctx = canvas.getContext('2d');
 
-// define the number of blocks in X and Y directions
 const numBlocksX = 200;
 const numBlocksY = 200;
 
 // calculate the maximum dimension of the display
 const maxDimension = Math.min(window.innerWidth, window.innerHeight);
 
-// set the canvas size to be 400x400 pixels and centered horizontally
+// set the canvas size to be 400x400 pixels
 const canvasSize = Math.min(maxDimension, 400);
 canvas.width = canvasSize;
 canvas.height = canvasSize;
+// below sets the canvas to be centered on the page
 canvas.style.marginLeft = `${(window.innerWidth - canvasSize) / 2}px`;
 
 // calculate the size of each block in the grid based on the maximum dimension
@@ -109,9 +109,9 @@ function drawGrid() {
             const isAlive = grid[x][y] === 1;
 
             if (isAlive) {
-                ctx.fillStyle = 'rgba(255, 192, 203, 0.99)'; // White color for populated blocks
+                ctx.fillStyle = 'rgba(255, 192, 203, 0.99)'; // cherry blossom color
             } else {
-                ctx.fillStyle = 'rgba(0, 0, 0, 0)'; // Completely transparent for unpopulated blocks
+                ctx.fillStyle = 'rgba(0, 0, 0, 0)'; // completely transparent
             }
 
             const posX = x * blockSize;
@@ -121,3 +121,5 @@ function drawGrid() {
         }
     }
 }
+
+// check wikipedia for game of life on more info
