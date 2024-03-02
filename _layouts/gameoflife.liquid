@@ -20,9 +20,6 @@
     
     <!-- Header -->
     {% include header.liquid %}
-
-    <!-- game of life sim -->
-    <script src="{{ site.baseurl }}/assets/js/cherry-blossoms.js"></script>
   
     <!-- Content -->
     <div class="container mt-5" role="main">
@@ -50,6 +47,9 @@
         {{ content }}
       {% endif %}
     </div>
+
+    <!-- game of life sim -->
+    <script src="{{ site.baseurl }}/assets/js/cherry_blossoms.js"></script>
 
     <!-- Footer -->
     {% include footer.liquid %}
