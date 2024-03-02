@@ -109,10 +109,10 @@ function drawGrid() {
             const isAlive = grid[x][y] === 1;
 
             if (isAlive) {
-                ctx.fillStyle = 'rgba(255, 192, 203, 0.9)'; // same color as cherry blossoms
+                ctx.fillStyle = 'rgba(255, 192, 203, 0.99)'; // White color for populated blocks
             } else {
-                ctx.fillStyle = 'rgba(0, 0, 0, 0)'; // completely transparent for unpopulated blocks
-            
+                ctx.fillStyle = 'rgba(0, 0, 0, 0)'; // Completely transparent for unpopulated blocks
+            }
 
             const posX = x * blockSize;
             const posY = y * blockSize;
