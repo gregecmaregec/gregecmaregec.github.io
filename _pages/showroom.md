@@ -5,9 +5,6 @@ permalink: /
 title: showroom
 
 ---
-
-<br>
-
 `expect a lot more to be here very soon`
 
 <br>
@@ -26,6 +23,3 @@ print("hello world!")
 
 ```
 <br>
-
-
----
