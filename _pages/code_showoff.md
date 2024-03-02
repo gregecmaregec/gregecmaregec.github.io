@@ -3,15 +3,13 @@
 layout: code
 permalink: /code/
 title: code showoff
-description: all code posted on this site is under the MIT license.
+description:
 nav: true
 nav_order: 3
 
 ---
 
----
-
-[MIT License](https://github.com/gregecmaregec/gregecmaregec.github.io/blob/master/LICENSE)
+All code shown explicitly on /code is under the [MIT License](https://github.com/gregecmaregec/gregecmaregec.github.io/blob/master/LICENSE)
 
 <br>
 <br>
@@ -130,16 +128,46 @@ function easeInOutQuad(progress) {
 
 ---
 
+### bash script to load an ssh guest directly to a program
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+```bash
+
+// bash
+
+
+#!/bin/bash
+
+
+if [ "$USER" = "serverguest" ]; then
+     trap '' SIGINT
+     trap '' SIGTERM
+     trap '' SIGHUP
+     trap '' SIGKILL
+     trap '' SIGSTOP
+     trap '' SIGQUIT
+     trap '' SIGTSTP
+     trap '' SIGCONT
+     trap '' SIGPIPE
+     trap '' SIGCHLD
+     trap '' SIGUSR1
+     trap '' SIGUSR2
+
+     echo -e "
+     welcome
+     "
+     neofetch # this is the program that you want to execute
+fi
+
+# save the script under /etc/profile.d/startup.sh
+# to have it run on every log-in (inlcuding root)
+# make serverguest have restricted bash by running
+sudo chsh -s /bin/rbash llmguest
+# in the terminal as super user
+
+```
+
+---
 
 `expect a lot more to be here very soon`
+
+---
