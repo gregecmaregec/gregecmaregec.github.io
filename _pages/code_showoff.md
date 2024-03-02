@@ -131,7 +131,7 @@ function easeInOutQuad(progress) {
 <br>
 <br>
 
-### bash script to load an ssh guest directly to a program
+### bash script to load a guest directly to a program
 
 `bash script`
 
