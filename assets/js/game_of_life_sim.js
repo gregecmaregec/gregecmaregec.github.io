@@ -5,8 +5,8 @@ document.body.appendChild(canvas);
 // get the 2D rendering context
 const ctx = canvas.getContext('2d');
 
-const numBlocksX = 40;
-const numBlocksY = 40;
+const numBlocksX = 10;
+const numBlocksY = 10;
 
 // calculate the maximum dimension of the display
 const maxDimension = Math.min(window.innerWidth, window.innerHeight);
