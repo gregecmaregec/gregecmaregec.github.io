@@ -5,21 +5,6 @@ permalink: /
 title: showroom
 
 ---
-`expect a lot more to be here very soon`
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-```python
-
-print("hello world!")
-
-```
-<br>
+game of life simulation on a 200x200 block space<br>
+randomly assingining populated / unpopulated blocks
