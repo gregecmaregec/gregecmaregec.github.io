@@ -5,14 +5,14 @@ document.body.appendChild(canvas);
 // get the 2D rendering context
 const ctx = canvas.getContext('2d');
 
-const numBlocksX = 200;
-const numBlocksY = 200;
+const numBlocksX = 700;
+const numBlocksY = 700;
 
 // calculate the maximum dimension of the display
 const maxDimension = Math.min(window.innerWidth, window.innerHeight);
 
 // set the canvas size to be 400x400 pixels
-const canvasSize = Math.min(maxDimension, 1000);
+const canvasSize = Math.min(maxDimension, 1300);
 canvas.width = canvasSize;
 canvas.height = canvasSize;
 // below sets the canvas to be centered on the page
