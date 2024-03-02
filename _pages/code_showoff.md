@@ -159,7 +159,7 @@ if [ "$USER" = "serverguest" ]; then
      welcome
      "
      yourprogram # this is the program that you want to execute
-     # it will basically run as if typing yourprogram into the terminal
+     # it will run as if typing yourprogram into the terminal as user serverguest
 
      exit #drops the connection after the program is quit
 fi
