@@ -1,68 +1,117 @@
-const canvas = document.getElementById('gameCanvas');
+// javascript
+
+// create a canvas element
+const canvas = document.createElement('canvas');
+document.body.appendChild(canvas);
+
+// get the 2D rendering context
 const ctx = canvas.getContext('2d');
 
-const cellSize = 4;
-const gridWidth = 100;
-const gridHeight = 100;
-canvas.width = gridWidth * cellSize;
-canvas.height = gridHeight * cellSize;
+// set the canvas size
+canvas.width = 400;
+canvas.height = 400;
 
-let grid = createGrid(gridWidth, gridHeight);
+// define the size of each block in the grid
+const blockSize = 4;
 
-function createGrid(width, height) {
-    const grid = new Array(height);
-    for (let y = 0; y < height; y++) {
-        grid[y] = new Array(width).fill(0).map(() => Math.round(Math.random()));
+// calculate the number of blocks in each dimension
+const numBlocksX = canvas.width / blockSize;
+const numBlocksY = canvas.height / blockSize;
+
+// create a 2D array to store the grid state
+let grid = createGrid();
+
+// create the initial grid state
+initializeGrid();
+
+// run the game immediately upon site load
+animate();
+
+function createGrid() {
+    const grid = new Array(numBlocksX);
+    for (let x = 0; x < numBlocksX; x++) {
+        grid[x] = new Array(numBlocksY);
     }
     return grid;
 }
 
-function drawGrid() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    for (let y = 0; y < gridHeight; y++) {
-        for (let x = 0; x < gridWidth; x++) {
-            ctx.beginPath();
-            ctx.rect(x * cellSize, y * cellSize, cellSize, cellSize);
-            ctx.fillStyle = grid[y][x] ? 'rgba(255, 192, 203, 0.7)' : 'transparent';
-            ctx.fill();
-            ctx.strokeStyle = 'black';
-            ctx.stroke();
+function initializeGrid() {
+    for (let x = 0; x < numBlocksX; x++) {
+        for (let y = 0; y < numBlocksY; y++) {
+            // randomly set each block to be alive or dead
+            grid[x][y] = Math.random() < 0.5 ? 1 : 0;
         }
     }
+}
+
+function animate() {
+    updateGrid();
+    drawGrid();
+    requestAnimationFrame(animate);
 }
 
 function updateGrid() {
-    let newGrid = createGrid(gridWidth, gridHeight);
-    for (let y = 0; y < gridHeight; y++) {
-        for (let x = 0; x < gridWidth; x++) {
-            const neighbors = countNeighbors(grid, x, y);
-            if (grid[y][x] === 1 && (neighbors < 2 || neighbors > 3)) {
-                newGrid[y][x] = 0;
-            } else if (grid[y][x] === 0 && neighbors === 3) {
-                newGrid[y][x] = 1;
+    const newGrid = createGrid();
+
+    for (let x = 0; x < numBlocksX; x++) {
+        for (let y = 0; y < numBlocksY; y++) {
+            const neighbors = countNeighbors(x, y);
+            const isAlive = grid[x][y] === 1;
+
+            if (isAlive && (neighbors < 2 || neighbors > 3)) {
+                // cell dies due to underpopulation or overpopulation
+                newGrid[x][y] = 0;
+            } else if (!isAlive && neighbors === 3) {
+                // cell becomes alive due to reproduction
+                newGrid[x][y] = 1;
             } else {
-                newGrid[y][x] = grid[y][x];
+                // cell remains in its current state
+                newGrid[x][y] = grid[x][y];
             }
         }
     }
+
     grid = newGrid;
-    drawGrid();
-    requestAnimationFrame(updateGrid);
 }
 
-function countNeighbors(grid, x, y) {
+function countNeighbors(x, y) {
     let count = 0;
-    for (let dy = -1; dy <= 1; dy++) {
-        for (let dx = -1; dx <= 1; dx++) {
-            if (dx === 0 && dy === 0) continue;
-            const x1 = x + dx;
-            const y1 = y + dy;
-            if (x1 >= 0 && x1 < gridWidth && y1 >= 0 && y1 < gridHeight) {
-                count += grid[y1][x1];
+
+    for (let i = -1; i <= 1; i++) {
+        for (let j = -1; j <= 1; j++) {
+            if (i === 0 && j === 0) continue;
+
+            const neighborX = x + i;
+            const neighborY = y + j;
+
+            if (
+                neighborX >= 0 &&
+                neighborX < numBlocksX &&
+                neighborY >= 0 &&
+                neighborY < numBlocksY
+            ) {
+                count += grid[neighborX][neighborY];
             }
         }
     }
+
     return count;
 }
 
-setTimeout(() => requestAnimationFrame(updateGrid), 4000);
+function drawGrid() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    for (let x = 0; x < numBlocksX; x++) {
+        for (let y = 0; y < numBlocksY; y++) {
+            const isAlive = grid[x][y] === 1;
+
+            if (isAlive) {
+                ctx.fillStyle = 'black';
+            } else {
+                ctx.fillStyle = 'white';
+            }
+
+            ctx.fillRect(x * blockSize, y * blockSize, blockSize, blockSize);
+        }
+    }
+}

@@ -9,12 +9,12 @@ nav_order: 3
 
 ---
 
-All code shown explicitly on /code is under the [MIT License](https://github.com/gregecmaregec/gregecmaregec.github.io/blob/master/LICENSE)
+All code shown explicitly on /code/ is under the [MIT License.](https://github.com/gregecmaregec/gregecmaregec.github.io/blob/master/LICENSE)
 
 <br>
 <br>
 
-### the blossom circles and scroll effect in /philosophy.
+### the blossom circles and scroll effect in /philosophy/
 `javascript`
 
 ```javascript
@@ -124,6 +124,9 @@ function easeInOutQuad(progress) {
 
 
 ```
+
+<br>
+<br> 
 
 ---
 
