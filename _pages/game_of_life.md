@@ -17,6 +17,3 @@ nav_order:
 <br>
 
 ---
-
-<small><i>this simulation is under the MIT license<br></i></small>
-
