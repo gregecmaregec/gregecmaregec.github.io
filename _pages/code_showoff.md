@@ -15,7 +15,6 @@ All code shown explicitly on /code is under the [MIT License](https://github.com
 <br>
 
 ### the blossom circles and scroll effect in /philosophy.
-
 `javascript`
 
 ```javascript
@@ -132,7 +131,6 @@ function easeInOutQuad(progress) {
 <br>
 
 ### bash script to load a guest directly to a program
-
 `bash script`
 
 ```bash
