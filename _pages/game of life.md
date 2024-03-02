@@ -4,8 +4,8 @@ layout: gameoflife
 permalink: /gameoflife/
 title: game of life sim
 description: 
-nav: true
-nav_order: 5
+nav: false
+nav_order: 
 
 ---
 
