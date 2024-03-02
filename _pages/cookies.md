@@ -22,7 +22,7 @@ I use cookies for a variety of reasons, such as setting a dark/light theme, prev
 
 ## Disabling Cookies
 
-You can prevent the setting of cookies by adjusting the settings on your browser (see your browser Help for how to do this). Be aware that disabling cookies will affect the functionality of this and many other websites that you visit. Disabling cookies will usually result in also disabling certain functionality and features of this site. Therefore, it is recommended that you do not disable cookies. This Cookies Policy was created with the help of the Cookies Policy Generator.
+You can prevent the setting of cookies by adjusting the settings on your browser (see your browser Help for how to do this). Be aware that disabling cookies will affect the functionality of this and many other websites that you visit. Disabling cookies will usually result in also disabling certain functionality and features of this site. Therefore, it is recommended that you do not disable cookies.
 
 ## Site preferences cookies
 
@@ -40,4 +40,4 @@ Hopefully, that has clarified things for you. And, as was previously mentioned, 
 
 However, if you are still looking for more information, or you would like help with remove your cookies on this website completely, then you can contact me through:
 
-Email: gregor.mihelac (at) outlook.com
+e-mail: gregor.mihelac (at) outlook (dot) com
