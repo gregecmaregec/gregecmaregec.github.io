@@ -8,7 +8,7 @@ nav: false
 nav_order: 
 
 ---
-## game of life sim
+sim trying
 
 
 <br>
@@ -16,4 +16,3 @@ nav_order:
 <br>
 <br>
 
----

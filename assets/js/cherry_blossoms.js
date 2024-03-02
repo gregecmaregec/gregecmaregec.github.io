@@ -38,7 +38,7 @@ class Leaf {
 }
 
 function createLeaves() {
-    const leafCount = 20;
+    const leafCount = 30;
     for (let i = 0; i < leafCount; i++) {
         const x = Math.random() * window.innerWidth;
         const y = Math.random() * (window.innerHeight / 2);
@@ -61,7 +61,7 @@ animate();
 
 let userHasScrolled = false;
 
-// detech user-initiated scroll actions to disable auto scroll feature
+// detect user-initiated scroll actions to disable auto scroll feature
 window.addEventListener('wheel', () => userHasScrolled = true);
 window.addEventListener('touchmove', () => userHasScrolled = true);
 
