@@ -63,6 +63,7 @@ function createLeaves() {
     const leafCount = 20;
     for (let i = 0; i < leafCount; i++) {
         const x = Math.random() * window.innerWidth;
+        // balls get generated at the top half first due to y
         const y = Math.random() * (window.innerHeight / 2);
         const size = Math.random() * 10 + 5;
         const speed = Math.random() * 0.5 + 0.5;
@@ -89,7 +90,6 @@ window.addEventListener('touchmove', () => userHasScrolled = true);
 
 setTimeout(() => {
     if (!userHasScrolled) {
-        // balls get generated at the bottom half first
         const scrollDistance = canvas.height / 2;
         // 10 seconds for the auto-scrolling to complete
         const scrollDuration = 10000;
