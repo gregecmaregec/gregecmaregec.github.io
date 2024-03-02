@@ -139,7 +139,8 @@ it shows just how amazing humans are at interpreting.
 <br>
 `11`
 
-Intelligence seems not to be found exclusively in life.
+Intelligence seems not to be found exclusively in life.<br>
+But in life, it is found in abundance.
 
 <br>
 `12`
