@@ -11,7 +11,8 @@ description: |+ # the ">" symbol means to ignore newlines until "footer_text:"
 footer_text: |+
   This website is open source under the MIT License. ✨<a href="https://github.com/gregecmaregec/gregecmaregec.github.io">Find the source code here</a>
   <br>
-  By using this website, you agree to the <a href="/cookies">Cookies Policy</a>
+  By using this website, you agree to the <a href="/cookies">Cookies Policy</a><br>
+  SORRY THAT THE SITE IS NOT SECURE I AM FIXING THIS, ISSUE IS CUSTOM DOMAIN now at gregormihelac.com IM FIXING ASAP SORRY SORRY SORRY
 keywords: jekyll, jekyll-theme, academic-website, portfolio-website # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: ⚛️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
