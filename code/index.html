@@ -42,6 +42,7 @@
     <span class="kd">const</span> <span class="nx">leafCount</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
     <span class="k">for </span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">leafCount</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
         <span class="kd">const</span> <span class="nx">x</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nf">random</span><span class="p">()</span> <span class="o">*</span> <span class="nb">window</span><span class="p">.</span><span class="nx">innerWidth</span><span class="p">;</span>
+        <span class="c1">// balls get generated at the top half first due to y</span>
         <span class="kd">const</span> <span class="nx">y</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nf">random</span><span class="p">()</span> <span class="o">*</span> <span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">innerHeight</span> <span class="o">/</span> <span class="mi">2</span><span class="p">);</span>
         <span class="kd">const</span> <span class="nx">size</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nf">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">10</span> <span class="o">+</span> <span class="mi">5</span><span class="p">;</span>
         <span class="kd">const</span> <span class="nx">speed</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nf">random</span><span class="p">()</span> <span class="o">*</span> <span class="mf">0.5</span> <span class="o">+</span> <span class="mf">0.5</span><span class="p">;</span>
@@ -68,7 +69,6 @@
 
 <span class="nf">setTimeout</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="k">if </span><span class="p">(</span><span class="o">!</span><span class="nx">userHasScrolled</span><span class="p">)</span> <span class="p">{</span>
-        <span class="c1">// balls get generated at the bottom half first</span>
         <span class="kd">const</span> <span class="nx">scrollDistance</span> <span class="o">=</span> <span class="nx">canvas</span><span class="p">.</span><span class="nx">height</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
         <span class="c1">// 10 seconds for the auto-scrolling to complete</span>
         <span class="kd">const</span> <span class="nx">scrollDuration</span> <span class="o">=</span> <span class="mi">10000</span><span class="p">;</span>
