@@ -7,16 +7,19 @@ document.body.appendChild(canvas);
 // get the 2D rendering context
 const ctx = canvas.getContext('2d');
 
-// set the canvas size
-canvas.width = 400;
-canvas.height = 400;
+// calculate the maximum dimension of the display
+const maxDimension = Math.max(window.innerWidth, window.innerHeight);
 
-// define the size of each block in the grid
-const blockSize = 4;
+// set the canvas size to be a square with the maximum dimension
+canvas.width = maxDimension;
+canvas.height = maxDimension;
 
-// calculate the number of blocks in each dimension
-const numBlocksX = canvas.width / blockSize;
-const numBlocksY = canvas.height / blockSize;
+// calculate the size of each block in the grid based on the maximum dimension
+const blockSize = maxDimension / Math.max(numBlocksX, numBlocksY);
+
+// calculate the offset to center the grid on the canvas
+const offsetX = (canvas.width - numBlocksX * blockSize) / 2;
+const offsetY = (canvas.height - numBlocksY * blockSize) / 2;
 
 // create a 2D array to store the grid state
 let grid = createGrid();
@@ -111,7 +114,10 @@ function drawGrid() {
                 ctx.fillStyle = 'white';
             }
 
-            ctx.fillRect(x * blockSize, y * blockSize, blockSize, blockSize);
+            const posX = offsetX + x * blockSize;
+            const posY = offsetY + y * blockSize;
+
+            ctx.fillRect(posX, posY, blockSize, blockSize);
         }
     }
 }

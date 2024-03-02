@@ -11,9 +11,6 @@ nav_order:
 ## game of life sim
 
 
-
-game of life sim trying really hard
-
 <br>
 <br>
 <br>
@@ -21,42 +18,5 @@ game of life sim trying really hard
 
 ---
 
-<small><i>this simulation of game of life on this website is under the MIT license<br></i></small>
+<small><i>this simulation is under the MIT license<br></i></small>
 
-<br>
-<br>
-<br>
-<br><br>
-<br>
-<br>
-<br><br>
-<br>
-<br>
-<br><br>
-<br>
-<br>
-<br><br>
-<br>
-<br>
-<br><br>
-<br>
-<br>
-<br><br>
-<br>
-<br>
-<br><br>
-<br>
-<br>
-<br><br>
-<br>
-<br>
-<br><br>
-<br>
-<br>
-<br><br>
-<br>
-<br>
-<br><br>
-<br>
-<br>
-<br>
