@@ -12,7 +12,7 @@ const numBlocksY = 100;
 const maxDimension = Math.min(window.innerWidth, window.innerHeight);
 
 // set the canvas size to be 400x400 pixels
-const canvasSize = Math.min(maxDimension, 760);
+const canvasSize = Math.min(maxDimension, 400);
 canvas.width = canvasSize;
 canvas.height = canvasSize;
 // below sets the canvas to be centered on the page
