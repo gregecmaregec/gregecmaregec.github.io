@@ -25,8 +25,8 @@ class Leaf {
         this.y += this.speed * 0.2;
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        //change the color below. 0.7 means the opacity
-        ctx.fillStyle = 'rgba(229, 88, 88, 0.7)';
+        //change the color below. 0.45 means the opacity
+        ctx.fillStyle = 'rgba(229, 88, 88, 0.45)';
         ctx.fill();
         ctx.closePath();
 
@@ -37,7 +37,7 @@ class Leaf {
 }
 
 function createLeaves() {
-    const leafCount = 20;
+    const leafCount = 10;
     for (let i = 0; i < leafCount; i++) {
         const x = Math.random() * window.innerWidth;
         // balls get generated at the top half first due to y
