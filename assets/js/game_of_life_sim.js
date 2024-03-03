@@ -11,7 +11,7 @@ const numBlocksY = 100;
 // calculate the maximum dimension of the display
 const maxDimension = Math.min(window.innerWidth, window.innerHeight);
 
-// set the canvas size to be 400x400 pixels
+// set the canvas size to be macDimension pixels
 const canvasSize = Math.min(maxDimension, 500);
 canvas.width = canvasSize;
 canvas.height = canvasSize;
