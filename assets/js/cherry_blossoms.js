@@ -1,5 +1,3 @@
-// javascript
-
 // create a canvas element
 const canvas = document.createElement('canvas');
 document.body.appendChild(canvas);
@@ -27,8 +25,8 @@ class Leaf {
         this.y += this.speed * 0.2;
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        //change the color below. 0.7 means the opacity
-        ctx.fillStyle = 'rgba(229, 88, 88, 0.7)';
+        //change the color below. 0.6 means the opacity
+        ctx.fillStyle = 'rgba(229, 88, 88, 0.6)';
         ctx.fill();
         ctx.closePath();
 
