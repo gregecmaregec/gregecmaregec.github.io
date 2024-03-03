@@ -1,5 +1,3 @@
-// javascript
-
 // create a canvas element
 const canvas = document.createElement('canvas');
 document.body.appendChild(canvas);
@@ -27,8 +25,7 @@ class Leaf {
         this.y += this.speed * 0.2;
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        //change the color below. 0.7 means the opacity
-        ctx.fillStyle = 'rgba(229, 88, 88, 0.7)';
+        ctx.fillStyle = 'rgba(229, 88, 88, 0.66)';
         ctx.fill();
         ctx.closePath();
 
@@ -39,9 +36,10 @@ class Leaf {
 }
 
 function createLeaves() {
-    const leafCount = 24;
+    const leafCount = 20;
     for (let i = 0; i < leafCount; i++) {
         const x = Math.random() * window.innerWidth;
+        // balls get generated at the top half first due to y
         const y = Math.random() * (window.innerHeight / 2);
         const size = Math.random() * 10 + 5;
         const speed = Math.random() * 0.5 + 0.5;
@@ -68,10 +66,9 @@ window.addEventListener('touchmove', () => userHasScrolled = true);
 
 setTimeout(() => {
     if (!userHasScrolled) {
-        // balls get generated at the top half first
         const scrollDistance = canvas.height / 2;
-        // 7 seconds for the auto-scrolling to complete
-        const scrollDuration = 70000;
+        // 10 seconds for the auto-scrolling to complete
+        const scrollDuration = 10000;
         let startTime = null;
 
         function scrollStep(timestamp) {
