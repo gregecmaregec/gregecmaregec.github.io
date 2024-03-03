@@ -8,7 +8,6 @@ nav: false
 nav_order: 
 
 ---
-sim trying
 
 
 <br>
