@@ -39,7 +39,7 @@ class Leaf {
 }
 
 function createLeaves() {
-    const leafCount = 30;
+    const leafCount = 24;
     for (let i = 0; i < leafCount; i++) {
         const x = Math.random() * window.innerWidth;
         const y = Math.random() * (window.innerHeight / 2);
