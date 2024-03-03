@@ -37,7 +37,7 @@ class Leaf {
 }
 
 function createLeaves() {
-    const leafCount = 10;
+    const leafCount = 20;
     for (let i = 0; i < leafCount; i++) {
         const x = Math.random() * window.innerWidth;
         // balls get generated at the top half first due to y
