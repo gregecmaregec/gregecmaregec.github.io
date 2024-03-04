@@ -5,7 +5,6 @@ permalink: /
 title: showroom
 
 ---
-<br>
 `hello world!`
 
 <br> 
