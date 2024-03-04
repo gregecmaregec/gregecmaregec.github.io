@@ -2,7 +2,7 @@
 
 layout: code
 permalink: /code/
-title: code showoff
+title: code
 description:
 nav: true
 nav_order: 3
