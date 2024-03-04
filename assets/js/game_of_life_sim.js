@@ -5,6 +5,7 @@ document.body.appendChild(canvas);
 // get the 2D rendering context
 const ctx = canvas.getContext('2d');
 
+<<<<<<< HEAD
 // dimensions of the game!
 const numBlocksX = 90;
 const numBlocksY = 90;
