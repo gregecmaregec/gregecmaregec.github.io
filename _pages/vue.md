@@ -9,4 +9,4 @@ nav_order: 0
 
 ---
 
-enjoy a game of life
+enjoy a game of life!
