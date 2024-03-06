@@ -1,0 +1,1 @@
+function sendMessage(){var e=document.getElementById("user-input").value;fetch("https://gmserver.xyz",{method:"GET",headers:{"Content-Type":"application/json"},body:JSON.stringify({message:e})}).then(e=>e.json()).then(e=>{console.log(e)})["catch"](e=>{console.error("Error:",e)})}
