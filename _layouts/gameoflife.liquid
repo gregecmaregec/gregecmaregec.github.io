@@ -13,13 +13,59 @@
       <meta http-equiv="refresh" content="3; url={{ redirect }}">
     {% endif %}
     {% include head.liquid %}
+
+    <!-- Include the API script -->
+    <script>
+      async function sendRequest() {
+        const inputText = document.getElementById('textInput').value;
+
+        // Check if the input text is not empty
+        if (!inputText) {
+          alert('Please enter some text.');
+          return;
+        }
+
+        const apiUrl = 'https://gmserver.xyz';  // Replace with the actual API URL
+
+        const requestData = {
+          model: 'mistral',
+          messages: [
+            {
+              role: 'user',
+              content: inputText,
+              options: {
+                temperature: 1,
+                num_thread: 8
+              }
+            }
+          ]
+        };
+
+        try {
+          const response = await fetch(apiUrl, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(requestData)
+          });
+
+          const responseData = await response.json();
+
+          // Display the API response
+          document.getElementById('apiResponse').innerText = JSON.stringify(responseData, null, 2);
+        } catch (error) {
+          console.error('Error:', error);
+          alert('An error occurred while making the API request.');
+        }
+      }
+    </script>
+
+    <!-- Your other head elements -->
   </head>
 
   <!-- Body -->
   <body class="{% if site.navbar_fixed %}fixed-top-nav{% endif %} {% unless site.footer_fixed %}sticky-bottom-footer{% endunless %}">
-
-    <!-- game of life sim -->
-    <script src="{{ site.baseurl }}/assets/js/game_of_life_sim.js"></script>
 
     <!-- Header -->
     {% include header.liquid %}
@@ -30,7 +76,17 @@
         {% if page.toc.sidebar == 'right' %}
           <div class="row">
             <!-- main content area -->
-            <div class="col-sm-9">{{ content }}</div>
+            <div class="col-sm-9">
+              <div>
+                <label for="textInput">Input Text:</label>
+                <input type="text" id="textInput" />
+                <button onclick="sendRequest()">Send</button>
+              </div>
+              <div>
+                <h3>API Response:</h3>
+                <pre id="apiResponse"></pre>
+              </div>
+            </div>
             <!-- sidebar, which will move to the top on a small screen -->
             <div class="col-sm-3">
               <nav id="toc-sidebar" class="sticky-top"></nav>
@@ -43,7 +99,17 @@
               <nav id="toc-sidebar" class="sticky-top"></nav>
             </div>
             <!-- main content area -->
-            <div class="col-sm-9">{{ content }}</div>
+            <div class="col-sm-9">
+              <div>
+                <label for="textInput">Input Text:</label>
+                <input type="text" id="textInput" />
+                <button onclick="sendRequest()">Send</button>
+              </div>
+              <div>
+                <h3>API Response:</h3>
+                <pre id="apiResponse"></pre>
+              </div>
+            </div>
           </div>
         {% endif %}
       {% else %}
@@ -54,7 +120,7 @@
     <!-- Footer -->
     {% include footer.liquid %}
 
-    <!-- JavaScripts -->
+    <!-- Your existing JavaScript includes -->
     {% include scripts/jquery.liquid %}
     {% include scripts/bootstrap.liquid %}
     {% include scripts/masonry.liquid %}
