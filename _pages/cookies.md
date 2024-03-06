@@ -40,4 +40,4 @@ Hopefully, that has clarified things for you. And, as was previously mentioned, 
 
 However, if you are still looking for more information, or you would like help with remove your cookies on this website completely, then you can contact me through:
 
-e-mail: gregor.mihelac (at) outlook (dot) com
+e-mail: gregor.mihelac (at)outlook (dot)com
