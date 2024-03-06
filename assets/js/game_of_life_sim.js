@@ -31,6 +31,13 @@ initializeGrid();
 // run the game immediately upon site load
 animate();
 
+// Stop the animation after 2 minutes
+setTimeout(() => {
+    cancelAnimationFrame(animationId);
+}, 2 * 60 * 1000);
+
+let animationId;
+
 function createGrid() {
     const grid = new Array(numBlocksX);
     for (let x = 0; x < numBlocksX; x++) {
@@ -51,7 +58,7 @@ function initializeGrid() {
 function animate() {
     updateGrid();
     drawGrid();
-    setTimeout(animate, 1000);
+    animationId = requestAnimationFrame(animate);
 }
 
 function updateGrid() {
