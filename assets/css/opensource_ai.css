@@ -1,0 +1,20 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+#canvas-container {
+    width: 1000px;
+    height: 1000px;
+    /* Add any additional styles for your canvas container */
+}
+
+#chat-box-container {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #f1f1f1;
+    padding: 10px;
+    /* Add any additional styles for your chat box container */
+}

@@ -24,6 +24,25 @@
     <!-- Cherry Blossom Animation -->
     <script src="{{ site.baseurl }}/assets/js/game_of_life_sim_v2.js"></script>
   
+    <div id="canvas-container">
+    <!-- Your canvas content goes here -->
+    </div>
+
+    <!-- Chat Box -->
+    <div class="chat-box">
+        <input type="text" id="user-input" placeholder="Type your message...">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+
+    <!-- Reference the CSS file without the # symbol -->
+    <link rel="stylesheet" href="{{ 'assets/css/opensource_ai.css' | relative_url }}">
+
+    <!-- Include the JavaScript file -->
+    <script src="{{ 'assets/js/opensource_ai.js' | relative_url }}"></script>
+
+
+
+    <script src="scripts/main.js"></script>
     <!-- Content -->
     <div class="container mt-5" role="main">
       {% if page.toc and page.toc.sidebar %}
