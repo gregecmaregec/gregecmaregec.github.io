@@ -1,8 +1,8 @@
 ---
 
-layout: vue
-permalink: /vue/
-title: jsvue
+layout: opensource_ai.liquid
+permalink: /osai/
+title: osai
 description: placeholder
 nav: false
 nav_order: 0
