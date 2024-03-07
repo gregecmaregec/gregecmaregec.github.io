@@ -60,7 +60,7 @@ let timerId;
 function animate() {
     updateGrid();
     drawGrid();
-    timerId = setTimeout(animate, 130);
+    timerId = setTimeout(animate, 100);
     
 }
 
@@ -126,15 +126,15 @@ function drawGrid() {
             if (isAlive) {
                 const randomColor = getRandomPastelColor();
                 ctx.fillStyle = randomColor;
-
-                function getRandomPastelColor() {
-                    const hue = Math.floor(Math.random() * 360);
-                    const saturation = Math.floor(Math.random() * 30) + 70; // 70-100
-                    const lightness = Math.floor(Math.random() * 30) + 70; // 70-100
-                    return `hsl(${hue}, ${saturation}%, ${lightness}%)`;
-                }
             } else {
                 ctx.fillStyle = 'rgba(0, 0, 0, 0)'; // completely transparent
+            }
+
+            function getRandomPastelColor() {
+                const hue = Math.floor(Math.random() * 360);
+                const saturation = Math.floor(Math.random() * 30) + 70; // 70-100
+                const lightness = Math.floor(Math.random() * 30) + 70; // 70-100
+                return `hsl(${hue}, ${saturation}%, ${lightness}%)`;
             }
 
             const posX = x * blockSize;
