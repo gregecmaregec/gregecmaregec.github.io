@@ -1,6 +1,5 @@
 <br>
 Full name is Gregor Mihelač.<br>
-<br>
 I grew up in a small village in Slovenia.<br>
 <br>
 Currently I am an M.Sc. student at the Univeristy of Mannheim in Germany,<br>
