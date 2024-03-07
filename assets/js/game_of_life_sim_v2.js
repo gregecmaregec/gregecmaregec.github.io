@@ -116,7 +116,7 @@ function drawGrid() {
             const isAlive = grid[x][y] === 1;
 
             if (isAlive) {
-                ctx.fillStyle = 'rgba(65, 184, 131, 1)'; // Vue.js color
+                ctx.fillStyle = 'rgba(255, 41, 70, 0.8)'; // osai color
             } else {
                 ctx.fillStyle = 'rgba(0, 0, 0, 0)'; 
             }
