@@ -1,0 +1,60 @@
+.custom-chat-interface {
+    all: unset;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 400px;
+  }
+  
+  .output-field {
+    width: 800px;
+    height: 350px;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    line-height: 350px; /* vertical center for 'hello world' */
+    border: 1px solid #fff; /* or any other border style you prefer */
+    box-shadow: 2px 2px #fff; /* shadow to the right and bottom */
+    margin-bottom: 20px;
+    overflow: hidden; /* to handle the content overflow */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .input-field {
+    width: 800px;
+    height: 50px;
+    border: none;
+    background-color: #121212;
+    color: #fff;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    padding-left: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+    outline: none; /* removes the outline */
+  }
+  
+  .send-button {
+    width: 50px;
+    height: 50px;
+    background-color: #a82c2c;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 50%;
+    position: absolute;
+    top: calc(100% - 65px);
+    left: calc(50% - 25px);
+    cursor: pointer;
+  }
+  
+  /* Media query for responsiveness */
+  @media (max-width: 800px) {
+    .output-field, .input-field {
+      width: 100%;
+    }
+  }
+  
