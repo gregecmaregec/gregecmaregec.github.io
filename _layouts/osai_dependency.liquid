@@ -54,10 +54,13 @@
     </div>
 
 
-    <div class="custom-chat-interface">
+    <div class="custom-chat-interface" style="all: unset;">
       <label for="inputField">User:</label>
       <input type="text" id="inputField" class="input-field" placeholder="type your message...">
       <div id="outputField" class="output-field"></div>
+      <style>
+        @import url("{{ site.baseurl }}/assets/css/input.css");
+      </style>
     </div>
     
     <!-- Footer -->
