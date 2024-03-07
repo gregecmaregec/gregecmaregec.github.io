@@ -1,9 +1,14 @@
-// create a canvas element
-const canvas = document.createElement('canvas');
-document.body.appendChild(canvas);
+// create the left canvas element
+const leftCanvas = document.createElement('canvas');
+document.body.appendChild(leftCanvas);
 
-// get the 2D rendering context
-const ctx = canvas.getContext('2d');
+// create the right canvas element
+const rightCanvas = document.createElement('canvas');
+document.body.appendChild(rightCanvas);
+
+// get the 2D rendering contexts for both canvases
+const leftCtx = leftCanvas.getContext('2d');
+const rightCtx = rightCanvas.getContext('2d');
 
 // dimensions of the game!
 const numBlocksX = 50;
@@ -12,15 +17,20 @@ const numBlocksY = 50;
 // calculate the maximum dimension of the display
 const maxDimension = Math.min(window.innerWidth, window.innerHeight);
 
-// set the canvas size to be macDimension pixels
-const canvasSize = Math.min(maxDimension, 350);
-canvas.width = canvasSize;
-canvas.height = canvasSize;
-// below sets the canvas to be centered on the page
-canvas.style.marginLeft = `${(window.innerWidth - canvasSize) / 2}px`;
-
 // calculate the size of each block in the grid based on the maximum dimension
-const blockSize = canvasSize / Math.max(numBlocksX, numBlocksY);
+const blockSize = maxDimension / Math.max(numBlocksX, numBlocksY);
+
+// set the canvas sizes and positions
+const canvasSize = Math.min(maxDimension / 3, 350);
+leftCanvas.width = canvasSize;
+leftCanvas.height = canvasSize;
+leftCanvas.style.position = 'absolute';
+leftCanvas.style.left = '0';
+
+rightCanvas.width = canvasSize;
+rightCanvas.height = canvasSize;
+rightCanvas.style.position = 'absolute';
+rightCanvas.style.right = '0';
 
 // create a 2D array to store the grid state
 let grid = createGrid();
@@ -61,7 +71,6 @@ function animate() {
     updateGrid();
     drawGrid();
     timerId = setTimeout(animate, 200);
-    
 }
 
 setTimeout(() => {
@@ -117,22 +126,26 @@ function countNeighbors(x, y) {
 }
 
 function drawGrid() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    leftCtx.clearRect(0, 0, leftCanvas.width, leftCanvas.height);
+    rightCtx.clearRect(0, 0, rightCanvas.width, rightCanvas.height);
 
     for (let x = 0; x < numBlocksX; x++) {
         for (let y = 0; y < numBlocksY; y++) {
             const isAlive = grid[x][y] === 1;
 
             if (isAlive) {
-                ctx.fillStyle = 'rgba(255, 192, 203, 0.99)'; // cherry blossom color
+                leftCtx.fillStyle = 'rgba(255, 192, 203, 0.99)'; // cherry blossom color
+                rightCtx.fillStyle = 'rgba(255, 192, 203, 0.99)'; // cherry blossom color
             } else {
-                ctx.fillStyle = 'rgba(0, 0, 0, 0)'; // completely transparent
+                leftCtx.fillStyle = 'rgba(0, 0, 0, 0)'; // completely transparent
+                rightCtx.fillStyle = 'rgba(0, 0, 0, 0)'; // completely transparent
             }
 
             const posX = x * blockSize;
             const posY = y * blockSize;
 
-            ctx.fillRect(posX, posY, blockSize, blockSize);
+            leftCtx.fillRect(posX, posY, blockSize, blockSize);
+            rightCtx.fillRect(posX, posY, blockSize, blockSize);
         }
     }
 }
