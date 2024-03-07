@@ -13,7 +13,7 @@
 }
 
 .output-field {
-    width: 800px;
+    width: calc(100% - 20px); /* Subtract 20px for left and right padding */
     height: 350px;
     background-color: #333;
     color: #fff;
@@ -28,7 +28,7 @@
 }
 
 .input-field {
-    width: 800px;
+    width: calc(100% - 20px); /* Subtract 20px for left and right padding */
     height: 50px;
     border: none;
     background-color: #333;
