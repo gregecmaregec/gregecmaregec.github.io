@@ -124,17 +124,9 @@ function drawGrid() {
             const isAlive = grid[x][y] === 1;
 
             if (isAlive) {
-                const randomColor = getRandomPastelColor();
-                ctx.fillStyle = randomColor;
+                ctx.fillStyle = 'rgba(255, 192, 203, 0.99)'; // cherry blossom color
             } else {
                 ctx.fillStyle = 'rgba(0, 0, 0, 0)'; // completely transparent
-            }
-
-            function getRandomPastelColor() {
-                const hue = Math.floor(Math.random() * 360);
-                const saturation = Math.floor(Math.random() * 30) + 70; // 70-100
-                const lightness = Math.floor(Math.random() * 30) + 70; // 70-100
-                return `hsl(${hue}, ${saturation}%, ${lightness}%)`;
             }
 
             const posX = x * blockSize;
@@ -144,5 +136,3 @@ function drawGrid() {
         }
     }
 }
-
-// check wikipedia for game of life on more info
