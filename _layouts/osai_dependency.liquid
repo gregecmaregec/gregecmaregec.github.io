@@ -51,15 +51,16 @@
             <p class="desc">{{ page.subtitle }}</p>
           </header>
         </div>
-
-        <div class="chat-interface">
-            <label for="inputField">User:</label>
-            <input type="text" id="inputField" class="input-field" placeholder="type your message...">
-            <div id="outputField" class="output-field"></div>
-        </div>
       {% endif %}
     </div>
 
+
+    <div class="chat-interface">
+      <label for="inputField">User:</label>
+      <input type="text" id="inputField" class="input-field" placeholder="type your message...">
+      <div id="outputField" class="output-field"></div>
+    </div>
+    
     <!-- Footer -->
     {% include footer.liquid %}
 
