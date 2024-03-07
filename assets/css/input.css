@@ -33,4 +33,5 @@
     background-color: #333;
     overflow-y: auto;
     border-radius: 10px;
+    text-align: left; /* Added property */
 }
