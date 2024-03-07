@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",function(){const e=document.getElementById("inputField"),t=document.getElementById("outputField");e.addEventListener("input",function(){const n=e.value;t.innerText=n})});
