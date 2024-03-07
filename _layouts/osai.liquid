@@ -55,21 +55,16 @@
 
 
     <div class="custom-chat-interface" style="all: unset; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh;">
-      <div id="outputField" class="output-field" style="width: 800px; height: 350px; text-align: center; margin-bottom: 20px;"></div>
-      <input type="text" id="inputField" class="input-field" placeholder=">..." style="width: 800px; height: 50px;">
+      <div id="outputField" class="output-field" style="width: 800px; text-align: center; margin-bottom: 20px;"></div>
+      <label for="inputField"></label>
+      <input type="text" id="inputField" class="input-field" placeholder=">..." style="width: 800px;">
       <style>
         @import url("{{ site.baseurl }}/assets/css/input.css");
       </style>
     </div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+
+    <!-- Footer -->
+    {% include footer.liquid %}
 
     <!-- game of life sim -->
     <script src="{{ site.baseurl }}/assets/js/game_of_life_sim_v2.js"></script>
