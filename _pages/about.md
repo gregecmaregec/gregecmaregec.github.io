@@ -5,7 +5,7 @@ permalink: /about/
 title: about
 description:
 nav: true
-nav_order: 4
+nav_order: 5
 
 profiles:
   - align: right
