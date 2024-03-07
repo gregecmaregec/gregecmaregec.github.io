@@ -1,5 +1,4 @@
-/// create the left canvas element
-
+// create the left canvas element
 const leftCanvas = document.createElement('canvas');
 leftCanvas.width = 300;
 leftCanvas.height = 500;
@@ -14,7 +13,6 @@ rightCanvas.height = 500;
 rightCanvas.style.position = 'absolute';
 rightCanvas.style.right = '0'; // Align to the total right
 document.body.appendChild(rightCanvas);
-
 
 // get the 2D rendering contexts for both canvases
 const leftCtx = leftCanvas.getContext('2d');
@@ -41,6 +39,27 @@ requestAnimationFrame(animate);
 
 let animationId;
 
+// Stop the animation after 2 minutes
+setTimeout(() => {
+    cancelAnimationFrame(animationId);
+}, 2 * 60 * 1000);
+
+// Animation settings
+const delayBetweenGenerations = 100; // in milliseconds
+
+async function animate() {
+    updateGrid(leftGrid, blocksByWidth, blocksByHeight);
+    updateGrid(rightGrid, blocksByWidth, blocksByHeight);
+    drawGrid(leftCtx, leftGrid, blockSizeWidth, blockSizeHeight);
+    drawGrid(rightCtx, rightGrid, blockSizeWidth, blockSizeHeight);
+
+    // Delay using async/await
+    await new Promise(resolve => setTimeout(resolve, delayBetweenGenerations));
+
+    // Continue the animation with the next frame
+    animationId = requestAnimationFrame(animate);
+}
+
 function createGrid(width, height) {
     const grid = new Array(height);
     for (let y = 0; y < height; y++) {
@@ -56,19 +75,6 @@ function initializeGrid(grid, width, height) {
         }
     }
 }
-
-function animate() {
-    updateGrid(leftGrid, blocksByWidth, blocksByHeight);
-    updateGrid(rightGrid, blocksByWidth, blocksByHeight);
-    drawGrid(leftCtx, leftGrid, blockSizeWidth, blockSizeHeight);
-    drawGrid(rightCtx, rightGrid, blockSizeWidth, blockSizeHeight);
-    animationId = requestAnimationFrame(animate);
-}
-
-// Stop the animation after 2 minutes
-setTimeout(() => {
-    cancelAnimationFrame(animationId);
-}, 2 * 60 * 1000);
 
 function updateGrid(grid, width, height) {
     const newGrid = createGrid(width, height);
