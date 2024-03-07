@@ -5,7 +5,7 @@
     align-items: center;
     justify-content: flex-start;
     height: 400px;
-    background-color: #333;
+    background-color: #ffffff00;
     border-radius: 10px;
 }
 
@@ -29,7 +29,6 @@
     border: none;
     background-color: #333;
     color: #fff;
-    border-top: 2px solid #fff;
     border-right: 2px solid #fff;
     border-bottom: 2px solid #ccc;
     border-right: 2px solid #ccc;
