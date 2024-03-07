@@ -14,7 +14,7 @@ const rightCtx = rightCanvas.getContext('2d');
 const numBlocks = 50;
 
 // calculate the size of each block in the grid based on the canvas size
-const blockSize = Math.floor(350 / numBlocks);
+const blockSize = Math.floor(175 / numBlocks);
 
 // set the canvas sizes and positions
 const canvasSize = blockSize * numBlocks;
