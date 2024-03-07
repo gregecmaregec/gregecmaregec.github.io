@@ -124,7 +124,15 @@ function drawGrid() {
             const isAlive = grid[x][y] === 1;
 
             if (isAlive) {
-                ctx.fillStyle = 'rgba(255, 192, 203, 0.99)'; // cherry blossom color
+                const randomColor = getRandomPastelColor();
+                ctx.fillStyle = randomColor;
+
+                function getRandomPastelColor() {
+                    const hue = Math.floor(Math.random() * 360);
+                    const saturation = Math.floor(Math.random() * 30) + 70; // 70-100
+                    const lightness = Math.floor(Math.random() * 30) + 70; // 70-100
+                    return `hsl(${hue}, ${saturation}%, ${lightness}%)`;
+                }
             } else {
                 ctx.fillStyle = 'rgba(0, 0, 0, 0)'; // completely transparent
             }
