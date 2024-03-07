@@ -1,11 +1,11 @@
 ---
 
-layout: opensourced_ai.liquid
+layout: osai
 permalink: /osai/
 title: osai
-description: placeholder
+description: 
 nav: false
-nav_order: 0
+nav_order:
 
 ---
 
