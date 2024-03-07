@@ -1,148 +1,122 @@
 // create the left canvas element
 const leftCanvas = document.createElement('canvas');
+leftCanvas.width = 300;
+leftCanvas.height = 500;
+leftCanvas.style.position = 'absolute';
+leftCanvas.style.left = 'calc(50% - 300px - 150px)'; // Align to the left from the center
 document.body.appendChild(leftCanvas);
 
 // create the right canvas element
 const rightCanvas = document.createElement('canvas');
+rightCanvas.width = 300;
+rightCanvas.height = 500;
+rightCanvas.style.position = 'absolute';
+rightCanvas.style.left = 'calc(50% + 150px)'; // Align to the right from the center
 document.body.appendChild(rightCanvas);
 
 // get the 2D rendering contexts for both canvases
 const leftCtx = leftCanvas.getContext('2d');
 const rightCtx = rightCanvas.getContext('2d');
 
-// dimensions of the game!
-const numBlocks = 50;
+// dimensions of the game
+const blocksByHeight = 50;
+const blocksByWidth = 30;
 
-// calculate the size of each block in the grid based on the canvas size
-const blockSize = Math.floor(350 / numBlocks);
+// calculate the size of each block
+const blockSizeWidth = leftCanvas.width / blocksByWidth;
+const blockSizeHeight = leftCanvas.height / blocksByHeight;
 
-// set the canvas sizes and positions
-const canvasSize = blockSize * numBlocks;
-leftCanvas.width = canvasSize;
-leftCanvas.height = canvasSize;
-
-rightCanvas.width = canvasSize;
-rightCanvas.height = canvasSize;
-leftCanvas.style.position = 'absolute';
-leftCanvas.style.left = '0';
-
-rightCanvas.style.position = 'absolute';
-rightCanvas.style.right = '0';
-
-// create a 2D array to store the grid state
-let grid = createGrid();
+// create 2D arrays to store the grid state for each canvas
+let leftGrid = createGrid(blocksByWidth, blocksByHeight);
+let rightGrid = createGrid(blocksByWidth, blocksByHeight);
 
 // create the initial grid state
-initializeGrid();
+initializeGrid(leftGrid, blocksByWidth, blocksByHeight);
+initializeGrid(rightGrid, blocksByWidth, blocksByHeight);
 
 // run the game immediately upon site load
-animate();
+requestAnimationFrame(animate);
+
+let animationId;
+
+function createGrid(width, height) {
+    const grid = new Array(height);
+    for (let y = 0; y < height; y++) {
+        grid[y] = new Array(width).fill(0);
+    }
+    return grid;
+}
+
+function initializeGrid(grid, width, height) {
+    for (let y = 0; y < height; y++) {
+        for (let x = 0; x < width; x++) {
+            grid[y][x] = Math.random() < 0.3 ? 1 : 0;
+        }
+    }
+}
+
+function animate() {
+    updateGrid(leftGrid, blocksByWidth, blocksByHeight);
+    updateGrid(rightGrid, blocksByWidth, blocksByHeight);
+    drawGrid(leftCtx, leftGrid, blockSizeWidth, blockSizeHeight);
+    drawGrid(rightCtx, rightGrid, blockSizeWidth, blockSizeHeight);
+    animationId = requestAnimationFrame(animate);
+}
 
 // Stop the animation after 2 minutes
 setTimeout(() => {
     cancelAnimationFrame(animationId);
 }, 2 * 60 * 1000);
 
-let animationId;
+function updateGrid(grid, width, height) {
+    const newGrid = createGrid(width, height);
 
-function createGrid() {
-    const grid = new Array(numBlocks);
-    for (let x = 0; x < numBlocks; x++) {
-        grid[x] = new Array(numBlocks);
-    }
-    return grid;
-}
-
-function initializeGrid() {
-    for (let x = 0; x < numBlocks; x++) {
-        for (let y = 0; y < numBlocks; y++) {
-            // randomly set each block to be alive or dead
-            grid[x][y] = Math.random() < 0.3 ? 1 : 0;
-        }
-    }
-}
-
-let timerId;
-
-function animate() {
-    updateGrid();
-    drawGrid();
-    timerId = setTimeout(animate, 200);
-}
-
-setTimeout(() => {
-    clearTimeout(timerId);
-}, 120000);
-
-function updateGrid() {
-    const newGrid = createGrid();
-
-    for (let x = 0; x < numBlocks; x++) {
-        for (let y = 0; y < numBlocks; y++) {
-            const neighbors = countNeighbors(x, y);
-            const isAlive = grid[x][y] === 1;
+    for (let y = 0; y < height; y++) {
+        for (let x = 0; x < width; x++) {
+            const neighbors = countNeighbors(grid, x, y, width, height);
+            const isAlive = grid[y][x] === 1;
 
             if (isAlive && (neighbors < 2 || neighbors > 3)) {
-                // cell dies due to underpopulation or overpopulation
-                newGrid[x][y] = 0;
+                newGrid[y][x] = 0;
             } else if (!isAlive && neighbors === 3) {
-                // cell becomes alive due to reproduction
-                newGrid[x][y] = 1;
+                newGrid[y][x] = 1;
             } else {
-                // cell remains in its current state
-                newGrid[x][y] = grid[x][y];
+                newGrid[y][x] = grid[y][x];
             }
         }
     }
 
-    grid = newGrid;
+    for (let y = 0; y < height; y++) {
+        grid[y] = newGrid[y].slice();
+    }
 }
 
-function countNeighbors(x, y) {
+function countNeighbors(grid, x, y, width, height) {
     let count = 0;
 
     for (let i = -1; i <= 1; i++) {
         for (let j = -1; j <= 1; j++) {
             if (i === 0 && j === 0) continue;
 
-            const neighborX = x + i;
-            const neighborY = y + j;
+            const neighborX = (x + i + width) % width;
+            const neighborY = (y + j + height) % height;
 
-            if (
-                neighborX >= 0 &&
-                neighborX < numBlocks &&
-                neighborY >= 0 &&
-                neighborY < numBlocks
-            ) {
-                count += grid[neighborX][neighborY];
-            }
+            count += grid[neighborY][neighborX];
         }
     }
 
     return count;
 }
 
-function drawGrid() {
-    leftCtx.clearRect(0, 0, leftCanvas.width, leftCanvas.height);
-    rightCtx.clearRect(0, 0, rightCanvas.width, rightCanvas.height);
+function drawGrid(ctx, grid, blockSizeWidth, blockSizeHeight) {
+    ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
 
-    for (let x = 0; x < numBlocks; x++) {
-        for (let y = 0; y < numBlocks; y++) {
-            const isAlive = grid[x][y] === 1;
+    for (let y = 0; y < grid.length; y++) {
+        for (let x = 0; x < grid[y].length; x++) {
+            const isAlive = grid[y][x] === 1;
 
-            if (isAlive) {
-                leftCtx.fillStyle = 'rgba(139, 0, 0, 0.8)'; // dark red color
-                rightCtx.fillStyle = 'rgba(139, 0, 0, 0.8)'; // dark red color with a little bit of orange
-            } else {
-                leftCtx.fillStyle = 'rgba(0, 0, 0, 0)'; // completely transparent
-                rightCtx.fillStyle = 'rgba(0, 0, 0, 0)'; // completely transparent
-            }
-
-            const posX = x * blockSize;
-            const posY = y * blockSize;
-
-            leftCtx.fillRect(posX, posY, blockSize, blockSize);
-            rightCtx.fillRect(posX, posY, blockSize, blockSize);
+            ctx.fillStyle = isAlive ? 'rgba(139, 0, 0, 0.8)' : 'rgba(0, 0, 0, 0)';
+            ctx.fillRect(x * blockSizeWidth, y * blockSizeHeight, blockSizeWidth, blockSizeHeight);
         }
     }
 }
