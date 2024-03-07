@@ -53,7 +53,7 @@ let timerId;
 function animate() {
     updateGrid();
     drawGrid();
-    timerId = setTimeout(animate, 500);
+    timerId = setTimeout(animate, 200);
 }
 
 setTimeout(() => {

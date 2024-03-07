@@ -55,11 +55,18 @@ function initializeGrid() {
     }
 }
 
+let timerId;
+
 function animate() {
     updateGrid();
     drawGrid();
-    setTimeout(animate, 90);
+    timerId = setTimeout(animate, 90);
+    
 }
+
+setTimeout(() => {
+    clearTimeout(timerId);
+}, 120000);
 
 function updateGrid() {
     const newGrid = createGrid();
