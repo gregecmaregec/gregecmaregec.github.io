@@ -15,18 +15,14 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  sendButton.addEventListener('click', function () {
-    outputField.innerText = inputField.value;
-    outputField.style.textAlign = 'left'; // Align text to left after input
-    outputField.style.justifyContent = 'flex-start'; // For flex container
-    outputField.style.alignItems = 'flex-start'; // For flex container
-    inputField.value = '';
-    sendButton.style.display = 'none';
-  });
-
   inputField.addEventListener('keypress', function (e) {
     if (e.key === 'Enter') {
-      sendButton.click();
+      outputField.innerText = inputField.value;
+      outputField.style.textAlign = 'left'; // Align text to left after input
+      outputField.style.justifyContent = 'flex-start'; // For flex container
+      outputField.style.alignItems = 'flex-start'; // For flex container
+      inputField.value = '';
+      sendButton.style.display = 'none';
     }
   });
 });
