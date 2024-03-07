@@ -124,7 +124,7 @@ function drawGrid() {
             const isAlive = grid[x][y] === 1;
 
             if (isAlive) {
-                ctx.fillStyle = 'rgba(255, 192, 203, 0.99)'; // cherry blossom color
+                ctx.fillStyle = 'rgba(255, 192, 203, 0.6)'; // cherry blossom color
             } else {
                 ctx.fillStyle = 'rgba(0, 0, 0, 0)'; // completely transparent
             }
