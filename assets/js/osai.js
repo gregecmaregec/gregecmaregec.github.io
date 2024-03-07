@@ -3,10 +3,6 @@ document.addEventListener('DOMContentLoaded', function () {
   const outputField = document.getElementById('outputField');
   const sendButton = document.getElementById('sendButton');
 
-  inputField.addEventListener('focus', function () {
-    sendButton.style.display = 'block';
-  });
-
   inputField.addEventListener('input', function () {
     if (this.value.length > 0) {
       sendButton.style.display = 'block';
@@ -17,13 +13,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
   inputField.addEventListener('keypress', function (e) {
     if (e.key === 'Enter') {
-      outputField.innerText = inputField.value;
-      outputField.style.textAlign = 'left'; // Align text to left after input
-      outputField.style.justifyContent = 'flex-start'; // For flex container
-      outputField.style.alignItems = 'flex-start'; // For flex container
-      inputField.value = '';
-      sendButton.style.display = 'none';
+      transmitData();
     }
   });
+
+  sendButton.addEventListener('click', function () {
+    transmitData();
+  });
+
+  function transmitData() {
+    outputField.innerText = inputField.value;
+    outputField.style.textAlign = 'left'; // Align text to left after input
+    outputField.style.justifyContent = 'flex-start'; // For flex container
+    outputField.style.alignItems = 'flex-start'; // For flex container
+    inputField.value = '';
+    sendButton.style.display = 'none';
+  }
 });
 
