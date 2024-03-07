@@ -45,7 +45,7 @@ setTimeout(() => {
 }, 2 * 60 * 1000);
 
 // Animation settings
-const delayBetweenGenerations = 100; // in milliseconds
+const delayBetweenGenerations = 200; // in milliseconds
 
 async function animate() {
     updateGrid(leftGrid, blocksByWidth, blocksByHeight);
