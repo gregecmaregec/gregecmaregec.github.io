@@ -1,26 +1,40 @@
-// create a canvas element
-const canvas = document.createElement('canvas');
-document.body.appendChild(canvas);
+// Create two canvas elements
+const canvas1 = document.createElement('canvas');
+const canvas2 = document.createElement('canvas');
+document.body.appendChild(canvas1);
+document.body.appendChild(canvas2);
 
-// get the 2D rendering context
-const ctx = canvas.getContext('2d');
+// Get the 2D rendering contexts
+const ctx1 = canvas1.getContext('2d');
+const ctx2 = canvas2.getContext('2d');
 
 // dimensions of the game!
 const numBlocksX = 50;
 const numBlocksY = 50;
 
-// calculate the maximum dimension of the display
+// Calculate the maximum dimension of the display
 const maxDimension = Math.min(window.innerWidth, window.innerHeight);
 
-// set the canvas size to be macDimension pixels
-const canvasSize = Math.min(maxDimension, 350);
-canvas.width = canvasSize;
-canvas.height = canvasSize;
-// below sets the canvas to be centered on the page
-canvas.style.marginLeft = `${(window.innerWidth - canvasSize) / 2}px`;
+// Set the canvas sizes to be half the maxDimension pixels, 250x500px as mentioned
+canvas1.width = 250;
+canvas1.height = 500;
+canvas2.width = 250;
+canvas2.height = 500;
 
-// calculate the size of each block in the grid based on the maximum dimension
-const blockSize = canvasSize / Math.max(numBlocksX, numBlocksY);
+// Position the canvases
+canvas1.style.position = 'absolute';
+canvas1.style.left = '0px';
+canvas1.style.top = '50%';
+canvas1.style.transform = 'translateY(-50%)';
+
+canvas2.style.position = 'absolute';
+canvas2.style.left = '50%';
+canvas2.style.top = '50%';
+canvas2.style.transform = 'translate(-50%, -50%)';
+
+// Calculate the size of each block in the grid
+const blockSizeX = canvas1.width / numBlocksX;
+const blockSizeY = canvas1.height / numBlocksY;
 
 // create a 2D array to store the grid state
 let grid = createGrid();
@@ -109,24 +123,25 @@ function countNeighbors(x, y) {
 }
 
 function drawGrid() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    // Clear both canvases
+    ctx1.clearRect(0, 0, canvas1.width, canvas1.height);
+    ctx2.clearRect(0, 0, canvas2.width, canvas2.height);
 
+    // Draw the grid on both canvases
     for (let x = 0; x < numBlocksX; x++) {
         for (let y = 0; y < numBlocksY; y++) {
             const isAlive = grid[x][y] === 1;
 
-            if (isAlive) {
-                ctx.fillStyle = 'rgba(255, 41, 70, 0.8)'; // osai color
-            } else {
-                ctx.fillStyle = 'rgba(0, 0, 0, 0)'; 
-            }
+            ctx1.fillStyle = ctx2.fillStyle = isAlive ? 'rgba(255, 41, 70, 0.8)' : 'rgba(0, 0, 0, 0)';
 
-            const posX = x * blockSize;
-            const posY = y * blockSize;
+            const posX = x * blockSizeX;
+            const posY = y * blockSizeY;
 
-            ctx.fillRect(posX, posY, blockSize, blockSize);
+            ctx1.fillRect(posX, posY, blockSizeX, blockSizeY);
+            ctx2.fillRect(posX, posY, blockSizeX, blockSizeY);
         }
     }
 }
+
 
 // check wikipedia for game of life on more info
