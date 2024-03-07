@@ -33,8 +33,8 @@ canvas2.style.top = '50%';
 canvas2.style.transform = 'translate(-50%, -50%)';
 
 // Calculate the size of each block in the grid
-const blockSizeX = canvasLeft.width / (numBlocksX / 2);
-const blockSizeY = canvasLeft.height / numBlocksY;
+const blockSizeX = canvas1.width / (numBlocksX / 2);
+const blockSizeY = canvas1.height / numBlocksY;
 
 // create a 2D array to store the grid state
 let grid = createGrid();
@@ -124,8 +124,9 @@ function countNeighbors(x, y) {
 
 function drawGrid() {
     // Clear both canvases
-    ctxLeft.clearRect(0, 0, canvasLeft.width, canvasLeft.height);
-    ctxRight.clearRect(0, 0, canvasRight.width, canvasRight.height);
+    ctx1.clearRect(0, 0, canvas1.width, canvas1.height);
+    ctx2.clearRect(0, 0, canvas2.width, canvas2.height);
+
 
     // Draw the left half of the grid on the left canvas and the right half on the right canvas
     for (let x = 0; x < numBlocksX; x++) {
