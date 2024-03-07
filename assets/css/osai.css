@@ -10,7 +10,7 @@
     font-family: "Times New Roman", Times, serif;
     color: white;
     font-size: 16px;
-    z-index: 9999; /* Set a high z-index value */
+    z-index: 9998; /* Set a high z-index value */
 }
 
 .output-field {
@@ -26,8 +26,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px;
-    z-index: 9999; /* Set a high z-index value */
+    padding: 0 10px; /* Added padding */
+    z-index: 9998; /* Set a high z-index value */
 }
 
 .input-field {
@@ -38,12 +38,12 @@
     background-color: #333;
     color: #fff;
     border-bottom: 2px solid #856767;
-    padding-left: 10px;
+    padding: 0 10px; /* Added padding */
     font-size: 16px;
     box-sizing: border-box;
     outline: none;
     border-radius: 10px;
-    z-index: 9999; /* Set a high z-index value */
+    z-index: 9998; /* Set a high z-index value */
 }
 
 .send-button {
@@ -59,7 +59,7 @@
     right: 0;
     transform: translateX(50%);
     cursor: pointer;
-    z-index: 9999; /* Set a high z-index value */
+    z-index: 9998; /* Set a high z-index value */
 }
 
 /* Media query for responsiveness */
@@ -72,6 +72,6 @@
 /* BEGIN: Additional CSS for superposition */
 * {
     position: relative;
-    z-index: 9999; /* Set a high z-index value */
+    z-index: 9998; /* Set a high z-index value */
 }
 /* END: Additional CSS for superposition */
