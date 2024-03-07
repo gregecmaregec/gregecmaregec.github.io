@@ -15,7 +15,6 @@
     background-color: #333;
     color: #fff;
     text-align: center;
-    line-height: 350px; /* vertical center for 'hello world' */
     border-radius: 10px;
     margin-bottom: 20px;
     overflow: hidden; /* to handle the content overflow */

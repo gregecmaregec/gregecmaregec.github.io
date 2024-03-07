@@ -69,3 +69,4 @@ function drawGrid(ctx, offsetX) {
         }
     }
 }
+å
