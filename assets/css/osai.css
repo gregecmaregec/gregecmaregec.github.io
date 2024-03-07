@@ -24,6 +24,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 10px; /* Add padding to indent the text */
 }
 
 .input-field {
@@ -32,7 +33,7 @@
     border: none;
     background-color: #333;
     color: #fff;
-    border-bottom: 2px solid #ccc;
+    border-bottom: 2px solid #856767;
     padding-left: 10px;
     font-size: 16px;
     box-sizing: border-box;
