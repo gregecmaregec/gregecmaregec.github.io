@@ -48,21 +48,17 @@ function initializeGrid() {
     }
 }
 
+let timerId;
+
 function animate() {
     updateGrid();
     drawGrid();
-
-    // Stop the animation after 1 minute
-    if (performance.now() < 60000) {
-        requestAnimationFrame(animate);
-    } else {
-        // Display the final frame as a static image
-        const image = new Image();
-        image.src = canvas.toDataURL();
-        document.body.innerHTML = '';
-        document.body.appendChild(image);
-    }
+    timerId = setTimeout(animate, 500);
 }
+
+setTimeout(() => {
+    clearTimeout(timerId);
+}, 60000);
 
 function updateGrid() {
     const newGrid = createGrid();
@@ -122,7 +118,7 @@ function drawGrid() {
             if (isAlive) {
                 ctx.fillStyle = 'rgba(65, 184, 131, 1)'; // Vue.js color
             } else {
-                ctx.fillStyle = 'rgba(0, 0, 0, 0)';
+                ctx.fillStyle = 'rgba(0, 0, 0, 0)'; 
             }
 
             const posX = x * blockSize;
