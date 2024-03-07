@@ -22,7 +22,7 @@
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 10px;
-    background-color: #e8e8e8;
+    background-color: #2b1f1fc6;
 }
 
 .custom-chat-interface .output-field {
@@ -30,7 +30,7 @@
     width: 100%;
     flex-grow: 1;
     padding: 10px;
-    background-color: #9c1e1e;
+    background-color: #2a0202;
     overflow-y: auto;
     border-radius: 10px;
 }

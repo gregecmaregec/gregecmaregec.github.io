@@ -60,7 +60,7 @@ let timerId;
 function animate() {
     updateGrid();
     drawGrid();
-    timerId = setTimeout(animate, 90);
+    timerId = setTimeout(animate, 60);
     
 }
 
