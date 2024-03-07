@@ -20,8 +20,8 @@ const maxDimension = Math.min(window.innerWidth, window.innerHeight);
 const blockSize = maxDimension / numBlocks;
 
 // set the canvas sizes and positions
-const canvasWidth = 175;
-const canvasHeight = 250;
+const canvasWidth = 350;
+const canvasHeight = 500;
 leftCanvas.width = canvasWidth;
 leftCanvas.height = canvasHeight;
 leftCanvas.style.position = 'absolute';
