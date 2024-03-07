@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', function () {
   const outputField = document.getElementById('outputField');
   const sendButton = document.getElementById('sendButton');
 
+  outputField.innerText = 'Hello World!'; // Add this line
+
   inputField.addEventListener('input', function () {
     if (this.value.length > 0) {
       sendButton.style.display = 'block';
