@@ -1,6 +1,6 @@
 ---
 
-layout: opensource_ai.liquid
+layout: opensourced_ai.liquid
 permalink: /osai/
 title: osai
 description: placeholder
@@ -10,3 +10,5 @@ nav_order: 0
 ---
 
 enjoy a game of life!
+
+gopls
