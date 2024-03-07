@@ -1,35 +1,3 @@
 /* /assets/css/text_interface.css */
 
-.text-interface-box {
-  font-family: 'Times New Roman', Times, serif;
-  border: 2px solid #333;
-  padding: 10px;
-  margin: 20px;
-  width: 300px;
-}
-
-.text-interface-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #f8f8f8;
-  border-radius: 10px;
-  padding: 3px;
-}
-
-.input-field {
-  width: 400px;
-  height: 200px;
-  padding: 5px;
-  margin-bottom: 3px;
-  border-radius: 10px;
-  background-color: #e8e8e8;
-}
-
-.output-field {
-  width: 600px;
-  height: 1980px;
-  padding: 10px;
-  background-color: #d8d8d8;
-}
+testing
