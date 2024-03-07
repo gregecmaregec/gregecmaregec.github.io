@@ -71,7 +71,7 @@ function createGrid(width, height) {
 function initializeGrid(grid, width, height) {
     for (let y = 0; y < height; y++) {
         for (let x = 0; x < width; x++) {
-            grid[y][x] = Math.random() < 0.3 ? 1 : 0;
+            grid[y][x] = Math.random() < 0.1 ? 1 : 0;
         }
     }
 }
