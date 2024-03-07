@@ -55,7 +55,7 @@
     font-size: 16px;
     border-radius: 10px;
     position: absolute;
-    top: calc(50% - 25px);
+    top: calc(100% + 20px); /* Position 20px below the input-field */
     right: 0;
     transform: translateX(50%);
     cursor: pointer;
