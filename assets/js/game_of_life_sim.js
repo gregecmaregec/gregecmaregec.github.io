@@ -13,7 +13,7 @@ const numBlocksY = 90;
 const maxDimension = Math.min(window.innerWidth, window.innerHeight);
 
 // set the canvas size to be macDimension pixels
-const canvasSize = Math.min(maxDimension, 430);
+const canvasSize = Math.min(maxDimension, 600);
 canvas.width = canvasSize;
 canvas.height = canvasSize;
 // below sets the canvas to be centered on the page
