@@ -16,5 +16,6 @@ github: [github.com/gregecmaregec](https://github.com/gregecmaregec)</i>
 <br>
 <br>
 this website is built using:<br>
-html ; ruby ; js ; css ; jekyll ; liquid tempalte language, yaml
+html ; ruby ; js ; css ; jekyll ; .liquid, yaml
+<br>
 backend to osai is built using go and data is encrypted end-to-end with cloudflare
