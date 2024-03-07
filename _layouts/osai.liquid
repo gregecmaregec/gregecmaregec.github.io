@@ -13,6 +13,7 @@
       <meta http-equiv="refresh" content="3; url={{ redirect }}">
     {% endif %}
     {% include head.liquid %}
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/osai.css">
   </head>
 
   <!-- Body -->
@@ -53,7 +54,8 @@
       {% endif %}
     </div>
 
-
+    
+    
     <div class="custom-chat-interface">
       <div id="outputField" class="output-field">hello world</div>
       <input type="text" id="inputField" class="input-field" placeholder=">...">
