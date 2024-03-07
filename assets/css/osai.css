@@ -20,15 +20,21 @@
     text-align: center;
     border-radius: 10px;
     margin-bottom: 20px;
-    overflow: hidden; /* to handle the content overflow */
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px; /* Add padding to indent the text */
+    padding: 10px;
+}
+
+.input-group {
+    width: 800px;
+    display: flex;
+    position: relative;
 }
 
 .input-field {
-    width: 800px;
+    width: 100%;
     height: 50px;
     border: none;
     background-color: #333;
@@ -37,8 +43,9 @@
     padding-left: 10px;
     font-size: 16px;
     box-sizing: border-box;
-    outline: none; /* removes the outline */
-    border-radius: 10px;
+    outline: none;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
 .send-button {
@@ -48,17 +55,13 @@
     border: none;
     color: #fff;
     font-size: 16px;
-    border-radius: 10px; /* Same border radius as .input-field */
-    position: absolute;
-    top: calc(50% - 25px); /* Position at the center of .input-field */
-    right: 0; /* Position to the right of .input-field */
-    transform: translateX(50%); /* Center horizontally */
+    border-radius: 10px;
+    margin-left: -50px; /* Aligns the button with the input field */
     cursor: pointer;
 }
 
-/* Media query for responsiveness */
 @media (max-width: 800px) {
-    .output-field, .input-field {
+    .output-field, .input-group {
         width: 100%;
     }
 }

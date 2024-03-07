@@ -63,9 +63,13 @@
     <script src="{{ site.baseurl }}/assets/js/osai.js"></script>
 
     <div class="custom-chat-interface">
-      <div id="outputField" class="output-field"></div>
-      <input type="text" id="inputField" class="input-field" placeholder=">...">
-      <button id="sendButton" class="send-button" style="display:none;">↑</button>
+        <div class="output-field">
+            <!-- Your chat output -->
+        </div>
+        <div class="input-group">
+            <input type="text" class="input-field" placeholder=">...">
+            <button class="send-button">Send</button>
+        </div>
     </div>
 
     <style>
