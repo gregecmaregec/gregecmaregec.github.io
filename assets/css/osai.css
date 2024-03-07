@@ -50,8 +50,9 @@
     font-size: 16px;
     border-radius: 10px; /* Same border radius as .input-field */
     position: absolute;
-    top: calc(100% - 65px);
+    top: calc(50% - 25px); /* Position at the center of .input-field */
     right: 0; /* Position to the right of .input-field */
+    transform: translateX(50%); /* Center horizontally */
     cursor: pointer;
 }
 
