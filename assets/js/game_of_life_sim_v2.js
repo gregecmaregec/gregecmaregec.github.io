@@ -40,14 +40,20 @@ initializeGrid(rightGrid, blocksByWidth, blocksByHeight);
 requestAnimationFrame(animate);
 
 let animationId;
+const delayBetweenGenerations = 100; // in milliseconds
 
-function createGrid(width, height) {
-    const grid = new Array(height);
-    for (let y = 0; y < height; y++) {
-        grid[y] = new Array(width).fill(0);
-    }
-    return grid;
+function animate() {
+    updateGrid(leftGrid, blocksByWidth, blocksByHeight);
+    updateGrid(rightGrid, blocksByWidth, blocksByHeight);
+    drawGrid(leftCtx, leftGrid, blockSizeWidth, blockSizeHeight);
+    drawGrid(rightCtx, rightGrid, blockSizeWidth, blockSizeHeight);
+
+    // Delay before requesting the next animation frame
+    setTimeout(() => {
+        animationId = requestAnimationFrame(animate);
+    }, delayBetweenGenerations);
 }
+
 
 function initializeGrid(grid, width, height) {
     for (let y = 0; y < height; y++) {
