@@ -6,14 +6,14 @@ document.body.appendChild(canvas);
 const ctx = canvas.getContext('2d');
 
 // dimensions of the game!
-const numBlocksX = 190;
-const numBlocksY = 190;
+const numBlocksX = 50;
+const numBlocksY = 50;
 
 // calculate the maximum dimension of the display
 const maxDimension = Math.min(window.innerWidth, window.innerHeight);
 
 // set the canvas size to be macDimension pixels
-const canvasSize = Math.min(maxDimension, 800);
+const canvasSize = Math.min(maxDimension, 350);
 canvas.width = canvasSize;
 canvas.height = canvasSize;
 // below sets the canvas to be centered on the page
@@ -51,7 +51,17 @@ function initializeGrid() {
 function animate() {
     updateGrid();
     drawGrid();
-    setTimeout(animate, 500);
+
+    // Stop the animation after 1 minute
+    if (performance.now() < 60000) {
+        requestAnimationFrame(animate);
+    } else {
+        // Display the final frame as a static image
+        const image = new Image();
+        image.src = canvas.toDataURL();
+        document.body.innerHTML = '';
+        document.body.appendChild(image);
+    }
 }
 
 function updateGrid() {
@@ -112,7 +122,7 @@ function drawGrid() {
             if (isAlive) {
                 ctx.fillStyle = 'rgba(65, 184, 131, 1)'; // Vue.js color
             } else {
-                ctx.fillStyle = 'rgba(0, 0, 0, 0)'; 
+                ctx.fillStyle = 'rgba(0, 0, 0, 0)';
             }
 
             const posX = x * blockSize;
