@@ -9,4 +9,4 @@ nav_order:
 
 ---
 
-open source means acceleration of knowledge
+open source means acceleration of knowledge, yes, yes!!!
