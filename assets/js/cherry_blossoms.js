@@ -67,9 +67,9 @@ window.addEventListener('touchmove', () => userHasScrolled = true);
 
 setTimeout(() => {
     if (!userHasScrolled) {
-        const scrollDistance = canvas.height / 2;
+        const scrollDistance = canvas.height / 3;
         // 10 seconds for the auto-scrolling to complete
-        const scrollDuration = 10000;
+        const scrollDuration = 1000;
         let startTime = null;
 
         function scrollStep(timestamp) {
@@ -91,7 +91,7 @@ setTimeout(() => {
         requestAnimationFrame(scrollStep);
     }
 // 4 seconds of inaction starts auto-scroll to complete
-}, 4000);
+}, 500);
 
 // a technique for auto-scrolling to be smooth
 function easeInOutQuad(progress) {
