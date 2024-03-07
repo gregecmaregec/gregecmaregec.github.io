@@ -25,11 +25,12 @@
 
 .input-field {
     width: 400px;
-    height: 200px;
+    height: 50px;
     padding: 5px;
     margin-bottom: 3px;
     border-radius: 10px;
     background-color: #e8e8e8;
+    margin: 0 auto; /* Center the input field */
 }
 
 .output-field {
