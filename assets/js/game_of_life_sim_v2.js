@@ -28,13 +28,13 @@ canvas1.style.top = '50%';
 canvas1.style.transform = 'translateY(-50%)';
 
 canvas2.style.position = 'absolute';
-canvas2.style.left = '50%';
+canvas2.style.right = '0px';
 canvas2.style.top = '50%';
 canvas2.style.transform = 'translate(-50%, -50%)';
 
 // Calculate the size of each block in the grid
-const blockSizeX = canvas1.width / numBlocksX;
-const blockSizeY = canvas1.height / numBlocksY;
+const blockSizeX = canvasLeft.width / (numBlocksX / 2);
+const blockSizeY = canvasLeft.height / numBlocksY;
 
 // create a 2D array to store the grid state
 let grid = createGrid();
@@ -124,24 +124,32 @@ function countNeighbors(x, y) {
 
 function drawGrid() {
     // Clear both canvases
-    ctx1.clearRect(0, 0, canvas1.width, canvas1.height);
-    ctx2.clearRect(0, 0, canvas2.width, canvas2.height);
+    ctxLeft.clearRect(0, 0, canvasLeft.width, canvasLeft.height);
+    ctxRight.clearRect(0, 0, canvasRight.width, canvasRight.height);
 
-    // Draw the grid on both canvases
+    // Draw the left half of the grid on the left canvas and the right half on the right canvas
     for (let x = 0; x < numBlocksX; x++) {
         for (let y = 0; y < numBlocksY; y++) {
             const isAlive = grid[x][y] === 1;
+            const color = isAlive ? 'rgba(255, 41, 70, 0.8)' : 'rgba(0, 0, 0, 0)';
 
-            ctx1.fillStyle = ctx2.fillStyle = isAlive ? 'rgba(255, 41, 70, 0.8)' : 'rgba(0, 0, 0, 0)';
-
-            const posX = x * blockSizeX;
-            const posY = y * blockSizeY;
-
-            ctx1.fillRect(posX, posY, blockSizeX, blockSizeY);
-            ctx2.fillRect(posX, posY, blockSizeX, blockSizeY);
+            if (x < numBlocksX / 2) {
+                // Draw on the left canvas
+                ctxLeft.fillStyle = color;
+                const posX = x * blockSizeX;
+                const posY = y * blockSizeY;
+                ctxLeft.fillRect(posX, posY, blockSizeX, blockSizeY);
+            } else {
+                // Draw on the right canvas
+                ctxRight.fillStyle = color;
+                const posX = (x - numBlocksX / 2) * blockSizeX; // Adjust X to start from 0 for the right canvas
+                const posY = y * blockSizeY;
+                ctxRight.fillRect(posX, posY, blockSizeX, blockSizeY);
+            }
         }
     }
 }
+
 
 
 // check wikipedia for game of life on more info
