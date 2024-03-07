@@ -10,27 +10,29 @@
     font-family: "Times New Roman", Times, serif;
     color: white;
     font-size: 16px;
+    z-index: 9999; /* Set a high z-index value */
 }
 
 .output-field {
-    width: calc(100% - 20px); /* Subtract 20px for left and right padding */
-    max-width: 800px; /* Limit the maximum width to 800px */
+    width: calc(100% - 20px);
+    max-width: 800px;
     height: 350px;
     background-color: #333;
     color: #fff;
     text-align: center;
     border-radius: 10px;
     margin-bottom: 20px;
-    overflow: hidden; /* to handle the content overflow */
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px; /* Add padding to indent the text */
+    padding: 10px;
+    z-index: 9999; /* Set a high z-index value */
 }
 
 .input-field {
-    width: calc(100% - 20px); /* Subtract 20px for left and right padding */
-    max-width: 800px; /* Limit the maximum width to 800px */
+    width: calc(100% - 20px);
+    max-width: 800px;
     height: 50px;
     border: none;
     background-color: #333;
@@ -39,8 +41,9 @@
     padding-left: 10px;
     font-size: 16px;
     box-sizing: border-box;
-    outline: none; /* removes the outline */
+    outline: none;
     border-radius: 10px;
+    z-index: 9999; /* Set a high z-index value */
 }
 
 .send-button {
@@ -50,12 +53,13 @@
     border: none;
     color: #fff;
     font-size: 16px;
-    border-radius: 10px; /* Same border radius as .input-field */
+    border-radius: 10px;
     position: absolute;
-    top: calc(50% - 25px); /* Position at the center of .input-field */
-    right: 0; /* Position to the right of .input-field */
-    transform: translateX(50%); /* Center horizontally */
+    top: calc(50% - 25px);
+    right: 0;
+    transform: translateX(50%);
     cursor: pointer;
+    z-index: 9999; /* Set a high z-index value */
 }
 
 /* Media query for responsiveness */
@@ -64,3 +68,10 @@
         width: 100%;
     }
 }
+
+/* BEGIN: Additional CSS for superposition */
+* {
+    position: relative;
+    z-index: 9999; /* Set a high z-index value */
+}
+/* END: Additional CSS for superposition */
