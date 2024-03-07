@@ -121,14 +121,12 @@ function countNeighbors(x, y) {
 
     return count;
 }
-
 function drawGrid() {
     // Clear both canvases
     ctx1.clearRect(0, 0, canvas1.width, canvas1.height);
     ctx2.clearRect(0, 0, canvas2.width, canvas2.height);
 
-
-    // Draw the left half of the grid on the left canvas and the right half on the right canvas
+    // Draw the left half of the grid on the left canvas (ctx1) and the right half on the right canvas (ctx2)
     for (let x = 0; x < numBlocksX; x++) {
         for (let y = 0; y < numBlocksY; y++) {
             const isAlive = grid[x][y] === 1;
@@ -136,16 +134,16 @@ function drawGrid() {
 
             if (x < numBlocksX / 2) {
                 // Draw on the left canvas
-                ctxLeft.fillStyle = color;
+                ctx1.fillStyle = color;
                 const posX = x * blockSizeX;
                 const posY = y * blockSizeY;
-                ctxLeft.fillRect(posX, posY, blockSizeX, blockSizeY);
+                ctx1.fillRect(posX, posY, blockSizeX, blockSizeY);
             } else {
                 // Draw on the right canvas
-                ctxRight.fillStyle = color;
+                ctx2.fillStyle = color;
                 const posX = (x - numBlocksX / 2) * blockSizeX; // Adjust X to start from 0 for the right canvas
                 const posY = y * blockSizeY;
-                ctxRight.fillRect(posX, posY, blockSizeX, blockSizeY);
+                ctx2.fillRect(posX, posY, blockSizeX, blockSizeY);
             }
         }
     }
