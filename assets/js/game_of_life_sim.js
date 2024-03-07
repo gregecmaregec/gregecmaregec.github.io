@@ -124,7 +124,7 @@ function drawGrid() {
             const isAlive = grid[x][y] === 1;
 
             if (isAlive) {
-                ctx.fillStyle = 'rgba(106, 0, 55, 0.8)'; // red color with 60% opacity
+                ctx.fillStyle = 'rgba(156, 0, 55, 0.8)'; // red color with 60% opacity
             } else {
                 ctx.fillStyle = 'rgba(0, 0, 0, 0)'; // completely transparent
             }
