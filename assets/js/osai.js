@@ -22,12 +22,21 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   function transmitData() {
-    outputField.innerText = inputField.value;
-    outputField.style.textAlign = 'left'; // Align text to left after input
-    outputField.style.justifyContent = 'flex-start'; // For flex container
-    outputField.style.alignItems = 'flex-start'; // For flex container
+    if (inputField.value.length > 0) {
+      outputField.innerText = inputField.value;
+      outputField.style.textAlign = 'left';
+      outputField.style.justifyContent = 'flex-start';
+      outputField.style.alignItems = 'flex-start';
+    } else {
+      outputField.innerText = 'Hello World!';
+      outputField.style.textAlign = 'center';
+      outputField.style.justifyContent = 'center';
+      outputField.style.alignItems = 'center';
+    }
+
     inputField.value = '';
     sendButton.style.display = 'none';
   }
 });
+
 
