@@ -28,9 +28,10 @@ canvas1.style.top = '50%';
 canvas1.style.transform = 'translateY(-50%)';
 
 canvas2.style.position = 'absolute';
-canvas2.style.right = '0px';
+canvas2.style.left = `${maxDimension - canvas2.width}px`; // Adjust the left position to place it to the right
 canvas2.style.top = '50%';
-canvas2.style.transform = 'translate(-50%, -50%)';
+canvas2.style.transform = 'translateY(-50%)';
+
 
 // Calculate the size of each block in the grid
 const blockSizeX = canvas1.width / (numBlocksX / 2);
