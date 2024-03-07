@@ -48,10 +48,10 @@
     border: none;
     color: #fff;
     font-size: 16px;
-    border-radius: 50%;
+    border-radius: 10px; /* Same border radius as .input-field */
     position: absolute;
     top: calc(100% - 65px);
-    left: calc(50% - 25px);
+    right: 0; /* Position to the right of .input-field */
     cursor: pointer;
 }
 
