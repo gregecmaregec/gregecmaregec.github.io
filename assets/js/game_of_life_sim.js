@@ -58,7 +58,7 @@ function initializeGrid() {
 function animate() {
     updateGrid();
     drawGrid();
-    setTimeout(animate, 110);
+    setTimeout(animate, 90);
 }
 
 function updateGrid() {
