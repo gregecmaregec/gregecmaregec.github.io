@@ -11,24 +11,24 @@ const leftCtx = leftCanvas.getContext('2d');
 const rightCtx = rightCanvas.getContext('2d');
 
 // dimensions of the game!
-const numBlocksX = 50;
-const numBlocksY = 50;
+const numBlocks = 50;
 
 // calculate the maximum dimension of the display
 const maxDimension = Math.min(window.innerWidth, window.innerHeight);
 
 // calculate the size of each block in the grid based on the maximum dimension
-const blockSize = maxDimension / Math.max(numBlocksX, numBlocksY);
+const blockSize = maxDimension / numBlocks;
 
 // set the canvas sizes and positions
-const canvasSize = Math.min(maxDimension / 3, 350);
-leftCanvas.width = canvasSize;
-leftCanvas.height = canvasSize;
+const canvasWidth = 350;
+const canvasHeight = 500;
+leftCanvas.width = canvasWidth;
+leftCanvas.height = canvasHeight;
 leftCanvas.style.position = 'absolute';
 leftCanvas.style.left = '0';
 
-rightCanvas.width = canvasSize;
-rightCanvas.height = canvasSize;
+rightCanvas.width = canvasWidth;
+rightCanvas.height = canvasHeight;
 rightCanvas.style.position = 'absolute';
 rightCanvas.style.right = '0';
 
@@ -49,16 +49,16 @@ setTimeout(() => {
 let animationId;
 
 function createGrid() {
-    const grid = new Array(numBlocksX);
-    for (let x = 0; x < numBlocksX; x++) {
-        grid[x] = new Array(numBlocksY);
+    const grid = new Array(numBlocks);
+    for (let x = 0; x < numBlocks; x++) {
+        grid[x] = new Array(numBlocks);
     }
     return grid;
 }
 
 function initializeGrid() {
-    for (let x = 0; x < numBlocksX; x++) {
-        for (let y = 0; y < numBlocksY; y++) {
+    for (let x = 0; x < numBlocks; x++) {
+        for (let y = 0; y < numBlocks; y++) {
             // randomly set each block to be alive or dead
             grid[x][y] = Math.random() < 0.3 ? 1 : 0;
         }
@@ -80,8 +80,8 @@ setTimeout(() => {
 function updateGrid() {
     const newGrid = createGrid();
 
-    for (let x = 0; x < numBlocksX; x++) {
-        for (let y = 0; y < numBlocksY; y++) {
+    for (let x = 0; x < numBlocks; x++) {
+        for (let y = 0; y < numBlocks; y++) {
             const neighbors = countNeighbors(x, y);
             const isAlive = grid[x][y] === 1;
 
@@ -113,9 +113,9 @@ function countNeighbors(x, y) {
 
             if (
                 neighborX >= 0 &&
-                neighborX < numBlocksX &&
+                neighborX < numBlocks &&
                 neighborY >= 0 &&
-                neighborY < numBlocksY
+                neighborY < numBlocks
             ) {
                 count += grid[neighborX][neighborY];
             }
@@ -129,8 +129,8 @@ function drawGrid() {
     leftCtx.clearRect(0, 0, leftCanvas.width, leftCanvas.height);
     rightCtx.clearRect(0, 0, rightCanvas.width, rightCanvas.height);
 
-    for (let x = 0; x < numBlocksX; x++) {
-        for (let y = 0; y < numBlocksY; y++) {
+    for (let x = 0; x < numBlocks; x++) {
+        for (let y = 0; y < numBlocks; y++) {
             const isAlive = grid[x][y] === 1;
 
             if (isAlive) {
