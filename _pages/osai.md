@@ -9,6 +9,4 @@ nav_order:
 
 ---
 
-enjoy a game of life!
-
-gopls
+open source means acceleration of knowledge
