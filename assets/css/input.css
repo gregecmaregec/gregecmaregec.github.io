@@ -1,5 +1,5 @@
 .custom-chat-interface {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, serif !important;
     border: 2px solid #333;
     border-radius: 15px;
     padding: 20px;
