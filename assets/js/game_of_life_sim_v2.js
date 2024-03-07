@@ -13,22 +13,19 @@ const rightCtx = rightCanvas.getContext('2d');
 // dimensions of the game!
 const numBlocks = 50;
 
-// calculate the maximum dimension of the display
-const maxDimension = Math.min(window.innerWidth, window.innerHeight);
-
-// calculate the size of each block in the grid based on the maximum dimension
-const blockSize = maxDimension / numBlocks;
+// calculate the size of each block in the grid based on the canvas size
+const blockSize = Math.floor(350 / numBlocks);
 
 // set the canvas sizes and positions
-const canvasWidth = 350;
-const canvasHeight = 500;
-leftCanvas.width = canvasWidth;
-leftCanvas.height = canvasHeight;
+const canvasSize = blockSize * numBlocks;
+leftCanvas.width = canvasSize;
+leftCanvas.height = canvasSize;
+
+rightCanvas.width = canvasSize;
+rightCanvas.height = canvasSize;
 leftCanvas.style.position = 'absolute';
 leftCanvas.style.left = '0';
 
-rightCanvas.width = canvasWidth;
-rightCanvas.height = canvasHeight;
 rightCanvas.style.position = 'absolute';
 rightCanvas.style.right = '0';
 
