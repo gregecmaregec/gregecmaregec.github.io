@@ -3,7 +3,7 @@
 layout: osai
 permalink: /osai/
 title: osai
-description: 
+description: this house loves open source ai models
 nav: false
 nav_order:
 

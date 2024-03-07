@@ -1,0 +1,22 @@
+/* /assets/css/text_interface.css */
+
+.text-interface-box {
+  font-family: 'Times New Roman', Times, serif;
+  border: 2px solid #333;
+  padding: 10px;
+  margin: 20px;
+  width: 300px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.output-field {
+  width: 100%;
+  padding: 10px;
+  background-color: #f8f8f8;
+  margin-bottom: 10px;
+}
