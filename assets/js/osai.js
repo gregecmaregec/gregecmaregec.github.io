@@ -1,57 +1,11 @@
-document.addEventListener('DOMContentLoaded', function () {
-  const inputField = document.getElementById('inputField');
-  const outputField = document.getElementById('outputField');
-  const sendButton = document.getElementById('sendButton');
+const userInput = document.getElementById('userInput');
+const submitBtn = document.getElementById('submitBtn');
+const output = document.getElementById('output');
 
-  outputField.innerText = 'Hello World!';
-
-  inputField.addEventListener('input', function () {
-    if (this.value.length > 0) {
-      sendButton.style.display = 'block';
-    } else {
-      sendButton.style.display = 'none';
+submitBtn.addEventListener('click', () => {
+    const inputValue = userInput.value.trim();
+    if (inputValue !== '') {
+        output.textContent = `You entered: ${inputValue}`;
+        userInput.value = '';
     }
-  });
-
-  inputField.addEventListener('keypress', function (e) {
-    if (e.key === 'Enter') {
-      transmitData();
-    }
-  });
-
-  sendButton.addEventListener('click', function () {
-    transmitData();
-  });
-
-  function transmitData() {
-    if (inputField.value.length > 0) {
-      let newContent = document.createElement('div');
-      newContent.textContent = 'Sending request...';
-      newContent.classList.add('message');
-      outputField.appendChild(newContent);
-      scrollToBottom();
-
-      fetch('https://gmserver.xyz', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'text/plain'
-        },
-        body: inputField.value
-      })
-      .then(response => response.text())
-      .then(data => {
-        newContent.textContent = data;
-      })
-      .catch(error => {
-        newContent.textContent = 'Error: ' + error.message;
-      });
-    }
-
-    inputField.value = '';
-    sendButton.style.display = 'none';
-  }
-
-  function scrollToBottom() {
-    outputField.scrollTop = outputField.scrollHeight;
-  }
 });

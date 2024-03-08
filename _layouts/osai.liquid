@@ -13,6 +13,7 @@
       <meta http-equiv="refresh" content="3; url={{ redirect }}">
     {% endif %}
     {% include head.liquid %}
+      <!-- Below is the access to the osai.css" -->
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/osai.css">
   </head>
 
@@ -60,12 +61,10 @@
     <!-- Text interface JS -->
     <script src="{{ site.baseurl }}/assets/js/osai.js"></script>
 
-    <div class="custom-chat-interface">
-        <div id="outputField" class="output-field"></div>
-        <div class="input-field-container">
-            <input type="text" id="inputField" class="input-field" placeholder="Type here...">
-            <button id="sendButton" class="send-button">↑</button>
-        </div>
+    <div id="container">
+        <input type="text" id="userInput" placeholder=">...">
+        <button id="submitBtn">Submit</button>
+        <div id="output"></div>
     </div>
 
     <!-- JavaScripts -->
