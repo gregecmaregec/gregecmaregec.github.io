@@ -50,7 +50,7 @@ function initializeGrid() {
     for (let x = 0; x < numBlocksX; x++) {
         for (let y = 0; y < numBlocksY; y++) {
             // randomly set each block to be alive or dead
-            grid[x][y] = Math.random() < 0.3 ? 0.5 : 0;
+            grid[x][y] = Math.random() < 0.3 ? 1 : 0;
         }
     }
 }
