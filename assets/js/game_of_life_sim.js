@@ -50,7 +50,7 @@ function initializeGrid() {
     for (let x = 0; x < numBlocksX; x++) {
         for (let y = 0; y < numBlocksY; y++) {
             // randomly set each block to be alive or dead
-            grid[x][y] = Math.random() < 0.3 ? 1 : 0;
+            grid[x][y] = Math.random() < 0.3 ? 0.5 : 0;
         }
     }
 }
@@ -124,7 +124,7 @@ function drawGrid() {
             const isAlive = grid[x][y] === 1;
 
             if (isAlive) {
-                ctx.fillStyle = 'rgba(156, 0, 55, 0.8)'; // red color with 60% opacity
+                ctx.fillStyle = 'rgba(255, 183, 197, 0.8)'; // cherry blossom color with 80% opacity
             } else {
                 ctx.fillStyle = 'rgba(0, 0, 0, 0)'; // completely transparent
             }
