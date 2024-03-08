@@ -26,6 +26,10 @@ const blocksByWidth = 15;
 const blockSizeWidth = leftCanvas.width / blocksByWidth;
 const blockSizeHeight = leftCanvas.height / blocksByHeight;
 
+// set the width and height of the right canvas
+rightCanvas.width = leftCanvas.width;
+rightCanvas.height = leftCanvas.height;
+
 // create 2D arrays to store the grid state for each canvas
 let leftGrid = createGrid(blocksByWidth, blocksByHeight);
 let rightGrid = createGrid(blocksByWidth, blocksByHeight);
@@ -39,7 +43,7 @@ requestAnimationFrame(animate);
 
 let animationId;
 
-// Stop the animation after 2 minutes
+// Stop the animation after 2 seconds
 setTimeout(() => {
     cancelAnimationFrame(animationId);
 }, 2 * 1000);
