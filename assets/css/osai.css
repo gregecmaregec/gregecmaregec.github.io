@@ -28,7 +28,7 @@
     height: auto; /* Height will adjust based on content */
     min-height: 30px; /* Minimum height */
     background-color: #333;
-    color: #fff;
+    color: #868484;
     border: none;
     outline: none;
     border-radius: 10px;
@@ -38,13 +38,13 @@
 }
 
 .send-button {
-    width: 50px;
-    height: 50px;
-    background-color: #a82c2c;
+    width: 30px;
+    height: 30px;
+    background-color: #8b0000cc;
     border: none;
-    color: #fff;
+    color: #00000000;
     font-size: 16px;
-    border-radius: 10px;
+    border-radius: 5px;
     cursor: pointer;
     z-index: 9999;
     position: absolute;
