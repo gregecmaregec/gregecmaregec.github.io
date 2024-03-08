@@ -7,19 +7,10 @@
     color: gray;
     font-size: 16px;
     z-index: 9998;
-    position: relative;
-    box-sizing: border-box;
-}
-
-.output-field {
-    width: 100%;
-    min-height: 100px; /* Initial height, but can grow */
-max-height: 300px; /* Maximum height before scrolling */
-overflow-y: auto;
-    background-color: #333;
-    border-radius: 10px;
-    margin-bottom: 10px;
-    padding: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     box-sizing: border-box;
 }
 
@@ -34,9 +25,9 @@ overflow-y: auto;
 
 .input-field {
     width: calc(100% - 70px); /* Adjust for button width plus padding */
-height: auto; /* Height will adjust based on content */
-min-height: 30px; /* Minimum height */
-background-color: #333;
+    height: auto; /* Height will adjust based on content */
+    min-height: 30px; /* Minimum height */
+    background-color: #333;
     color: #fff;
     border: none;
     outline: none;
@@ -56,6 +47,10 @@ background-color: #333;
     border-radius: 10px;
     cursor: pointer;
     z-index: 9999;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 @media (max-width: 800px) {
@@ -63,9 +58,16 @@ background-color: #333;
     .output-field,
     .input-field-container {
         width: calc(100% - 20px); /* Full width minus padding */
-}
+    }
 
     .input-field {
         width: calc(100% - 70px); /* Adjust for button width plus padding */
-}
+    }
+
+    .send-button {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
 }
