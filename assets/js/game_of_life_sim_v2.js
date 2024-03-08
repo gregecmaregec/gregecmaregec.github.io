@@ -43,9 +43,18 @@ requestAnimationFrame(animate);
 
 let animationId;
 
+// Record the start time
+const startTime = Date.now();
+
 // Stop the animation after 2 seconds
 setTimeout(() => {
     cancelAnimationFrame(animationId);
+
+    // Update grid and draw final state
+    updateGrid(leftGrid, blocksByWidth, blocksByHeight);
+    updateGrid(rightGrid, blocksByWidth, blocksByHeight);
+    drawGrid(leftCtx, leftGrid, blockSizeWidth, blockSizeHeight);
+    drawGrid(rightCtx, rightGrid, blockSizeWidth, blockSizeHeight);
 }, 2 * 1000);
 
 // Animation settings
@@ -56,6 +65,14 @@ async function animate() {
     updateGrid(rightGrid, blocksByWidth, blocksByHeight);
     drawGrid(leftCtx, leftGrid, blockSizeWidth, blockSizeHeight);
     drawGrid(rightCtx, rightGrid, blockSizeWidth, blockSizeHeight);
+
+    // Check if 2 seconds have passed, and if so, return without continuing the animation
+    if (Date.now() - startTime >= 2 * 1000) {
+        // Draw the final state
+        drawGrid(leftCtx, leftGrid, blockSizeWidth, blockSizeHeight);
+        drawGrid(rightCtx, rightGrid, blockSizeWidth, blockSizeHeight);
+        return;
+    }
 
     // Delay using async/await
     await new Promise(resolve => setTimeout(resolve, delayBetweenGenerations));
