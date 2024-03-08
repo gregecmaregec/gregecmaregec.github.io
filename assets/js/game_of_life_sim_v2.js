@@ -1,6 +1,6 @@
 // create the left canvas element
 const leftCanvas = document.createElement('canvas');
-leftCanvas.width = 300;
+leftCanvas.width = 150;
 leftCanvas.height = 500;
 leftCanvas.style.position = 'absolute';
 leftCanvas.style.left = '0'; // Align to the total left
@@ -8,7 +8,7 @@ document.body.appendChild(leftCanvas);
 
 // create the right canvas element
 const rightCanvas = document.createElement('canvas');
-rightCanvas.width = 300;
+rightCanvas.width = 150;
 rightCanvas.height = 500;
 rightCanvas.style.position = 'absolute';
 rightCanvas.style.right = '0'; // Align to the total right
@@ -20,7 +20,7 @@ const rightCtx = rightCanvas.getContext('2d');
 
 // dimensions of the game
 const blocksByHeight = 50;
-const blocksByWidth = 30;
+const blocksByWidth = 15;
 
 // calculate the size of each block
 const blockSizeWidth = leftCanvas.width / blocksByWidth;
@@ -42,7 +42,7 @@ let animationId;
 // Stop the animation after 2 minutes
 setTimeout(() => {
     cancelAnimationFrame(animationId);
-}, 2 * 60 * 1000);
+}, 2 * 1000);
 
 // Animation settings
 const delayBetweenGenerations = 200; // in milliseconds
