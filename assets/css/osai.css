@@ -6,21 +6,23 @@
     justify-content: flex-start;
     height: 400px;
     background-color: #ffffff00;
-    border-radius: 10px;
+    border-radius: 20px; /* Sophisticated rounding corners style */
     font-family: "Times New Roman", Times, serif;
     color: gray;
     font-size: 16px;
     z-index: 9998; /* Set a high z-index value */
     padding: 10px; /* Add padding to the container */
+    position: relative; /* Enable positioning for children */
 }
 
 .output-field {
     max-width: 800px;
+    min-width: 250px; /* Minimum width for responsiveness */
     height: 350px;
     background-color: #333;
-    border-radius: 10px;
+    border-radius: 20px; /* Sophisticated rounding corners style */
     margin-bottom: 20px;
-    overflow: hidden;
+    overflow-y: auto; /* Enable vertical scrollbar if content exceeds height */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,6 +31,7 @@
 
 .input-field {
     max-width: 800px;
+    min-width: 250px; /* Minimum width for responsiveness */
     height: 50px;
     background-color: #333;
     color: #fff;
@@ -36,9 +39,13 @@
     font-size: 16px;
     box-sizing: border-box;
     outline: none;
-    border-radius: 10px;
+    border-radius: 20px; /* Sophisticated rounding corners style */
+    resize: none; /* Disable textarea resizing */
 }
 
+.input-field::placeholder {
+    color: #fff; /* Placeholder text color */
+}
 
 .send-button {
     width: 50px;
@@ -47,25 +54,19 @@
     border: none;
     color: #fff;
     font-size: 16px;
-    border-radius: 10px;
+    border-radius: 20px; /* Sophisticated rounding corners style */
     position: absolute;
-    top: calc(100% + 20px); /* Position 20px below the input-field */
-    right: 0;
-    transform: translateX(50%);
+    bottom: 10px;
+    right: 10px;
     cursor: pointer;
-    z-index: 9998; /* Set a high z-index value */
+    z-index: 9999; /* Set a higher z-index value */
 }
 
 /* Media query for responsiveness */
 @media (max-width: 800px) {
-    .output-field, .input-field {
+    .output-field,
+    .input-field {
         width: 100%;
+        max-width: 100%;
     }
 }
-
-/* BEGIN: Additional CSS for superposition */
-* {
-    position: relative;
-    z-index: 9998; /* Set a high z-index value */
-}
-/* END: Additional CSS for superposition */
