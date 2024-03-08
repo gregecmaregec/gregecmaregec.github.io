@@ -11,7 +11,7 @@
     color: gray;
     font-size: 16px;
     z-index: 9998; /* Set a high z-index value */
-    padding: 20px; /* Add padding to the container */
+    padding: 10px; /* Add padding to the container */
 }
 
 .output-field {
@@ -32,7 +32,7 @@
     height: 50px;
     background-color: #333;
     color: #fff;
-    border-bottom: 2px solid #856767;
+    border-bottom: 2px solid #fff;
     font-size: 16px;
     box-sizing: border-box;
     outline: none;
