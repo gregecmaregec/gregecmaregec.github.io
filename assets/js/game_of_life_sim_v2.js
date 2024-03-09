@@ -4,7 +4,6 @@ leftCanvas.width = 150;
 leftCanvas.height = 500;
 leftCanvas.style.position = 'absolute';
 leftCanvas.style.left = '0'; // Align to the total left
-rightCanvas.style.top = '50%'; // Align to the middle vertically
 document.body.appendChild(leftCanvas);
 
 // create the right canvas element
@@ -13,7 +12,6 @@ rightCanvas.width = 150;
 rightCanvas.height = 500;
 rightCanvas.style.position = 'absolute';
 rightCanvas.style.right = '0'; // Align to the total right
-rightCanvas.style.top = '50%'; // Align to the middle vertically
 document.body.appendChild(rightCanvas);
 
 // get the 2D rendering contexts for both canvases
