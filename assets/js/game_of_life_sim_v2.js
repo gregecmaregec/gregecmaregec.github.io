@@ -1,19 +1,17 @@
 // create the left canvas element
 const leftCanvas = document.createElement('canvas');
-leftCanvas.width = 150;
-leftCanvas.height = 500;
+leftCanvas.height = window.innerHeight;
 leftCanvas.style.position = 'absolute';
-leftCanvas.style.left = '0'; // Align to the total left
-leftCanvas.style.top = '50%'; // Align to the middle vertically
+leftCanvas.style.left = '50%';
+leftCanvas.style.transform = 'translateX(-50%)';
 document.body.appendChild(leftCanvas);
 
 // create the right canvas element
-const rightCanvas = document.createElement('canvas');
-rightCanvas.width = 150;
-rightCanvas.height = 500;
+const rightCanvas = document.createElement('canvas');;
+rightCanvas.height = window.innerHeight;
 rightCanvas.style.position = 'absolute';
-rightCanvas.style.right = '0'; // Align to the total right
-rightCanvas.style.top = '50%'; // Align to the middle vertically
+rightCanvas.style.right = '50%';
+rightCanvas.style.transform = 'translateX(50%)';
 document.body.appendChild(rightCanvas);
 
 // get the 2D rendering contexts for both canvases

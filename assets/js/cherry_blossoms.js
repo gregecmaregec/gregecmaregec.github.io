@@ -69,7 +69,7 @@ setTimeout(() => {
     if (!userHasScrolled) {
         const scrollDistance = canvas.height / 3;
         // 10 seconds for the auto-scrolling to complete
-        const scrollDuration = 7000;
+        const scrollDuration = 10;
         let startTime = null;
 
         function scrollStep(timestamp) {
@@ -90,8 +90,8 @@ setTimeout(() => {
         const startY = window.scrollY;
         requestAnimationFrame(scrollStep);
     }
-// 4 seconds of inaction starts auto-scroll to complete
-}, 10000);
+// unit of time of inaction before the start of auto-scroll to complete
+}, 7000);
 
 // a technique for auto-scrolling to be smooth
 function easeInOutQuad(progress) {
