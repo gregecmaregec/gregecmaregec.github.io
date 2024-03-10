@@ -35,7 +35,7 @@ document.getElementById('inputBox').addEventListener('keypress', function(event)
         .then(response => response.text())
         .then(responseData => {
             // Display the server's response in the output box
-            outputBox.innerHTML += selectedModel.charAt(0).toUpperCase() + selectedModel.slice(1) + ': ' + '<br>' + responseData + '<br><br>';
+            outputBox.innerHTML += '<span style="color: rgba(139, 0, 0, 0.8)">' + selectedModel.charAt(0).toUpperCase() + selectedModel.slice(1) + '</span>: ' + '<br>' + responseData + '<br><br>';
         })
         .catch(error => {
             // Display the error in the output box
@@ -62,7 +62,7 @@ function modelChoice(choice) {
             button.style.borderRight = '1px solid rgba(68, 68, 68, 0.3)';
         }
     });
-    
+
     // Highlight the border of the selected button
     var selectedButton = document.querySelector(`button[data-model="${choice}"]`);
     if (selectedButton) {
