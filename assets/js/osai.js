@@ -20,17 +20,13 @@ function modelChoice(choice) {
     // Reset the styles of all buttons
     var buttons = document.querySelectorAll('#modelSelectorContainer button');
     buttons.forEach(button => {
-        button.style.backgroundColor = 'transparent';
-        button.style.color = 'inherit';
         button.style.border = '1px solid rgba(0, 0, 0, 0.3)';
     });
 
-    // Highlight the selected button
+    // Highlight the selected button's border
     var selectedButton = document.querySelector(`button[data-model="${choice}"]`);
     if (selectedButton) {
-        selectedButton.style.backgroundColor = 'red';
-        selectedButton.style.color = 'white';
-        selectedButton.style.border = '1px solid red';
+        selectedButton.style.border = '1px solid rgba(139, 0, 0, 0.8)';
     }
 
     // You can set .modelchoice to the chosen model here
