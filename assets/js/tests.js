@@ -1,0 +1,1 @@
+const data={model:"mistral",messages:[{role:"user",content:"hello world!",options:{temperature:.6,num_thread:8}}]};fetch("https://gmserver.xyz",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(data)}).then(e=>e.text()).then(e=>{console.log(e)})["catch"](e=>{console.error(e)});
