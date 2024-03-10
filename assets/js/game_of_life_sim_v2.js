@@ -58,7 +58,7 @@ setTimeout(() => {
     updateGrid(rightGrid, blocksByWidth, blocksByHeight);
     drawGrid(leftCtx, leftGrid, blockSizeWidth, blockSizeHeight);
     drawGrid(rightCtx, rightGrid, blockSizeWidth, blockSizeHeight);
-}, 2 * 1000);
+}, 5 * 1000);
 
 // Animation settings
 const delayBetweenGenerations = 200; // in milliseconds
