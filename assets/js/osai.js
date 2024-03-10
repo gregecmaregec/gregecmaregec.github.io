@@ -1,1 +1,1 @@
-document.getElementById("inputBox").addEventListener("keypress",function(e){if("Enter"===e.key){e.preventDefault();var t=this.value;document.getElementById("outputBox").textContent+=t+"\n",this.value=""}});
+document.getElementById("inputBox").addEventListener("keypress",function(e){if("Enter"===e.key&&!e.shiftKey){e.preventDefault();var t=this.value;document.getElementById("outputBox").textContent+=t+"\n",this.value=""}});
