@@ -6,6 +6,7 @@ body {
     align-items: center;
     font-family: Arial, sans-serif;
     padding: 10px; /* Padding around the body */
+    box-sizing: border-box; /* Ensures padding does not affect the overall width calculations */
 }
 
 .container {
@@ -13,12 +14,11 @@ body {
     flex-direction: column-reverse;
     align-items: center;
     gap: 20px;
-    width: 820px; /* Set the container width to accommodate the input box plus body padding */
     max-width: 100%; /* Ensure the container is not wider than the viewport */
 }
 
 #inputBox {
-    width: 100%; /* Make the input box fill the container */
+    width: 800px; /* Explicitly set to 800px */
     min-height: 50px;
     font-size: 16px;
     box-sizing: border-box;
@@ -28,11 +28,11 @@ body {
     border-radius: 8px;
     background-color: transparent; /* Set the background to transparent */
     border: 1px solid #ccc; /* Add a border to make the input box visible */
+    margin: 0 auto; /* Center the input box */
 }
 
 #outputBox {
     width: 800px;
-    max-width: 100%; /* Ensure it doesn't overflow the screen */
     min-height: 50px;
     max-height: 400px;
     overflow-y: auto;
@@ -40,4 +40,5 @@ body {
     padding: 10px;
     box-sizing: border-box;
     word-wrap: break-word;
+    margin: 0 auto; /* Ensure the output box is also centered */
 }
