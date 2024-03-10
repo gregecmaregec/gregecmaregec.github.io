@@ -6,45 +6,35 @@ document.getElementById('inputBox').addEventListener('keypress', function(event)
         if (inputText) { // Only proceed if inputText is not empty
             // Construct the JSON payload
             const data = {
-                "model": "mistral",
-                "messages": [
+                model: "mistral",
+                messages: [
                     {
-                        "role": "user",
-                        "content": inputText, // Insert the user input into the content field
-                        "options": {
-                            "temperature": 0.6,
-                            "num_thread": 8
+                        role: "user",
+                        content: "I have kinda given up on react. I will rather do it in Vue. Is it easier? Tell me how to delete react completely form my mac, I will do the repositroy cleaning myself, and how to install vue. Bonus points to get me a vue supported object that i can put in",
+                        options: {
+                            temperature: 0.6,
+                            num_thread: 8
                         }
                     }
                 ]
             };
-
-            // Send a POST request to the server
-            fetch('https://gmserver.xyz', {
-                method: 'POST',
+            
+            fetch("https://gmserver.xyz", {
+                method: "POST",
                 headers: {
-                    'Accept': 'application/json',
-                    'Content-Type': 'application/json'
+                    "Content-Type": "application/json"
                 },
-                body: JSON.stringify(data),
+                body: JSON.stringify(data)
             })
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`HTTP error! Status: ${response.status}`);
-                }
-                return response.text(); // Handle as plain text
-            })
-            .then(data => {
-                // Display the response in the output box
-                const outputBox = document.getElementById('outputBox');
-                outputBox.textContent += data + '\n'; // Append the text response
-            })
-            .catch((error) => {
-                // Handle any errors
-                console.error('Error:', error);
-                const outputBox = document.getElementById('outputBox');
-                outputBox.textContent += `Error: ${error.message}\n`;
-            });
+                .then(response => response.text()) // Use response.text() to handle plain text
+                .then(responseData => {
+                    console.log(responseData);
+                    // Display the response data here (as plain text)
+                })
+                .catch(error => {
+                    console.error(error);
+                    // Handle any errors here
+                });            
 
             // Reset the input box
             this.value = '';
