@@ -60,6 +60,13 @@
           <div id="outputBox" style="width: 800px; min-height: 50px; max-height: 400px; overflow-y: auto; padding: 10px; box-sizing: border-box; word-wrap: break-word;"></div>
       </div>
 
+      <div id="modelSelectorContainer" style="width: 100%; max-width: 800px; display: flex; justify-content: center; margin: auto; margin-bottom: 10px;">
+        <button onclick="modelChoice('mistral')" style="flex: 1; text-align: center; border-radius: 15px; background-color: transparent; border: 1px solid rgba(0, 0, 0, 0.3); padding: 10px; color: inherit; margin-right: 5px;">Mistral</button>
+        <button onclick="modelChoice('llama2-uncensored')" style="flex: 1; text-align: center; border-radius: 15px; background-color: transparent; border: 1px solid rgba(0, 0, 0, 0.3); padding: 10px; color: inherit; margin-right: 5px;">LLaMA2-Uncensored</button>
+        <button onclick="modelChoice('codellama')" style="flex: 1; text-align: center; border-radius: 15px; background-color: transparent; border: 1px solid rgba(0, 0, 0, 0.3); padding: 10px; color: inherit; margin-right: 5px;">CodeLLaMA</button>
+        <button onclick="modelChoice('gemma')" style="flex: 1; text-align: center; border-radius: 15px; background-color: transparent; border: 1px solid rgba(0, 0, 0, 0.3); padding: 10px; color: inherit;">GEMMA</button>
+      </div>
+
       <div id="inputBoxContainer" style="width: 100%; max-width: 800px; display: flex; justify-content: center; margin: auto;">
           <textarea id="inputBox" placeholder=">..." style="width: calc(100% - 22px); height: 50px; min-height: 50px; max-height: 800px; box-sizing: border-box; text-align: left; overflow-y: auto; resize: none; border-radius: 15px; background-color: transparent; border: 1px solid rgba(0, 0, 0, 0.3); border-bottom: 2px solid rgba(204, 204, 204, 0.3); border-right: 1px solid rgba(68, 68, 68, 0.3); padding: 10px; color: inherit;"></textarea>
       </div>
