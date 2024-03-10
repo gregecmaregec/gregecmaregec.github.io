@@ -1,17 +1,3 @@
-const data = {
-    model: "mistral",
-    messages: [
-        {
-            role: "user",
-            content: "", // Initial content will be replaced with user input
-            options: {
-                temperature: 0.6,
-                num_thread: 8
-            }
-        }
-    ]
-};
-
 document.getElementById('inputBox').addEventListener('input', function(event) {
     this.style.height = 'auto';
     this.style.height = (this.scrollHeight) + 'px';
@@ -21,32 +7,10 @@ document.getElementById('inputBox').addEventListener('keypress', function(event)
     if (event.key === 'Enter' && !event.shiftKey) {
         event.preventDefault();
         var inputText = this.value;
-
-        // Update the messages array with the user's input
-        data.messages[0].content = inputText;
-
-        // Send a POST request to the server
-        fetch("https://gmserver.xyz", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(data)
-        })
-        .then(response => response.text())
-        .then(responseData => {
-            // Update the output box with the server's response
-            var outputBox = document.getElementById('outputBox');
-            outputBox.textContent += responseData + '\n';
-        })
-        .catch(error => {
-            console.error(error);
-            // Handle any errors here
-        });
-
-        // Clear the input box and reset height after submission
+        var outputBox = document.getElementById('outputBox');
+        outputBox.textContent += inputText + '\n';
         this.value = '';
-        this.style.height = '50px';
+        this.style.height = '50px'; // Reset height after submission
     }
 });
 
