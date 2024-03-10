@@ -1,6 +1,6 @@
 // create the left canvas element
 const leftCanvas = document.createElement('canvas');
-leftCanvas.width = 140;
+leftCanvas.width = 200;
 leftCanvas.height = 500;
 leftCanvas.style.position = 'absolute'; // Use fixed position instead of absolute
 leftCanvas.style.left = '0';
@@ -10,7 +10,7 @@ document.body.appendChild(leftCanvas);
 
 // create the right canvas element
 const rightCanvas = document.createElement('canvas');
-rightCanvas.width = 140;
+rightCanvas.width = 200;
 rightCanvas.height = 500;
 rightCanvas.style.position = 'absolute'; // Use fixed position instead of absolute
 rightCanvas.style.right = '0';
@@ -22,8 +22,8 @@ const leftCtx = leftCanvas.getContext('2d');
 const rightCtx = rightCanvas.getContext('2d');
 
 // dimensions of the game
-const blocksByHeight = 70;
-const blocksByWidth = 32;
+const blocksByHeight = 50;
+const blocksByWidth = 20;
 
 // calculate the size of each block
 const blockSizeWidth = leftCanvas.width / blocksByWidth;
