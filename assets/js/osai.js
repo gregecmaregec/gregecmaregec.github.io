@@ -32,12 +32,12 @@ document.getElementById('inputBox').addEventListener('keypress', function(event)
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
                 }
-                return response.json();
-            }) // Parse the JSON response
+                return response.text(); // Handle as plain text
+            })
             .then(data => {
                 // Display the response in the output box
                 const outputBox = document.getElementById('outputBox');
-                outputBox.textContent += JSON.stringify(data, null, 2) + '\n';
+                outputBox.textContent += data + '\n'; // Append the text response
             })
             .catch((error) => {
                 // Handle any errors
@@ -52,6 +52,13 @@ document.getElementById('inputBox').addEventListener('keypress', function(event)
         }
     }
 });
+
+// Adjust the height of the input box based on its content
+document.getElementById('inputBox').addEventListener('input', function(event) {
+    this.style.height = 'auto';
+    this.style.height = (this.scrollHeight) + 'px';
+});
+
 
 // Adjust the height of the input box based on its content
 document.getElementById('inputBox').addEventListener('input', function(event) {
