@@ -4,7 +4,6 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #f0f0f0;
   }
   
   .container {
@@ -25,12 +24,13 @@ body {
   
   .output-field {
     width: 100%;
-    background-color: transparent;
     outline: none;
     padding: 10px;
     box-sizing: border-box;
     white-space: pre-wrap;
     word-wrap: break-word;
+    background-color: transparent;
+    color: var(--text-color);
   }
   
   .input-field {
@@ -40,7 +40,33 @@ body {
     padding: 10px;
     box-sizing: border-box;
     outline: none;
-    border: 1px solid #ccc;
+    border: 1px solid var(--border-color);
     border-radius: 4px;
     font-size: 16px;
+    background-color: var(--input-bg-color);
+    color: var(--text-color);
+  }
+  
+  @media (prefers-color-scheme: light) {
+    body {
+      background-color: #f0f0f0;
+    }
+  
+    :root {
+      --text-color: #333;
+      --border-color: #ccc;
+      --input-bg-color: #fff;
+    }
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: #333;
+    }
+  
+    :root {
+      --text-color: #f0f0f0;
+      --border-color: #555;
+      --input-bg-color: #444;
+    }
   }
