@@ -3,7 +3,7 @@ const data = {
     messages: [
         {
             role: "user",
-            content: "I have kinda given up on react. I will rather do it in Vue. Is it easier? Tell me how to delete react completely form my mac, I will do the repositroy cleaning myself, and how to install vue. Bonus points to get me a vue supported object that i can put in",
+            content: "really good to see that this works now",
             options: {
                 temperature: 0.6,
                 num_thread: 8
