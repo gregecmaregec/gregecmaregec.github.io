@@ -58,14 +58,14 @@ setTimeout(() => {
     updateGrid(rightGrid, blocksByWidth, blocksByHeight);
     drawGrid(leftCtx, leftGrid, blockSizeWidth, blockSizeHeight);
     drawGrid(rightCtx, rightGrid, blockSizeWidth, blockSizeHeight);
-}, 5 * 1000);
+}, 2 * 1000);
 
 // Animation settings
 const delayBetweenGenerations = 200; // in milliseconds
 
 async function animate() {
     const elapsed = Date.now() - startTime;
-    const progress = Math.min(1, elapsed / (5 * 1000)); // Ensure progress is capped at 1
+    const progress = Math.min(1, elapsed / (2 * 1000)); // Ensure progress is capped at 1
 
     updateGrid(leftGrid, blocksByWidth, blocksByHeight);
     updateGrid(rightGrid, blocksByWidth, blocksByHeight);
