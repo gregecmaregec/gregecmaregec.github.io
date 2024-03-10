@@ -5,27 +5,32 @@ body {
     justify-content: center;
     align-items: center;
     font-family: Arial, sans-serif;
+    padding: 10px; /* Add padding around the entire body to ensure the centering takes this into account */
 }
 
 .container {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
     gap: 20px;
+    max-width: calc(100% - 20px); /* Ensure the container respects body padding */
 }
 
 #inputBox {
     width: 800px;
+    max-width: 100%; /* Ensure it doesn't overflow the screen */
     min-height: 50px;
     font-size: 16px;
     box-sizing: border-box;
     text-align: left;
     overflow-y: hidden;
     resize: none;
+    border-radius: 8px; /* Add rounded corners */
 }
 
 #outputBox {
     width: 800px;
+    max-width: calc(100% - 20px); /* Ensure it doesn't overflow the screen */
     min-height: 50px;
     max-height: 400px;
     overflow-y: auto;
