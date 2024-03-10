@@ -22,8 +22,8 @@ const leftCtx = leftCanvas.getContext('2d');
 const rightCtx = rightCanvas.getContext('2d');
 
 // dimensions of the game
-const blocksByHeight = 100;
-const blocksByWidth = 30;
+const blocksByHeight = 67;
+const blocksByWidth = 20;
 
 // calculate the size of each block
 const blockSizeWidth = leftCanvas.width / blocksByWidth;
