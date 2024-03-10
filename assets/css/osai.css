@@ -8,17 +8,18 @@ body #inputBoxContainer, body #outputBoxContainer {
 body #inputBox {
     width: 100% !important;
     min-height: 50px !important;
-    max-height: 200px !important; /* Set a max height for the input box */
+    max-height: 200px !important; /* Adjust if needed */
     font-size: 16px !important;
     box-sizing: border-box !important;
     text-align: left !important;
     overflow-y: hidden !important;
-    resize: none !important;
+    resize: none !important; /* Prevent resizing */
     border-radius: 8px !important;
     background-color: transparent !important;
     border: 1px solid #ccc !important;
-    padding: 0 !important; /* Remove padding to prevent misalignment */
+    padding: 0 !important;
 }
+
 
 body #outputBox {
     width: 100% !important;
