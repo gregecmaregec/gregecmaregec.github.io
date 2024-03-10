@@ -1,3 +1,5 @@
+let selectedModel = 'mistral'; // Default model
+
 document.getElementById('inputBox').addEventListener('input', function(event) {
     this.style.height = 'auto';
     this.style.height = (this.scrollHeight) + 'px';
@@ -8,10 +10,13 @@ document.getElementById('inputBox').addEventListener('keypress', function(event)
         event.preventDefault();
         var inputText = this.value;
         var outputBox = document.getElementById('outputBox');
-        
-        // Define the data to be sent to the server
+
+        // Display user input in the output box
+        outputBox.textContent += 'User: ' + inputText + '\n\n';
+
+        // Define the data to be sent to the server, dynamically using selectedModel
         const data = {
-            model: "mistral",
+            model: selectedModel, // Use the dynamically updated model
             messages: [
                 {
                     role: "user",
@@ -35,11 +40,11 @@ document.getElementById('inputBox').addEventListener('keypress', function(event)
         .then(response => response.text())
         .then(responseData => {
             // Display the server's response in the output box
-            outputBox.textContent += responseData + '\n';
+            outputBox.textContent += 'Server: ' + responseData + '\n\n';
         })
         .catch(error => {
             // Display the error in the output box
-            outputBox.textContent += 'Error: ' + error.message + '\n';
+            outputBox.textContent += 'Error: ' + error.message + '\n\n';
         });
 
         // Reset input box after submission
@@ -48,7 +53,6 @@ document.getElementById('inputBox').addEventListener('keypress', function(event)
     }
 });
 
-
 function modelChoice(choice) {
     console.log("Model selected:", choice);
     selectedModel = choice;
@@ -56,7 +60,7 @@ function modelChoice(choice) {
     // Iterate over all buttons
     var buttons = document.querySelectorAll('#modelSelectorContainer button');
     buttons.forEach(button => {
-        // Reset the border style only if it's not the selected model
+        // Reset the border style for non-selected models
         if (button.getAttribute('data-model') !== choice) {
             button.style.border = '1px solid rgba(0, 0, 0, 0.3)';
             button.style.borderBottom = '2px solid #ccc';
@@ -72,4 +76,3 @@ function modelChoice(choice) {
         selectedButton.style.borderRight = '1px solid rgba(139, 0, 0, 0.8)';
     }
 }
-
