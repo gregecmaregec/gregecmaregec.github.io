@@ -58,7 +58,7 @@ function modelChoice(choice) {
         // Reset the border style for non-selected models
         if (button.getAttribute('data-model') !== choice) {
             button.style.border = '1px solid rgba(0, 0, 0, 0.3)';
-            button.style.borderBottom = '2px solid #ccc';
+            button.style.borderBottom = '2px solid rgba(204, 204, 204, 0.3)';
             button.style.borderRight = '1px solid #444';
         }
     });
