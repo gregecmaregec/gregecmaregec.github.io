@@ -4,13 +4,13 @@ document.getElementById('inputBox').addEventListener('keypress', function(event)
 
         const inputText = this.value.trim(); // Get user input and trim whitespace
         if (inputText) { // Only proceed if inputText is not empty
-            // Construct the JSON payload
+            // Construct the JSON payload using the user's input
             const data = {
                 model: "mistral",
                 messages: [
                     {
                         role: "user",
-                        content: "I have kinda given up on react. I will rather do it in Vue. Is it easier? Tell me how to delete react completely form my mac, I will do the repositroy cleaning myself, and how to install vue. Bonus points to get me a vue supported object that i can put in",
+                        content: inputText,
                         options: {
                             temperature: 0.6,
                             num_thread: 8
@@ -18,7 +18,8 @@ document.getElementById('inputBox').addEventListener('keypress', function(event)
                     }
                 ]
             };
-            
+
+            // Send a POST request to the server
             fetch("https://gmserver.xyz", {
                 method: "POST",
                 headers: {
@@ -26,15 +27,18 @@ document.getElementById('inputBox').addEventListener('keypress', function(event)
                 },
                 body: JSON.stringify(data)
             })
-                .then(response => response.text()) // Use response.text() to handle plain text
-                .then(responseData => {
-                    console.log(responseData);
-                    // Display the response data here (as plain text)
-                })
-                .catch(error => {
-                    console.error(error);
-                    // Handle any errors here
-                });            
+            .then(response => response.text()) // Handle the response as plain text
+            .then(responseData => {
+                // Display the response data in the output box
+                const outputBox = document.getElementById('outputBox');
+                outputBox.textContent += responseData + '\n';
+            })
+            .catch(error => {
+                // Handle any errors
+                console.error('Error:', error);
+                const outputBox = document.getElementById('outputBox');
+                outputBox.textContent += `Error: ${error.message}\n`;
+            });
 
             // Reset the input box
             this.value = '';
@@ -48,6 +52,7 @@ document.getElementById('inputBox').addEventListener('input', function(event) {
     this.style.height = 'auto';
     this.style.height = (this.scrollHeight) + 'px';
 });
+
 
 
 
