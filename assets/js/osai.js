@@ -69,3 +69,4 @@ function modelChoice(choice) {
         selectedButton.style.border = '2px solid rgba(139, 0, 0, 0.8)';
     }
 }
+
