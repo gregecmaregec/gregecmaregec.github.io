@@ -64,24 +64,34 @@ setTimeout(() => {
 const delayBetweenGenerations = 200; // in milliseconds
 
 async function animate() {
+    const elapsed = Date.now() - startTime;
+    const progress = Math.min(1, elapsed / (2 * 1000)); // Ensure progress is capped at 1
+
     updateGrid(leftGrid, blocksByWidth, blocksByHeight);
     updateGrid(rightGrid, blocksByWidth, blocksByHeight);
     drawGrid(leftCtx, leftGrid, blockSizeWidth, blockSizeHeight);
     drawGrid(rightCtx, rightGrid, blockSizeWidth, blockSizeHeight);
 
     // Check if 2 seconds have passed, and if so, return without continuing the animation
-    if (Date.now() - startTime >= 2 * 1000) {
+    if (progress >= 1) {
         // Draw the final state
         drawGrid(leftCtx, leftGrid, blockSizeWidth, blockSizeHeight);
         drawGrid(rightCtx, rightGrid, blockSizeWidth, blockSizeHeight);
         return;
     }
 
+    // Apply easing function to control animation speed
+    const easedProgress = easeInOutQuad(progress);
+
     // Delay using async/await
     await new Promise(resolve => setTimeout(resolve, delayBetweenGenerations));
 
     // Continue the animation with the next frame
     animationId = requestAnimationFrame(animate);
+}
+
+function easeInOutQuad(t) {
+    return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
 }
 
 function createGrid(width, height) {
