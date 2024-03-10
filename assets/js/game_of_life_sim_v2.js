@@ -4,6 +4,8 @@ leftCanvas.width = 200;
 leftCanvas.height = 500;
 leftCanvas.style.position = 'absolute'; // Use fixed position instead of absolute
 leftCanvas.style.left = '0';
+leftCanvas.style.top = '50%'; // Position at 50% from the top
+leftCanvas.style.transform = 'translateY(-50%)'; // Translate up by 50% to center vertically
 document.body.appendChild(leftCanvas);
 
 // create the right canvas element
@@ -12,8 +14,9 @@ rightCanvas.width = 200;
 rightCanvas.height = 500;
 rightCanvas.style.position = 'absolute'; // Use fixed position instead of absolute
 rightCanvas.style.right = '0';
+rightCanvas.style.top = '50%'; // Position at 50% from the top
+rightCanvas.style.transform = 'translateY(-50%)'; // Translate up by 50% to center vertically
 document.body.appendChild(rightCanvas);
-
 // get the 2D rendering contexts for both canvases
 const leftCtx = leftCanvas.getContext('2d');
 const rightCtx = rightCanvas.getContext('2d');
