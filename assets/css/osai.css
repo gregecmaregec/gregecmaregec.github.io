@@ -5,7 +5,7 @@ body {
     justify-content: center;
     align-items: center;
     font-family: Arial, sans-serif;
-    padding: 10px; /* Add padding around the entire body to ensure the centering takes this into account */
+    padding: 10px; /* Padding around the body */
 }
 
 .container {
@@ -13,24 +13,26 @@ body {
     flex-direction: column-reverse;
     align-items: center;
     gap: 20px;
-    max-width: calc(100% - 20px); /* Ensure the container respects body padding */
+    width: 820px; /* Set the container width to accommodate the input box plus body padding */
+    max-width: 100%; /* Ensure the container is not wider than the viewport */
 }
 
 #inputBox {
-    width: 800px;
-    max-width: 100%; /* Ensure it doesn't overflow the screen */
+    width: 100%; /* Make the input box fill the container */
     min-height: 50px;
     font-size: 16px;
     box-sizing: border-box;
     text-align: left;
     overflow-y: hidden;
     resize: none;
-    border-radius: 8px; /* Add rounded corners */
+    border-radius: 8px;
+    background-color: transparent; /* Set the background to transparent */
+    border: 1px solid #ccc; /* Add a border to make the input box visible */
 }
 
 #outputBox {
     width: 800px;
-    max-width: calc(100% - 20px); /* Ensure it doesn't overflow the screen */
+    max-width: 100%; /* Ensure it doesn't overflow the screen */
     min-height: 50px;
     max-height: 400px;
     overflow-y: auto;
