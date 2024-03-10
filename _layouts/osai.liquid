@@ -62,12 +62,11 @@
     <!-- Text interface JS -->
     <script src="{{ site.baseurl }}/assets/js/osai.js"></script>
 
-    <div class="custom-chat-interface">
-        <div id="outputField" class="output-field"></div>
-        <div class="input-field-container">
-            <input type="text" id="inputField" class="input-field" placeholder="Type here...">
-            <button id="sendButton" class="send-button">↑</button>
-        </div>
+    <div class="container">
+      <div class="output-container">
+        <div class="output-field" contenteditable="true"></div>
+      </div>
+      <textarea class="input-field" placeholder="Type something and press Enter..."></textarea>
     </div>
 
     <!-- JavaScripts -->
