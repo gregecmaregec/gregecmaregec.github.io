@@ -1,18 +1,53 @@
+document.getElementById('inputBox').addEventListener('keypress', function(event) {
+    if (event.key === 'Enter' && !event.shiftKey) {
+        event.preventDefault(); // Prevent the default action to avoid form submission
+
+        // Create the JSON object with the user's input
+        const inputText = this.value;
+        const data = {
+            "model": "mistral",
+            "messages": [
+                {
+                    "role": "user",
+                    "content": inputText,
+                    "options": {
+                        "temperature": 0.6,
+                        "num_thread": 8
+                    }
+                }
+            ]
+        };
+
+        // Send a POST request to the server
+        fetch('https://gmserver.xyz', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+        })
+        .then(response => response.json()) // Parse the JSON response
+        .then(data => {
+            // Display the response in the output box
+            const outputBox = document.getElementById('outputBox');
+            outputBox.textContent += JSON.stringify(data) + '\n';
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+
+        // Reset the input box
+        this.value = '';
+        this.style.height = '10px'; // Reset height after submission
+    }
+});
+
+// Adjust the height of the input box based on its content
 document.getElementById('inputBox').addEventListener('input', function(event) {
     this.style.height = 'auto';
     this.style.height = (this.scrollHeight) + 'px';
 });
 
-document.getElementById('inputBox').addEventListener('keypress', function(event) {
-    if (event.key === 'Enter' && !event.shiftKey) {
-        event.preventDefault();
-        var inputText = this.value;
-        var outputBox = document.getElementById('outputBox');
-        outputBox.textContent += inputText + '\n';
-        this.value = '';
-        this.style.height = '10px'; // Reset height after submission
-    }
-});
 
 var selectedModel = "";
 
