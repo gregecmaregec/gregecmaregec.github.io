@@ -8,7 +8,6 @@ leftCanvas.style.top = '50%'; // Position at 50% from the top
 leftCanvas.style.transform = 'translateY(-50%)'; // Translate up by 50% to center vertically
 document.body.appendChild(leftCanvas);
 
-// create the right canvas element
 const rightCanvas = document.createElement('canvas');
 rightCanvas.width = 150;
 rightCanvas.height = 500;
@@ -17,6 +16,12 @@ rightCanvas.style.right = '0';
 rightCanvas.style.top = '50%'; // Position at 50% from the top
 rightCanvas.style.transform = 'translateY(-50%)'; // Translate up by 50% to center vertically
 document.body.appendChild(rightCanvas);
+
+// Check if the screen width is smaller than 800px
+if (window.innerWidth < 800) {
+    leftCanvas.style.display = 'none';
+    rightCanvas.style.display = 'none';
+}
 // get the 2D rendering contexts for both canvases
 const leftCtx = leftCanvas.getContext('2d');
 const rightCtx = rightCanvas.getContext('2d');
