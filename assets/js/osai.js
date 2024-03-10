@@ -1,5 +1,5 @@
 document.getElementById('inputBox').addEventListener('keypress', function(event) {
-    if (event.key === 'Enter') {
+    if (event.key === 'Enter' && !event.shiftKey) {
         event.preventDefault();
         var inputText = this.value;
         var outputBox = document.getElementById('outputBox');
