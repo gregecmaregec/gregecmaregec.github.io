@@ -10,7 +10,7 @@ document.getElementById('inputBox').addEventListener('keypress', function(event)
         var outputBox = document.getElementById('outputBox');
         outputBox.textContent += inputText + '\n';
         this.value = '';
-        this.style.height = '50px'; // Reset height after submission
+        this.style.height = '10px'; // Reset height after submission
     }
 });
 
@@ -29,7 +29,7 @@ function modelChoice(choice) {
     var selectedButton = document.querySelector(`button[data-model="${choice}"]`);
     if (selectedButton) {
         selectedButton.style.border = '1px solid rgba(139, 0, 0, 0.8)';
-        selectedButton.style.borderBottom = '2px solid rgba(139, 0, 0, 0.8)';
+        selectedButton.style.borderBottom = '1px solid rgba(139, 0, 0, 0.8)';
         selectedButton.style.borderRight = '1px solid rgba(139, 0, 0, 0.8)';
     }
 }
