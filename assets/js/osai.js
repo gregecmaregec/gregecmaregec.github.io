@@ -35,7 +35,7 @@ document.getElementById('inputBox').addEventListener('keypress', function(event)
         .then(response => response.text())
         .then(responseData => {
             // Display the server's response in the output box
-            outputBox.innerHTML += 'AI: ' + '<br>' + responseData + '<br><br>';
+            outputBox.innerHTML += selectedModel + ': ' + '<br>' + responseData + '<br><br>';
         })
         .catch(error => {
             // Display the error in the output box
