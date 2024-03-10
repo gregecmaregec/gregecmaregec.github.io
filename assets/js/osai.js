@@ -15,20 +15,26 @@ document.getElementById('inputBox').addEventListener('keypress', function(event)
 });
 
 function modelChoice(choice) {
-    console.log("Model selected:", choice); // For demonstration purposes
+    console.log("Model selected:", choice);
+    selectedModel = choice;
 
-    // Reset the styles of all buttons
+    // Iterate over all buttons
     var buttons = document.querySelectorAll('#modelSelectorContainer button');
     buttons.forEach(button => {
-        button.style.border = '1px solid rgba(0, 0, 0, 0.3)';
+        // Reset the border style only if it's not the selected model
+        if (button.getAttribute('data-model') !== choice) {
+            button.style.border = '1px solid rgba(0, 0, 0, 0.3)';
+            button.style.borderBottom = '2px solid #ccc';
+            button.style.borderRight = '1px solid #444';
+        }
     });
 
-    // Highlight the selected button's border
+    // Highlight the border of the selected button
     var selectedButton = document.querySelector(`button[data-model="${choice}"]`);
     if (selectedButton) {
         selectedButton.style.border = '1px solid rgba(139, 0, 0, 0.8)';
+        selectedButton.style.borderBottom = '2px solid rgba(139, 0, 0, 0.8)';
+        selectedButton.style.borderRight = '1px solid rgba(139, 0, 0, 0.8)';
     }
-
-    // You can set .modelchoice to the chosen model here
-    // e.g., model.modelchoice = choice;
 }
+
