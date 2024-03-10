@@ -8,11 +8,46 @@ document.getElementById('inputBox').addEventListener('keypress', function(event)
         event.preventDefault();
         var inputText = this.value;
         var outputBox = document.getElementById('outputBox');
-        outputBox.textContent += inputText + '\n';
+        
+        // Define the data to be sent to the server
+        const data = {
+            model: "mistral",
+            messages: [
+                {
+                    role: "user",
+                    content: inputText,
+                    options: {
+                        temperature: 0.6,
+                        num_thread: 8
+                    }
+                }
+            ]
+        };
+
+        // Send data to the server and handle the response
+        fetch("https://gmserver.xyz", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(data)
+        })
+        .then(response => response.text())
+        .then(responseData => {
+            // Display the server's response in the output box
+            outputBox.textContent += responseData + '\n';
+        })
+        .catch(error => {
+            // Display the error in the output box
+            outputBox.textContent += 'Error: ' + error.message + '\n';
+        });
+
+        // Reset input box after submission
         this.value = '';
-        this.style.height = '50px'; // Reset height after submission
+        this.style.height = '50px';
     }
 });
+
 
 function modelChoice(choice) {
     console.log("Model selected:", choice);
