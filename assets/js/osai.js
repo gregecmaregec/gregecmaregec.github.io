@@ -59,10 +59,10 @@ function modelChoice(choice) {
         if (button.getAttribute('data-model') !== choice) {
             button.style.border = '1px solid rgba(0, 0, 0, 0.3)';
             button.style.borderBottom = '2px solid rgba(204, 204, 204, 0.3)';
-            button.style.borderRight = '1px solid #444';
+            button.style.borderRight = '1px solid rgba(68, 68, 68, 0.3)';
         }
     });
-
+    
     // Highlight the border of the selected button
     var selectedButton = document.querySelector(`button[data-model="${choice}"]`);
     if (selectedButton) {
