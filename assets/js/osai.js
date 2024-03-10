@@ -1,1 +1,0 @@
-const outputField=document.querySelector(".output-field"),inputField=document.querySelector(".input-field"),outputContainer=document.querySelector(".output-container");inputField.addEventListener("keydown",t=>{if("Enter"===t.key){const t=inputField.value.trim();t&&(outputField.textContent+=`${t}\n`,inputField.value="",outputContainer.scrollTop=outputContainer.scrollHeight)}});
