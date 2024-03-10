@@ -2,6 +2,7 @@
   <html lang="{{ site.lang }}">
     <!-- Head -->
     <head>
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/osai.css">
       {% if page.redirect %}
         {% if page.redirect == true %}
           {% assign redirect = site.baseurl | append: '/' %}
@@ -13,7 +14,7 @@
         <meta http-equiv="refresh" content="3; url={{ redirect }}">
       {% endif %}
       {% include head.liquid %}
-      <script src="{{ site.baseurl }}/assets/css/osai.css"></script>
+
     </head>
 
     <!-- Body -->
