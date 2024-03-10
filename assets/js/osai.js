@@ -14,22 +14,18 @@ document.getElementById('inputBox').addEventListener('keypress', function(event)
     }
 });
 
+var selectedModel = "";
+
 function modelChoice(choice) {
-    console.log("Model selected:", choice);
     selectedModel = choice;
 
-    // Iterate over all buttons
     var buttons = document.querySelectorAll('#modelSelectorContainer button');
     buttons.forEach(button => {
-        // Reset the border style only if it's not the selected model
-        if (button.getAttribute('data-model') !== choice) {
-            button.style.border = '1px solid rgba(0, 0, 0, 0.3)';
-            button.style.borderBottom = '2px solid #ccc';
-            button.style.borderRight = '1px solid #444';
-        }
+        button.style.border = '1px solid rgba(0, 0, 0, 0.3)';
+        button.style.borderBottom = '2px solid rgba(204, 204, 204, 0.3)';
+        button.style.borderRight = '1px solid rgba(68, 68, 68, 0.3)';
     });
 
-    // Highlight the border of the selected button
     var selectedButton = document.querySelector(`button[data-model="${choice}"]`);
     if (selectedButton) {
         selectedButton.style.border = '1px solid rgba(139, 0, 0, 0.8)';
@@ -37,4 +33,5 @@ function modelChoice(choice) {
         selectedButton.style.borderRight = '1px solid rgba(139, 0, 0, 0.8)';
     }
 }
+
 
