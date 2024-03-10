@@ -13,7 +13,54 @@
         <meta http-equiv="refresh" content="3; url={{ redirect }}">
       {% endif %}
       {% include head.liquid %}
+        <style>
+        @media (prefers-color-scheme: dark) {
+            body {
+                color: white;
+                background-color: #121212; /* Dark mode background color */
+            }
 
+            #outputBox {
+                color: white;
+            }
+
+            #inputBox {
+                color: black;
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            body {
+                color: black;
+                background-color: #f4f4f4; /* Light mode background color */
+            }
+
+            #outputBox {
+                color: black;
+            }
+
+            #inputBox {
+                color: black;
+            }
+        }
+
+        #inputBox {
+            outline: none; /* Remove default blue outline */
+            border: 1px solid #000; /* Black bottom border */
+            border-bottom-style: double; /* Double bottom border */
+            border-right: 1px solid #ccc; /* Gray right border */
+            border-radius: 15px;
+            background-color: transparent;
+            padding: 10px;
+            font-size: 16px;
+            font-family: 'Times New Roman', Times, serif;
+            resize: none;
+            width: 100%;
+            min-height: 50px;
+            max-height: 200px;
+            box-sizing: border-box;
+        }
+    </style>
     </head>
 
     <!-- Body -->
@@ -57,43 +104,11 @@
         {% endif %}
       </div>
 
-      <style>
-          @media (prefers-color-scheme: dark) {
-              body {
-                  color: white;
-                  background-color: #121212; /* Dark mode background color */
-              }
-
-              #outputBox {
-                  color: white;
-              }
-
-              #inputBox {
-                  color: black;
-              }
-          }
-
-          @media (prefers-color-scheme: light) {
-              body {
-                  color: black;
-                  background-color: #f4f4f4; /* Light mode background color */
-              }
-
-              #outputBox {
-                  color: black;
-              }
-
-              #inputBox {
-                  color: black;
-              }
-          }
-      </style>
-
       <div id="outputBoxContainer" style="width: 800px; display: flex; justify-content: center; margin: auto;">
           <div id="outputBox" style="width: 100%; min-height: 50px; max-height: 400px; overflow-y: auto; padding: 10px; box-sizing: border-box; word-wrap: break-word; font-family: 'Times New Roman', Times, serif;"></div>
       </div>
       <div id="inputBoxContainer" style="width: 800px; display: flex; justify-content: center; margin: auto;">
-          <textarea id="inputBox" placeholder="Type here..." style="width: 100%; min-height: 50px; max-height: 200px; font-size: 16px; box-sizing: border-box; text-align: left; overflow-y: hidden; resize: none; border-radius: 15px; background-color: transparent; border: 1px solid #ccc; padding: 10px; font-family: 'Times New Roman', Times, serif;"></textarea>
+          <textarea id="inputBox" placeholder="Type here..."></textarea>
       </div>
 
 
