@@ -1,39 +1,33 @@
-#uniqueOutputBoxContainer {
-    width: 800px;
-    display: flex;
-    justify-content: center;
-    margin: auto;
+body #inputBoxContainer, body #outputBoxContainer {
+    width: 800px !important;
+    display: flex !important;
+    justify-content: center !important;
+    margin: auto !important; /* Center the containers horizontally */
 }
 
-#uniqueOutputBox {
-    width: 100%;
-    min-height: 50px;
-    max-height: 400px;
-    overflow-y: auto;
-    border: 1px solid #ccc;
-    padding: 10px;
-    box-sizing: border-box;
-    word-wrap: break-word;
+body #inputBox {
+    width: 100% !important;
+    min-height: 50px !important;
+    max-height: 200px !important; /* Adjust if needed */
+    font-size: 16px !important;
+    box-sizing: border-box !important;
+    text-align: left !important;
+    overflow-y: hidden !important;
+    resize: none !important; /* Prevent resizing */
+    border-radius: 8px !important;
+    background-color: transparent !important;
+    border: 1px solid #ccc !important;
+    padding: 0 !important;
 }
 
-#uniqueInputBoxContainer {
-    width: 800px;
-    display: flex;
-    justify-content: center;
-    margin: auto;
-}
 
-#uniqueInputBox {
-    width: 100%;
-    min-height: 50px;
-    max-height: 200px;
-    font-size: 16px;
-    box-sizing: border-box;
-    text-align: left;
-    overflow-y: hidden;
-    resize: none;
-    border-radius: 8px;
-    background-color: transparent;
-    border: 1px solid #ccc;
-    padding: 0;
+body #outputBox {
+    width: 100% !important;
+    min-height: 50px !important;
+    max-height: 400px !important;
+    overflow-y: auto !important;
+    border: 1px solid #ccc !important;
+    padding: 10px !important;
+    box-sizing: border-box !important;
+    word-wrap: break-word !important;
 }
