@@ -1,10 +1,5 @@
 let selectedModel = 'mistral'; // Default model
 
-document.getElementById('inputBox').addEventListener('input', function(event) {
-    this.style.height = 'auto';
-    this.style.height = (this.scrollHeight) + 'px';
-});
-
 document.getElementById('inputBox').addEventListener('keypress', function(event) {
     if (event.key === 'Enter' && !event.shiftKey) {
         event.preventDefault();
@@ -12,7 +7,7 @@ document.getElementById('inputBox').addEventListener('keypress', function(event)
         var outputBox = document.getElementById('outputBox');
 
         // Display user input in the output box
-        outputBox.textContent += 'User: ' + inputText + '\n\n';
+        outputBox.innerHTML += 'User: ' + inputText + '<br><br>';
 
         // Define the data to be sent to the server, dynamically using selectedModel
         const data = {
@@ -40,11 +35,11 @@ document.getElementById('inputBox').addEventListener('keypress', function(event)
         .then(response => response.text())
         .then(responseData => {
             // Display the server's response in the output box
-            outputBox.textContent += 'Server: ' + responseData + '\n\n';
+            outputBox.innerHTML += 'Server: ' + responseData + '<br><br>';
         })
         .catch(error => {
             // Display the error in the output box
-            outputBox.textContent += 'Error: ' + error.message + '\n\n';
+            outputBox.innerHTML += 'Error: ' + error.message + '<br><br>';
         });
 
         // Reset input box after submission
