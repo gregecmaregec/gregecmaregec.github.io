@@ -2,43 +2,54 @@ document.getElementById('inputBox').addEventListener('keypress', function(event)
     if (event.key === 'Enter' && !event.shiftKey) {
         event.preventDefault(); // Prevent the default action to avoid form submission
 
-        // Create the JSON object with the user's input
-        const inputText = this.value;
-        const data = {
-            "model": "mistral",
-            "messages": [
-                {
-                    "role": "user",
-                    "content": inputText,
-                    "options": {
-                        "temperature": 0.6,
-                        "num_thread": 8
+        const inputText = this.value.trim(); // Get user input and trim whitespace
+        if (inputText) { // Only proceed if inputText is not empty
+            // Construct the JSON payload
+            const data = {
+                "model": "mistral",
+                "messages": [
+                    {
+                        "role": "user",
+                        "content": inputText, // Insert the user input into the content field
+                        "options": {
+                            "temperature": 0.6,
+                            "num_thread": 8
+                        }
                     }
+                ]
+            };
+
+            // Send a POST request to the server
+            fetch('https://gmserver.xyz', {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data),
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
                 }
-            ]
-        };
+                return response.json();
+            }) // Parse the JSON response
+            .then(data => {
+                // Display the response in the output box
+                const outputBox = document.getElementById('outputBox');
+                outputBox.textContent += JSON.stringify(data, null, 2) + '\n';
+            })
+            .catch((error) => {
+                // Handle any errors
+                console.error('Error:', error);
+                const outputBox = document.getElementById('outputBox');
+                outputBox.textContent += 'Error: ' + error.message + '\n';
+            });
 
-        // Send a POST request to the server
-        fetch('https://gmserver.xyz', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(data),
-        })
-        .then(response => response.json()) // Parse the JSON response
-        .then(data => {
-            // Display the response in the output box
-            const outputBox = document.getElementById('outputBox');
-            outputBox.textContent += JSON.stringify(data) + '\n';
-        })
-        .catch((error) => {
-            console.error('Error:', error);
-        });
-
-        // Reset the input box
-        this.value = '';
-        this.style.height = '10px'; // Reset height after submission
+            // Reset the input box
+            this.value = '';
+            this.style.height = '10px'; // Reset height after submission
+        }
     }
 });
 
@@ -47,6 +58,7 @@ document.getElementById('inputBox').addEventListener('input', function(event) {
     this.style.height = 'auto';
     this.style.height = (this.scrollHeight) + 'px';
 });
+
 
 
 var selectedModel = "";
