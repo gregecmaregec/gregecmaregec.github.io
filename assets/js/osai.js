@@ -9,6 +9,14 @@ inputField.addEventListener('keydown', (event) => {
       outputField.textContent += `${inputValue}\n`;
       inputField.value = '';
       outputContainer.scrollTop = outputContainer.scrollHeight;
+      adjustInputHeight();
     }
   }
 });
+
+function adjustInputHeight() {
+  inputField.style.height = 'auto';
+  inputField.style.height = `${inputField.scrollHeight}px`;
+}
+
+inputField.addEventListener('input', adjustInputHeight);
