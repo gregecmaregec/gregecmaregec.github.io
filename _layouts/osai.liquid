@@ -13,6 +13,7 @@
       <meta http-equiv="refresh" content="3; url={{ redirect }}">
     {% endif %}
     {% include head.liquid %}
+      <!-- Below is the access to the osai.css" -->
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/osai.css">
   </head>
 
@@ -57,16 +58,13 @@
       {% endif %}
     </div>
 
-
-
     <!-- Text interface JS -->
     <script src="{{ site.baseurl }}/assets/js/osai.js"></script>
 
-    <div class="container">
-      <div class="output-container">
-        <div class="output-field" contenteditable="true"></div>
-      </div>
-      <textarea class="input-field" placeholder="Type something and press Enter..." rows="1"></textarea>
+    <div id="container">
+        <input type="text" id="userInput" placeholder=">...">
+        <button id="submitBtn">Submit</button>
+        <div id="output"></div>
     </div>
 
     <!-- JavaScripts -->
