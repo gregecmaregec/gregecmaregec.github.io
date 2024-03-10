@@ -3,7 +3,7 @@ const data = {
     messages: [
         {
             role: "user",
-            content: "really good to see that this works now",
+            content: "hello world!",
             options: {
                 temperature: 0.6,
                 num_thread: 8
