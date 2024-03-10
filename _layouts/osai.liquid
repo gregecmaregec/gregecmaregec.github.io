@@ -13,7 +13,6 @@
         <meta http-equiv="refresh" content="3; url={{ redirect }}">
       {% endif %}
       {% include head.liquid %}
-      <script src="{{ site.baseurl }}/assets/cs/osai.css"></script>
     </head>
 
     <!-- Body -->
@@ -57,11 +56,10 @@
         {% endif %}
       </div>
 
-      <div id="outputBoxContainer">
+      <div class="container">
+          <link rel="stylesheet" href="osai.css">
           <div id="outputBox"></div>
-      </div>
-      <div id="inputBoxContainer">
-          <textarea id="inputBox" placeholder="Type here..."></textarea>
+          <textarea id="inputBox" placeholder=">..."></textarea>
       </div>
 
        <script src="{{ site.baseurl }}/assets/js/osai.js"></script>
