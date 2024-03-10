@@ -30,7 +30,7 @@ document.getElementById('inputBox').addEventListener('keypress', function(event)
             })
             .then(response => {
                 if (!response.ok) {
-                    throw new Error('Network response was not ok');
+                    throw new Error(`HTTP error! Status: ${response.status}`);
                 }
                 return response.text(); // Handle as plain text
             })
@@ -43,7 +43,7 @@ document.getElementById('inputBox').addEventListener('keypress', function(event)
                 // Handle any errors
                 console.error('Error:', error);
                 const outputBox = document.getElementById('outputBox');
-                outputBox.textContent += 'Error: ' + error.message + '\n';
+                outputBox.textContent += `Error: ${error.message}\n`;
             });
 
             // Reset the input box
@@ -59,12 +59,6 @@ document.getElementById('inputBox').addEventListener('input', function(event) {
     this.style.height = (this.scrollHeight) + 'px';
 });
 
-
-// Adjust the height of the input box based on its content
-document.getElementById('inputBox').addEventListener('input', function(event) {
-    this.style.height = 'auto';
-    this.style.height = (this.scrollHeight) + 'px';
-});
 
 
 
