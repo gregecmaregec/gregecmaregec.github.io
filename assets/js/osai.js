@@ -6,12 +6,20 @@ document.getElementById('inputBox').addEventListener('keypress', function(event)
         var inputText = this.value;
         var outputBox = document.getElementById('outputBox');
 
-        // Display user input in the output box
-        outputBox.innerHTML += '<strong>' + 'You' + '</strong>' + '<br>' + inputText + '<br><br>';
+        // Display user input in the output box as plain text
+        const userStrongText = document.createElement('strong');
+        userStrongText.textContent = 'You';
+        
+        const userInputText = document.createTextNode(inputText);
+        
+        outputBox.appendChild(userStrongText);
+        outputBox.appendChild(document.createElement('br'));
+        outputBox.appendChild(userInputText);
+        outputBox.appendChild(document.createElement('br'));
+        outputBox.appendChild(document.createElement('br'));
 
-        // Define the data to be sent to the server, dynamically using selectedModel
         const data = {
-            model: selectedModel, // Use the dynamically updated model
+            model: selectedModel,
             messages: [
                 {
                     role: "user",
@@ -24,7 +32,6 @@ document.getElementById('inputBox').addEventListener('keypress', function(event)
             ]
         };
 
-        // Send data to the server and handle the response
         fetch("https://gmserver.xyz", {
             method: "POST",
             headers: {
@@ -34,15 +41,23 @@ document.getElementById('inputBox').addEventListener('keypress', function(event)
         })
         .then(response => response.text())
         .then(responseData => {
-            // Display the server's response in the output box
-            outputBox.innerHTML += '<strong>' + selectedModel.charAt(0).toUpperCase() + selectedModel.slice(1) + '</strong>' + '<br>' + responseData + '<br><br>';
+            const strongText = document.createElement('strong');
+            strongText.textContent = selectedModel.charAt(0).toUpperCase() + selectedModel.slice(1);
+        
+            const responseText = document.createTextNode(responseData);
+        
+            outputBox.appendChild(strongText);
+            outputBox.appendChild(document.createElement('br'));
+            outputBox.appendChild(responseText);
+            outputBox.appendChild(document.createElement('br'));
+            outputBox.appendChild(document.createElement('br'));
         })
         .catch(error => {
-            // Display the error in the output box
-            outputBox.innerHTML += 'Error: ' + error.message + '<br><br>';
+            const errorText = document.createTextNode('Error: ' + error.message + '\n\n');
+            outputBox.appendChild(errorText);
+            outputBox.appendChild(document.createElement('br'));
         });
-
-        // Reset input box after submission
+        
         this.value = '';
         this.style.height = '50px';
     }
@@ -52,10 +67,8 @@ function modelChoice(choice) {
     console.log("Model selected:", choice);
     selectedModel = choice;
 
-    // Iterate over all buttons
     var buttons = document.querySelectorAll('#modelSelectorContainer button');
     buttons.forEach(button => {
-        // Reset the border style for non-selected models
         if (button.getAttribute('data-model') !== choice) {
             button.style.border = '1px solid rgba(0, 0, 0, 0.3)';
             button.style.borderBottom = '2px solid rgba(204, 204, 204, 0.3)';
@@ -63,10 +76,8 @@ function modelChoice(choice) {
         }
     });
 
-    // Highlight the border of the selected button
     var selectedButton = document.querySelector(`button[data-model="${choice}"]`);
     if (selectedButton) {
         selectedButton.style.borderBottom = '2px solid rgba(139, 0, 0, 0.8)';
     }
 }
-
