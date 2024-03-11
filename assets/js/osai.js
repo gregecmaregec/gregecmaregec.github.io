@@ -66,7 +66,7 @@ function modelChoice(choice) {
     // Highlight the border of the selected button
     var selectedButton = document.querySelector(`button[data-model="${choice}"]`);
     if (selectedButton) {
-        selectedButton.style.border = '2px solid rgba(139, 0, 0, 0.8)';
+        selectedButton.style.borderBottom = '2px solid rgba(139, 0, 0, 0.8)';
     }
 }
 
