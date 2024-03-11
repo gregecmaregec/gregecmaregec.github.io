@@ -1,5 +1,5 @@
 <br>
-Full name is Gregor Mihelač.<br>
+This is a personal, static website of Gregor Mihelač.<br>
 I grew up in a small village in Slovenia.<br>
 <br>
 Currently I am an M.Sc. student at the Univeristy of Mannheim in Germany,<br>
@@ -16,6 +16,8 @@ github: [github.com/gregecmaregec](https://github.com/gregecmaregec)</i>
 <br>
 <br>
 this website is built using:<br>
-html ; ruby ; js ; css ; jekyll ; .liquid, yaml
+html ; ruby ; js ; css ; yaml ; liquid template language, jekyll
 <br>
-backend to osai is built using go and data is encrypted end-to-end with cloudflare
+<br>
+server-side handling of os_ai is built with go<br>
+data is encrypted end-to-end with cloudflare
