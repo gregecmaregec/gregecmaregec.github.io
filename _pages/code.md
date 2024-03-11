@@ -316,3 +316,35 @@ function drawGrid() {
 ```
 
 ---
+
+<br>
+<br>
+
+### simple http server
+`go`
+
+```go
+   package main
+    //all the below imports are included in default go installation
+    import (
+        "fmt"
+        "log"
+        "net/http"
+    )
+
+    //this will be the response when you trigger the api
+    func handler(w http.ResponseWriter, r *http.Request) {
+        fmt.Fprintf(w, "Hello, this is a response from your Go API!")
+    }
+
+    func main() {
+        http.HandleFunc("/", handler) // Set the handler for the root path
+        log.Println("Starting server on :8080...")
+        err := http.ListenAndServe(":8080", nil) // Listen on port 8080
+        if err != nil {
+            log.Fatal("ListenAndServe: ", err)
+        }
+    }
+
+// you may now trigger your api by engaging with http://localhost:8080 
+```
