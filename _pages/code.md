@@ -314,13 +314,15 @@ function drawGrid() {
 // check wikipedia for game of life on more info
 
 ```
+<br>
+<br>
 
 ---
 
 <br>
 <br>
 
-### simple http server
+### simple http server using go-lang
 `go`
 
 ```go
