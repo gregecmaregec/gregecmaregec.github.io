@@ -7,7 +7,7 @@ document.getElementById('inputBox').addEventListener('keypress', function(event)
         var outputBox = document.getElementById('outputBox');
 
         // Display user input in the output box
-        outputBox.innerHTML += 'You: ' + '<br>' + inputText + '<br><br>';
+        outputBox.innerHTML += '<strong>' + 'You: ' + '</strong>' + '<br>' + inputText + '<br><br>';
 
         // Define the data to be sent to the server, dynamically using selectedModel
         const data = {
@@ -35,7 +35,7 @@ document.getElementById('inputBox').addEventListener('keypress', function(event)
         .then(response => response.text())
         .then(responseData => {
             // Display the server's response in the output box
-            outputBox.innerHTML += selectedModel.charAt(0).toUpperCase() + selectedModel.slice(1) + ': ' + '<br>' + responseData + '<br><br>';
+            outputBox.innerHTML += '<strong>' + selectedModel.charAt(0).toUpperCase() + selectedModel.slice(1) + ': </strong>' + '<br>' + responseData + '<br><br>';
         })
         .catch(error => {
             // Display the error in the output box
