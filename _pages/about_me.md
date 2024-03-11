@@ -6,6 +6,7 @@ Currently I am an M.Sc. student at the Univeristy of Mannheim in Germany,<br>
 where I focus primarily on IT and Finance.<br>
 <br>
 <br>
+<br>
 <i>e-mail: gregor.mihelac (at) outlook (dot) com
 <br>
 linkedin: [in/gregormihelac](https://www.linkedin.com/in/gregormihelac/)
@@ -19,5 +20,5 @@ this website is built using:<br>
 html ; ruby ; js ; css ; yaml ; liquid template language, jekyll
 <br>
 <br>
-server-side handling of os_ai is built with go<br>
-data is encrypted end-to-end with cloudflare
+server-side handling of os_ai is built with Go,<br>
+data is encrypted end-to-end with Cloudflare.
