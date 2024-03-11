@@ -8,6 +8,7 @@ nav: true
 nav_order: 5
 
 profiles:
+
   - align: right
     image: gregor.PNG
     content: about_me.md
