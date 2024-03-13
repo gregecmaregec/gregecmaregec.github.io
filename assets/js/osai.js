@@ -63,8 +63,7 @@ document.getElementById('inputBox').addEventListener('keypress', function(event)
         
             outputBox.appendChild(document.createElement('br'));
             outputBox.appendChild(document.createElement('br'));
-        });
-        
+        })
         .catch(error => {
             const errorText = document.createTextNode('Error: ' + error.message + '\n\n');
             outputBox.appendChild(errorText);
