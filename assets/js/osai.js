@@ -43,12 +43,21 @@ document.getElementById('inputBox').addEventListener('keypress', function(event)
         .then(responseData => {
             const strongText = document.createElement('strong');
             strongText.textContent = selectedModel.charAt(0).toUpperCase() + selectedModel.slice(1);
-        
-            const responseText = document.createTextNode(responseData);
-        
+
             outputBox.appendChild(strongText);
             outputBox.appendChild(document.createElement('br'));
-            outputBox.appendChild(responseText);
+
+            // Split the response data by new line and process each line separately
+            responseData.split('\n').forEach((line, index, array) => {
+                const textNode = document.createTextNode(line);
+                outputBox.appendChild(textNode);
+                
+                // Add a <br> element after each line except the last one
+                if (index < array.length - 1) {
+                    outputBox.appendChild(document.createElement('br'));
+                }
+            });
+
             outputBox.appendChild(document.createElement('br'));
             outputBox.appendChild(document.createElement('br'));
         })
