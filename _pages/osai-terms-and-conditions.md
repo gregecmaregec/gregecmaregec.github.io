@@ -22,12 +22,13 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SO
 ### OSAI stands for opensourced ai.<br>
 <br>
 Your chat history is not recorded. Whatever you write to any of the models and their response, is for your eyes only. 
-Your chat history is private, inaccessible even by me. Inference is done exclusively on my local hardware and is never shared with third parties.<br>
+The conversations you have with the models will be inaccessible even by me. When you trigger inference on OSAI, the computation is done locally on my own personal PC, a system with an Intel i5 13600kf CPU and an RTX 3070ti GPU, and will never be shared with third parties.<br>
 <br>
-The website acts as a gateway to an https server that is built using GO-lang, encrypted end-to-end with Cloudflare. <br>
 <br>
-When you trigger inference on OSAI, the computation is done locally on my own personal PC, a system with an Intel i5 13600kf CPU and an RTX 3070ti GPU.<br>
+The website acts as a gateway to an https server and API that is built using Go, data in transit is encrypted end-to-end with Cloudflare. <br>
+<br>
 <br>
 This website is only functional some of the time, because my personal PC needs to be running a Linux server environment to be able to serve https requests as set up now, and sometimes I want to play videogames, which means I have to boot out of Linux.<br>
+<br>
 <br>
 for inquiries, you can reach me at gregormihelac (at) outlook (dot) com
