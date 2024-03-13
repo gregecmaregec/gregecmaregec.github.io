@@ -43,10 +43,13 @@ document.getElementById('inputBox').addEventListener('keypress', function(event)
         .then(responseData => {
             const strongText = document.createElement('strong');
             strongText.textContent = selectedModel.charAt(0).toUpperCase() + selectedModel.slice(1);
-
+        
             outputBox.appendChild(strongText);
             outputBox.appendChild(document.createElement('br'));
-
+        
+            // Apply white-space preservation
+            outputBox.style.whiteSpace = 'pre-wrap';
+        
             // Split the response data by new line and process each line separately
             responseData.split('\n').forEach((line, index, array) => {
                 const textNode = document.createTextNode(line);
@@ -57,10 +60,11 @@ document.getElementById('inputBox').addEventListener('keypress', function(event)
                     outputBox.appendChild(document.createElement('br'));
                 }
             });
-
+        
             outputBox.appendChild(document.createElement('br'));
             outputBox.appendChild(document.createElement('br'));
-        })
+        });
+        
         .catch(error => {
             const errorText = document.createTextNode('Error: ' + error.message + '\n\n');
             outputBox.appendChild(errorText);
