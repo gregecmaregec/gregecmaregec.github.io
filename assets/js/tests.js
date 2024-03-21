@@ -10,8 +10,8 @@ const data = {
           "content": "due lao tzu."
         },
         {
-          "role": "user",
-          "content": "tell me more about this man?",
+            "role": "user",
+            "content": "tell me more about this man?",
             options: {
                 temperature: 0.6,
                 num_thread: 8

@@ -10,9 +10,7 @@ document.getElementById('inputBox').addEventListener('keypress', function(event)
         // Display user input in the output box as plain text
         const userStrongText = document.createElement('strong');
         userStrongText.textContent = 'You';
-        
         const userInputText = document.createTextNode(inputText);
-        
         outputBox.appendChild(userStrongText);
         outputBox.appendChild(document.createElement('br'));
         outputBox.appendChild(userInputText);
@@ -24,17 +22,8 @@ document.getElementById('inputBox').addEventListener('keypress', function(event)
 
         const data = {
             model: selectedModel,
-            messages: [
-                ...messageHistory, // Spread the previous messages
-                {
-                    role: "user",
-                    content: inputText,
-                    options: {
-                        temperature: 0.6,
-                        num_thread: 8
-                    }
-                }
-            ]
+            messages: [...messageHistory],
+            options: { temperature: 0.6, num_thread: 8 }
         };
 
         fetch("https://gmserver.xyz", {
@@ -48,24 +37,22 @@ document.getElementById('inputBox').addEventListener('keypress', function(event)
         .then(responseData => {
             const strongText = document.createElement('strong');
             strongText.textContent = selectedModel.charAt(0).toUpperCase() + selectedModel.slice(1);
-        
             outputBox.appendChild(strongText);
             outputBox.appendChild(document.createElement('br'));
-        
+
             // Apply white-space preservation
             outputBox.style.whiteSpace = 'pre-wrap';
-        
+
             // Split the response data by new line and process each line separately
             responseData.split('\n').forEach((line, index, array) => {
                 const textNode = document.createTextNode(line);
                 outputBox.appendChild(textNode);
-                
                 // Add a <br> element after each line except the last one
                 if (index < array.length - 1) {
                     outputBox.appendChild(document.createElement('br'));
                 }
             });
-        
+
             outputBox.appendChild(document.createElement('br'));
             outputBox.appendChild(document.createElement('br'));
 
@@ -77,7 +64,7 @@ document.getElementById('inputBox').addEventListener('keypress', function(event)
             outputBox.appendChild(errorText);
             outputBox.appendChild(document.createElement('br'));
         });
-        
+
         this.value = '';
         this.style.height = '50px';
     }
@@ -86,7 +73,6 @@ document.getElementById('inputBox').addEventListener('keypress', function(event)
 function modelChoice(choice) {
     console.log("Model selected:", choice);
     selectedModel = choice;
-
     var buttons = document.querySelectorAll('#modelSelectorContainer button');
     buttons.forEach(button => {
         if (button.getAttribute('data-model') !== choice) {
@@ -95,7 +81,6 @@ function modelChoice(choice) {
             button.style.borderRight = '1px solid rgba(68, 68, 68, 0.3)';
         }
     });
-
     var selectedButton = document.querySelector(`button[data-model="${choice}"]`);
     if (selectedButton) {
         selectedButton.style.borderBottom = '2px solid rgba(139, 0, 0, 0.8)';
