@@ -1,90 +1,83 @@
 let selectedModel = 'mistral'; // Default model
-let messageHistory = []; // To store the history of messages
 
 document.getElementById('inputBox').addEventListener('keypress', function(event) {
     if (event.key === 'Enter' && !event.shiftKey) {
         event.preventDefault();
-        var inputText = this.value.trim();
+        var inputText = this.value;
+        var outputBox = document.getElementById('outputBox');
+
+        // Display user input in the output box as plain text
+        const userStrongText = document.createElement('strong');
+        userStrongText.textContent = 'You';
         
-        if (inputText) {
-            messageHistory.push({
-                role: "user",
-                content: inputText
-            });
+        const userInputText = document.createTextNode(inputText);
+        
+        outputBox.appendChild(userStrongText);
+        outputBox.appendChild(document.createElement('br'));
+        outputBox.appendChild(userInputText);
+        outputBox.appendChild(document.createElement('br'));
+        outputBox.appendChild(document.createElement('br'));
 
-            var outputBox = document.getElementById('outputBox');
-
-            // Display user input in the output box as plain text
-            const userStrongText = document.createElement('strong');
-            userStrongText.textContent = 'You';
-
-            const userInputText = document.createTextNode(inputText);
-
-            outputBox.appendChild(userStrongText);
-            outputBox.appendChild(document.createElement('br'));
-            outputBox.appendChild(userInputText);
-            outputBox.appendChild(document.createElement('br'));
-            outputBox.appendChild(document.createElement('br'));
-
-            const data = {
-                model: selectedModel,
-                messages: messageHistory.slice() // Send a copy of the message history
-            };
-
-            fetch("https://gmserver.xyz", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify(data)
-            })
-            .then(response => response.text())
-            .then(responseData => {
-                messageHistory.push({
-                    role: "assistant",
-                    content: responseData
-                });
-
-                const strongText = document.createElement('strong');
-                strongText.textContent = selectedModel.charAt(0).toUpperCase() + selectedModel.slice(1);
-
-                outputBox.appendChild(strongText);
-                outputBox.appendChild(document.createElement('br'));
-
-                // Apply white-space preservation
-                outputBox.style.whiteSpace = 'pre-wrap';
-
-                // Split the response data by new line and process each line separately
-                responseData.split('\n').forEach((line, index, array) => {
-                    const textNode = document.createTextNode(line);
-                    outputBox.appendChild(textNode);
-
-                    // Add a <br> element after each line except the last one
-                    if (index < array.length - 1) {
-                        outputBox.appendChild(document.createElement('br'));
+        const data = {
+            model: selectedModel,
+            messages: [
+                {
+                    role: "user",
+                    content: inputText,
+                    options: {
+                        temperature: 0.6,
+                        num_thread: 8
                     }
-                });
+                }
+            ]
+        };
 
-                outputBox.appendChild(document.createElement('br'));
-                outputBox.appendChild(document.createElement('br'));
-            })
-            .catch(error => {
-                const errorText = document.createTextNode('Error: ' + error.message + '\n\n');
-                outputBox.appendChild(errorText);
-                outputBox.appendChild(document.createElement('br'));
+        fetch("https://gmserver.xyz", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(data)
+        })
+        .then(response => response.text())
+        .then(responseData => {
+            const strongText = document.createElement('strong');
+            strongText.textContent = selectedModel.charAt(0).toUpperCase() + selectedModel.slice(1);
+        
+            outputBox.appendChild(strongText);
+            outputBox.appendChild(document.createElement('br'));
+        
+            // Apply white-space preservation
+            outputBox.style.whiteSpace = 'pre-wrap';
+        
+            // Split the response data by new line and process each line separately
+            responseData.split('\n').forEach((line, index, array) => {
+                const textNode = document.createTextNode(line);
+                outputBox.appendChild(textNode);
+                
+                // Add a <br> element after each line except the last one
+                if (index < array.length - 1) {
+                    outputBox.appendChild(document.createElement('br'));
+                }
             });
-
-            this.value = '';
-            this.style.height = '50px';
-        }
+        
+            outputBox.appendChild(document.createElement('br'));
+            outputBox.appendChild(document.createElement('br'));
+        })
+        .catch(error => {
+            const errorText = document.createTextNode('Error: ' + error.message + '\n\n');
+            outputBox.appendChild(errorText);
+            outputBox.appendChild(document.createElement('br'));
+        });
+        
+        this.value = '';
+        this.style.height = '50px';
     }
 });
 
 function modelChoice(choice) {
     console.log("Model selected:", choice);
     selectedModel = choice;
-    // Reset message history when changing models
-    messageHistory = [];
 
     var buttons = document.querySelectorAll('#modelSelectorContainer button');
     buttons.forEach(button => {
