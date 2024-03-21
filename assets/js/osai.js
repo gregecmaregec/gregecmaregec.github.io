@@ -1,4 +1,5 @@
 let selectedModel = 'mistral'; // Default model
+let messageHistory = []; // Array to store previous messages
 
 document.getElementById('inputBox').addEventListener('keypress', function(event) {
     if (event.key === 'Enter' && !event.shiftKey) {
@@ -18,9 +19,13 @@ document.getElementById('inputBox').addEventListener('keypress', function(event)
         outputBox.appendChild(document.createElement('br'));
         outputBox.appendChild(document.createElement('br'));
 
+        // Add the user's input to the message history
+        messageHistory.push({ role: "user", content: inputText });
+
         const data = {
             model: selectedModel,
             messages: [
+                ...messageHistory, // Spread the previous messages
                 {
                     role: "user",
                     content: inputText,
@@ -63,6 +68,9 @@ document.getElementById('inputBox').addEventListener('keypress', function(event)
         
             outputBox.appendChild(document.createElement('br'));
             outputBox.appendChild(document.createElement('br'));
+
+            // Add the assistant's response to the message history
+            messageHistory.push({ role: "assistant", content: responseData });
         })
         .catch(error => {
             const errorText = document.createTextNode('Error: ' + error.message + '\n\n');

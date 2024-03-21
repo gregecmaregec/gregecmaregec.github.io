@@ -3,7 +3,15 @@ const data = {
     messages: [
         {
             role: "user",
-            content: "how to make a webpate that will display a div in red?",
+            content: "why is this?",
+        },
+        {
+          "role": "assistant",
+          "content": "due lao tzu."
+        },
+        {
+          "role": "user",
+          "content": "tell me more about this man?",
             options: {
                 temperature: 0.6,
                 num_thread: 8
