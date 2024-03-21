@@ -43,6 +43,9 @@ document.getElementById('inputBox').addEventListener('keypress', function(event)
             // Apply white-space preservation
             outputBox.style.whiteSpace = 'pre-wrap';
 
+            // Trim leading and trailing whitespace from responseData
+            responseData = responseData.trim();
+
             // Split the response data by new line and process each line separately
             responseData.split('\n').forEach((line, index, array) => {
                 const textNode = document.createTextNode(line);
