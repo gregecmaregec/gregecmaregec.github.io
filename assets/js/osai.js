@@ -43,18 +43,22 @@ document.getElementById('inputBox').addEventListener('keypress', function(event)
             // Apply white-space preservation
             outputBox.style.whiteSpace = 'pre-wrap';
 
-            // Trim leading and trailing whitespace from responseData
-            responseData = responseData.trim();
-
             // Split the response data by new line and process each line separately
             responseData.split('\n').forEach((line, index, array) => {
-                const textNode = document.createTextNode(line);
-                outputBox.appendChild(textNode);
-                // Add a <br> element after each line except the last one
-                if (index < array.length - 1) {
+                // Trim leading and trailing whitespace characters from the line
+                const trimmedLine = line.trim();
+              
+                // Create a TextNode only if the trimmed line is not empty
+                if (trimmedLine !== '') {
+                  const textNode = document.createTextNode(trimmedLine);
+                  outputBox.appendChild(textNode);
+              
+                  // Add a <br> element after each line except the last one
+                  if (index < array.length - 1) {
                     outputBox.appendChild(document.createElement('br'));
+                  }
                 }
-            });
+              });
 
             outputBox.appendChild(document.createElement('br'));
             outputBox.appendChild(document.createElement('br'));
