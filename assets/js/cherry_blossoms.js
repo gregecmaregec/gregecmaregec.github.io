@@ -43,7 +43,7 @@ function createLeaves() {
         // balls get generated at the top half first due to y
         const y = Math.random() * (window.innerHeight / 2);
         const size = Math.random() * 10 + 5;
-        const speed = (Math.random() * 0.5 + 0.5)/2;    
+        const speed = (Math.random() * 0.5 + 0.5)/3;    
         leaves.push(new Leaf(x, y, size, speed));
     }
 }
