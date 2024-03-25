@@ -34,7 +34,7 @@ animate();
 // Stop the animation after 2 minutes
 setTimeout(() => {
     cancelAnimationFrame(animationId);
-}, 2 * 60 * 1000);
+}, 4 * 60 * 1000);
 
 let animationId;
 
