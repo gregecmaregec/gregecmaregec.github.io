@@ -102,31 +102,11 @@ Nietzche was incorrect in assuming you ever could in the first place.
 <br>
 `9`
 
-God is: 
+The meaning of life for a human being is found in exercising responsibility. <br>
+Be it for a career, a plant, a repository of code, a child, a parent, a dog, to exercise, to improve, to meditate, to pray, to worship, or even to steal.<br>
 
-What bring order out of chaos.<br>
-What brings cells and atoms to strive for their stable variations, i.e. homeostasis.<br>
-God is the manliness in men.<br>
-God is the the taste in water.<br>
-
-What God is not: <br>
-
-God is not chaos.<br>
-God is not the mother of the universe.<br>
-God is not quantum uncertainty.<br>
-God is not the femininity in women.<br>
-God is not the exsistance before God.<br>
-
-The above is a profound truth. Yet the opposite of a profound truth is another profound truth. <br>
-
-There is no real name for the feminine representation of the divine. Goddess does not suffice, as it portrays the feminine in a masculine domain. <br>
-For the lack of a better word, the ancient Chinese called it the Tao.<br>
-Yet much like the Tao that can be told is not the eternal Tao, the God that can be interpolated is not the eternal God.<br>
-
-God is masculine, as is order,<br>
-Tao is feminine, as is chaos.<br>
-When the masculine and feminine combine,<br>
-all things achieve harmony.
+Wherever responsibility presents itself to your eyes,<br>
+therein you have the opportunity, for the meaning of life to manifest itself inside of you.
 
 <br>
 `10`
@@ -164,14 +144,6 @@ Reincarnation, and heaven and hell are fundamentally the same idea, told in diff
 Will you act according to your God’s ideals in this life, <br>
 so that what comes next will be better?
 
-<br>
-`15`
-
-The meaning of life for a human being is found in exercising responsibility. <br>
-Be it for a career, a plant, a repository of code, a child, a parent, a dog, to exercise, to improve, to meditate, to pray, to worship, or even to steal.<br>
-
-Wherever responsibility presents itself to your eyes,<br>
-therein you have the opportunity, for the meaning of life to manifest itself inside of you.
 
 <br>
 <br>
