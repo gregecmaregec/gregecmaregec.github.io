@@ -112,7 +112,7 @@ therein you have the opportunity, for the meaning of life to manifest itself ins
 `10`
 
 All scriptures were written by humans.<br>
-
+‚
 This fact doesn’t negate the divine, on the contrary- <br>
 it shows just how amazing humans are at interpreting.
 
@@ -144,7 +144,12 @@ Reincarnation, and heaven and hell are fundamentally the same idea, told in diff
 Will you act according to your God’s ideals in this life, <br>
 so that what comes next will be better?
 
+<br>
+`15`
 
+The more you explore something, the smaller it becomes. <br>
+
+‚
 <br>
 <br>
 <br>
