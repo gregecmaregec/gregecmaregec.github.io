@@ -1,14 +1,19 @@
 const inputBox = document.getElementById('inputBox');
 
 function adjustHeight() {
-    // Subtract vertical padding and border widths
-    const verticalPadding = 20; // 10px top padding + 10px bottom padding
-    const verticalBorderWidth = 3; // 1px top border + 2px bottom border
-    const adjustment = verticalPadding + verticalBorderWidth;
+    const singleLineHeight = 50; // Height for a single line of text
+    const multiLineHeight = 68; // Height for multiple lines of text
 
     inputBox.style.height = 'auto';
-    const newHeight = inputBox.scrollHeight - adjustment;
-    inputBox.style.height = `${newHeight}px`;
+    const contentHeight = inputBox.scrollHeight;
+
+    if (contentHeight > singleLineHeight) {
+        // If content height exceeds single line height, set to multiLineHeight
+        inputBox.style.height = `${multiLineHeight}px`;
+    } else {
+        // If content fits in a single line, set height to singleLineHeight
+        inputBox.style.height = `${singleLineHeight}px`;
+    }
 }
 
 inputBox.addEventListener('input', adjustHeight);
