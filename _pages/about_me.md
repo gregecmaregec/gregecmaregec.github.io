@@ -7,7 +7,7 @@ where I focus primarily on IT and Finance.<br>
 <br>
 <br>
 <br>
-<i>e-mail: gregormihelac (at) outlook (dot) com
+<i>e-mail: gregor.mihelac (at) outlook (dot) com
 <br>
 linkedin: [in/gregormihelac](https://www.linkedin.com/in/gregormihelac/)
 <br>
