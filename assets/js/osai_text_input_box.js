@@ -1,9 +1,21 @@
 const inputBox = document.getElementById('inputBox');
-inputBox.style.height = '50px'; // Set the initial height to 50px
+const initialHeight = 50; // Set the initial height in pixels
+inputBox.style.height = `${initialHeight}px`;
 
 function adjustHeight() {
-  inputBox.style.height = 'auto'; // Reset height to auto
-  inputBox.style.height = `${inputBox.scrollHeight}px`; // Set the new height based on scrollHeight
+  // Reset height to auto
+  inputBox.style.height = 'auto';
+
+  // Get the scrollHeight after resetting to auto
+  const scrollHeight = inputBox.scrollHeight;
+
+  // If scrollHeight is greater than initialHeight, adjust the height
+  if (scrollHeight > initialHeight) {
+    inputBox.style.height = `${scrollHeight}px`;
+  } else {
+    // Otherwise, reset to initialHeight
+    inputBox.style.height = `${initialHeight}px`;
+  }
 }
 
 inputBox.addEventListener('input', adjustHeight);
