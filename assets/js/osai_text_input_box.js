@@ -8,17 +8,19 @@ let isOverflown = false;
 function adjustHeight() {
   const lines = inputBox.value.split('\n');
   const currentLine = lines[lines.length - 1];
+  const currentScrollHeight = inputBox.scrollHeight;
 
-  if (currentLine.length > lastLine.length || isOverflown) {
-    // New character added or already overflown
-    inputBox.style.height = 'auto';
-    const scrollHeight = inputBox.scrollHeight;
-    inputBox.style.height = `${scrollHeight}px`;
-    isOverflown = true;
-  } else if (currentLine.length < lastLine.length) {
-    // Character removed
+  if (currentScrollHeight > initialHeight) {
+    if (currentLine.length > lastLine.length || isOverflown) {
+      // New character added or already overflown
+      inputBox.style.height = 'auto';
+      const scrollHeight = inputBox.scrollHeight;
+      inputBox.style.height = `${scrollHeight}px`;
+      isOverflown = true;
+    }
+  } else if (currentLine.length < lastLine.length && !isOverflown) {
+    // Character removed and not overflown
     inputBox.style.height = `${initialHeight}px`;
-    isOverflown = false;
   }
 
   lastLine = currentLine;
