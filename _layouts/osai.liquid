@@ -58,6 +58,8 @@
     </div>
 		<div style="margin-bottom: 3px;"></div>
 
+    <div id="loader" class="loader" style="display: none; padding: 10px; margin: auto;"></div>
+
 		<br>
 
     <div id="modelSelectorContainer" style="width: 100%; max-width: 800px; display: flex; justify-content: space-between; margin: auto; margin-bottom: 10px;">
@@ -66,8 +68,6 @@
       <button data-model="qwen:7b" onclick="modelChoice('qwen:7b')" style="width: calc((800px - 30px) / 4); text-align: center; border-radius: 15px; background-color: transparent; border: 1px solid rgba(0, 0, 0, 0.3); border-bottom: 2px solid rgba(204, 204, 204, 0.3); border-right: 1px solid rgba(68, 68, 68, 0.3); padding: 10px; color: inherit;">Qwen</button>
       <button data-model="gemma:7b" onclick="modelChoice('gemma:7b')" style="width: calc((800px - 30px) / 4); text-align: center; border-radius: 15px; background-color: transparent; border: 1px solid rgba(0, 0, 0, 0.3); border-bottom: 2px solid rgba(204, 204, 204, 0.3); border-right: 1px solid rgba(68, 68, 68, 0.3); padding: 10px; margin-right: 10px; color: inherit;">Gemma</button>
     </div>
-
-    <div id="loader" class="loader" style="display: none; padding: 10px; margin: 0 auto;"></div>
 
     <div id="inputBoxContainer" style="width: 100%; max-width: 800px; display: flex; justify-content: center; margin: auto;">
       <textarea id="inputBox" placeholder=">..." style="width: calc(100% - 22px); height: 50px; min-height: 50px; max-height: 800px; box-sizing: border-box; text-align: left; overflow-y: auto; resize: none; border-radius: 15px; background-color: transparent; border: 1px solid rgba(0, 0, 0, 0.3); border-bottom: 2px solid rgba(204, 204, 204, 0.3); border-right: 1px solid rgba(68, 68, 68, 0.3); padding: 10px; color: inherit; outline: none;"></textarea>
