@@ -7,6 +7,7 @@ document.getElementById('inputBox').addEventListener('keypress', function(event)
     var inputText = this.value;
     var outputBox = document.getElementById('outputBox');
     var loader = document.getElementById('loader');
+    var inputBox = document.getElementById('inputBox');
 
     // Display user input in the output box as plain text
     const userStrongText = document.createElement('strong');
@@ -27,8 +28,9 @@ document.getElementById('inputBox').addEventListener('keypress', function(event)
       options: { temperature: 0.6, num_thread: 8 }
     };
 
-    // Show the loader
+    // Show the loader and disable the input box
     loader.style.display = 'block';
+    inputBox.disabled = true;
 
     fetch("https://gmserver.xyz", {
       method: "POST",
@@ -67,16 +69,18 @@ document.getElementById('inputBox').addEventListener('keypress', function(event)
       // Add the assistant's response to the message history
       messageHistory.push({ role: "assistant", content: responseData });
 
-      // Hide the loader
+      // Hide the loader and enable the input box
       loader.style.display = 'none';
+      inputBox.disabled = false;
     })
     .catch(error => {
       const errorText = document.createTextNode('Error: ' + error.message + '\n\n');
       outputBox.appendChild(errorText);
       outputBox.appendChild(document.createElement('br'));
 
-      // Hide the loader
+      // Hide the loader and enable the input box
       loader.style.display = 'none';
+      inputBox.disabled = false;
     });
 
     this.value = '';
