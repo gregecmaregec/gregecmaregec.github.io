@@ -1,26 +1,9 @@
 const inputBox = document.getElementById('inputBox');
 inputBox.style.height = '50px'; // Set the initial height to 50px
-let isExpanded = false; // Flag to track if the input box has been expanded
 
 function adjustHeight() {
-  const scrollHeight = inputBox.scrollHeight;
-  const boxHeight = inputBox.offsetHeight;
-
-  if (scrollHeight > boxHeight) {
-    // Content is overflowing
-    if (!isExpanded) {
-      // Expand the input box only if it hasn't been expanded before
-      inputBox.style.height = `${scrollHeight}px`;
-      isExpanded = true; // Set the flag to true
-    }
-  } else {
-    // Content is not overflowing
-    if (isExpanded) {
-      // Reset the input box height only if it was previously expanded
-      inputBox.style.height = '50px';
-      isExpanded = false; // Reset the flag to false
-    }
-  }
+  inputBox.style.height = 'auto'; // Reset height to auto
+  inputBox.style.height = `${inputBox.scrollHeight}px`; // Set the new height based on scrollHeight
 }
 
 inputBox.addEventListener('input', adjustHeight);
