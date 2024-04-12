@@ -1,0 +1,1 @@
+function adjustFooterPosition(){var o=document.getElementById("footer");document.body.scrollHeight>window.innerHeight?o.style.position="static":o.style.position="fixed"}window.onload=adjustFooterPosition,window.onresize=adjustFooterPosition;
