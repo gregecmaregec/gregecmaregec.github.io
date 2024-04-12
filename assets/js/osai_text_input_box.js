@@ -2,20 +2,26 @@ const inputBox = document.getElementById('inputBox');
 const initialHeight = 50; // Set the initial height in pixels
 inputBox.style.height = `${initialHeight}px`;
 
+let lastLine = '';
+let isOverflown = false;
+
 function adjustHeight() {
-  // Reset height to auto
-  inputBox.style.height = 'auto';
+  const lines = inputBox.value.split('\n');
+  const currentLine = lines[lines.length - 1];
 
-  // Get the scrollHeight after resetting to auto
-  const scrollHeight = inputBox.scrollHeight;
-
-  // If scrollHeight is greater than initialHeight, adjust the height
-  if (scrollHeight > initialHeight) {
+  if (currentLine.length > lastLine.length || isOverflown) {
+    // New character added or already overflown
+    inputBox.style.height = 'auto';
+    const scrollHeight = inputBox.scrollHeight;
     inputBox.style.height = `${scrollHeight}px`;
-  } else {
-    // Otherwise, reset to initialHeight
+    isOverflown = true;
+  } else if (currentLine.length < lastLine.length) {
+    // Character removed
     inputBox.style.height = `${initialHeight}px`;
+    isOverflown = false;
   }
+
+  lastLine = currentLine;
 }
 
 inputBox.addEventListener('input', adjustHeight);
