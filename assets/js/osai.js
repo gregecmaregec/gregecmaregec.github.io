@@ -1,4 +1,4 @@
-let selectedModel = 'mistral'; // Default model
+let selectedModel = 'llama3'; // Default model
 let messageHistory = []; // Array to store previous messages
 
 document.getElementById('inputBox').addEventListener('keypress', function(event) {
