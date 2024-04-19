@@ -89,7 +89,6 @@ document.getElementById('inputBox').addEventListener('keypress', function(event)
 });
 
 function modelChoice(choice) {
-  console.log("Model selected:", choice);
   selectedModel = choice;
   var buttons = document.querySelectorAll('#modelSelectorContainer button');
   buttons.forEach(button => {
