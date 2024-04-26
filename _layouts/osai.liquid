@@ -16,20 +16,20 @@
     <style>
     .loader {
       border: 4px solid rgba(243, 243, 243, 0.03);
-      border-top: 4px solid #8b0000;
+      border-top: 4px solid #8b0000; /* dark red */
       border-radius: 50%;
       width: 30px;
       height: 30px;
-      left: 100%;
-      top: 50%;
-      transform: translate(-50%, -50%);
+      left: 50%; /* center loader horizontally */
+      top: 50%; /* center loader vertically */
+      transform: translate(-50%, -50%); /* fine-tune exact centering */
       animation: spin 2s linear infinite;
-      margin-left: -400px;
+      margin-left: -15px; /* adjust this based on the actual center offset */
     }
 
     @media (min-width: 800px) {
       .loader {
-        left: calc(50% - 200px); /* adjust this value to your liking */
+        left: calc(50% - 200px); /* adjust this to not be more than 400px from center */
       }
     }
 
