@@ -23,7 +23,6 @@
       height: 30px;
       position: absolute; /* Add position: absolute */
       left: 50%; /* Position it at the horizontal center */
-      top: 50%; /* Position it at the vertical center */
       transform: translate(-50%, -50%); /* Adjust for the element's own size */
       animation: spin 2s linear infinite;
       margin-left: 0; /* Remove the margin-left */
@@ -31,7 +30,7 @@
 
       @media (min-width: 800px) {
       .loader {
-        left: calc(50% - 200px); /* Adjust this value to your liking */
+        left: calc(50% - 400px); /* Adjust this value to your liking */
        }
       }
 
@@ -72,7 +71,7 @@
 		<div style="margin-bottom: 3px;"></div>
     
     <div id="loader" class="loader" style="display: none; max-width: {{ site.max_width }}; margin: 0 auto; padding: 10px;"></div>
-    
+
 		<br>
 
     <div id="modelSelectorContainer" style="width: 100%; max-width: 800px; display: flex; justify-content: space-between; margin: auto; margin-bottom: 10px;">
