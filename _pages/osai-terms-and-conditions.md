@@ -23,6 +23,8 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SO
 
 ### OSAI stands for opensourced ai.<br>
 
+<br>
+
 OSAI is an implmenetation of serving open source LLMs through the internet with a privacy-first approach. No log on is required, your data is not stored or shared to third parties by me.
 <br>
 <br>
