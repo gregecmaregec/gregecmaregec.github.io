@@ -31,10 +31,10 @@ initializeGrid();
 // run the game immediately upon site load
 animate();
 
-// Stop the animation after 2 minutes
+// Stop the animation after n minutes
 setTimeout(() => {
     cancelAnimationFrame(animationId);
-}, 4 * 60 * 1000);
+}, 6 * 60 * 1000);
 
 let animationId;
 

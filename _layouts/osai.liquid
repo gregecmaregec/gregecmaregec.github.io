@@ -14,22 +14,29 @@
     {% endif %}
     {% include head.liquid %}
     <style>
-      .loader {
-        border: 4px solid rgba(243, 243, 243, 0.03);
-        border-top: 4px solid #8b0000;
-        border-radius: 50%;
-        width: 30px;
-        height: 30px;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        animation: spin 2s linear infinite;
-      }
+    .loader {
+      border: 4px solid rgba(243, 243, 243, 0.03);
+      border-top: 4px solid #8b0000;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      left: calc(50%-400px);
+      top: 50%;
+      transform: translate(-50%, -50%);
+      animation: spin 2s linear infinite;
+      margin-left: -400px;
+    }
 
-      @keyframes spin {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
+    @media (min-width: 800px) {
+      .loader {
+        left: calc(50% - 200px); /* adjust this value to your liking */
       }
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
     </style>
   </head>
 
@@ -58,20 +65,22 @@
     </div>
 		<div style="margin-bottom: 3px;"></div>
 
-    <div id="loader" class="loader" style="display: none; padding: 10px; margin: auto; margin-bottom: 10px; margin-left: 10px;"></div>
+    <div id="loader" class="loader" style="display: none; max-width: 800px; justify-content: center; margin: 0 auto; padding: 13px; margin: auto; margin-bottom: 10px; margin-left: 10px;"></div>
 
 		<br>
 
     <div id="modelSelectorContainer" style="width: 100%; max-width: 800px; display: flex; justify-content: space-between; margin: auto; margin-bottom: 10px;">
-      <button data-model="mistral" onclick="modelChoice('mistral')" style="width: calc((800px - 30px) / 4); text-align: center; border-radius: 15px; background-color: transparent; border: 1px solid rgba(0, 0, 0, 0.3); border-bottom: 2px solid rgba(204, 204, 204, 0.3); border-right: 1px solid rgba(68, 68, 68, 0.3); padding: 10px; margin-left: 10px; color: inherit;">Mistral</button>
-      <button data-model="llama2-uncensored" onclick="modelChoice('llama2-uncensored')" style="width: calc((800px - 30px) / 4); text-align: center; border-radius: 15px; background-color: transparent; border: 1px solid rgba(0, 0, 0, 0.3); border-bottom: 2px solid rgba(204, 204, 204, 0.3); border-right: 1px solid rgba(68, 68, 68, 0.3); padding: 10px; color: inherit;">LLaMA2-Uncensored</button>
-      <button data-model="qwen:7b" onclick="modelChoice('qwen:7b')" style="width: calc((800px - 30px) / 4); text-align: center; border-radius: 15px; background-color: transparent; border: 1px solid rgba(0, 0, 0, 0.3); border-bottom: 2px solid rgba(204, 204, 204, 0.3); border-right: 1px solid rgba(68, 68, 68, 0.3); padding: 10px; color: inherit;">Qwen</button>
-      <button data-model="gemma:7b" onclick="modelChoice('gemma:7b')" style="width: calc((800px - 30px) / 4); text-align: center; border-radius: 15px; background-color: transparent; border: 1px solid rgba(0, 0, 0, 0.3); border-bottom: 2px solid rgba(204, 204, 204, 0.3); border-right: 1px solid rgba(68, 68, 68, 0.3); padding: 10px; margin-right: 10px; color: inherit;">Gemma</button>
+      <button data-model="llama3" onclick="modelChoice('llama3')" style="width: calc((800px - 30px) / 4); text-align: center; border-radius: 15px; background-color: transparent; border: 1px solid rgba(0, 0, 0, 0.3); border-bottom: 2px solid rgba(204, 204, 204, 0.3); border-right: 1px solid rgba(68, 68, 68, 0.3); padding: 10px; margin-left: 10px; color: inherit;">llama3</button>
+      <button data-model="llama2-uncensored" onclick="modelChoice('llama2-uncensored')" style="width: calc((800px - 30px) / 4); text-align: center; border-radius: 15px; background-color: transparent; border: 1px solid rgba(0, 0, 0, 0.3); border-bottom: 2px solid rgba(204, 204, 204, 0.3); border-right: 1px solid rgba(68, 68, 68, 0.3); padding: 10px; color: inherit;">llama2-uncensored</button>
+      <button data-model="qwen:7b" onclick="modelChoice('qwen:7b')" style="width: calc((800px - 30px) / 4); text-align: center; border-radius: 15px; background-color: transparent; border: 1px solid rgba(0, 0, 0, 0.3); border-bottom: 2px solid rgba(204, 204, 204, 0.3); border-right: 1px solid rgba(68, 68, 68, 0.3); padding: 10px; color: inherit;">qwen</button>
+      <button data-model="gemma:7b" onclick="modelChoice('gemma:7b')" style="width: calc((800px - 30px) / 4); text-align: center; border-radius: 15px; background-color: transparent; border: 1px solid rgba(0, 0, 0, 0.3); border-bottom: 2px solid rgba(204, 204, 204, 0.3); border-right: 1px solid rgba(68, 68, 68, 0.3); padding: 10px; margin-right: 10px; color: inherit;">gemma</button>
     </div>
 
     <div id="inputBoxContainer" style="width: 100%; max-width: 800px; display: flex; justify-content: center; margin: auto;">
       <textarea id="inputBox" placeholder=">..." style="width: calc(100% - 22px); height: 50px; min-height: 50px; max-height: 800px; box-sizing: border-box; text-align: left; overflow-y: auto; resize: none; border-radius: 15px; background-color: transparent; border: 1px solid rgba(0, 0, 0, 0.3); border-bottom: 2px solid rgba(204, 204, 204, 0.3); border-right: 1px solid rgba(68, 68, 68, 0.3); padding: 10px; color: inherit; outline: none;"></textarea>
     </div>
+
+    <br>
 
     <div style="text-align: center; font-size: 12px; font-weight: 100; opacity: 0.6; padding: 10px;">
       Large language models make mistakes and are known to fabricate facts. Check information before implementing it. <br> By using osai, you agree to the <a href="https://gregormihelac.com/osai-terms-and-conditions/">Terms & Conditions.</a>

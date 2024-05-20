@@ -1,7 +1,7 @@
 // working!!!
 
 const data = {
-    model: "mistral",
+    model: "llama3",
     messages: [
         {
             role: "user",
