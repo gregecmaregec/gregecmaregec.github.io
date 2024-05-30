@@ -5,7 +5,7 @@ permalink: /philosophy/
 title: philosophy
 description: some observations on the way things seem to be
 nav: true
-nav_order: 2
+nav_order: 4
 
 ---
 ## Some observations on the way things seem to be
