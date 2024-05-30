@@ -156,6 +156,7 @@ The more you explore something, the smaller it becomes. <br>
 <br>
 
 ---
+<div style="height: 2px; width: 800px; padding: 10px; background-color: darkgray;"></div>
 
 <small><i>The writings in this page are the products of my own mind, and in no way represent the views of any employer of mine,<br></i></small>
 <small><i>past, present, or future.</i></small><br>
