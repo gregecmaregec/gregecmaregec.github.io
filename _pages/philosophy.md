@@ -149,7 +149,7 @@ so that what comes next will be better?
 
 The more you explore something, the smaller it becomes. <br>
 
-‚
+
 <br>
 <br>
 <br>
