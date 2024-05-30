@@ -156,12 +156,12 @@ The more you explore something, the smaller it becomes. <br>
 <br>
 
 ---
-<div style="height: 2px; width: 800px; background-color: darkgray;"></div>
-
+<div style="height: 1px; width: 800px; background-color: darkgray;"></div>
+<br>
 <small><i>The writings in this page are the products of my own mind, and in no way represent the views of any employer of mine,<br></i></small>
 <small><i>past, present, or future.</i></small><br>
 <br>
 <small><i>The writings in this page are not covered under the MIT license. © 2024 Gregor Mihelac. All rights reserved .</i></small>
-
-<div style="height: 2px; width: 800px; background-color: darkgray;"></div>
+<br>
+<div style="height: 1px; width: 800px; background-color: darkgray;"></div>
 
