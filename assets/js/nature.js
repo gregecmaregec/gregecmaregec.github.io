@@ -1,11 +1,9 @@
-//this one totally works
-
 document.addEventListener('DOMContentLoaded', () => {
     const canvas = document.getElementById('crystalCanvas');
     const ctx = canvas.getContext('2d');
 
     // Set canvas size
-    canvas.width = Math.min(window.innerWidth * 0.98, 795);
+    canvas.width = Math.min(window.innerWidth * 0.98, 800);
     canvas.height = 400;
 
     // Center canvas horizontally
@@ -16,9 +14,9 @@ document.addEventListener('DOMContentLoaded', () => {
         constructor(x, y) {
             this.x = x;
             this.y = y;
-            this.size = Math.random() * 4 + 1;
-            this.speedX = ((Math.random() * 3 - 1.5)/3);
-            this.speedY = ((Math.random() * 3 - 1.5)/3);
+            this.size = Math.random() * 5 + 1;
+            this.speedX = Math.random() * 3 - 1.5;
+            this.speedY = Math.random() * 3 - 1.5;
             this.color = `hsl(${Math.random() * 360}, 100%, 50%)`;
         }
 
