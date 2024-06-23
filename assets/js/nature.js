@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Set canvas size
     canvas.width = Math.min(window.innerWidth * 0.90, 750);
-    canvas.height = 400;
+    canvas.height = 500;
 
     // Center canvas horizontally
     canvas.style.display = 'block';
@@ -18,8 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
             this.x = x;
             this.y = y;
             this.size = Math.random() * 5 + 1;
-            this.speedX = Math.random() * 3 - 1.5;
-            this.speedY = Math.random() * 3 - 1.5;
+            this.speedX = Math.random() * 2 - 1.25;
+            this.speedY = Math.random() * 2 - 1.25;
             this.color = `hsl(${Math.random() * 360}, 100%, 50%)`;
         }
 
