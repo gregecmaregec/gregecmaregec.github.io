@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', () => {
     const canvas = document.getElementById('crystalCanvas');
     const ctx = canvas.getContext('2d');
