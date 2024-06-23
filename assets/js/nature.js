@@ -5,17 +5,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const ctx = canvas.getContext('2d');
 
     function resizeCanvas() {
-        if (window.innerWidth <= 400) {
-            canvas.width = window.innerWidth * 0.995;
-            canvas.height = 400;
-        } else {
-            canvas.width = 800;
-            canvas.height = 400;
-        }
-        container.style.width = `${canvas.width}px`;
-        container.style.height = `${canvas.height}px`;
+        const maxWidth = Math.min(800, window.innerWidth * 0.99);
+        canvas.width = maxWidth;
+        canvas.height = 400;
+
+        // Override any margin restrictions
+        container.style.width = `${maxWidth}px`;
+        container.style.height = '400px';
         container.style.margin = '0 auto';
-        container.style.display = 'block';
+        container.style.position = 'relative';
+        container.style.left = '50%';
+        container.style.transform = 'translateX(-50%)';
+        container.style.maxWidth = 'none';
     }
 
     resizeCanvas();
