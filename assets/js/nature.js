@@ -1,30 +1,15 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // Find the existing container div
-    const container = document.getElementById('crystalCanvas').parentElement;
 
-    // Create a canvas element
-    const canvas = document.createElement('canvas');
-    container.appendChild(canvas);
+document.addEventListener('DOMContentLoaded', () => {
+    const canvas = document.getElementById('crystalCanvas');
     const ctx = canvas.getContext('2d');
 
     // Set canvas size
-    function resizeCanvas() {
-        const containerWidth = container.clientWidth;
-        canvas.width = containerWidth;
-        canvas.height = containerWidth / 2; // Maintain the 2:1 aspect ratio
-    }
+    canvas.width = Math.min(window.innerWidth * 0.8, 800);
+    canvas.height = 400;
 
-    // Initial resize and add event listener for window resize
-    resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
-
-    // Remove any padding from the container
-    container.style.padding = '0';
-
-    // Ensure the container takes full width on small screens
-    container.style.width = '100vw';
-    container.style.marginLeft = 'calc(-50vw + 50%)';
-    container.style.marginRight = 'calc(-50vw + 50%)';
+    // Center canvas horizontally
+    canvas.style.display = 'block';
+    canvas.style.margin = '20px auto';
 
     // Particle system
     class Particle {
@@ -98,18 +83,9 @@ document.addEventListener('DOMContentLoaded', () => {
         requestAnimationFrame(animate);
     }
 
-    function getMousePos(canvas, event) {
-        const rect = canvas.getBoundingClientRect();
-        return {
-            x: event.clientX - rect.left,
-            y: event.clientY - rect.top
-        };
-    }
-
     canvas.addEventListener('mousemove', (event) => {
-        const mousePos = getMousePos(canvas, event);
-        mouse.x = mousePos.x;
-        mouse.y = mousePos.y;
+        mouse.x = event.x - canvas.offsetLeft;
+        mouse.y = event.y - canvas.offsetTop;
 
         for (let i = 0; i < 5; i++) {
             particles.push(new Particle(mouse.x, mouse.y));
