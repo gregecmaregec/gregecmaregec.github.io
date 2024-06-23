@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Center canvas horizontally
     canvas.style.display = 'block';
-    canvas.style.margin = '20px auto';
+    canvas.style.margin = '5px auto';
 
     // Particle system
     class Particle {
