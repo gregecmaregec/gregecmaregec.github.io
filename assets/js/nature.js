@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const canvas = document.getElementById('crystalCanvas');
     const ctx = canvas.getContext('2d');
 
+    const maxDimension = Math.min(window.innerWidth, window.innerHeight);
     const canvasSize = Math.min(maxDimension, 500);
     canvas.width = canvasSize;
     canvas.height = canvasSize;
