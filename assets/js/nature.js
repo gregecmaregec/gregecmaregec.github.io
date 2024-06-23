@@ -1,18 +1,30 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Find the existing container div
+    const container = document.getElementById('crystalCanvas').parentElement;
+
     // Create a canvas element
     const canvas = document.createElement('canvas');
-    document.body.appendChild(canvas);
+    container.appendChild(canvas);
     const ctx = canvas.getContext('2d');
 
     // Set canvas size
-    const maxDimension = Math.min(window.innerWidth, window.innerHeight);
-    const canvasSize = Math.min(maxDimension, 800);
-    canvas.width = canvasSize;
-    canvas.height = canvasSize / 2; // Maintain the 2:1 aspect ratio
+    function resizeCanvas() {
+        const containerWidth = container.clientWidth;
+        canvas.width = containerWidth;
+        canvas.height = containerWidth / 2; // Maintain the 2:1 aspect ratio
+    }
 
-    // Center canvas horizontally
-    canvas.style.display = 'block';
-    canvas.style.marginLeft = `${(window.innerWidth - canvasSize) / 2}px`;
+    // Initial resize and add event listener for window resize
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+
+    // Remove any padding from the container
+    container.style.padding = '0';
+
+    // Ensure the container takes full width on small screens
+    container.style.width = '100vw';
+    container.style.marginLeft = 'calc(-50vw + 50%)';
+    container.style.marginRight = 'calc(-50vw + 50%)';
 
     // Particle system
     class Particle {
