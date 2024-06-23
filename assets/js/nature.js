@@ -6,8 +6,10 @@ document.addEventListener('DOMContentLoaded', () => {
     canvas.width = Math.min(window.innerWidth * 0.98, 800);
     canvas.height = 400;
 
-    // Center canvas horizontally
+    // Center canvas horizontally and set position to relative
+    canvas.style.display = 'block';
     canvas.style.margin = '0 auto';
+    canvas.style.position = 'relative';
 
     // Particle system
     class Particle {
@@ -81,9 +83,18 @@ document.addEventListener('DOMContentLoaded', () => {
         requestAnimationFrame(animate);
     }
 
+    function getMousePos(canvas, event) {
+        const rect = canvas.getBoundingClientRect();
+        return {
+            x: event.clientX - rect.left,
+            y: event.clientY - rect.top
+        };
+    }
+
     canvas.addEventListener('mousemove', (event) => {
-        mouse.x = event.x - canvas.offsetLeft;
-        mouse.y = event.y - canvas.offsetTop;
+        const mousePos = getMousePos(canvas, event);
+        mouse.x = mousePos.x;
+        mouse.y = mousePos.y;
 
         for (let i = 0; i < 5; i++) {
             particles.push(new Particle(mouse.x, mouse.y));
