@@ -2,76 +2,94 @@ document.addEventListener('DOMContentLoaded', () => {
     const canvas = document.getElementById('crystalCanvas');
     const ctx = canvas.getContext('2d');
 
-    const maxDimension = Math.min(window.innerWidth, window.innerHeight);
-    const canvasSize = Math.min(maxDimension, 500);
-    canvas.width = canvasSize;
-    canvas.height = canvasSize;
-    // below sets the canvas to be centered on the page
-    canvas.style.marginLeft = `${(window.innerWidth - canvasSize) / 2}px`;
+    // Set canvas size
+    canvas.width = Math.min(window.innerWidth * 0.8, 800);
+    canvas.height = 400;
 
-    class Crystal {
-        constructor(x, y, size) {
+    // Center canvas horizontally
+    canvas.style.display = 'block';
+    canvas.style.margin = '20px auto';
+
+    // Particle system
+    class Particle {
+        constructor(x, y) {
             this.x = x;
             this.y = y;
-            this.size = size;
-            this.angle = Math.random() * Math.PI * 2;
-            this.speed = 0.02 + Math.random() * 0.03;
+            this.size = Math.random() * 5 + 1;
+            this.speedX = Math.random() * 3 - 1.5;
+            this.speedY = Math.random() * 3 - 1.5;
+            this.color = `hsl(${Math.random() * 360}, 100%, 50%)`;
         }
 
         update() {
-            this.angle += this.speed;
-            this.x += Math.cos(this.angle) * 2;
-            this.y += Math.sin(this.angle) * 2;
+            this.x += this.speedX;
+            this.y += this.speedY;
 
-            if (this.x < 0 || this.x > canvas.width) this.x = canvas.width / 2;
-            if (this.y < 0 || this.y > canvas.height) this.y = canvas.height / 2;
+            if (this.size > 0.2) this.size -= 0.1;
         }
 
         draw() {
-            ctx.save();
-            ctx.translate(this.x, this.y);
-            ctx.rotate(this.angle);
-
-            const gradient = ctx.createLinearGradient(-this.size, -this.size, this.size, this.size);
-            gradient.addColorStop(0, 'rgba(255, 0, 0, 0.5)');
-            gradient.addColorStop(0.2, 'rgba(255, 165, 0, 0.5)');
-            gradient.addColorStop(0.4, 'rgba(255, 255, 0, 0.5)');
-            gradient.addColorStop(0.6, 'rgba(0, 255, 0, 0.5)');
-            gradient.addColorStop(0.8, 'rgba(0, 0, 255, 0.5)');
-            gradient.addColorStop(1, 'rgba(238, 130, 238, 0.5)');
-
-            ctx.fillStyle = gradient;
+            ctx.fillStyle = this.color;
             ctx.beginPath();
-            ctx.moveTo(-this.size, 0);
-            ctx.lineTo(0, -this.size);
-            ctx.lineTo(this.size, 0);
-            ctx.lineTo(0, this.size);
-            ctx.closePath();
+            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
             ctx.fill();
-
-            ctx.restore();
         }
     }
 
-    const crystals = [];
-    for (let i = 0; i < 30; i++) {
-        crystals.push(new Crystal(
-            Math.random() * canvas.width,
-            Math.random() * canvas.height,
-            5 + Math.random() * 20
-        ));
+    let particles = [];
+    const mouse = { x: null, y: null, radius: 150 };
+
+    function createParticles() {
+        for (let i = 0; i < 5; i++) {
+            particles.push(new Particle(
+                Math.random() * canvas.width,
+                Math.random() * canvas.height
+            ));
+        }
+    }
+
+    function handleParticles() {
+        for (let i = 0; i < particles.length; i++) {
+            particles[i].update();
+            particles[i].draw();
+
+            for (let j = i; j < particles.length; j++) {
+                const dx = particles[i].x - particles[j].x;
+                const dy = particles[i].y - particles[j].y;
+                const distance = Math.sqrt(dx * dx + dy * dy);
+
+                if (distance < 100) {
+                    ctx.beginPath();
+                    ctx.strokeStyle = particles[i].color;
+                    ctx.lineWidth = 0.2;
+                    ctx.moveTo(particles[i].x, particles[i].y);
+                    ctx.lineTo(particles[j].x, particles[j].y);
+                    ctx.stroke();
+                }
+            }
+
+            if (particles[i].size <= 0.2) {
+                particles.splice(i, 1);
+                i--;
+            }
+        }
     }
 
     function animate() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-        crystals.forEach(crystal => {
-            crystal.update();
-            crystal.draw();
-        });
-
+        handleParticles();
+        createParticles();
         requestAnimationFrame(animate);
     }
+
+    canvas.addEventListener('mousemove', (event) => {
+        mouse.x = event.x - canvas.offsetLeft;
+        mouse.y = event.y - canvas.offsetTop;
+
+        for (let i = 0; i < 5; i++) {
+            particles.push(new Particle(mouse.x, mouse.y));
+        }
+    });
 
     animate();
 });
