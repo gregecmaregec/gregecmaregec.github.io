@@ -16,9 +16,9 @@ document.addEventListener('DOMContentLoaded', () => {
         constructor(x, y) {
             this.x = x;
             this.y = y;
-            this.size = Math.random() * 5 + 1;
-            this.speedX = ((Math.random() * 3 - 1.5)/2);
-            this.speedY = ((Math.random() * 3 - 1.5)/2);
+            this.size = Math.random() * 4 + 1;
+            this.speedX = ((Math.random() * 3 - 1.5)/3);
+            this.speedY = ((Math.random() * 3 - 1.5)/3);
             this.color = `hsl(${Math.random() * 360}, 100%, 50%)`;
         }
 
