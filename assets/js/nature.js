@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Set canvas size
     canvas.width = Math.min(window.innerWidth * 0.98, 800);
-    canvas.height = 500;
+    canvas.height = 400;
 
     // Center canvas horizontally
     canvas.style.display = 'block';
