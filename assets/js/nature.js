@@ -1,11 +1,22 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const canvas = document.querySelector('#crystalCanvas canvas');
+    const container = document.getElementById('crystalCanvas');
+    const canvas = document.createElement('canvas');
+    container.appendChild(canvas);
     const ctx = canvas.getContext('2d');
 
     function resizeCanvas() {
-        const rect = canvas.parentElement.getBoundingClientRect();
-        canvas.width = rect.width;
-        canvas.height = rect.height;
+        const maxWidth = Math.min(800, window.innerWidth * 0.99);
+        canvas.width = maxWidth;
+        canvas.height = 400;
+
+        // Override any margin restrictions
+        container.style.width = `${maxWidth}px`;
+        container.style.height = '400px';
+        container.style.margin = '0 auto';
+        container.style.position = 'relative';
+        container.style.left = '50%';
+        container.style.transform = 'translateX(-50%)';
+        container.style.maxWidth = 'none';
     }
 
     resizeCanvas();
