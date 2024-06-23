@@ -6,7 +6,7 @@ title: devops
 nav: false
 
 ---
-`hello world!`
+`this is meant for internal testing`
 
 <br> 
 <!-- enjoy a sample [game of life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) simulation<br>
