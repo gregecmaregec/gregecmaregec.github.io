@@ -7,7 +7,7 @@ const ctx = canvas.getContext('2d');
 
 // Set canvas size
 canvas.width = Math.min(window.innerWidth * 0.98, 750);
-canvas.height = 500;
+canvas.height = 400;
 
     //Center canvas horizontally
 canvas.style.display = 'block';
