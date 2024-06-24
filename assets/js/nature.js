@@ -1,5 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const canvas = document.getElementById('crystalCanvas');
+    
+    const canvas = document.createElement('canvas');
+    document.body.appendChild(canvas);
+    
     const ctx = canvas.getContext('2d');
 
     // Set canvas size
