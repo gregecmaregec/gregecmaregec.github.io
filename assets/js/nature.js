@@ -6,8 +6,8 @@ document.body.appendChild(canvas);
 const ctx = canvas.getContext('2d');
 
 // Set canvas size
-canvas.width = Math.min(window.innerWidth * 0.98, 790);
-canvas.height = 450;
+canvas.width = Math.min(window.innerWidth * 0.98, 800);
+canvas.height = 400;
 
     //Center canvas horizontally
 canvas.style.display = 'block';
@@ -19,8 +19,8 @@ class Particle {
         this.x = x;
         this.y = y;
         this.size = Math.random() * 5 + 1;
-        this.speedX = (Math.random() * 3 - 1.5) * 0.5;
-        this.speedY = (Math.random() * 3 - 1.5) * 0.5;
+        this.speedX = (Math.random() * 3 - 1.5) * 0.65;
+        this.speedY = (Math.random() * 3 - 1.5) * 0.65;
         this.color = `hsl(${Math.random() * 360}, 100%, 50%)`;
     }
 
