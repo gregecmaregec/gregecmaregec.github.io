@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     
-    const canvas = document.createElement('canvas');
-    document.body.appendChild(canvas);
+    const canvas = document.createElement('crystalCanvas');
+    document.body.appendChild(crystalCanvas);
     
     const ctx = canvas.getContext('2d');
 
