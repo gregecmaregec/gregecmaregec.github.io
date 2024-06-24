@@ -43,7 +43,7 @@ let particles = [];
 const mouse = { x: null, y: null, radius: 150 };
 
 function createParticles() {
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < 4; i++) {
         particles.push(new Particle(
             Math.random() * canvas.width,
             Math.random() * canvas.height
