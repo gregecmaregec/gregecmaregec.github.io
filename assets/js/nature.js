@@ -1,3 +1,4 @@
+//crystal-nature simulation
 
 const canvas = document.createElement('canvas');
 document.body.appendChild(canvas);
@@ -18,8 +19,8 @@ class Particle {
         this.x = x;
         this.y = y;
         this.size = Math.random() * 5 + 1;
-        this.speedX = Math.random() * 3 - 1.5;
-        this.speedY = Math.random() * 3 - 1.5;
+        this.speedX = (Math.random() * 3 - 1.5) * 0.5;
+        this.speedY = (Math.random() * 3 - 1.5) * 0.5;
         this.color = `hsl(${Math.random() * 360}, 100%, 50%)`;
     }
 
@@ -42,7 +43,7 @@ let particles = [];
 const mouse = { x: null, y: null, radius: 150 };
 
 function createParticles() {
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 3; i++) {
         particles.push(new Particle(
             Math.random() * canvas.width,
             Math.random() * canvas.height
