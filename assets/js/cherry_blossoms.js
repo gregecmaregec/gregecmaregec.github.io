@@ -25,8 +25,8 @@ class Leaf {
         this.y += this.speed * 0.2;
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        //change the color below. 0.3 means the opacity
-        ctx.fillStyle = 'rgba(255, 192, 203, 0.3)';
+        //change the color below. 0.5 means the opacity
+        ctx.fillStyle = 'rgba(255, 192, 203, 0.5)';
         ctx.fill();
         ctx.closePath();
 
