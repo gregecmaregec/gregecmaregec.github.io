@@ -10,7 +10,7 @@ nav_order: 5
 profiles:
 
   - align: right
-    image: gregor.PNG
+    image: gregor.jpg
     content: about_me.md
     image_circular: false # crops the image to make it circular
 
