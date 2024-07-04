@@ -3,7 +3,7 @@ This is a personal, static website of Gregor Mihelač.<br>
 <br>
 I grew up in a small village in Slovenia.<br>
 Currently I am an M.Sc. student at the Univeristy of Mannheim in Germany,<br>
-where I focus primarily on IT and Finance.<br>
+where I focus primarily on topics in IT and Finance.<br>
 <br>
 <br>
 <br>

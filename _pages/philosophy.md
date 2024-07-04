@@ -51,7 +51,7 @@ You should, too.
 <br>
 `5`
 
-Whoever understands the origin of the Universe as hydrogen and heat, from which everything arose:<br>
+Whoever understands the origin of the Universe as plasma, hydrogen, and heat, from which everything arose:<br>
 
 understands that either everything is conscious - <br>
 or nothing is.
@@ -112,8 +112,8 @@ therein you have the opportunity, for the meaning of life to manifest itself ins
 `10`
 
 All scriptures were written by humans.<br>
-‚
-This fact doesn’t negate the divine, on the contrary- <br>
+
+This fact doesn’t negate the divine, on the contrary - <br>
 it shows just how amazing humans are at interpreting.
 
 <br>
@@ -125,10 +125,10 @@ But in life, it is found in abundance.
 <br>
 `12`
 
-Albert Einstein said: “I think the most important question facing humanity is, ‘Is the universe a friendly place?”<br>
+Albert Einstein said: “I think the most important question facing humanity is, is the universe a friendly place?”<br>
 
 It is to the optimist. It isn’t to a cynic.<br>
-The universe is what you make of it.
+The universe is what you make of it. You are the universe experiencing itself.
 
 <br>
 `13`
