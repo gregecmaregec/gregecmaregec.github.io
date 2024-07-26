@@ -1,5 +1,5 @@
-let selectedModel = 'llama3'; // Default model
-let messageHistory = []; // Array to store previous messages
+let selectedModel = 'llama3.1'; // default model
+let messageHistory = []; // array to store previous messages
 
 document.getElementById('inputBox').addEventListener('keypress', function(event) {
   if (event.key === 'Enter' && !event.shiftKey) {
@@ -9,7 +9,7 @@ document.getElementById('inputBox').addEventListener('keypress', function(event)
     var loader = document.getElementById('loader');
     var inputBox = document.getElementById('inputBox');
 
-    // Display user input in the output box as plain text
+    // display user input in the output box as plain text
     const userStrongText = document.createElement('strong');
     userStrongText.textContent = 'You';
     const userInputText = document.createTextNode(inputText);
@@ -19,7 +19,7 @@ document.getElementById('inputBox').addEventListener('keypress', function(event)
     outputBox.appendChild(document.createElement('br'));
     outputBox.appendChild(document.createElement('br'));
 
-    // Add the user's input to the message history
+    // add the user's input to the message history
     messageHistory.push({ role: "user", content: inputText });
 
     const data = {
@@ -46,18 +46,18 @@ document.getElementById('inputBox').addEventListener('keypress', function(event)
       outputBox.appendChild(strongText);
       outputBox.appendChild(document.createElement('br'));
 
-      // Apply white-space preservation
+      // apply white-space preservation
       outputBox.style.whiteSpace = 'pre-wrap';
 
-      // Trim leading and trailing whitespace from responseData
+      // trim leading and trailing whitespace from responseData
       responseData = responseData.trim();
 
-      // Split the response data by new line and process each line separately
+      // split the response data by new line and process each line separately
       responseData.split('\n').forEach((line, index, array) => {
         const textNode = document.createTextNode(line);
         outputBox.appendChild(textNode);
 
-        // Add a <br> element after each line except the last one
+        // add a <br> element after each line except the last one
         if (index < array.length - 1) {
           outputBox.appendChild(document.createElement('br'));
         }
@@ -66,10 +66,10 @@ document.getElementById('inputBox').addEventListener('keypress', function(event)
       outputBox.appendChild(document.createElement('br'));
       outputBox.appendChild(document.createElement('br'));
 
-      // Add the assistant's response to the message history
+      // add the assistant's response to the message history
       messageHistory.push({ role: "assistant", content: responseData });
 
-      // Hide the loader and enable the input box
+      // hide the loader and enable the input box
       loader.style.display = 'none';
       inputBox.disabled = false;
     })
@@ -78,7 +78,7 @@ document.getElementById('inputBox').addEventListener('keypress', function(event)
       outputBox.appendChild(errorText);
       outputBox.appendChild(document.createElement('br'));
 
-      // Hide the loader and enable the input box
+      // hide the loader and enable the input box
       loader.style.display = 'none';
       inputBox.disabled = false;
     });
