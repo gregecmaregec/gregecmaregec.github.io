@@ -14,7 +14,14 @@
     {% endif %}
     {% include head.liquid %}
     <style>
-      .loader {  
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+
+    .loader {  
         border: 4px solid rgba(243, 243, 243, 0.03);
         border-top: 4px solid #8b0000;
         border-radius: 50%;
@@ -22,22 +29,14 @@
         height: 30px;
         animation: spin 2s linear infinite;
         margin-bottom: 10px;
-        padding-left: 10px; /* Minimum padding from the left */
-        max-width: 800px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-    
-      @media (min-width: 800px) {
-        .loader {
-          padding-left: calc(50% - 390px); /* 400px from left edge of content area */
-        }
-      }
-    
-      @keyframes spin {
+        margin-left: 10px;
+        max-width: 400px;
+    }
+
+    @keyframes spin {
         0% { transform: rotate(0deg); }
         100% { transform: rotate(360deg); }
-      }
+    }
     </style>
   </head>
 
@@ -66,8 +65,10 @@
     </div>
 		<div style="margin-bottom: 3px;"></div>
 
-    <div id="loader" class="loader" style="display: none;"></div>
-    
+    <div class="container">
+      <div id="loader" class="loader" style="display: none;"></div>
+    </div>
+
 		<br>
 
     <div id="modelSelectorContainer" style="width: 100%; max-width: 800px; display: flex; justify-content: space-between; margin: auto; margin-bottom: 10px;">
