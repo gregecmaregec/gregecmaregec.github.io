@@ -6,11 +6,9 @@ function adjustTextareaHeight(textarea) {
   const padding = parseInt(window.getComputedStyle(textarea).paddingTop) + 
                   parseInt(window.getComputedStyle(textarea).paddingBottom);
   const lines = textarea.value.split('\n').length;
-  const newHeight = Math.max(50, lines * lineHeight + padding);
+  const newHeight = lines > 1 ? (lines * lineHeight + padding) : 50;
 
-  if (newHeight !== textarea.clientHeight) {
-    textarea.style.height = newHeight + 'px';
-  }
+  textarea.style.height = newHeight + 'px';
 }
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -19,7 +17,8 @@ document.addEventListener('DOMContentLoaded', function() {
   const loader = document.getElementById('loader');
 
   function handleInput() {
-    if (inputBox.value.includes('\n')) {
+    const lines = inputBox.value.split('\n');
+    if (lines.length > 1 || (lines.length === 1 && inputBox.scrollHeight > inputBox.clientHeight)) {
       adjustTextareaHeight(inputBox);
     } else {
       inputBox.style.height = '50px';
