@@ -6,7 +6,7 @@ function adjustTextareaHeight(textarea) {
   const padding = parseInt(window.getComputedStyle(textarea).paddingTop) + 
                   parseInt(window.getComputedStyle(textarea).paddingBottom);
   const lines = textarea.value.split('\n').length;
-  const newHeight = lines * lineHeight + padding;
+  const newHeight = Math.max(50, lines * lineHeight + padding);
 
   if (newHeight !== textarea.clientHeight) {
     textarea.style.height = newHeight + 'px';
@@ -18,131 +18,111 @@ document.addEventListener('DOMContentLoaded', function() {
   const outputBox = document.getElementById('outputBox');
   const loader = document.getElementById('loader');
 
-  inputBox.addEventListener('input', function() {
-    if (this.value.includes('\n')) {
-      adjustTextareaHeight(this);
+  function handleInput() {
+    if (inputBox.value.includes('\n')) {
+      adjustTextareaHeight(inputBox);
     } else {
-      this.style.height = '50px';
+      inputBox.style.height = '50px';
     }
-  });
+  }
 
-  inputBox.addEventListener('keydown', function(event) {
+  function handleKeyDown(event) {
     if (event.key === 'Enter') {
       if (event.shiftKey) {
         // Shift+Enter: insert newline
         event.preventDefault();
-        const start = this.selectionStart;
-        const end = this.selectionEnd;
-        this.value = this.value.substring(0, start) + '\n' + this.value.substring(end);
-        this.selectionStart = this.selectionEnd = start + 1;
-        adjustTextareaHeight(this);
+        const start = inputBox.selectionStart;
+        const end = inputBox.selectionEnd;
+        inputBox.value = inputBox.value.substring(0, start) + '\n' + inputBox.value.substring(end);
+        inputBox.selectionStart = inputBox.selectionEnd = start + 1;
+        adjustTextareaHeight(inputBox);
       } else {
         // Enter: send message
         event.preventDefault();
-        var inputText = this.value;
-
-        if (inputText.trim() === '') return;
-
-        // display user input in the output box as plain text
-        const userStrongText = document.createElement('strong');
-        userStrongText.textContent = 'You';
-        const userInputText = document.createTextNode(inputText);
-        outputBox.appendChild(userStrongText);
-        outputBox.appendChild(document.createElement('br'));
-        outputBox.appendChild(userInputText);
-        outputBox.appendChild(document.createElement('br'));
-        outputBox.appendChild(document.createElement('br'));
-
-        // add the user's input to the message history
-        messageHistory.push({ role: "user", content: inputText });
-
-        const data = {
-          model: selectedModel,
-          messages: [...messageHistory],
-          options: { temperature: 0.6, num_thread: 8 }
-        };
-
-        // Show the loader and disable the input box
-        loader.style.display = 'block';
-        this.disabled = true;
-
-        fetch("https://gmserver.xyz", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify(data)
-        })
-        .then(response => response.text())
-        .then(responseData => {
-          const strongText = document.createElement('strong');
-          strongText.textContent = selectedModel.charAt(0).toUpperCase() + selectedModel.slice(1);
-          outputBox.appendChild(strongText);
-          outputBox.appendChild(document.createElement('br'));
-
-          // apply white-space preservation
-          outputBox.style.whiteSpace = 'pre-wrap';
-
-          // trim leading and trailing whitespace from responseData
-          responseData = responseData.trim();
-
-          // split the response data by new line and process each line separately
-          responseData.split('\n').forEach((line, index, array) => {
-            const textNode = document.createTextNode(line);
-            outputBox.appendChild(textNode);
-
-            // add a <br> element after each line except the last one
-            if (index < array.length - 1) {
-              outputBox.appendChild(document.createElement('br'));
-            }
-          });
-
-          outputBox.appendChild(document.createElement('br'));
-          outputBox.appendChild(document.createElement('br'));
-
-          // add the assistant's response to the message history
-          messageHistory.push({ role: "assistant", content: responseData });
-
-          // hide the loader and enable the input box
-          loader.style.display = 'none';
-          inputBox.disabled = false;
-
-          // Scroll to the bottom of the output box
-          outputBox.scrollTop = outputBox.scrollHeight;
-        })
-        .catch(error => {
-          const errorText = document.createTextNode('Error: ' + error.message + '\n\n' + 'experiencing issues?');
-          outputBox.appendChild(errorText);
-          outputBox.appendChild(document.createElement('br'));
-
-          // hide the loader and enable the input box
-          loader.style.display = 'none';
-          inputBox.disabled = false;
-
-          // Scroll to the bottom of the output box
-          outputBox.scrollTop = outputBox.scrollHeight;
-        });
-
-        this.value = '';
-        this.style.height = '50px';
+        sendMessage();
       }
     }
-  });
+  }
+
+  function sendMessage() {
+    const inputText = inputBox.value.trim();
+    if (!inputText) return;
+
+    // Display user input
+    appendToOutput('You', inputText);
+
+    // Add user input to message history
+    messageHistory.push({ role: "user", content: inputText });
+
+    const data = {
+      model: selectedModel,
+      messages: [...messageHistory],
+      options: { temperature: 0.6, num_thread: 8 }
+    };
+
+    // Show loader and disable input
+    loader.style.display = 'block';
+    inputBox.disabled = true;
+
+    fetch("https://gmserver.xyz", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data)
+    })
+    .then(response => response.text())
+    .then(responseData => {
+      // Display model response
+      appendToOutput(selectedModel.charAt(0).toUpperCase() + selectedModel.slice(1), responseData.trim());
+
+      // Add response to message history
+      messageHistory.push({ role: "assistant", content: responseData.trim() });
+    })
+    .catch(error => {
+      appendToOutput('Error', error.message + '\n\nexperiencing issues?');
+    })
+    .finally(() => {
+      // Hide loader and enable input
+      loader.style.display = 'none';
+      inputBox.disabled = false;
+    });
+
+    // Clear and reset input box
+    inputBox.value = '';
+    inputBox.style.height = '50px';
+  }
+
+  function appendToOutput(sender, content) {
+    const strongText = document.createElement('strong');
+    strongText.textContent = sender;
+    outputBox.appendChild(strongText);
+    outputBox.appendChild(document.createElement('br'));
+
+    content.split('\n').forEach((line, index, array) => {
+      outputBox.appendChild(document.createTextNode(line));
+      if (index < array.length - 1) {
+        outputBox.appendChild(document.createElement('br'));
+      }
+    });
+
+    outputBox.appendChild(document.createElement('br'));
+    outputBox.appendChild(document.createElement('br'));
+    outputBox.scrollTop = outputBox.scrollHeight;
+  }
+
+  inputBox.addEventListener('input', handleInput);
+  inputBox.addEventListener('keydown', handleKeyDown);
 });
 
 function modelChoice(choice) {
   selectedModel = choice;
-  var buttons = document.querySelectorAll('#modelSelectorContainer button');
+  const buttons = document.querySelectorAll('#modelSelectorContainer button');
   buttons.forEach(button => {
-    if (button.getAttribute('data-model') !== choice) {
+    if (button.getAttribute('data-model') === choice) {
+      button.style.borderBottom = '2px solid rgba(139, 0, 0, 0.8)';
+    } else {
       button.style.border = '1px solid rgba(0, 0, 0, 0.3)';
       button.style.borderBottom = '2px solid rgba(204, 204, 204, 0.3)';
       button.style.borderRight = '1px solid rgba(68, 68, 68, 0.3)';
     }
   });
-
-  var selectedButton = document.querySelector(`button[data-model="${choice}"]`);
-  if (selectedButton) {
-    selectedButton.style.borderBottom = '2px solid rgba(139, 0, 0, 0.8)';
-  }
 }
