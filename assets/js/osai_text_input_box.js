@@ -26,9 +26,6 @@ function adjustHeight() {
   lastLine = currentLine;
 }
 
-// loader 
-const inputBox = document.querySelector('#inputBox'); // Assuming there's an input box with this id
-
 inputBox.addEventListener('input', adjustHeight);
 inputBox.addEventListener('keydown', (event) => {
   if (event.shiftKey && event.code === 'Enter') {

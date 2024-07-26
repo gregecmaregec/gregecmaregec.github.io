@@ -14,14 +14,7 @@
     {% endif %}
     {% include head.liquid %}
     <style>
-    .container {
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 0 10px;
-        box-sizing: border-box;
-    }
-
-    .loader {  
+      .loader {  
         border: 4px solid rgba(243, 243, 243, 0.03);
         border-top: 4px solid #8b0000;
         border-radius: 50%;
@@ -29,14 +22,19 @@
         height: 30px;
         animation: spin 2s linear infinite;
         margin-bottom: 10px;
-        margin-left: 10px;
-        max-width: 400px;
-    }
+        margin-left: 10px; /* Positions loader on the left for mobile */
+      }
 
-    @keyframes spin {
+      @media (min-width: 800px) {
+        .loader {
+          margin-left: max(10px, calc(50% - 400px));
+        }
+      }
+
+      @keyframes spin {
         0% { transform: rotate(0deg); }
         100% { transform: rotate(360deg); }
-    }
+      }
     </style>
   </head>
 
@@ -65,9 +63,7 @@
     </div>
 		<div style="margin-bottom: 3px;"></div>
 
-    <div class="container">
-      <div id="loader" class="loader" style="display: none;"></div>
-    </div>
+    <div id="loader" class="loader" style="display: none; max-width: 800px; justify-content: center; margin: 0 auto; padding: 13px; margin: auto; margin-bottom: 10px; margin-left: 10px;"></div>
 
 		<br>
 
