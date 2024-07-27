@@ -2,10 +2,9 @@
 layout: page
 title: itfa el24 submission
 permalink: /itfasubmission/
-description: 
+description: Demistifying AI - Overview of Artificial Intelligence (AI) and potential applications in the Trade Finance space
 nav: true
 nav_order: 6
-display_categories: [content, fun]
 horizontal: false
 ---
 
