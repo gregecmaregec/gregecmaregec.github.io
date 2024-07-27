@@ -1,7 +1,7 @@
 ---
 layout: page_itfa
 title: ITFA EL 24 submission
-permalink: /itfa24elsubmission/
+permalink: /itfasubmission/
 description: Overview of Artificial Intelligence (AI) and potential applications in the Trade Finance space
 nav: true
 nav_order: 6
