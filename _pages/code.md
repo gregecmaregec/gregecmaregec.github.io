@@ -14,7 +14,7 @@ All code shown explicitly on /code/ is under the [MIT License.](https://github.c
 <br>
 <br>
 
-### particle crystal-nature simulation in natural JS
+### particle crystal-nature simulation in natty JS
 `javascript`
 
 ```javascript
@@ -119,6 +119,13 @@ animate();​​​​​
 
 
 ```
+<br>
+<br> 
+
+---
+
+<br>
+<br>
 
 ### the blossom circles and scroll effect in /philosophy/
 `javascript`
