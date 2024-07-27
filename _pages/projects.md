@@ -1,8 +1,8 @@
 ---
 layout: page_itfa
 title: projects
-permalink: /projects/
-description: A growing collection of your cool projects.
+permalink: /itfasubmission/
+description: Demistifying AI
 nav: true
 nav_order: 6
 display_categories: [work, fun]
