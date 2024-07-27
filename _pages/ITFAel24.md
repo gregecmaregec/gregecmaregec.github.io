@@ -1,5 +1,5 @@
 ---
-layout: page_itfa
+layout: itfael24
 title: Demistifying AI
 permalink: /itfasubmission/
 nav: true
