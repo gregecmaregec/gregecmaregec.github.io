@@ -1,8 +1,7 @@
 ---
 layout: page_itfa
-title: projects
+title: Demistifying AI
 permalink: /itfasubmission/
-description: Demistifying AI
 nav: true
 nav_order: 6
 display_categories: [work, fun]
