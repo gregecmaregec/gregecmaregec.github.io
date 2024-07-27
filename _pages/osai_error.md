@@ -34,8 +34,12 @@ The website acts as a gateway to an API that I built using Go, data in transit i
 <br>
 
 <br>
-for inquiries or a scheduled time of availability, you can reach me at gregor.mihelac (at) outlook (dot) com
+for inquiries you can reach me at gregor.mihelac (at) outlook (dot) com
 
+<br>
+<br>
+<br>
+<br>
 
 ### LIABILITY DISCLAIMER<br>
 <br>
