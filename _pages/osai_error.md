@@ -23,7 +23,8 @@ When you use OSAI, it makes an API call to my server. <a href> If you are using 
 <br>
 But it does also mean, that my server "https://gmserver.xyz" will be automatically blacklisted, as it is an unknown domain and I've built the server rather recently.
 
-Unfortunately, getting OSAI to work on your work hardware is not worth the time. I suggest trying it out on <a href>your personal devices</a> - such as a personal phone or PC. It should  work, as my server is freely listening to requests from the internet.
+Unfortunately, getting OSAI to work on your work hardware is not worth the time. 
+<br>I suggest trying it out on <a href>your personal devices</a> - such as a personal phone or PC. It should  work, as my server is freely listening to requests from the internet.
 
 My server is a completely local solution. I assembled the hardware myself and it runs on a fresh install of Ubuntu server. Your chat history is not recorded. Whatever you write to any of the large language models and their response, is for your eyes only.
 The conversations you have with the models are inaccessible even by me. Data is encrypted from your machine to my server end-to-end with https.
