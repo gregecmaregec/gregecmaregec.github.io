@@ -1,7 +1,7 @@
 ---
 layout: page_itfa_subpage
-title: project 2
-description: a project with a background image and giscus comments
+title: Environmental considerations 
+description:
 img: assets/img/3.jpg
 importance: 2
 giscus_comments: true

@@ -1,6 +1,6 @@
 ---
 layout: page_itfa_subpage
-title: 
+title: Foreword
 description: Foreword
 img: assets/img/3.jpg
 importance: 2

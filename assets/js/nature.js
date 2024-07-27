@@ -7,6 +7,8 @@ const ctx = canvas.getContext('2d');
 const TARGET_WIDTH = 800;
 const TARGET_HEIGHT = 400;
 
+let scale = 1;
+
 // Function to set canvas size and scale
 function setCanvasSize() {
     let width = Math.min(window.innerWidth * 0.98, TARGET_WIDTH);
@@ -15,14 +17,10 @@ function setCanvasSize() {
     canvas.style.width = `${width}px`;
     canvas.style.height = `${height}px`;
 
-    // Set actual canvas dimensions for high DPI displays
-    const dpr = window.devicePixelRatio || 1;
-    canvas.width = TARGET_WIDTH * dpr;
-    canvas.height = TARGET_HEIGHT * dpr;
+    canvas.width = TARGET_WIDTH;
+    canvas.height = TARGET_HEIGHT;
 
-    // Scale the context to ensure correct drawing and full view
-    const scale = width / TARGET_WIDTH;
-    ctx.setTransform(dpr * scale, 0, 0, dpr * scale, 0, 0);
+    scale = width / TARGET_WIDTH;
 
     // Set CSS to center the canvas
     canvas.style.display = 'block';
@@ -108,11 +106,8 @@ function animate() {
 // below makes particles when you hover with mouse 
 canvas.addEventListener('mousemove', (event) => {
     const rect = canvas.getBoundingClientRect();
-    const scaleX = TARGET_WIDTH / rect.width;
-    const scaleY = TARGET_HEIGHT / rect.height;
-
-    mouse.x = (event.clientX - rect.left) * scaleX;
-    mouse.y = (event.clientY - rect.top) * scaleY;
+    mouse.x = (event.clientX - rect.left) / scale;
+    mouse.y = (event.clientY - rect.top) / scale;
 
     for (let i = 0; i < 6; i++) {
         particles.push(new Particle(mouse.x, mouse.y));

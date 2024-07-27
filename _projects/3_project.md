@@ -1,7 +1,6 @@
 ---
 layout: page_itfa_subpage
-title: 6
-description: Lexicon
+title: Potential applications in Trade Finance
 img: assets/img/7.jpg
 redirect: https://unsplash.com
 category: work
