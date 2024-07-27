@@ -5,7 +5,7 @@ permalink: /osai/
 title: osai
 description: this house loves open source ai models
 nav: true
-nav_order: 2
+nav_order: 5
 
 ---
 
