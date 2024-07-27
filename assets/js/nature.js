@@ -1,5 +1,4 @@
 //crystal-nature simulation
-
 const canvas = document.createElement('canvas');
 document.body.appendChild(canvas);
 const ctx = canvas.getContext('2d');
@@ -18,11 +17,12 @@ function setCanvasSize() {
 
     // Set actual canvas dimensions for high DPI displays
     const dpr = window.devicePixelRatio || 1;
-    canvas.width = width * dpr;
-    canvas.height = height * dpr;
+    canvas.width = TARGET_WIDTH * dpr;
+    canvas.height = TARGET_HEIGHT * dpr;
 
-    // Scale the context to ensure correct drawing
-    ctx.scale(dpr, dpr);
+    // Scale the context to ensure correct drawing and full view
+    const scale = width / TARGET_WIDTH;
+    ctx.setTransform(dpr * scale, 0, 0, dpr * scale, 0, 0);
 
     // Set CSS to center the canvas
     canvas.style.display = 'block';
@@ -36,11 +36,11 @@ window.addEventListener('resize', setCanvasSize);
 // particle system
 class Particle {
     constructor(x, y) {
-        this.x = x * (canvas.width / TARGET_WIDTH);
-        this.y = y * (canvas.height / TARGET_HEIGHT);
-        this.size = (Math.random() * 5 + 1) * (canvas.width / TARGET_WIDTH);
-        this.speedX = ((Math.random() * 3 - 1.5) * 0.60) * (canvas.width / TARGET_WIDTH);
-        this.speedY = ((Math.random() * 3 - 1.5) * 0.60) * (canvas.height / TARGET_HEIGHT);
+        this.x = x;
+        this.y = y;
+        this.size = Math.random() * 5 + 1;
+        this.speedX = (Math.random() * 3 - 1.5) * 0.60;
+        this.speedY = (Math.random() * 3 - 1.5) * 0.60;
         this.color = `hsl(${Math.random() * 360}, 100%, 50%)`;
     }
 
@@ -48,7 +48,7 @@ class Particle {
         this.x += this.speedX;
         this.y += this.speedY;
 
-        if (this.size > 0.2 * (canvas.width / TARGET_WIDTH)) this.size -= 0.1 * (canvas.width / TARGET_WIDTH);
+        if (this.size > 0.2) this.size -= 0.1;
     }
 
     draw() {
@@ -60,7 +60,7 @@ class Particle {
 }
 
 let particles = [];
-const mouse = { x: null, y: null, radius: 150 * (canvas.width / TARGET_WIDTH) };
+const mouse = { x: null, y: null, radius: 150 };
 
 function createParticles() {
     for (let i = 0; i < 4; i++) {
@@ -81,17 +81,17 @@ function handleParticles() {
             const dy = particles[i].y - particles[j].y;
             const distance = Math.sqrt(dx * dx + dy * dy);
 
-            if (distance < 100 * (canvas.width / TARGET_WIDTH)) {
+            if (distance < 100) {
                 ctx.beginPath();
                 ctx.strokeStyle = particles[i].color;
-                ctx.lineWidth = 0.2 * (canvas.width / TARGET_WIDTH);
+                ctx.lineWidth = 0.2;
                 ctx.moveTo(particles[i].x, particles[i].y);
                 ctx.lineTo(particles[j].x, particles[j].y);
                 ctx.stroke();
             }
         }
 
-        if (particles[i].size <= 0.2 * (canvas.width / TARGET_WIDTH)) {
+        if (particles[i].size <= 0.2) {
             particles.splice(i, 1);
             i--;
         }
@@ -99,7 +99,7 @@ function handleParticles() {
 }
 
 function animate() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.clearRect(0, 0, TARGET_WIDTH, TARGET_HEIGHT);
     handleParticles();
     createParticles();
     requestAnimationFrame(animate);
@@ -108,14 +108,14 @@ function animate() {
 // below makes particles when you hover with mouse 
 canvas.addEventListener('mousemove', (event) => {
     const rect = canvas.getBoundingClientRect();
-    const scaleX = canvas.width / rect.width;
-    const scaleY = canvas.height / rect.height;
+    const scaleX = TARGET_WIDTH / rect.width;
+    const scaleY = TARGET_HEIGHT / rect.height;
 
     mouse.x = (event.clientX - rect.left) * scaleX;
     mouse.y = (event.clientY - rect.top) * scaleY;
 
     for (let i = 0; i < 6; i++) {
-        particles.push(new Particle(mouse.x * (TARGET_WIDTH / canvas.width), mouse.y * (TARGET_HEIGHT / canvas.height)));
+        particles.push(new Particle(mouse.x, mouse.y));
     }
 });
 
