@@ -15,13 +15,13 @@
     {% include head.liquid %}
   </head>
 
-  <script src="{{ site.baseurl }}/assets/js/nature.js"></script>
   
-
   <!-- Body -->
   <body class="{% if site.navbar_fixed %}fixed-top-nav{% endif %} {% unless site.footer_fixed %}sticky-bottom-footer{% endunless %}">
     <!-- Header -->
     {% include header_v2_no_progress_bar_nav.liquid %}
+    
+    <script src="{{ site.baseurl }}/assets/js/nature.js"></script>
 
     <!-- Content -->
     <div class="container mt-5" role="main">
