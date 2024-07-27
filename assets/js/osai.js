@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
       messageHistory.push({ role: "assistant", content: responseData.trim() });
     })
     .catch(error => {
-      appendToOutput('Error', error.message + '\n\n <a href = "gregormihelac.com/osai-error/">experiencing issues?<a>');
+      appendToOutput('Error', error.message + '\n\n <a href="https://gregormihelac.com/osai-error/">experiencing issues?</a>', true);
     })
     .finally(() => {
       // Hide loader and enable input
@@ -90,27 +90,42 @@ document.addEventListener('DOMContentLoaded', function() {
     inputBox.style.height = '50px';
   }
 
-  function appendToOutput(sender, content) {
+  function appendToOutput(sender, content, isError = false) {
     const strongText = document.createElement('strong');
     strongText.textContent = sender;
     outputBox.appendChild(strongText);
     outputBox.appendChild(document.createElement('br'));
-
-    content.split('\n').forEach((line, index, array) => {
-      outputBox.appendChild(document.createTextNode(line));
-      if (index < array.length - 1) {
-        outputBox.appendChild(document.createElement('br'));
+  
+    if (isError) {
+      // Split error message and link
+      const [errorMessage, linkText] = content.split('\n\n');
+      
+      // Append error message as text
+      outputBox.appendChild(document.createTextNode(errorMessage));
+      outputBox.appendChild(document.createElement('br'));
+      outputBox.appendChild(document.createElement('br'));
+      
+      // Create link element for the error link
+      if (linkText && linkText.includes('<a href')) {
+        const linkElement = document.createElement('a');
+        linkElement.href = "https://gregormihelac.com/osai-error/";
+        linkElement.textContent = "experiencing issues?";
+        outputBox.appendChild(linkElement);
       }
-    });
-
+    } else {
+      // For non-error content (including LLM output), treat everything as plain text
+      content.split('\n').forEach((line, index, array) => {
+        outputBox.appendChild(document.createTextNode(line));
+        if (index < array.length - 1) {
+          outputBox.appendChild(document.createElement('br'));
+        }
+      });
+    }
+  
     outputBox.appendChild(document.createElement('br'));
     outputBox.appendChild(document.createElement('br'));
     outputBox.scrollTop = outputBox.scrollHeight;
   }
-
-  inputBox.addEventListener('input', handleInput);
-  inputBox.addEventListener('keydown', handleKeyDown);
-});
 
 function modelChoice(choice) {
   selectedModel = choice;
