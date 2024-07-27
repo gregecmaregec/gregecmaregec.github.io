@@ -1,30 +1,19 @@
 //crystal-nature simulation
+
 const canvas = document.createElement('canvas');
 document.body.appendChild(canvas);
+    
 const ctx = canvas.getContext('2d');
 
-// Define the target size
-const TARGET_WIDTH = 800;
-const TARGET_HEIGHT = 400;
+// Set canvas size
+canvas.width = Math.min(window.innerWidth * 0.98, 800);
+canvas.height = 400;
 
-// Function to set canvas size
-function setCanvasSize() {
-    canvas.width = TARGET_WIDTH;
-    canvas.height = TARGET_HEIGHT;
+    //Center canvas horizontally
+canvas.style.display = 'block';
+canvas.style.margin = '20px auto';
 
-    // Set CSS to make canvas responsive
-    canvas.style.width = '100%';
-    canvas.style.maxWidth = `${TARGET_WIDTH}px`;
-    canvas.style.height = 'auto';
-    canvas.style.display = 'block';
-    canvas.style.margin = '20px auto';
-}
-
-// Call the function initially and on window resize
-setCanvasSize();
-window.addEventListener('resize', setCanvasSize);
-
-// particle system
+    // Particle system
 class Particle {
     constructor(x, y) {
         this.x = x;
@@ -56,8 +45,8 @@ const mouse = { x: null, y: null, radius: 150 };
 function createParticles() {
     for (let i = 0; i < 4; i++) {
         particles.push(new Particle(
-            Math.random() * TARGET_WIDTH,
-            Math.random() * TARGET_HEIGHT
+            Math.random() * 800,
+            Math.random() * 400
         ));
     }
 }
@@ -90,24 +79,19 @@ function handleParticles() {
 }
 
 function animate() {
-    ctx.clearRect(0, 0, TARGET_WIDTH, TARGET_HEIGHT);
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
     handleParticles();
     createParticles();
     requestAnimationFrame(animate);
 }
 
-// below makes particles when you hover with mouse 
 canvas.addEventListener('mousemove', (event) => {
-    const rect = canvas.getBoundingClientRect();
-    const scaleX = TARGET_WIDTH / rect.width;
-    const scaleY = TARGET_HEIGHT / rect.height;
+    mouse.x = event.x - canvas.offsetLeft;
+    mouse.y = event.y - canvas.offsetTop;
 
-    mouse.x = (event.clientX - rect.left) * scaleX;
-    mouse.y = (event.clientY - rect.top) * scaleY;
-
-    for (let i = 0; i < 6; i++) {
+    for (let i = 0; i < 5; i++) {
         particles.push(new Particle(mouse.x, mouse.y));
     }
 });
 
-animate();
+animate();​​​​​
