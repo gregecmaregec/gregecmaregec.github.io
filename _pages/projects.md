@@ -1,11 +1,11 @@
 ---
 layout: page
-title: projects
+title: itfa el24 submission
 permalink: /itfasubmission/
 description: 
 nav: true
 nav_order: 6
-#display_categories: [work, fun]
+display_categories: [content, fun]
 horizontal: false
 ---
 
