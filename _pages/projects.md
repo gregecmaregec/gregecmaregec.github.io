@@ -7,6 +7,7 @@ nav: true
 nav_order: 6
 horizontal: false
 ---
+Overview of Artificial Intelligence (AI) and potential applications in the Trade Finance space
 
 <!-- pages/projects.md -->
 <div class="projects">
