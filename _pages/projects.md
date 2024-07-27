@@ -1,15 +1,13 @@
 ---
 layout: page
-title: Demistifying AI
-permalink: /itfasubmission/
-description: Overview of Artificial Intelligence (AI) and potential applications in the Trade Finance space
+title: projects
+permalink: /projects/
+description: A growing collection of your cool projects.
 nav: true
 nav_order: 3
 display_categories: [work, fun]
 horizontal: false
 ---
-
-<a>hello world 1</a>
 
 <!-- pages/projects.md -->
 <div class="projects">
@@ -65,5 +63,3 @@ horizontal: false
   {% endif %}
 {% endif %}
 </div>
-
-<a>hello world 2</a>
