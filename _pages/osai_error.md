@@ -13,17 +13,19 @@ nav_order:
 
 <br>
 
-OSAI is my implementation of serving open source AIs through the internet with a privacy-first approach. No log on is required, your data is not stored or shared to third parties by me. 
+OSAI is my implementation of serving open source AIs through the internet with a privacy-first approach. No log on is required, your data is encrypted, is not stored or shared to third parties and is inaccessible even by me.
 <br>
 <br>
-When you use OSAI, it makes an API call to my server. <b><a href> If you are using company hardware<a> </b> your company most likely has disabled API calls to unknown internet sources - which, honestly, is overall a good security measure against internet threats.
+<br>
+<br>
+When you use OSAI, it makes an API call to my server. <a href> If you are using company hardware<a> your company most likely has disabled API calls to unknown internet sources - which, honestly, is overall a good security measure against internet threats.
 <br>
 <br>
 But it does also mean, that my server "https://gmserver.xyz" will also be automatically blacklisted, as it is an unknown domain and I've built the server rather recently.
 
-Unfortunately, getting OSAI to work on your work hardware is not worth the time. <b>I suggest trying it out on your personal devices</b> if you are curious - such as a personal phone or PC. There it should  work, as my server is freely listening to requests from the internet.
+Unfortunately, getting OSAI to work on your work hardware is not worth the time. <a href>I suggest trying it out on your personal devices</a> - such as a personal phone or PC. It should  work, as my server is freely listening to requests from the internet.
 
-My server is a completely local solution. I assembled the hardware and it runs on a fresh install of Ubuntu server. Your chat history is not recorded. Whatever you write to any of the large language models and their response, is for your eyes only.
+My server is a completely local solution. I assembled the hardware myself and it runs on a fresh install of Ubuntu server. Your chat history is not recorded. Whatever you write to any of the large language models and their response, is for your eyes only.
 The conversations you have with the models are inaccessible even by me. Data is encrypted from your machine to my server end-to-end with https.
 
 <br>
