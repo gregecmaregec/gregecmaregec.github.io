@@ -4,8 +4,8 @@ document.body.appendChild(canvas);
 const ctx = canvas.getContext('2d');
 
 // Define the target size
-const TARGET_WIDTH = 800;
-const TARGET_HEIGHT = 400;
+const TARGET_WIDTH = 840;
+const TARGET_HEIGHT = 450;
 
 // Function to set canvas size
 function setCanvasSize() {
@@ -30,8 +30,8 @@ class Particle {
         this.x = x;
         this.y = y;
         this.size = Math.random() * 5 + 1;
-        this.speedX = (Math.random() * 3 - 1.5) * 0.60;
-        this.speedY = (Math.random() * 3 - 1.5) * 0.60;
+        this.speedX = (Math.random() * 3 - 1.5) * 0.65;
+        this.speedY = (Math.random() * 3 - 1.5) * 0.65;
         this.color = `hsl(${Math.random() * 360}, 100%, 50%)`;
     }
 
