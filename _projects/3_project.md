@@ -2,6 +2,7 @@
 layout: page_itfa_subpage
 title: Potential applications in Trade Finance
 img: assets/img/7.jpg
+importance: 2
 redirect: https://unsplash.com
 category: work
 ---
