@@ -11,3 +11,4 @@ horizontal: true
     
 <script src="{{ site.baseurl }}/assets/js/nature.js"></script>
 
+<a href="gregormihelac.com/itfasubmission/transformer">The Transformer neueral net: what makes a Large Language Model?<a>
