@@ -11,14 +11,12 @@ nav_order:
 <br>
 
 
-### OSAI stands for opensourced AI.<br>
-
 <br>
 
 OSAI is my implementation of serving open source AIs through the internet with a privacy-first approach. No log on is required, your data is not stored or shared to third parties by me. 
 <br>
 <br>
-When you use OSAI, it makes an API call to my server. <b> If you are using company hardware </b> your company most likely has disabled API calls to unknown internet sources - which, honestly, is overall a good security measure against internet threats.
+When you use OSAI, it makes an API call to my server. <b><a href> If you are using company hardware<a> </b> your company most likely has disabled API calls to unknown internet sources - which, honestly, is overall a good security measure against internet threats.
 <br>
 <br>
 But it does also mean, that my server "https://gmserver.xyz" will also be automatically blacklisted, as it is an unknown domain and I've built the server rather recently.
