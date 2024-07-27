@@ -127,6 +127,10 @@ document.addEventListener('DOMContentLoaded', function() {
     outputBox.scrollTop = outputBox.scrollHeight;
   }
 
+  inputBox.addEventListener('input', handleInput);
+  inputBox.addEventListener('keydown', handleKeyDown);
+});
+
 function modelChoice(choice) {
   selectedModel = choice;
   const buttons = document.querySelectorAll('#modelSelectorContainer button');

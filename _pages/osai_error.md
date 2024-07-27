@@ -21,7 +21,7 @@ OSAI is my implementation of serving open source AIs through the internet with a
 When you use OSAI, it makes an API call to my server. <b> If you are using company hardware </b> your company most likely has disabled API calls to unknown internet sources - which, honestly, is overall a good security measure against internet threats.
 <br>
 <br>
-But it does also mean, that my server (https://gmserver.xyz) will also be automatically blacklisted, as it is an unknown domain and I've built the server rather recently.
+But it does also mean, that my server "https://gmserver.xyz" will also be automatically blacklisted, as it is an unknown domain and I've built the server rather recently.
 
 Unfortunately, getting OSAI to work on your work hardware is not worth the time. <b>I suggest trying it out on your personal devices</b> if you are curious - such as a personal phone or PC. There it should  work, as my server is freely listening to requests from the internet.
 
