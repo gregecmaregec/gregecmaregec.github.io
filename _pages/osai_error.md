@@ -18,10 +18,10 @@ OSAI is my implementation of serving open source AIs through the internet with a
 <br>
 <br>
 <br>
-When you use OSAI, it makes an API call to my server. <a href> If you are using company hardware<a> your company most likely has disabled API calls to unknown internet sources - which, honestly, is a good security measure against internet threats.
+When you use OSAI, it makes an API call to my server. <a href> If you are using company hardware<a> your company most likely has disabled API calls to unknown internet sources - which, honestly, is a good security measure to protect against internet threats.
 <br>
 <br>
-But it does also mean, that my server "https://gmserver.xyz" will be automatically blacklisted, as it is an unknown domain and I've built the server rather recently.
+But it does also mean, that my server <a href= "https://gmserver.xyz">gmserver.xyz<a> will be automatically blacklisted, as it is an unknown domain + I've connected it to the internet rather recently.
 
 Unfortunately, getting OSAI to work on your work hardware is not worth the time. 
 <br>I suggest <a href>trying it out on your personal devices</a> - such as a personal phone or PC. It should  work, as my server is freely listening to requests from the internet.
