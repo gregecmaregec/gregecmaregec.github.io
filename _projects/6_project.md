@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: page_itfa
 title: project 6
 description: a project with no image
 img:
