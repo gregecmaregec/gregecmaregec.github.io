@@ -9,9 +9,6 @@ horizontal: false
 Overview of Artificial Intelligence (AI) and potential applications in the Trade Finance space
 
 <br>
-<br>
-<br>
-
 <!-- pages/projects.md -->
 <div class="projects">
 {% if site.enable_project_categories and page.display_categories %}
