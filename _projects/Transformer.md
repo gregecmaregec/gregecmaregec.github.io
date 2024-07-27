@@ -1,7 +1,6 @@
 ---
 layout: page_itfa
-title: project 1
-description: with background image
+title: The Transformer – what makes a large language model (LLM)?
 img: assets/img/12.jpg
 importance: 1
 category: work
