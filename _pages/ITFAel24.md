@@ -7,7 +7,9 @@ nav_order: 6
 display_categories: [work, fun]
 horizontal: true
 ---
-
+    
+    
+<script src="{{ site.baseurl }}/assets/js/nature.js"></script>
 <!-- pages/projects.md -->
 <div class="projects">
 {% if site.enable_project_categories and page.display_categories %}
