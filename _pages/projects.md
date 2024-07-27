@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: page_itfa
 title: Demistifying AI
 permalink: /itfasubmission/
 description: Overview of Artificial Intelligence (AI) and potential applications in the Trade Finance space
