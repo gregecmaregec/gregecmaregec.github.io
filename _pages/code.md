@@ -14,6 +14,112 @@ All code shown explicitly on /code/ is under the [MIT License.](https://github.c
 <br>
 <br>
 
+### particle crystal-nature simulation in natural JS
+`javascript`
+
+```javascript
+
+const canvas = document.createElement('canvas');
+document.body.appendChild(canvas);
+    
+const ctx = canvas.getContext('2d');
+
+// set canvas size
+canvas.width = Math.min(window.innerWidth * 0.98, 800);
+canvas.height = 400;
+
+//center canvas horizontally
+canvas.style.display = 'block';
+canvas.style.margin = '20px auto';
+
+// particle system
+class Particle {
+    constructor(x, y) {
+        this.x = x;
+        this.y = y;
+        this.size = Math.random() * 5 + 1;
+        this.speedX = (Math.random() * 3 - 1.5) * 0.60;
+        this.speedY = (Math.random() * 3 - 1.5) * 0.60;
+        this.color = `hsl(${Math.random() * 360}, 100%, 50%)`;
+    }
+
+    update() {
+        this.x += this.speedX;
+        this.y += this.speedY;
+
+        if (this.size > 0.2) this.size -= 0.1;
+    }
+
+    draw() {
+        ctx.fillStyle = this.color;
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fill();
+    }
+}
+
+let particles = [];
+const mouse = { x: null, y: null, radius: 150 };
+
+function createParticles() {
+    for (let i = 0; i < 4; i++) {
+        particles.push(new Particle(
+            Math.random() * canvas.width,
+            Math.random() * canvas.height
+        ));
+    }
+}
+
+function handleParticles() {
+    for (let i = 0; i < particles.length; i++) {
+        particles[i].update();
+        particles[i].draw();
+
+        for (let j = i; j < particles.length; j++) {
+            const dx = particles[i].x - particles[j].x;
+            const dy = particles[i].y - particles[j].y;
+            const distance = Math.sqrt(dx * dx + dy * dy);
+
+            if (distance < 100) {
+                ctx.beginPath();
+                ctx.strokeStyle = particles[i].color;
+                ctx.lineWidth = 0.2;
+                ctx.moveTo(particles[i].x, particles[i].y);
+                ctx.lineTo(particles[j].x, particles[j].y);
+                ctx.stroke();
+            }
+        }
+
+        if (particles[i].size <= 0.2) {
+            particles.splice(i, 1);
+            i--;
+        }
+    }
+}
+
+
+function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    handleParticles();
+    createParticles();
+    requestAnimationFrame(animate);
+}
+
+// below makes particles when you hover with mouse 
+canvas.addEventListener('mousemove', (event) => {
+    mouse.x = event.x - canvas.offsetLeft;
+    mouse.y = event.y - canvas.offsetTop;
+
+    for (let i = 0; i < 6; i++) {
+        particles.push(new Particle(mouse.x, mouse.y));
+    }
+});
+
+animate();​​​​​
+
+
+```
+
 ### the blossom circles and scroll effect in /philosophy/
 `javascript`
 
@@ -191,14 +297,15 @@ document.body.appendChild(canvas);
 // get the 2D rendering context
 const ctx = canvas.getContext('2d');
 
-const numBlocksX = 200;
-const numBlocksY = 200;
+// dimensions of the game!
+const numBlocksX = 90;
+const numBlocksY = 90;
 
 // calculate the maximum dimension of the display
 const maxDimension = Math.min(window.innerWidth, window.innerHeight);
 
-// set the canvas size to be 400x400 pixels
-const canvasSize = Math.min(maxDimension, 400);
+// set the canvas size to be macDimension pixels
+const canvasSize = Math.min(maxDimension, 500);
 canvas.width = canvasSize;
 canvas.height = canvasSize;
 // below sets the canvas to be centered on the page
@@ -216,6 +323,13 @@ initializeGrid();
 // run the game immediately upon site load
 animate();
 
+// stop the animation after n minutes
+setTimeout(() => {
+    cancelAnimationFrame(animationId);
+}, 6 * 60 * 1000);
+
+let animationId;
+
 function createGrid() {
     const grid = new Array(numBlocksX);
     for (let x = 0; x < numBlocksX; x++) {
@@ -228,16 +342,23 @@ function initializeGrid() {
     for (let x = 0; x < numBlocksX; x++) {
         for (let y = 0; y < numBlocksY; y++) {
             // randomly set each block to be alive or dead
-            grid[x][y] = Math.random() < 0.5 ? 1 : 0;
+            grid[x][y] = Math.random() < 0.3 ? 1 : 0;
         }
     }
 }
 
+let timerId;
+
 function animate() {
     updateGrid();
     drawGrid();
-    requestAnimationFrame(animate);
+    timerId = setTimeout(animate, 100);
+    
 }
+
+setTimeout(() => {
+    clearTimeout(timerId);
+}, 120000);
 
 function updateGrid() {
     const newGrid = createGrid();
@@ -262,9 +383,6 @@ function updateGrid() {
 
     grid = newGrid;
 }
-
-// important feature of game of life is to count the neighbours
-// and update alive or dead in accordance
 
 function countNeighbors(x, y) {
     let count = 0;
@@ -298,7 +416,7 @@ function drawGrid() {
             const isAlive = grid[x][y] === 1;
 
             if (isAlive) {
-                ctx.fillStyle = 'rgba(255, 192, 203, 0.99)'; // cherry blossom color
+                ctx.fillStyle = 'rgba(255, 183, 197, 0.8)'; // cherry blossom color with 80% opacity
             } else {
                 ctx.fillStyle = 'rgba(0, 0, 0, 0)'; // completely transparent
             }

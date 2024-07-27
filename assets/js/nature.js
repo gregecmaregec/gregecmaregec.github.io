@@ -5,15 +5,15 @@ document.body.appendChild(canvas);
     
 const ctx = canvas.getContext('2d');
 
-// Set canvas size
+// set canvas size
 canvas.width = Math.min(window.innerWidth * 0.98, 800);
 canvas.height = 400;
 
-    //Center canvas horizontally
+//center canvas horizontally
 canvas.style.display = 'block';
 canvas.style.margin = '20px auto';
 
-    // Particle system
+// particle system
 class Particle {
     constructor(x, y) {
         this.x = x;
@@ -78,6 +78,7 @@ function handleParticles() {
     }
 }
 
+
 function animate() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     handleParticles();
@@ -85,11 +86,12 @@ function animate() {
     requestAnimationFrame(animate);
 }
 
+// below makes particles when you hover with mouse 
 canvas.addEventListener('mousemove', (event) => {
     mouse.x = event.x - canvas.offsetLeft;
     mouse.y = event.y - canvas.offsetTop;
 
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 6; i++) {
         particles.push(new Particle(mouse.x, mouse.y));
     }
 });
