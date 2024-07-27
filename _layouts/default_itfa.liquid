@@ -20,6 +20,14 @@
     <!-- Header -->
     {% include header_v2_no_progress_bar_nav.liquid %}
 
+    <div class="post">
+    <header class="post-header">
+      <h1 class="post-title">Demistifying AI</h1>
+      <p class="post-description">{{ page.description }}</p>
+    </header>
+
+    <script src="{{ site.baseurl }}/assets/js/nature.js"></script>
+
     <!-- Content -->
     <div class="container mt-5" role="main">
       {% if page.toc and page.toc.sidebar %}
