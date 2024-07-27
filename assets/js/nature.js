@@ -11,20 +11,22 @@ let scale = 1;
 
 // Function to set canvas size and scale
 function setCanvasSize() {
-    let width = Math.min(window.innerWidth * 0.98, TARGET_WIDTH);
-    let height = width / 2; // Maintain 2:1 ratio
-
-    canvas.style.width = `${width}px`;
-    canvas.style.height = `${height}px`;
+    let width = window.innerWidth;
+    let height = window.innerHeight;
+    
+    // Calculate scale to fit entire canvas
+    scale = Math.min(width / TARGET_WIDTH, height / TARGET_HEIGHT);
+    
+    canvas.style.width = `${TARGET_WIDTH * scale}px`;
+    canvas.style.height = `${TARGET_HEIGHT * scale}px`;
 
     canvas.width = TARGET_WIDTH;
     canvas.height = TARGET_HEIGHT;
 
-    scale = width / TARGET_WIDTH;
-
-    // Set CSS to center the canvas
-    canvas.style.display = 'block';
-    canvas.style.margin = '20px auto';
+    // Center the canvas
+    canvas.style.position = 'absolute';
+    canvas.style.left = `${(width - TARGET_WIDTH * scale) / 2}px`;
+    canvas.style.top = `${(height - TARGET_HEIGHT * scale) / 2}px`;
 }
 
 // Call the function initially and on window resize
