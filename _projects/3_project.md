@@ -1,10 +1,9 @@
 ---
 layout: page_itfa_subpage
-title: Potential applications in Trade Finance
+title: Potential applications of AI
+description: In Trade Finance & Insurance
 img: assets/img/7.jpg
 importance: 2
-redirect: https://unsplash.com
-category: work
 ---
 
 Every project has a beautiful feature showcase page.
