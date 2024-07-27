@@ -1,5 +1,5 @@
 ---
-layout: page_itfa
+layout: page_itfa_subpage
 title: 6
 description: Lexicon
 img: assets/img/7.jpg
