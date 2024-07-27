@@ -18,15 +18,15 @@ OSAI is my implementation of serving open source AIs through the internet with a
 <br>
 <br>
 <br>
-When you use OSAI, it makes an API call to my server. <a href> If you are using company hardware<a> your company most likely has disabled API calls to unknown internet sources - which, honestly, is overall a good security measure against internet threats.
+When you use OSAI, it makes an API call to my server. <a href> If you are using company hardware<a> your company most likely has disabled API calls to unknown internet sources - which, honestly, is a good security measure against internet threats.
 <br>
 <br>
 But it does also mean, that my server "https://gmserver.xyz" will be automatically blacklisted, as it is an unknown domain and I've built the server rather recently.
 
 Unfortunately, getting OSAI to work on your work hardware is not worth the time. 
-<br>I suggest trying it out on <a href>your personal devices</a> - such as a personal phone or PC. It should  work, as my server is freely listening to requests from the internet.
+<br>I suggest <a href>trying it out on your personal devices</a> - such as a personal phone or PC. It should  work, as my server is freely listening to requests from the internet.
 
-My server is a completely local solution. I assembled the hardware myself and it runs on a fresh install of Ubuntu server. Your chat history is not recorded. Whatever you write to any of the large language models and their response, is for your eyes only.
+My server is a completely local solution. I assembled the hardware myself and it runs on a fresh install of Ubuntu. Your chat history is not recorded. Whatever you write to any of the large language models and their response, is for your eyes only.
 The conversations you have with the models are inaccessible even by me. Data is encrypted from your machine to my server end-to-end with https.
 
 <br>
