@@ -1,7 +1,7 @@
 ---
 layout: page_itfa_subpage
-title: Transformer Neural Net
-description: What makes a large language model (LLM)?
+title: Transformer Neural Net Architecture
+description: What powers a large language model (LLM)?
 img: assets/img/3.jpg
 importance: 2
 ---
