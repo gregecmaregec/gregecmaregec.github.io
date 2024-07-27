@@ -2,7 +2,7 @@
 layout: page_itfa_subpage
 title: Foreword
 img: assets/img/3.jpg
-description: + as a dictionary for AI related terms
+description: and a wordbook for AI related terms
 importance: 1
 ---
 <br>
@@ -19,27 +19,5 @@ I hope you enjoy reading this piece. Let me know any feedback at gregor.mihelac 
 <br>
 <br>
 
-### Dictionary
+### Wordbook
 
-AI – 
-LLM –
-Neural net – 
-Prompt – 
-Copilot –
-Claude –
-ChatGPT – 
-OpenAI- 
-Anthropic – 
-Meta – 
-Llama - 
-Phishing – 
-Hallucinations - 
-JSON – 
-Token – 
-Output – 
-Inference – 
-Stream – 
-Black box – 
-Multimodal – 
-convolutional neural nets – 
-Ai chatbot – LLMs are the state of the art, Transformer based “AI chatbot” offered as a service.
