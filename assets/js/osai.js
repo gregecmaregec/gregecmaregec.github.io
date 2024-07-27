@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
       messageHistory.push({ role: "assistant", content: responseData.trim() });
     })
     .catch(error => {
-      appendToOutput('Error', error.message + '\n\nexperiencing issues?');
+      appendToOutput('Error', error.message + '\n\n <a href = "gregormihelac.com/osai-error/">experiencing issues?<a>');
     })
     .finally(() => {
       // Hide loader and enable input
