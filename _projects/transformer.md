@@ -6,12 +6,20 @@ img: assets/img/3.jpg
 importance: 2
 ---
 
-Neural nets refer to the makeup of a computational models inspired by the structures and functions of neurons in brains. They are not new, their implementation into hardware and software dates as far back as 1953. 
-Large Language Models (LLMs) are, in essence, computational models predicting and generating next words in sentences. There have been variations of language models as far back as 2003.
-The Transformer is a neural net architecture, presented in a scientific paper – “Attention is All You Need”, published 2017. It is the power engine of modern day LLMs. The Transformer architecture has been implemented at the centre of billion-dollar AI LLM products such as ChatGPT, Copilot, Claude, Mistral, Grok, LLaMa etc. It is hard to overstate the impact of the Transformer on the AI services boom of 2023 and 2024, as well as on advances in AI, large language models, and neural nets.
+<b>Neural nets</b> refer to the makeup of a computational models inspired by the structures and functions of neurons in brains. They are not new, their implementation into hardware and software dates as far back as 1953. 
 
-<i>The Transformer. Attention is All You Need, Vaswani et al. (2017)
-“Attention Is All You Need is the most important advance in the recent history or neural networks.”</i>
+<b>Large Language Models (LLMs)</b> are, in essence, computational models predicting and generating next words in sentences. There have been variations of language models as far back as 2003.
+
+<b>The Transformer</b> is a neural net architecture, presented in a scientific paper – “Attention is All You Need”, published 2017. It is the power engine of modern day LLMs. The Transformer architecture has been implemented at the centre of billion-dollar AI LLM products such as ChatGPT, Copilot, Claude, Mistral, Grok, LLaMa etc. It is hard to overstate the impact of the Transformer on the AI services boom of 2023 and 2024, as well as on advances in AI, large language models, and neural nets.
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/itfa/transformer.jpg" title="LLM outputs" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+The Transformer. Attention is All You Need, Vaswani et al. (2017)
+<br>
+<i>“Attention Is All You Need is the most important advance in the recent history or neural networks.”</i>
 -	 Ilya Stuskever, cofounder and former chief scientist of OpenAI
 
 Neural networks used to be designed for specific use cases and tailored to a specific tasks. For example, different neural net designs were implemented for processing image, video, sound, code etc. The initial showcase of the Transformer in in Attention is All you Need was computerized translation. The authors reported state of the art results when testing the Transformer with automated benchmarks and human evaluation scores, and indicated intentions to test the Transformer on “other tasks” in the future.
@@ -44,14 +52,15 @@ To give your project a background in the portfolio page, just add the img tag to
 <div class="caption">
     Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
 </div>
+<div class="caption">
+    LLMs output tokens based on probabilities obtained in the training stage. 
+</div>
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/itfa/outputs.jpg" title="LLM outputs" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
-<div class="caption">
-    LLMs output tokens based on probabilities obtained in the training stage. 
-</div>
+
 
 You can also put regular text between your rows of images.
 Say you wanted to write a little bit about your project before you posted the rest of the images.
