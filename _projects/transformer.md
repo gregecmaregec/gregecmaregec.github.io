@@ -49,7 +49,8 @@ Many types of data can be broken down into tokens / tokenized. E.g. written Engl
     <footer style="font-size: 0.9rem; color: #888; padding: 1rem; text-align: right;">— Andrej Karpathy, cofounder of OpenAI, former head of AI at Tesla</footer>
   </blockquote>
 </div>
-
+<br>
+<br>
 LLMs output sentences that normally do not show up to the user all at once, but rather one token after another. This is due to the way the LLMs operate – they choose between tokens based on probabilities established in the training stage, and output the next token only when the sequence of previous tokens has been established – creating a stream of responses. 
 
 <div class="caption">
