@@ -3,6 +3,7 @@ layout: page_itfa_subpage
 title: Potential applications of AI
 description: In Trade Finance & Insurance
 img: assets/img/7.jpg
+nav: true
 importance: 2
 ---
 
