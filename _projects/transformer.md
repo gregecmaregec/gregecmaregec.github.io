@@ -21,7 +21,7 @@ importance: 2
         {% include figure.liquid loading="eager" path="assets/itfa/transformer.jpg" title="transformer" class="img-fluid2 rounded z-depth-1" style="width=50%"%}
     </div>
 </div>
-The Transformer. Attention is All You Need, Vaswani et al. (2017)
+<s>The Transformer. Attention is All You Need, Vaswani et al. (2017)</s>
 
 
 <i>“Attention Is All You Need is the most important advance in the recent history or neural networks.”</i>
