@@ -1,6 +1,6 @@
 ---
 layout: page_itfa_subpage
-title: Transformer Neural Net Architecture
+title: The Transformer neural net architecture 
 description: What powers a large language model (LLM)?
 img: assets/img/3.jpg
 importance: 2
