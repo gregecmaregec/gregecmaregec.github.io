@@ -13,15 +13,16 @@ importance: 2
 <b>The Transformer</b> is a neural net architecture, presented in a scientific paper – “Attention is All You Need”, published 2017. It is the power engine of modern day LLMs. The Transformer architecture has been implemented at the centre of billion-dollar AI LLM products such as ChatGPT, Copilot, Claude, Mistral, Grok, LLaMa etc. It is hard to overstate the impact of the Transformer on the AI services boom of 2023 and 2024, as well as on advances in AI, large language models, and neural nets.
 <br>
 <br>
-<div class="caption">
-    The Transformer. Attention is All You Need, Vaswani et al. (2017)
-</div>
+
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/itfa/transformer.jpg" title="transformer" class="img-fluid2 rounded z-depth-1" style="width=50%"%}
     </div>
 </div>
-<s>The Transformer. Attention is All You Need, Vaswani et al. (2017)</s>
+<div class="caption">
+    The Transformer. Attention is All You Need, Vaswani et al. (2017)
+</div>
+
 
 
 <i>“Attention Is All You Need is the most important advance in the recent history or neural networks.”</i>
