@@ -1,6 +1,6 @@
 <header>
   <!-- Nav Bar -->
-  <nav id="navbar" class="navbar navbar-light navbar-expand-sm {% if site.navbar_fixed %}fixed-top{% else %}sticky-top{% endif %}" role="navigation">
+  <nav id="navbar" class="navbar navbar-light {% if site.navbar_fixed %}fixed-top{% else %}sticky-top{% endif %}" role="navigation">
     <div class="container">
       {% if page.permalink != '/' %}
         <a class="navbar-brand title font-weight-lighter" href="{{ site.baseurl }}/itfasubmission/">
@@ -15,7 +15,7 @@
       {% endif %}
       <!-- Navbar Toggle -->
       <button
-        class="navbar-toggler collapsed ml-auto"
+        class="navbar-toggler"
         type="button"
         data-toggle="collapse"
         data-target="#navbarNav"
@@ -29,7 +29,7 @@
         <span class="icon-bar bottom-bar"></span>
       </button>
 
-      <div class="collapse navbar-collapse text-right" id="navbarNav">
+      <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto flex-nowrap">
           {% for page in site.projects %}
             {% if page.permalink == '/' %} {% assign about_title = page.title %} {% endif %}
@@ -46,7 +46,7 @@
           </li>
 
           <!-- Other pages -->
-          {% assign sorted_pages = site.projects | sort: 'nav_order' %}
+          {% assign sorted_pages = site.projects | sort: 'importance' %}
           {% for p in sorted_pages %}
             {% if p.nav and p.autogen == null %}
               {% if p.dropdown %}
@@ -57,7 +57,7 @@
                   {% endif %}
                 {% endfor %}
                 <li class="nav-item dropdown {% if page.title == p.title or has_active_child %}active{% endif %}">
-                  <a
+                  
                     class="nav-link dropdown-toggle"
                     href="#"
                     id="navbarDropdown"
