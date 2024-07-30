@@ -26,21 +26,38 @@ importance: 2
 <i>“Attention Is All You Need is the most important advance in the recent history or neural networks.”</i>
 -	 Ilya Stuskever, cofounder and former chief scientist of OpenAI
 
-Neural networks used to be designed for specific use cases and tailored to a specific tasks. For example, different neural net designs were implemented for processing image, video, sound, code etc. The initial showcase of the Transformer in in Attention is All you Need was computerized translation. The authors reported state of the art results when testing the Transformer with automated benchmarks and human evaluation scores, and indicated intentions to test the Transformer on “other tasks” in the future.
-
 Neural networks used to be designed for specific use cases and tailored to a specific tasks. For example, different neural net designs were implemented for processing image, video, sound, code etc. The initial showcase for the Transformer in in Attention is All you Need was computerized translation. The authors reported state of the art results testing the Transformer on automated benchmarks and human evaluation scores, and indicated intentions to test the Transformer on “other tasks” in the future.
 
 A mere year after the publication of Attention is All You Need, another milestone in the field of AI research was published: “Language Models are Unsupervised Multitask Learners” by Radford et al. (2018), where OpenAI showcased their state-of-the-art language model GPT-2. The GPT in OpenAI’s ChatGPT stands for generative pre-trained Transformer.
 
-Text, images, code, ... – the Transformer even generates sound - e.g. Wav2Vec is a Transformer based AI, developed by Meta (formerly Facebook), able to generate natural sounding vocal speech of languages possessing no written form, such as Mboshi: a Bantu language spoken by approximately 150,000 people in the Republic of the Congo (Ji et al, 2022). The Transformer is a token-based prediction engine, not matter which data is tokenized.
+Text, images, code, ... – the Transformer even generates sound - e.g. Wav2Vec is a Transformer based AI, developed by Meta (formerly Facebook), able to generate natural sounding vocal speech of languages possessing no written form, such as Mboshi: a Bantu language spoken by approximately 150,000 people in the Republic of the Congo (Ji et al, 2022). 
 
+The Transformer is a token-based prediction engine, not matter which data is tokenized.
 Many types of data can be broken down into tokens / tokenized. E.g. written English, tokens are usually 3-7 characters long.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/itfa/outputs.jpg" title="LLM outputs" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/itfa/tokens.jpg" title="tokenization" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
+
+<i>“What's really interesting is that this Transformer architecture actually has been remarkably resilient - basically the Transformer that came out in 2017 is the Transformer you would use today except you reshuffle some of the layer norms...
+…I think people have been trying to change it, but it's proven remarkably resilient, but I do think that there should be even better architectures potentially - but you got to admire the resilience here. There's something profound about this architecture “</i>
+-	Andrej Karpathy, cofounder of OpenAI, former head of AI at Tesla
+
+LLMs output sentences that normally do not show up to the user all at once, but rather one token after another. This is due to the way the LLMs operate – they choose between tokens based on probabilities established in the training stage, and output the next token only when the sequence of previous tokens has been established – creating a stream of responses. 
+
+<div class="caption">
+    LLMs output tokens based on probabilities obtained in the training stage. 
+</div>
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/itfa/tokens.jpg" title="tokenization" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+
+Presented in 1) is a JSON-formatted output, a way of transmitting data across multiple programming languages. It is a mapping system, and carries with it multiple attributes, including the “response” of the LLM. In 2) the probabilities of the next tokens are shown. It is Important to note that the highest probability output is not always chosen. Token “the” is the most probable output in the above example and has a 73.23% probability of being chosen - while the next highest-probability possible token “how” would have been chosen 16.72% of the time. For this reason, running the same instruction to an LLM will result in different outputs. This also makes LLMs “black box” systems, as the output is not known before execution.
+
 
 
 <div class="row">
@@ -49,39 +66,22 @@ Many types of data can be broken down into tokens / tokenized. E.g. written Engl
     </div>
 </div>
 
+Presented in 1) is a JSON-formatted output, a way of transmitting data across multiple programming languages. It is a mapping system, and carries with it multiple attributes, including the “response” of the LLM. In 2) the probabilities of the next tokens are shown. It is Important to note that the highest probability output is not always chosen. Token “the” is the most probable output in the above example and has a 73.23% probability of being chosen - while the next highest-probability possible token “how” would have been chosen 16.72% of the time. For this reason, running the same instruction to an LLM will result in different outputs. This also makes LLMs “black box” systems, as the output is not known before execution.
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
-
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
 <div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
+    Example 1:
+</div>
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/itfa/example1.jpg" title="LLM outputs" class="img-fluid rounded z-depth-1" %}
+    </div>
 </div>
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
-
-{% raw %}
-
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
+<div class="caption">
+    Example 2:
 </div>
-```
-
-{% endraw %}
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/itfa/example2.jpg" title="LLM outputs" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
