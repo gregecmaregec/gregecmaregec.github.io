@@ -1,5 +1,6 @@
 <header>
-  <nav id="navbar" class="navbar navbar-light" role="navigation">
+  <!-- Nav Bar -->
+  <nav id="navbar" class="navbar navbar-light navbar-expand-sm {% if site.navbar_fixed %}fixed-top{% else %}sticky-top{% endif %}" role="navigation">
     <div class="container">
       {% if page.permalink != '/' %}
         <a class="navbar-brand title font-weight-lighter" href="{{ site.baseurl }}/itfasubmission/">
@@ -9,11 +10,12 @@
           {% endif %}
         </a>
       {% elsif site.enable_navbar_social %}
+        <!-- Social Icons -->
         <div class="navbar-brand social">{% include social.liquid %}</div>
       {% endif %}
-      
+      <!-- Navbar Toggle -->
       <button
-        class="navbar-toggler"
+        class="navbar-toggler collapsed ml-auto"
         type="button"
         data-toggle="collapse"
         data-target="#navbarNav"
@@ -27,12 +29,13 @@
         <span class="icon-bar bottom-bar"></span>
       </button>
 
-      <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="collapse navbar-collapse text-right" id="navbarNav">
         <ul class="navbar-nav ml-auto flex-nowrap">
           {% for page in site.projects %}
             {% if page.permalink == '/' %} {% assign about_title = page.title %} {% endif %}
           {% endfor %}
 
+          <!-- About -->
           <li class="nav-item {% if page.permalink == '/' %}active{% endif %}">
             <a class="nav-link" href="{{ '/' | relative_url }}">
               {{- about_title }}
@@ -42,6 +45,7 @@
             </a>
           </li>
 
+          <!-- Other pages -->
           {% assign sorted_pages = site.projects | sort: 'nav_order' %}
           {% for p in sorted_pages %}
             {% if p.nav and p.autogen == null %}
@@ -53,7 +57,7 @@
                   {% endif %}
                 {% endfor %}
                 <li class="nav-item dropdown {% if page.title == p.title or has_active_child %}active{% endif %}">
-                  
+                  <a
                     class="nav-link dropdown-toggle"
                     href="#"
                     id="navbarDropdown"
@@ -93,6 +97,7 @@
             {% endif %}
           {% endfor %}
           {% if site.enable_darkmode %}
+            <!-- Toogle theme mode -->
             <li class="toggle-container">
               <button id="light-toggle" title="Change theme">
                 <i class="fa-solid fa-moon"></i>

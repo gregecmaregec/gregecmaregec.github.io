@@ -42,9 +42,9 @@ Many types of data can be broken down into tokens / tokenized. E.g. written Engl
     </div>
 </div>
 
-<div style="max-width: 820px; margin: 2rem auto; padding: 0 1rem;">
-  <blockquote style="background-color: transparent; border-left: 5px solid #d64a4a; padding: 1.5rem; margin: 0; border-radius: 0 8px 8px 0; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.2s ease-in-out;">
-    <p style="font-size: 1rem; line-height: 1.6; color: inherit; margin-bottom: 1rem; font-style: italic;">"What's really interesting is that this Transformer architecture actually has been remarkably resilient - basically the Transformer that came out in 2017 is the Transformer you would use today except you reshuffle some of the layer norms...
+<div style="max-width: 820px; margin: 1rem auto; padding: 0 1rem;">
+  <blockquote style="background-color: transparent; border-left: 5px solid #d64a4a; padding: 0.7rem; margin: 0; border-radius: 0 8px 8px 0; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.2s ease-in-out;">
+    <p style="font-size: 1rem; line-height: 1.6; color: inherit; font-style: italic;">"What's really interesting is that this Transformer architecture actually has been remarkably resilient - basically the Transformer that came out in 2017 is the Transformer you would use today except you reshuffle some of the layer norms...
 …I think people have been trying to change it, but it's proven remarkably resilient, but I do think that there should be even better architectures potentially - but you got to admire the resilience here. There's something profound about this architecture."</p>
     <footer style="font-size: 0.9rem; color: #888; text-align: right;">— Andrej Karpathy, cofounder of OpenAI, former head of AI at Tesla</footer>
   </blockquote>
@@ -63,6 +63,8 @@ LLMs output sentences that normally do not show up to the user all at once, but 
 
 Presented in 1) is a JSON-formatted output, a way of transmitting data across multiple programming languages. It is a mapping system, and carries with it multiple attributes, including the “response” of the LLM. In 2) the probabilities of the next tokens are shown. It is Important to note that the highest probability output is not always chosen. Token “the” is the most probable output in the above example and has a 73.23% probability of being chosen - while the next highest-probability possible token “how” would have been chosen 16.72% of the time. For this reason, running the same instruction to an LLM will result in different outputs. This also makes LLMs “black box” systems, as the output is not known before execution.
 
+<br>
+<br>
 
 <div class="caption">
     Example 1:
