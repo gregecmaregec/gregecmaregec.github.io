@@ -4,6 +4,7 @@ title: Risk & Compliance
 description: what are the legal considerations?
 img: assets/img/3.jpg
 importance: 2
+nav: true
 giscus_comments: true
 ---
 

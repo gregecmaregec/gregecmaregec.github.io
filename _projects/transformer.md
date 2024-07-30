@@ -2,6 +2,7 @@
 layout: page_itfa_subpage
 title: The Transformer neural net architecture 
 description: What powers a large language model (LLM)?
+nav: true
 img: assets/img/3.jpg
 importance: 2
 ---
@@ -42,10 +43,10 @@ Many types of data can be broken down into tokens / tokenized. E.g. written Engl
 </div>
 
 <div style="max-width: 800px; margin: 2rem auto; padding: 0 1rem;">
-  <blockquote style="background-color: #f8f9fa; border-left: 5px solid #007bff; padding: 1.5rem; margin: 0; border-radius: 0 8px 8px 0; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.2s ease-in-out;">
-    <p style="font-size: 1.25rem; line-height: 1.6; color: #343a40; margin-bottom: 1rem;">"What's really interesting is that this Transformer architecture actually has been remarkably resilient - basically the Transformer that came out in 2017 is the Transformer you would use today except you reshuffle some of the layer norms...
+  <blockquote style="background-color: transparent; border-left: 5px solid #007bff; padding: 1.5rem; margin: 0; border-radius: 0 8px 8px 0; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.2s ease-in-out;">
+    <p style="font-family: 'Times New Roman', Times, serif; font-size: 1rem; line-height: 1.6; color: inherit; margin-bottom: 1rem; font-style: italic;">"What's really interesting is that this Transformer architecture actually has been remarkably resilient - basically the Transformer that came out in 2017 is the Transformer you would use today except you reshuffle some of the layer norms...
 …I think people have been trying to change it, but it's proven remarkably resilient, but I do think that there should be even better architectures potentially - but you got to admire the resilience here. There's something profound about this architecture."</p>
-    <footer style="font-size: 1rem; color: #6c757d; text-align: right; font-style: italic;">— Andrej Karpathy, cofounder of OpenAI, former head of AI at Tesla</footer>
+    <footer style="font-size: 0.9rem; color: #888; text-align: right;">— Andrej Karpathy, cofounder of OpenAI, former head of AI at Tesla</footer>
   </blockquote>
 </div>
 
