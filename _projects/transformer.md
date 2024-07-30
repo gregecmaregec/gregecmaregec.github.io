@@ -23,9 +23,12 @@ importance: 2
     </div>
 </div>
 
-
-<i>“Attention Is All You Need is the most important advance in the recent history or neural networks.”</i>
--	 Ilya Stuskever, cofounder and former chief scientist of OpenAI
+<div style="max-width: 830px; margin: 1rem auto; padding: 0 1rem;">
+  <blockquote style="background-color: transparent; border-left: 5px solid #d64a4a; padding: 0.7rem; margin: 0; border-radius: 0 8px 8px 0; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.2s ease-in-out;">
+    <p style="font-size: 1rem; line-height: 1.6; color: inherit; font-style: italic;">"“Attention Is All You Need is the most important advance in the recent history or neural networks."</p>
+    <footer style="font-size: 0.9rem; padding: 1rem; text-align: left;">— Ilya Stuskever, cofounder and former chief scientist of OpenAI</footer>
+  </blockquote>
+</div>
 
 Neural networks used to be designed for specific use cases and tailored to a specific tasks. For example, different neural net designs were implemented for processing image, video, sound, code etc. The initial showcase for the Transformer in in Attention is All you Need was computerized translation. The authors reported state of the art results testing the Transformer on automated benchmarks and human evaluation scores, and indicated intentions to test the Transformer on “other tasks” in the future.
 
@@ -51,7 +54,6 @@ Many types of data can be broken down into tokens / tokenized. E.g. written Engl
 </div>
 
 <br>
-<br>
 
 LLMs output sentences that normally do not show up to the user all at once, but rather one token after another. This is due to the way the LLMs operate – they choose between tokens based on probabilities established in the training stage, and output the next token only when the sequence of previous tokens has been established – creating a stream of responses. 
 
@@ -65,9 +67,6 @@ LLMs output sentences that normally do not show up to the user all at once, but 
 </div>
 
 Presented in 1) is a JSON-formatted output, a way of transmitting data across multiple programming languages. It is a mapping system, and carries with it multiple attributes, including the “response” of the LLM. In 2) the probabilities of the next tokens are shown. It is Important to note that the highest probability output is not always chosen. Token “the” is the most probable output in the above example and has a 73.23% probability of being chosen - while the next highest-probability possible token “how” would have been chosen 16.72% of the time. For this reason, running the same instruction to an LLM will result in different outputs. This also makes LLMs “black box” systems, as the output is not known before execution.
-
-<br>
-<br>
 
 <div class="caption">
     Example 1:
