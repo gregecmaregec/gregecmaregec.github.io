@@ -14,7 +14,7 @@ nav_order:
 
 <br>
 
-OSAI is my implementation of serving open source LLMs through the internet with a privacy-first approach. No log on is required, your data is not stored or shared to third parties by me. The only cookie used is for setting the theme between white and dark, completely local.
+OSAI is my implementation of serving open source AIs through the internet with a privacy-first approach. No log on is required, your data is encrypted, is not stored or shared to third parties and is inaccessible even by me. The only cookie used is for setting the theme between white and dark, stored locally on your machine.
 <br>
 <br>
 <br>
