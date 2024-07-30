@@ -56,7 +56,7 @@
                     {% assign has_active_child = true %}
                   {% endif %}
                 {% endfor %}
-                <li class="nav-item dropdown {% if page.title == p.title or has_active_child %}active{% endif %}">
+                <li class="nav-item dropdown {% if page.url contains p.url %}active{% endif %}">
   
                 class="nav-link dropdown-toggle"
                 href="#"
@@ -67,7 +67,7 @@
                 aria-expanded="false"
               >
                 {{- p.title }}
-                {% if page.title == p.title or has_active_child %}
+                {% if page.url contains p.url %}
                   <span class="sr-only">(current)</span>
                 {% endif %}
               </a>
@@ -76,7 +76,7 @@
                   {% if child.title == 'divider' %}
                     <div class="dropdown-divider"></div>
                   {% else %}
-                    <a class="dropdown-item {% if page.title == child.title %}active{% endif %}" href="{{ child.permalink | relative_url }}">
+                    <a class="dropdown-item {% if page.url == child.url %}active{% endif %}" href="{{ child.url | relative_url }}">
                       {{- child.title -}}
                     </a>
                   {% endif %}
