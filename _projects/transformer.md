@@ -18,10 +18,10 @@ importance: 2
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/itfa/transformer.jpg" title="transformer" class="img-fluid2 rounded z-depth-1" style="width=50%"%}
     </div>
-</div>
-<div class="caption">
+</div><div class="caption">
     The Transformer. Attention is All You Need, Vaswani et al. (2017)
 </div>
+
 
 
 
