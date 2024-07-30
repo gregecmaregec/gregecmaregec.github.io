@@ -52,21 +52,12 @@ LLMs output sentences that normally do not show up to the user all at once, but 
 </div>
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/itfa/tokens.jpg" title="tokenization" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-
-Presented in 1) is a JSON-formatted output, a way of transmitting data across multiple programming languages. It is a mapping system, and carries with it multiple attributes, including the “response” of the LLM. In 2) the probabilities of the next tokens are shown. It is Important to note that the highest probability output is not always chosen. Token “the” is the most probable output in the above example and has a 73.23% probability of being chosen - while the next highest-probability possible token “how” would have been chosen 16.72% of the time. For this reason, running the same instruction to an LLM will result in different outputs. This also makes LLMs “black box” systems, as the output is not known before execution.
-
-
-
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/itfa/outputs.jpg" title="LLM outputs" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 
 Presented in 1) is a JSON-formatted output, a way of transmitting data across multiple programming languages. It is a mapping system, and carries with it multiple attributes, including the “response” of the LLM. In 2) the probabilities of the next tokens are shown. It is Important to note that the highest probability output is not always chosen. Token “the” is the most probable output in the above example and has a 73.23% probability of being chosen - while the next highest-probability possible token “how” would have been chosen 16.72% of the time. For this reason, running the same instruction to an LLM will result in different outputs. This also makes LLMs “black box” systems, as the output is not known before execution.
+
 
 <div class="caption">
     Example 1:
