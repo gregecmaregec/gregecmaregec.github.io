@@ -18,11 +18,13 @@ importance: 2
     </div>
 </div>
 The Transformer. Attention is All You Need, Vaswani et al. (2017)
-<br>
+
+
 <i>“Attention Is All You Need is the most important advance in the recent history or neural networks.”</i>
 -	 Ilya Stuskever, cofounder and former chief scientist of OpenAI
 
 Neural networks used to be designed for specific use cases and tailored to a specific tasks. For example, different neural net designs were implemented for processing image, video, sound, code etc. The initial showcase of the Transformer in in Attention is All you Need was computerized translation. The authors reported state of the art results when testing the Transformer with automated benchmarks and human evaluation scores, and indicated intentions to test the Transformer on “other tasks” in the future.
+
 
 
 Every project has a beautiful feature showcase page.
