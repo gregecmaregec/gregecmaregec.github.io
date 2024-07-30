@@ -6,6 +6,17 @@ img: assets/img/3.jpg
 importance: 2
 ---
 
+Neural nets refer to the makeup of a computational models inspired by the structures and functions of neurons in brains. They are not new, their implementation into hardware and software dates as far back as 1953. 
+Large Language Models (LLMs) are, in essence, computational models predicting and generating next words in sentences. There have been variations of language models as far back as 2003.
+The Transformer is a neural net architecture, presented in a scientific paper – “Attention is All You Need”, published 2017. It is the power engine of modern day LLMs. The Transformer architecture has been implemented at the centre of billion-dollar AI LLM products such as ChatGPT, Copilot, Claude, Mistral, Grok, LLaMa etc. It is hard to overstate the impact of the Transformer on the AI services boom of 2023 and 2024, as well as on advances in AI, large language models, and neural nets.
+
+<i>The Transformer. Attention is All You Need, Vaswani et al. (2017)
+“Attention Is All You Need is the most important advance in the recent history or neural networks.”</i>
+-	 Ilya Stuskever, cofounder and former chief scientist of OpenAI
+
+Neural networks used to be designed for specific use cases and tailored to a specific tasks. For example, different neural net designs were implemented for processing image, video, sound, code etc. The initial showcase of the Transformer in in Attention is All you Need was computerized translation. The authors reported state of the art results when testing the Transformer with automated benchmarks and human evaluation scores, and indicated intentions to test the Transformer on “other tasks” in the future.
+
+
 Every project has a beautiful feature showcase page.
 It's easy to include images in a flexible 3-column grid format.
 Make your photos 1/3, 2/3, or full width.
