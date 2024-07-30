@@ -46,7 +46,7 @@ Many types of data can be broken down into tokens / tokenized. E.g. written Engl
   <blockquote style="background-color: transparent; border-left: 5px solid #d64a4a; padding: 0.7rem; margin: 0; border-radius: 0 8px 8px 0; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.2s ease-in-out;">
     <p style="font-size: 1rem; line-height: 1.6; color: inherit; font-style: italic;">"What's really interesting is that this Transformer architecture actually has been remarkably resilient - basically the Transformer that came out in 2017 is the Transformer you would use today except you reshuffle some of the layer norms...
 …I think people have been trying to change it, but it's proven remarkably resilient, but I do think that there should be even better architectures potentially - but you got to admire the resilience here. There's something profound about this architecture."</p>
-    <footer style="font-size: 0.9rem; color: #888; text-align: right;">— Andrej Karpathy, cofounder of OpenAI, former head of AI at Tesla</footer>
+    <footer style="font-size: 0.9rem; color: #888; padding: 1rem; text-align: right;">— Andrej Karpathy, cofounder of OpenAI, former head of AI at Tesla</footer>
   </blockquote>
 </div>
 
