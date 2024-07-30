@@ -4,8 +4,8 @@ document.body.appendChild(canvas);
 const ctx = canvas.getContext('2d');
 
 // Define the target size
-const TARGET_WIDTH = 840;
-const TARGET_HEIGHT = 350;
+const TARGET_WIDTH = 800;
+const TARGET_HEIGHT = 400;
 
 // Function to set canvas size
 function setCanvasSize() {
