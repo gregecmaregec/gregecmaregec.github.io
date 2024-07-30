@@ -3,7 +3,7 @@ layout: page_itfa_subpage
 title: Is AI conscious?
 img: assets/img/3.jpg
 nav: true
-importance: 2
+importance: 5
 ---
 <br>
 <br>

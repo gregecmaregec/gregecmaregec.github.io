@@ -1,10 +1,10 @@
 ---
 layout: page_itfa_subpage
 title: Potential applications of AI
-description: In Trade Finance & Insurance
+description: In facilitating International Trade
 img: assets/img/7.jpg
 nav: true
-importance: 2
+importance: 3
 ---
 
 Every project has a beautiful feature showcase page.

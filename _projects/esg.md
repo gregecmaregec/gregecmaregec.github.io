@@ -1,10 +1,10 @@
 ---
 layout: page_itfa_subpage
-title: Risk & Compliance
-description: what are the legal considerations?
+title: Environmental considerations 
+description: Current AI solutions use a lot of energy
 img: assets/img/3.jpg
-importance: 2
 nav: true
+importance: 6
 giscus_comments: true
 ---
 
