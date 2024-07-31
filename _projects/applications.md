@@ -10,6 +10,8 @@ importance: 3
 
 Below is excerpt from a 2023 Interview between Dwarkesh Patel, a podcaster, and Ilya Sutskever, cofounder and former chief scientist of OpenAI and lead contributor to the creation of ChatGPT.
 
+<br>
+
 <div style="max-width: 830px; margin: 1rem auto; padding: 0 1rem;">
   <blockquote style="background-color: transparent; border-left: 5px solid #d64a4a; padding: 0.7rem; padding-bottom: 0.1rem; margin: 0; border-radius: 0 8px 8px 0; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.2s ease-in-out;">
     <p style="font-size: 1rem; line-height: 1.6; color: inherit; font-style: italic;">
@@ -112,7 +114,7 @@ AI chatbots can assist in creating various types of content, such as scripts, im
 </div>
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/itfa/applications/midjourney.jpg" title="LLMs making images" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/itfa/applications/midjourney.jpg" title="LLMs making images" class="img-fluid2 rounded z-depth-1" %}
     </div>
 </div>
 
@@ -130,7 +132,7 @@ AI chatbots can be helpful in condensing content to help create presentations, p
 </div>
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/itfa/applications/powerpoint.jpg" title="LLMs helping with slidedecks" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/itfa/applications/powerpoint.jpg" title="LLMs helping with slidedecks" class="img-fluid2 rounded z-depth-1" %}
     </div>
 </div> 
 
