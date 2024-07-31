@@ -67,4 +67,7 @@ og_type: "website"
 {% endif %}
 </div>
 
-<p style="font-size: 1.4rem;">ITFA emerging leaders 2024 competition submission, writen June 2024</p>
+
+<div class="caption">
+    ITFA emerging leaders 2024 competition submission, writen June 2024 
+</div>
