@@ -17,7 +17,7 @@ Each chapter of this report is designed to be complete when read on its own. Sho
 
 <br>
 <br>
-I hope you enjoy reading this report. Let me know any feedback at gregor.mihelac (at) outlook (dot) com
+For comments or inquiries you may reach me at gregor.mihelac (at) outlook (dot) com
 <br>
 <br>
 
