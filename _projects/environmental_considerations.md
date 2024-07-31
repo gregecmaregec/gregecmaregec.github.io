@@ -1,7 +1,7 @@
 ---
 layout: page_itfa_subpage
 title: Environmental considerations 
-description: Current AI solutions use a lot of energy
+description: As current AI solutions use a lot of energy
 img: assets/itfa/esg_thumbnail.jpg
 nav: true
 importance: 6
