@@ -29,17 +29,19 @@ class Particle {
     constructor(x, y) {
         this.x = x;
         this.y = y;
-        this.size = Math.random() * 5 + 1;
-        this.speedX = (Math.random() * 3 - 1.5) * 0.6;
-        this.speedY = (Math.random() * 3 - 1.5) * 0.6;
-        this.color = `hsl(${Math.random() * 360}, 100%, 50%)`;
+        this.size = Math.random() * 3 + 1;
+        this.speedX = (Math.random() * 1 - 0.5) * 0.2;
+        this.speedY = (Math.random() * 1 - 0.5) * 0.2;
+        this.color = `hsl(${Math.random() * 360}, 70%, 50%)`;
+        this.lifespan = 300 + Math.random() * 200;
     }
 
     update() {
         this.x += this.speedX;
         this.y += this.speedY;
+        this.lifespan--;
 
-        if (this.size > 0.2) this.size -= 0.1;
+        if (this.size > 0.2 && this.lifespan < 100) this.size -= 0.02;
     }
 
     draw() {
@@ -54,7 +56,7 @@ let particles = [];
 const mouse = { x: null, y: null, radius: 150 };
 
 function createParticles() {
-    for (let i = 0; i < 4; i++) {
+    if (particles.length < 200) {
         particles.push(new Particle(
             Math.random() * TARGET_WIDTH,
             Math.random() * TARGET_HEIGHT
@@ -75,14 +77,14 @@ function handleParticles() {
             if (distance < 100) {
                 ctx.beginPath();
                 ctx.strokeStyle = particles[i].color;
-                ctx.lineWidth = 0.2;
+                ctx.lineWidth = 0.1;
                 ctx.moveTo(particles[i].x, particles[i].y);
                 ctx.lineTo(particles[j].x, particles[j].y);
                 ctx.stroke();
             }
         }
 
-        if (particles[i].size <= 0.2) {
+        if (particles[i].size <= 0.2 || particles[i].lifespan <= 0) {
             particles.splice(i, 1);
             i--;
         }
@@ -105,8 +107,10 @@ canvas.addEventListener('mousemove', (event) => {
     mouse.x = (event.clientX - rect.left) * scaleX;
     mouse.y = (event.clientY - rect.top) * scaleY;
 
-    for (let i = 0; i < 6; i++) {
-        particles.push(new Particle(mouse.x, mouse.y));
+    if (particles.length < 250) {
+        for (let i = 0; i < 3; i++) {
+            particles.push(new Particle(mouse.x, mouse.y));
+        }
     }
 });
 
