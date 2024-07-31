@@ -12,7 +12,7 @@ Below is excerpt from a 2023 Interview between Dwarkesh Patel, a podcaster, and 
 
 <div style="max-width: 830px; margin: 1rem auto; padding: 0 1rem;">
   <blockquote style="background-color: transparent; border-left: 5px solid #d64a4a; padding: 0.7rem; padding-bottom: 0.1rem; margin: 0; border-radius: 0 8px 8px 0; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.2s ease-in-out;">
-    <p style="font-size: 1rem; line-height: 1.6; color: inherit; font-style: italic;">""
+    <p style="font-size: 1rem; line-height: 1.6; color: inherit; font-style: italic;">
     Dwarkesh:<br>
     Let's say it's 2030 and not that much economic value has been created by these LLMs. As unlikely as you think this might be, what would be your best explanation right now of why something like this might happen?
     <br><br>
