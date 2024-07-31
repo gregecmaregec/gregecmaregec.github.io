@@ -5,8 +5,8 @@ permalink: /itfasubmission/
 nav: true
 nav_order: 6
 horizontal: false
-og_title: "ITFA EL 24 submission"
-og_description: "Overview of Artificial Intelligence (AI) and potential applications in the Trade Finance space"
+og_title: "ITFA EL 2024 submission"
+og_description: "Demystifying AI for use cases in International Trade"
 og_image: "https://gregormihelac.com/assets/itfa/foreword_thumbnail.jpg"
 og_url: "https://gregormihelac.com/itfasubmission/"
 og_type: "website"
