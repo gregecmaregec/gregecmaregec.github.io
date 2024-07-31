@@ -11,7 +11,7 @@ og_image: "https://gregormihelac.com/assets/itfa/foreword_thumbnail.jpg"
 og_url: "https://gregormihelac.com/itfasubmission/"
 og_type: "website"
 ---
-For applications in International Trade
+<p style="font-size: 1.4rem;">For applications in International Trade</p>
 
 <br>
 <!-- pages/projects.md -->
