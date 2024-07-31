@@ -188,7 +188,10 @@ Currently, the market tendency is to avoid implementing non-human oversight AI s
 
 In the realm of autonomous vehicles, both manufacturers and regulatory agencies set high standards for allowing full AI automation. Fully autonomous self-driving vehicles must demonstrate not only an accident and error rate comparable to that of an average human driver - but significantly lower. The same rigorous approach should be applied to the automation of end-to-end trade finance or trade insurance processes with AI solutions, especially those that function as “black box” systems, where the output is not known before it is executed.
 
-Currently available AI solutions, chatbot or not, have known reliability and data validity issues. Moreover, the regulatory environment for the implementation and the audit procedures thereof are still in their infancy with little to no precedence. The regulatory environment may make some of the below solutions not compliant in certain jurisdictions. All examples below however are already possible with current Transformer-based AI technology.
+Currently available AI solutions, chatbot or not, have known reliability and data validity issues. Moreover, the regulatory environment for the implementation and the audit procedures thereof are still in their infancy with little to no precedence. The regulatory environment may make some of the below solutions not compliant in certain jurisdictions. <u>All examples below however are already possible with current Transformer-based AI technology.</u>
+
+<br>
+<br>
 
 <b>Document processing</b><br>
 AI could automate processing of documents relating to trade instruments, e.g. letters of credit, bills of lading, invoices etc. An AI system could be implemented to, for example, check whether the conditions set out in a letter of credit have been met by analysing documents submitted by a supplier, and releasing the payment upon a positive confirmation. Even with partially automated approaches, AI solutions could be set up to help trade professionals reach a decision.
