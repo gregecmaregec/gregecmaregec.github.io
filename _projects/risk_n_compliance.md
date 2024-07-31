@@ -2,7 +2,7 @@
 layout: page_itfa_subpage
 title: Risk & Compliance considerations
 description:  of AI utilization in International Trade
-img: assets/img/3.jpg
+img: assets/itfa/risk_thumbnail.jpg
 importance: 4
 nav: true
 giscus_comments: true

@@ -1,7 +1,7 @@
 ---
 layout: page_itfa_subpage
 title: Foreword
-img: assets/img/3.jpg
+img: assets/itfa/foreword_thumbnail.jpg
 nav: true
 description: and a wordbook for AI related terms
 importance: 1

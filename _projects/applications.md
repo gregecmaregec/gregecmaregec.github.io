@@ -2,7 +2,7 @@
 layout: page_itfa_subpage
 title: Potential applications of AI
 description: In facilitating International Trade
-img: assets/img/7.jpg
+img: assets/itfa/applications_thumbail.jpg
 nav: true
 importance: 3
 ---
