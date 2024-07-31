@@ -10,6 +10,9 @@ importance: 5
 
 #### It is hard to scientifically measure something one cannot properly define. 
 
+<br>
+<br>
+
 Consciousness is a multifaceted concept intertwining philosophy, psychology, neuroscience, etc... It encompasses debates on subjective experiences, self-awareness, internal observation, predetermination, and much more. 
 The question of whether AI can be or is conscious is deeply related with one’s belief of what consciousness is. This makes it challenging to determine if systems, even highly advanced ones, can be considered conscious – and what are the markers proving such.
 
