@@ -7,9 +7,6 @@ nav: true
 importance: 6
 ---
 
-<br>
-<div style="height: 1px; width: min(800px, 100%); padding: 0 5px; box-sizing: border-box; background-color: lightgray;"></div>
-<br>
 
 #### Energy consumption by AI
 
