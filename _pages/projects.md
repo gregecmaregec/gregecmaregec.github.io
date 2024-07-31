@@ -11,8 +11,6 @@ og_image: "https://gregormihelac.com/assets/itfa/foreword_thumbnail.jpg"
 og_url: "https://gregormihelac.com/itfasubmission/"
 og_type: "website"
 ---
-<br>
-<p style="font-size: 1.4rem;">ITFA emerging leaders 2024 competition submission, writen June 2024</p>
 
 <!-- pages/projects.md -->
 <div class="projects">
@@ -68,3 +66,5 @@ og_type: "website"
   {% endif %}
 {% endif %}
 </div>
+
+<p style="font-size: 1.4rem;">ITFA emerging leaders 2024 competition submission, writen June 2024</p>
