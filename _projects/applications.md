@@ -1,7 +1,7 @@
 ---
 layout: page_itfa_subpage
 title: Potential use cases of AI
-description: In facilitating International Trade
+description: For trade finance professionals
 img: assets/itfa/applications_thumbail.jpg
 nav: true
 importance: 3
