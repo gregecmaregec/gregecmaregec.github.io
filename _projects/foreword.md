@@ -3,7 +3,7 @@ layout: page_itfa_subpage
 title: Foreword
 img: assets/itfa/foreword_thumbnail.jpg
 nav: true
-description: and a wordbook for AI related terms
+description: and a wordbook for AI terms used in the project
 importance: 1
 ---
 <br>
@@ -79,3 +79,15 @@ Thanks to: André Casterman; Caitlin MacNamara; Charlotte Russo; Pia Reyes; Sam 
 <b>Training stage / AI training</b> - Process of teaching AI models to recognize patterns and make decisions using large datasets.<br>
 <b>Transformer</b> - Neural network architecture used in many state-of-the-art AI models, particularly in natural language processing.<br>
 <b>Wav2Vec</b> - Self-supervised learning approach for speech recognition developed by Facebook AI.<br>
+
+
+Mentioned sources: 
+
+Ji, H., et al. (2022), “Predicting within and across language phoneme recognition performance of self-supervised learning speech pre-trained models”. ArXiv: 2206.12489. <br><br>
+Vaswani, A., et al. (2017) “Attention Is All You Need “. ArXiv: 1706.03762. <br><br>
+McKinsey (2015) “Four fundamentals of workplace automation”. Article, McKinsey Quarterly. <br><br>
+Radford, A., et al. (2018) “Language Models are Unsupervised Multitask Learners”. <br><br>
+Goldman Sachs (2024) “AI is poised to drive 160% increase in data center power demand”. Article.<br><br>
+Wei, et al. (2023) “Jailbroken: How Does LLM Safety Training Fail?”. ArXiv: 2307.02483<br><br>
+
+<br>
