@@ -56,7 +56,7 @@ let particles = [];
 const mouse = { x: null, y: null, radius: 150 };
 
 function createParticles() {
-    if (particles.length < 200) {
+    if (particles.length < 100) {
         particles.push(new Particle(
             Math.random() * TARGET_WIDTH,
             Math.random() * TARGET_HEIGHT
@@ -107,11 +107,9 @@ canvas.addEventListener('mousemove', (event) => {
     mouse.x = (event.clientX - rect.left) * scaleX;
     mouse.y = (event.clientY - rect.top) * scaleY;
 
-    if (particles.length < 125) {
         for (let i = 0; i < 2; i++) {
             particles.push(new Particle(mouse.x, mouse.y));
         }
-    }
 });
 
 animate();
