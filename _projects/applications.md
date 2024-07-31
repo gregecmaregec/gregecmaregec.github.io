@@ -30,7 +30,6 @@ Below is excerpt from a 2023 Interview between Dwarkesh Patel, a podcaster, and 
 </div>
 
 <br>
-<br>
 
 #### Large Language Models (LLMs) / AI chatbots 
 <br>
