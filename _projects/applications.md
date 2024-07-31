@@ -72,7 +72,7 @@ AI chatbots excel in translating between numerous languages with high degree of 
 </div>
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/itfa/applications/translation.jpg" title="LLMs translating" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/itfa/applications/translation.jpg" title="LLMs translating" class="img-fluid2 rounded z-depth-1" %}
     </div>
 </div>
 
@@ -85,7 +85,7 @@ AI chatbots excel in translating between numerous languages with high degree of 
 </div>
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/itfa/applications/code.jpg" title="LLMs coding" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/itfa/applications/code.jpg" title="LLMs coding" class="img-fluid2 rounded z-depth-1" %}
     </div>
 </div>
 
@@ -98,7 +98,7 @@ AI chatbots can prove useful guides on how to complete complex tasks on many pop
 </div>
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/itfa/applications/excel.jpg" title="LLMs helping with programs" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/itfa/applications/excel.jpg" title="LLMs helping with programs" class="img-fluid2 rounded z-depth-1" %}
     </div>
 </div>
  
