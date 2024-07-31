@@ -23,8 +23,8 @@ importance: 2
     </div>
 </div>
 
-<div style="max-width: 830px; margin: 1rem auto; padding: 0 1rem;">
-  <blockquote style="background-color: transparent; border-left: 5px solid #d64a4a; padding: 0.7rem; padding-bottom: 0.1rem; margin: 0; border-radius: 0 8px 8px 0; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.2s ease-in-out;">
+<div style="max-width: 830px; margin: 0.3rem auto; padding: 0 1rem;">
+  <blockquote style="background-color: transparent; border-left: 5px solid #d64a4a; padding: 0.3rem; margin: 0; border-radius: 0 8px 8px 0; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.2s ease-in-out;">
     <p style="font-size: 1rem; line-height: 1.6; color: inherit; font-style: italic;">"“Attention Is All You Need is the most important advance in the recent history or neural networks."</p>
     <footer style="font-size: 0.8rem; padding: 1rem; text-align: left;">— Ilya Stuskever, cofounder and former chief scientist of OpenAI</footer>
   </blockquote>
