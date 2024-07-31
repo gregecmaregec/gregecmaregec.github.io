@@ -220,9 +220,6 @@ AI systems could automate some stages of insurance claims processing, including 
 <b>Underwriting</b><br>
 AI systems can analyse vast amounts of data and could improve risk assessment and pricing accuracy. Furthermore, AI systems could automate underwriting processes for amounts not large enough to warrant the working hours otherwise required of a human underwriter.
 
-<b>Customer service</b><br>
-AI systems trained on company data and AI-powered virtual assistants could handle routine customer inquiries and policy explanations.
-
 <b>Personalized insurance products</b><br>
 AI systems could analyse individual customer data or past customer failures to offer tailored insurance products and pricing.
 

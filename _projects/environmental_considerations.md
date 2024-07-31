@@ -29,8 +29,8 @@ A Goldman Sachs report estimates that currently, data centres account for 1-2% o
   <blockquote style="background-color: transparent; border-left: 5px solid #d64a4a; padding: 0.7rem; padding-bottom: 0.1rem; margin: 0; border-radius: 0 8px 8px 0; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.2s ease-in-out;">
     <p style="font-size: 1rem; line-height: 1.6; color: inherit; font-style: italic;">“Data centers—the engines powering everything from AI to traditional computing to cryptocurrency—currently account for about 2% of global electricity consumption. Of this, AI accounts for roughly 0.5%,” 
     </p>
+    <footer style="font-size: 0.8rem; padding: 1rem; text-align: left;">— Charles Boakye, analyst at Jefferies.</footer>
   </blockquote>
-  <footer style="font-size: 0.8rem; padding: 1rem; text-align: left;">— - Charles Boakye, analyst at Jefferies.</footer>
 </div>
 
 <br>
