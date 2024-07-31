@@ -54,7 +54,7 @@
             if (link && currentPath.includes(link.getAttribute('href'))) {
               item.classList.add('active');
               
-              // If this is a dropdown item, also activate its parent
+              // if this is a dropdown item, also activate its parent
               var dropdownParent = item.closest('.dropdown');
               if (dropdownParent) {
                 dropdownParent.classList.add('active');
@@ -62,7 +62,7 @@
             }
           });
         });
-        </script>
+      </script>
     </div>
 
     <!-- JavaScripts -->
