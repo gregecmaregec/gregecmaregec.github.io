@@ -108,7 +108,7 @@ canvas.addEventListener('mousemove', (event) => {
     mouse.y = (event.clientY - rect.top) * scaleY;
 
     if (particles.length < 250) {
-        for (let i = 0; i < 3; i++) {
+        for (let i = 0; i < 2; i++) {
             particles.push(new Particle(mouse.x, mouse.y));
         }
     }
