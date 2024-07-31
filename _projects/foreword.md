@@ -29,7 +29,7 @@ Special thanks to Silja Calac and Duarte Pedreira for their incredible mentorshi
 <br>
 Thanks to: André Casterman; Caitlin MacNamara; Charlotte Russo; Pia Reyes; Sam Fowler-Holmes 
 <br>for engaging in meaningful conversation that helped me see this topic from a different perspective.
-<br>
+<br><br>
 And thank you, for reading!
 
 <br>
