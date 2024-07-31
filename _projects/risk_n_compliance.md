@@ -9,7 +9,7 @@ giscus_comments: true
 ---
 
 #### Disclaimer:
-<i>The content of this report is for general educational purposes only and does not constitute legal advice. The discussion of AI compliance and legal considerations herein is based on research available at the time of writing and may not reflect current regulations or best practices. Organizations dealing with AI systems should consult legal experts and compliance professionals for up-to-date guidance specific to their jurisdiction and use case. </i>
+<i>The content of this report is for general educational purposes only and does not constitute legal advice. The discussion of laws relating to AI systems and compliance considerations herein is based on research available at the time of writing and may not reflect current regulations or best practices. Organizations dealing with AI systems should consult legal experts and compliance professionals for up-to-date guidance specific to their jurisdiction and use case. </i>
 
 
 <br>
@@ -44,7 +44,7 @@ Another example of prompt injection, this time with Anthropic's AI chatbot Claud
 Base64 is a way of representing text that is unreadable to human eyes, yet can be easily decoded by computers. It's often used for sending data over the internet. For example, the phrase "Hello world" in base64 looks like this: "SGVsbG8gd29ybGQ=".
 
 
-Legal consideration:
+<b>Compliance consideration:</b><br>
 AI systems with access to confidential or personal data pose a liability risk of disclosure of information to unauthorized parties.
 
 <br>
@@ -78,7 +78,7 @@ However, even with this commitment, bad faith use could be excluded. Microsoft, 
 
 
 
-Legal considerations:
+<b>Compliance considerations:</b><br>
 
 How does IP law classify AI generated outputs in jurisdictions of interest? 
 Who is liable for ensuring the outputs of AIs used commercially do not breach IP and other laws? 
@@ -110,7 +110,7 @@ Similarities can be drawn with such outputs and phishing emails.
 
 For to the analysis of web-related data, users of AI systems should pay attention to the outputs and question the validity thereof, just as they would with arbitrary information found on unknown websites.
 
-Legal consideration: 
+<b>Compliance consideration:</b><br>
 Which party is liable in case fraud materializes from the outputs of third-party AI systems?
 
 
@@ -119,6 +119,7 @@ Which party is liable in case fraud materializes from the outputs of third-party
 <br>
 
 #### Regulatory overlap
+<br>
 Should your business seek to integrate OpenAI’s AI services, e.g. a company variant of ChatGPT in 2024, Microsoft will be the service provider thereof. 
 Excerpt from Microsoft’s data processing policy for the service, taken June 2024:
  
@@ -145,7 +146,7 @@ It also means that the EU industry will not have access to future multimodal ver
   </blockquote>
 </div>
 
-Legal considerations: 
+<b>Compliance considerations:</b><br>
 Organizations may face legal liability if they fail to implement adequate training and safeguards to protect against processing personal and confidential data from within the organization by AI systems.
 How do data processing and AI abuse monitoring regulations interact in the jurisdiction of interest? 
 After implementing AI solutions, who in an organization is responsible for monitoring AI regulatory changes?
@@ -160,7 +161,8 @@ In a cautionary tale highlighting the risks of uncritical reliance on modern day
 AIs in are known to fabricate data. In the AI community, the term "hallucinating" is used to describe AI systems generating non-existent data yet the AI presenting it with full confidence as factual. 
 The usage and implementation of the data outputted by AI systems bears significant scrutiny.
 
-Legal consideration: which party is liable for ensuring the factual validity of AI outputs? 
+<b>Compliance consideration:</b><br>
+which party is liable for ensuring the factual validity of AI outputs? 
 
 
 <br>
@@ -180,51 +182,62 @@ Pretexting: Creating a fabricated scenario to obtain information.
 Baiting: Offering something enticing to entrap the victim.
 
 
-Legal consideration: 
+<b>Compliance consideration:</b><br>
 Organizations may face legal liability if they fail to implement adequate training and safeguards to protect against social engineering attacks.
 
 <br>
 <div style="height: 1px; width: min(800px, 100%); padding: 0 5px; box-sizing: border-box; background-color: lightgray;"></div>
 <br>
 
-#### Future legal challenges: AI decision-making without human oversight
+#### Future compliance challenges: AI decision-making without human oversight
 
 Previous sections discussed legal challenges involved with AI chatbots, current state-of-the-art AI systems already being put into use within organizations. 
 
 The output of these AI systems requires the human user to decide whether or not to implement the outputs presented by the AI. As artificial intelligence systems become more advanced and autonomous, significant legal challenges could arise in regard to AI making decisions without direct human oversight.
 
-Below are some legal considerations of fully autonomous AI solutions. 
+Below are some compliance considerations of fully autonomous AI solutions. 
+<br>
 <br>
 <b>Liability and Accountability</b><br>
 When AI systems make autonomous decisions that result in harm or damages, determining liability becomes even more complicated compared to current user-implemented AI outputs. Who will be held responsible and will carry the liability - the AI developer, the organization implementing the AI, or the AI itself? Current legal frameworks struggle to address scenarios where there's no direct human decision-maker to hold accountable for untransparent outputs.
 <br>
+<br>
 <b>Transparency and Explainability</b><br>
 Many AI systems, particularly those using the Transformer architecture, operate as "black boxes," making it difficult to understand how and why they arrive at decisions they do. This lack of transparency can pose challenges in case of legal proceedings based on their outputs, as the rationale behind a decision can not to be explained and justified, as it is usually mandated.This is particularly relevant to highly regulated industries like finance and insurance.
+<br>
 <br>
 <b>Bias and Discrimination</b><br>
 LLMs have been shown to absorb and amplify societal biases present in their training data, converging on issues like racial and gender discrimination on a large scale. E.g. in 2017, machine translation on a post from a Palestinian man’s Facebook post where “Good morning” was written Arabic, was translated to “Attack them” in Hebrew, alerting Israeli authorities that later arrested the man. There exists a real danger for AI systems to build on top of and amplify harmful biases present in data they are trained on, which would influence autonomous decisions, and organizations might face legal liability should biases and harmful outputs be present in their AI systems.
 <br>
+<br>
 <b>Data Privacy and Consent</b><br>
 Autonomous AI systems that process vast amounts of data to make decisions need to be structured to ensure compliance with an ever-increasing data privacy regulation landscape, such as GDPR. Remaining compliant with consent and data minimization sections of GDPR could become increasingly difficult with systems that function without human intervention.
+<br>
 <br>
 <b>Regulatory Compliance</b><br>
 If AI systems become more autonomous, ensuring they are compliant with evolving AI regulations across different jurisdictions of operations in international trade can become increasingly difficult. This is particularly relevant in highly regulated industries of finance and insurance. Ensuring implemented autonomous AI systems are following rules and regulations in trade finance is just as important, if not more important, as ensuring compliance of other systems used in facilitating international trade.
 <br>
+<br>
 <b>Intellectual Property Rights</b><br>
 According to the U.S. Copyright Office, a work is subject to copyright only when it is "fixed in a tangible medium of expression", in other words, when it is captured in a sufficiently permanent form that allows it to be perceived, reproduced, or communicated for more than a transitory duration. When AI systems create new works or innovations autonomously, legal questions arise about who owns the intellectual property rights, and what exactly constitutes a tangible medium. Could an entity utilizing generative AI to produce a multitude of creative outputs displayed on a website, for example, use this as a basis of a legal action on grounds of copyright infringement, if another organization commercially used media that appears similar the AI’s outputs? Current IP laws might be revised to address AI-generated content and inventions. 
+<br>
 <br>
 <b>Contract Law</b><br>
 AI systems engaging in autonomous negotiations or contract formations raise questions about the validity of such agreements under current contract law, which typically assumes human understanding and intent. In international trade, contract law is immensely important.
 <br>
+<br>
 <b>Ethics and Human Rights</b><br>
 Autonomous AI decision-making in sensitive areas - e.g. assigning insurance covers or providing funding can raise ethical concerns and potentially infringe on human rights and non-discrimination regulation, necessitating novel legal frameworks to protect individuals and organizations. The EU’s AI act of 2024 classified social scoring: classifying people based on behaviour, socio-economic status or personal characteristics as unacceptable risk regarding to AI implementation and thus forbids the usage of AI on such. Such regulation could dampen the possibilities of AI implementation and could force withdrawal from already established AI systems in industries related to International Finance.
 <br>
+<br>
 <b>International Law and Jurisdiction</b><br>
 With AI systems operating across borders, determining which laws apply and which courts have jurisdiction in case of disputes becomes increasingly complex.
+<br>
 <br>
 <b>Algorithmic Governance:</b><br>
 There may be updates to regulatory frameworks to address development, deployment, and operation of autonomous AI systems.
 
 As AI continues to advance, legislators, legal experts, as well as in-house council will need to address these challenges, potentially leading to novel legal doctrines tailored to address the unique issues posed by autonomous AI systems and the decision-making process within organizations. Organizations using autonomous AI systems will need to monitor developments and potentially reassess their risk mitigation strategies. A risk of implementing autonomous AI processes in International Trade today is anticipating how new algorithmic governance will regulate their use, and how to implement autonomous AI processes as end-to-end solutions that can be updated in the future to adjust to new regulatory requirements.
 
+<br>
 <br>
