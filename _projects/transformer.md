@@ -89,3 +89,5 @@ Presented in 1) is a JSON-formatted output, a way of transmitting data across mu
         {% include figure.liquid loading="eager" path="assets/itfa/example2.jpg" title="LLM outputs" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
+
+<br>
