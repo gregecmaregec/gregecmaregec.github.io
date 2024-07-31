@@ -69,5 +69,6 @@ og_type: "website"
 
 
 <div class="caption">
-    ITFA emerging leaders 2024 competition submission, writen June 2024 
+    ITFA emerging leaders 2024 competition submission
+    <br>writen June 2024 
 </div>
