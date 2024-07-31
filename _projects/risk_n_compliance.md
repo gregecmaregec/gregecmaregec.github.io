@@ -52,10 +52,11 @@ AI systems with access to confidential or personal data pose a liability risk of
 <br>
 
 #### Copyright infringement
-
+<br>
+<br>
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/itfa/risks/chatgpt.jpg" title="LLM copyright violation" class="img-fluid2 rounded z-depth-1" style="width=50%"%}
+        {% include figure.liquid loading="eager" path="assets/itfa/risks/sonice.jpg" title="LLM copyright violation" class="img-fluid2 rounded z-depth-1" style="width=50%"%}
     </div>
 </div>
 
