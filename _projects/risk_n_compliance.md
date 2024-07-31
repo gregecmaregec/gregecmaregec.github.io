@@ -5,7 +5,6 @@ description:  of AI utilization in International Trade
 img: assets/itfa/risk_thumbnail.jpg
 importance: 4
 nav: true
-giscus_comments: true
 ---
 
 #### Disclaimer:
