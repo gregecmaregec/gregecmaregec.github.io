@@ -206,7 +206,7 @@ Many AI systems, particularly those using the Transformer architecture, operate 
 <br>
 <br>
 <b>Bias and Discrimination</b><br>
-LLMs have been shown to absorb and amplify societal biases present in their training data, converging on issues like racial and gender discrimination on a large scale. E.g. in 2017, machine translation on a post from a Palestinian man’s Facebook post where “Good morning” was written Arabic, was translated to “Attack them” in Hebrew, alerting Israeli authorities that later arrested the man. There exists a real danger for AI systems to build on top of and amplify harmful biases present in data they are trained on, which would influence autonomous decisions, and International Trade organizations might face legal liability should biases and harmful outputs be present in their AI systems.
+LLMs have been shown to absorb and amplify societal biases present in their training data, converging on issues like racial and gender discrimination on a large scale. E.g. in 2017, machine translation on a post from a Palestinian man’s Facebook post where “Good morning” was written Arabic, was translated to “Attack them” in Hebrew, alerting Israeli authorities that later arrested the man. There exists a real danger for AI systems to build on top of and amplify harmful biases present in data they are trained on, which would influence autonomous decisions, and organizations engaged in International Trade might face legal liability should biases and harmful outputs be present in their AI systems - with potentially immense reputational damages.
 <br>
 <br>
 <b>Data Privacy and Consent</b><br>
