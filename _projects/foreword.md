@@ -83,11 +83,13 @@ Thanks to: André Casterman; Caitlin MacNamara; Charlotte Russo; Pia Reyes; Sam 
 
 Mentioned sources: 
 
-Ji, H., et al. (2022), “Predicting within and across language phoneme recognition performance of self-supervised learning speech pre-trained models”. ArXiv: 2206.12489. <br><br>
-Vaswani, A., et al. (2017) “Attention Is All You Need “. ArXiv: 1706.03762. <br><br>
-McKinsey (2015) “Four fundamentals of workplace automation”. Article, McKinsey Quarterly. <br><br>
-Radford, A., et al. (2018) “Language Models are Unsupervised Multitask Learners”. <br><br>
-Goldman Sachs (2024) “AI is poised to drive 160% increase in data center power demand”. Article.<br><br>
-Wei, et al. (2023) “Jailbroken: How Does LLM Safety Training Fail?”. ArXiv: 2307.02483<br><br>
+Goldman Sachs (2024) "AI is poised to drive 160% increase in data center power demand". Article.<br><br>
+Greshake et al. (2023) "Not what you've signed up for: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection". ArXiv 2302.12173v2<br><br>
+Ji, H., et al. (2022), "Predicting within and across language phoneme recognition performance of self-supervised learning speech pre-trained models". ArXiv: 2206.12489.<br><br>
+McKinsey (2015) "Four fundamentals of workplace automation". Article, McKinsey Quarterly.<br><br>
+Radford, A., et al. (2018) "Language Models are Unsupervised Multitask Learners".<br><br>
+Vaswani, A., et al. (2017) "Attention Is All You Need ". ArXiv: 1706.03762.<br><br>
+Wei, et al. (2023) "Jailbroken: How Does LLM Safety Training Fail?". ArXiv: 2307.02483<br><br>
+
 
 <br>
