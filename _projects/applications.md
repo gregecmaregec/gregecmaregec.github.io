@@ -8,7 +8,7 @@ importance: 3
 ---
 
 
-Below is excerpt from a 2023 Interview between Dwarkesh Patel, a podcaster, and Ilya Sutskever, cofounder and former chief scientist of OpenAI and lead contributor to the creation of ChatGPT.
+Presented as an introduction into this chapter is excerpt from a 2023 Interview between Dwarkesh Patel, a podcaster, and Ilya Sutskever, cofounder and former chief scientist of OpenAI and lead contributor to the creation of ChatGPT.
 
 <br>
 
@@ -35,11 +35,11 @@ Below is excerpt from a 2023 Interview between Dwarkesh Patel, a podcaster, and 
 
 #### Large Language Models (LLMs) / AI chatbots 
 <br>
-The present offers of AI chatbots provide added value to trade finance and insurance industries, specifically in contributing added value to employees’ workflows.  There is a range of offers on the selling side of LLMs / AI chatbots to both consumers and corporate clients – e.g. ChatGPT, Claude, Llama, Perplexity etc.
+The present offers of AI chatbots provide added value to trade finance and insurance industries, specifically in contributing added value to employees’ workflows.  There is a broad range of offers on the selling side of LLMs / AI chatbots to both consumers and corporate clients – e.g. ChatGPT, Claude, Llama, Perplexity etc.
 
 A McKinsey study from 2015 found that 45% of employee time could be automated with then existing technologies. The same study however found that only 5% of employee time could be fully automated – meaning no input and output-checking by humans is required. The sophistication of technology for automation has increased in scope and scale since 2015, and current AI chatbots are great at helping design automation solutions for the 45% parts, yet not so much the 5% - at least not yet, as AI output validity is not reliable. Current market tendency is to not base critical processes on AI outputs. 
 
-ChatGPT for example, offers the next disclaimer below their input box: “ChatGPT can make mistakes. Check important info”. 
+ChatGPT for example, offers a disclaimer below their input box: “ChatGPT can make mistakes. Check important info”. 
 Claude from Anthropic presents a different version: “Claude can make mistakes. Please double-check responses.” 
 
 <br>
@@ -48,7 +48,7 @@ Claude from Anthropic presents a different version: “Claude can make mistakes.
 #### Some of the benefits of AI chatbots include:
 <br>
 <b>Distillation of knowledge from the web</b>
-AI chatbots are trained on vast amounts of internet data - including Wikipedia and answers from search results, as well as on various papers and literature. ChatGPT 3 was trained on approximately 45 terabytes of data. Even when an AI Chatbot is not accessing live search results, it can summarize and work with a large knowledge base from information found on the internet. This includes a knowledge base about trade finance and its instruments.
+AI chatbots are trained on vast amounts of internet data - including Wikipedia and answers from search results, as well as on various papers and literature. ChatGPT 3 was trained on approximately 45 terabytes of data. Even when an AI Chatbot is not accessing live internet search results, it can summarize and work with a large knowledge base from information found on the internet. This includes a knowledge base about trade finance and its instruments.
 
 <b>Question answering</b>
 Providing answers about a vast array of topics, including answers from user-uploaded proprietary data, e.g. specific trade documents or financing facility information.
@@ -60,7 +60,7 @@ Condensing large texts and outlining relevant information.
 AI chatbots can help with various forms of writing, from creative to technical. Chatbots excel at recognizing and pointing out spelling and syntax mistakes in writings. With legal writings, such as distribution contracts, AI chatbots could provide real time feedback on deviations from market standards and the potential impact thereof.
 
 <b>Translation</b>
-AI chatbots excel in translating between numerous languages with high degree of accuracy, providing output rated higher in human evaluations scores compared to non-AI solutions. AI can also generate natural sounding speech in different languages, enabling real time voice-to-voice translation. E.g. OpenAI has recently announced the voice feature with ChatGPT 4o. This can be useful in meetings held in a language not spoken fluently by all present parties.
+AI chatbots excel in translating between numerous languages with high degree of accuracy, providing output rated higher in human evaluations scores compared to non-AI solutions. AI can also generate natural sounding speech in different languages, enabling real time voice-to-voice translation. E.g. OpenAI has recently announced the voice feature with ChatGPT 4o. This could prove useful in meetings held in a language not spoken fluently by all present parties.
 
 <div class="caption">
     Example natural language to writing assistance and translation with Anthropic’s Claude. 
@@ -101,7 +101,7 @@ AI chatbots can prove useful guides on how to complete complex tasks on many pop
 Brainstorming and outlining potential solutions to complex problems, e.g. structuring a financing facility that fits with a particular situation or a particular client.
 
 <b>Data analysis and interpretation</b>
-Examining vast datasets and creating data analysis with visual aids.
+Examining vast datasets and crafting data analysis with visual aids.
 
 <b>Conversational AI</b>
 Engaging in coherent, context-aware dialogues.
@@ -119,10 +119,10 @@ AI chatbots can assist in creating various types of content, such as scripts, im
 </div>
 
 <b>Information retrieval and organization</b>
-Quickly accessing and structuring relevant information, specific queries to SQL databases with instructions written in natural language – e.g. relating to a financing facility’s past performance.
+Quickly accessing and structuring relevant information, specific queries to SQL databases with instructions written in natural language – e.g. relating to a financing facility’s past performance or specific KPIs.
 
 <b>Sentiment analysis</b>
-Helping users to determining the emotional tone of text, giving feedback and second opinions on structured replies,.
+Helping users to determining the emotional tone of text, giving feedback and second opinions on structured replies.
 
 <b>Presentation creation assistance</b>
 AI chatbots can be helpful in condensing content to help create presentations, potentially saving time and effort in constructing client engagement materials and other types of slide decks.
@@ -136,17 +136,19 @@ AI chatbots can be helpful in condensing content to help create presentations, p
     </div>
 </div> 
 
-For organizations implementing general-purpose AI chatbots, to market tendency is to implement AI chatbots on a company-wide basis, usually in cooperation from Microsoft, Google, IBM, or another third-party digital services provider. 
-Similarities can be drawn with enterprises choosing an email or a videocall solution provider - the decision to go with either Outlook vs Gmail, Zoom vs Teams, Notion vs SharePoint, etc. is going to usually be decided outside of trade finance and specific insurance departments, and be made accessible to multiple divisions of an enterprise simultaneously, with a company-wide code of conduct and licence agreements.
+For organizations implementing general-purpose AI chatbots, to market tendency is to implement AI chatbots on a company-wide basis, usually in cooperation with Microsoft, Google, IBM, or another third-party digital services provider. 
+Similarities can be drawn with organizations choosing an email or a videocall solution provider - the decision to go with either Outlook vs Gmail, Zoom vs Teams, Notion vs SharePoint, etc. is going to usually be decided outside of trade finance and specific insurance departments, and be made accessible to multiple divisions of an enterprise simultaneously, with a company-wide code of conduct and licence agreements.
 
 <br>
 <br>
 
 #### Fraud and plagiarism detection:
 <br>
-Modern AI systems generate natural sounding language, raising concerns about plagiarism and weaponization of bots pretending to be human actors. AI algorithms in turn can identify patterns and anomalies in data to flag potentially fraudulent or AI generated material.
+Modern AI systems generate natural sounding language, raising concerns about plagiarism and weaponization of bots pretending to be human actors. AI algorithms in turn can identify patterns and anomalies in data to flag potentially fraudulent or AI-generated material.
+
 Imagine a hypothetical scenario: an employee gets a call from their manager, instructing that a client reported the employee’s company used the wrong bank account number to transfer contractual payments, and back office needs to be notified of the mistake immediately. The next payment due today should be to the new, through the call provided bank account number, to avoid the risk of losing a high-value client. The manager is generated by AI, yet the employee is unaware of such.
-We are not yet at the point where such a scenario is likely, but this is changing fast. OpenAI has introduced ChatGPT 4o, which comes closest to imitating speech that is not distinguishable as AI generated by humans. With the progress of innovation in this space, AI could be used to counter such risk by flagging communications within a company which are likely to be generated by other AI systems.
+
+We are not yet at the point where such a scenario is likely, but this is changing fast. OpenAI has introduced ChatGPT 4o, which comes closest to imitating speech that is not distinguishable as AI generated by humans. With the progress of innovation in this space, AI could in turn be used to counter such risk by flagging communications within a company which are likely to be generated by other AI systems.
 
 Currently available solutions for fraud / plagiarism detection:
 Note: in this selection only fraud and plagiarism detection from AI sources is considered, and not fraud detection from human sources.
@@ -179,10 +181,10 @@ Currently, the market tendency is to avoid implementing non-human oversight AI s
 
 In the realm of autonomous vehicles, both manufacturers and regulatory agencies set high standards for allowing full AI automation. Fully autonomous self-driving vehicles must demonstrate not only an accident and error rate comparable to that of an average human driver - but significantly lower. The same rigorous approach should be applied to the automation of end-to-end trade finance or trade insurance processes with AI solutions, especially those that function as “black box” systems, where the output is not known before it is executed.
 
-Currently available AI solutions, chatbot or not, have known reliability and data validity issues. Moreover, the regulatory environment for the implementation and the audit procedures thereof are still in their infancy with little to no precedence.. The regulatory environment may make some of the below solutions not compliant in certain jurisdictions. All examples below however are already possible with current Transformer-based AI technology.
+Currently available AI solutions, chatbot or not, have known reliability and data validity issues. Moreover, the regulatory environment for the implementation and the audit procedures thereof are still in their infancy with little to no precedence. The regulatory environment may make some of the below solutions not compliant in certain jurisdictions. All examples below however are already possible with current Transformer-based AI technology.
 
 <b>Document processing</b><br>
-AI could automate processing of documents relating to trade instruments, e.g. letters of credit, bills of lading, invoices etc. An AI system could be implemented to, for example, check whether the conditions set out in a letter of credit have been met by analysing documents submitted by a supplier, and releasing the payment upon a positive confirmation. Even with partially automated approaches, AI solutions could be set up to help trade finance professionals reach a decision.
+AI could automate processing of documents relating to trade instruments, e.g. letters of credit, bills of lading, invoices etc. An AI system could be implemented to, for example, check whether the conditions set out in a letter of credit have been met by analysing documents submitted by a supplier, and releasing the payment upon a positive confirmation. Even with partially automated approaches, AI solutions could be set up to help trade professionals reach a decision.
 
 <b>Risk assessment</b><br>
 AI systems could analyse a vast sum of historical data to assess the creditworthiness of parties involved in trade transactions, providing an additional mechanism in the credit risk analysis processes.
@@ -191,7 +193,7 @@ AI systems could analyse a vast sum of historical data to assess the creditworth
 AI systems could continuously scan transactions and facilities against ever-changing sanctions lists and regulatory requirements, and automatically raise concerns should new regulation mandate changes in workflows or practices.
 
 <b>Smart contracts</b><br>
-AI systems could help create and manage self-executing contracts, with automatic assessment of counterparty risk. Smart contract execution with AI could be combined with blockchain technology, where AI could assess the counterparty risk and blockchain to manage and keep transactions bound by pre-agreed code.
+AI systems could help create and manage self-executing contracts, with automatic assessment of counterparty risk. Smart contract execution with AI could potentially be combined with blockchain technology, where AI could assess the counterparty risk and blockchain to manage and keep transactions bound by pre-agreed code.
 
 <b>Predictive analytics</b><br>
 AI systems could help forecast market trends, commodity prices, and currency fluctuations based on a large amount of publicly available data to optimize trade finance decisions.
@@ -200,7 +202,7 @@ AI systems could help forecast market trends, commodity prices, and currency flu
 AI systems could provide end-to-end visibility of goods movement in natural language, enhancing risk management and influencing financing decisions.
 
 <b>AI-driven trade finance marketplaces</b><br>
-Platforms could use AI systems to match buyers, sellers, and financiers, running in effect as an optimization algorithm for trade finance solutions based on risk profiles and market conditions at the time.
+Platforms could use AI systems to match buyers, sellers, and financiers, running in effect as an optimization algorithm for trade finance solutions based on risk profiles and market conditions at a given time.
 
 <b>Legal guidance and wording</b><br>
 AI systems could help point out potential wording syntax mistakes or point out faulty logic between different sections of a contract. AI systems could automatically adjust a market standard contract template to better fit the transaction, providing a template to work upon that is better suited for a particular transaction and counterparty compared to a market standard template.
@@ -209,7 +211,7 @@ AI systems could help point out potential wording syntax mistakes or point out f
 AI systems could automate some stages of insurance claims processing, including damage assessment from provided images, and help with fraud detection.
 
 <b>Underwriting</b><br>
-AI systems could analyse vast amounts of data to improve risk assessment and pricing accuracy. Furthermore, AI systems could automate underwriting processes for amounts not large enough to warrant the working hours otherwise required of a human underwriter.
+AI systems can analyse vast amounts of data and could improve risk assessment and pricing accuracy. Furthermore, AI systems could automate underwriting processes for amounts not large enough to warrant the working hours otherwise required of a human underwriter.
 
 <b>Customer service</b><br>
 AI systems trained on company data and AI-powered virtual assistants could handle routine customer inquiries and policy explanations.
@@ -230,9 +232,9 @@ AI systems could draft personalized insurance policies based on individual risk 
 AI systems could predict potential risks based on real time data and suggest preventive measures to insurers and insured.
 
 <b>Autonomous claims settlement</b><br>
-Advanced AI could handle the small claims process without human intervention for straightforward cases and small amounts.
+AI systems could handle the small claims process without human intervention for straightforward cases and small amounts.
 
 <b>AI-driven catastrophe response</b><br>
-In the event of disasters, AI could quickly assess damage across affected areas using satellite and drone imagery, expediting claims processing and resource allocation, as well as assessing whether the applicable insurance contracts cover the damaged. E.g. in deeds of insurance, damage from radiation exposure is often not covered.
+In the event of disasters, AI systems could quickly assess damage across affected areas using satellite and drone imagery, expediting claims processing and resource allocation, as well as assessing whether the applicable insurance contracts cover the damages. E.g. in deeds of insurance, damage from radiation exposure is often not covered.
 
 <br>
