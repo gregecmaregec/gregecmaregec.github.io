@@ -9,7 +9,7 @@ giscus_comments: true
 ---
 
 #### Disclaimer:
-<i>The following information is provided for general informational purposes only and does not constitute legal advice. This section is not exhaustive. This content should not be used as a substitute for obtaining legal advice from a licensed attorney in your jurisdiction. The legal landscape surrounding AI is complex and rapidly evolving. Readers should consult with qualified legal professionals for specific guidance related to their particular circumstances.</i>
+<i>The content of this report is for general educational purposes only and does not constitute legal advice. The discussion of AI compliance and legal considerations herein is based on research available at the time of writing and may not reflect current regulations or best practices. Organizations dealing with AI systems should consult legal experts and compliance professionals for up-to-date guidance specific to their jurisdiction and use case. </i>
 
 
 <br>
