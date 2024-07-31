@@ -65,6 +65,8 @@ AI chatbots can help with various forms of writing, from creative to technical. 
 <b>Translation</b>
 AI chatbots excel in translating between numerous languages with high degree of accuracy, providing output rated higher in human evaluations scores compared to non-AI solutions. AI can also generate natural sounding speech in different languages, enabling real time voice-to-voice translation. E.g. OpenAI has recently announced the voice feature with ChatGPT 4o. This could prove useful in meetings held in a language not spoken fluently by all present parties.
 
+<br>
+<br>
 <div class="caption">
     Example natural language to writing assistance and translation with Anthropic’s Claude. 
 </div>
@@ -73,11 +75,14 @@ AI chatbots excel in translating between numerous languages with high degree of 
         {% include figure.liquid loading="eager" path="assets/itfa/applications/translation.jpg" title="LLMs translating" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
-
+<br>
+<br>
 
 <b>Code generation and debugging</b>
  AI chatbots excel at generating code in multiple programming language - e.g. Python. This capability offers tremendous potential for trade finance professionals to automate repetitive tasks.
  
+<br>
+<br>
 <div class="caption">
     Example natural language to python script with GitHub’s Copilot. 
 </div>
@@ -86,11 +91,15 @@ AI chatbots excel in translating between numerous languages with high degree of 
         {% include figure.liquid loading="eager" path="assets/itfa/applications/code.jpg" title="LLMs coding" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
+<br>
+<br>
 
 
 <b>Program guides</b>
 AI chatbots can prove useful guides on how to complete complex tasks on many popular computer programs. They are trained on data relating to use of programs such as Adobe Photoshop, Microsoft’s Office Suite, PowerBI, video editing software, program specific APIs etc.
 
+<br>
+<br>
 <div class="caption">
     Example natural language to Excel formula with Anthropic’s Claude. 
 </div>
@@ -99,7 +108,9 @@ AI chatbots can prove useful guides on how to complete complex tasks on many pop
         {% include figure.liquid loading="eager" path="assets/itfa/applications/excel.jpg" title="LLMs helping with programs" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
- 
+<br>
+<br>
+
 <b>Task planning and problem-solving</b>
 Brainstorming and outlining potential solutions to complex problems, e.g. structuring a financing facility that fits with a particular situation or a particular client.
 
@@ -112,6 +123,8 @@ Engaging in coherent, context-aware dialogues.
 <b>Content generation</b>
 AI chatbots can assist in creating various types of content, such as scripts, images, articles, replies., etc. Useful for creating presentations and client engagement materials.
 
+<br>
+<br>
 <div class="caption">
     Example image generation with Midjourney. Midjourney pledges that the user that writes the prompt becomes the copyright owner of created images, and images generated with its model are allowed to be used commercially. 
 </div>
@@ -120,6 +133,8 @@ AI chatbots can assist in creating various types of content, such as scripts, im
         {% include figure.liquid loading="eager" path="assets/itfa/applications/midjourney.jpg" title="LLMs making images" class="img-fluid2 rounded z-depth-1" %}
     </div>
 </div>
+<br>
+<br>
 
 <b>Information retrieval and organization</b>
 Quickly accessing and structuring relevant information, specific queries to SQL databases with instructions written in natural language – e.g. relating to a financing facility’s past performance or specific KPIs.
@@ -130,6 +145,8 @@ Helping users to determine the emotional tone of text, giving feedback and secon
 <b>Presentation creation assistance</b>
 AI chatbots can be helpful in condensing content to help create presentations, potentially saving time and effort in constructing client engagement materials and other types of slide decks.
  
+<br>
+<br>
 <div class="caption">
     Example natural language to presentation creation assistance with OpenAI’s ChatGPT. 
 </div>
@@ -137,7 +154,9 @@ AI chatbots can be helpful in condensing content to help create presentations, p
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/itfa/applications/powerpoint.jpg" title="LLMs helping with slidedecks" class="img-fluid rounded z-depth-1" %}
     </div>
-</div> 
+</div>
+<br>
+<br> 
 
 For organizations implementing general-purpose AI chatbots, to market tendency is to implement AI chatbots on a company-wide basis, usually in cooperation with Microsoft, Google, IBM, or another third-party digital services provider. 
 Similarities can be drawn with organizations choosing an email or a videocall solution provider - the decision to go with either Outlook vs Gmail, Zoom vs Teams, Notion vs SharePoint, etc. is going to usually be decided outside of trade finance and specific insurance departments, and be made accessible to multiple divisions of an enterprise simultaneously, with a company-wide code of conduct and licence agreements.
