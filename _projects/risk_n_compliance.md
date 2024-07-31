@@ -79,10 +79,10 @@ However, even with this commitment, bad faith use could be excluded. Microsoft, 
 
 <b>Compliance considerations:</b><br>
 
-How does IP law classify AI generated outputs in jurisdictions of interest? 
-Who is liable for ensuring the outputs of AIs used commercially do not breach IP and other laws? 
-Is the organization contractually allowed to transform specific data with AI systems for commercial purposes that are provided by third parties?
-Are users of implemented AI systems appropriately aware about the risk of generating content breaching IP laws?
+How does IP law classify AI generated outputs in jurisdictions of interest?<br><br>
+Who is liable for ensuring the outputs of AIs used commercially do not breach IP and other laws?<br><br>
+Is the organization contractually allowed to transform specific data with AI systems for commercial purposes that are provided by third parties?<br><br>
+Are users of implemented AI systems appropriately aware about the risk of generating content breaching IP laws?<br><br>
 
 
 <br>
@@ -146,9 +146,9 @@ It also means that the EU industry will not have access to future multimodal ver
 </div>
 
 <b>Compliance considerations:</b><br>
-Organizations may face legal liability if they fail to implement adequate training and safeguards to protect against processing personal and confidential data from within the organization by AI systems.
-How do data processing and AI abuse monitoring regulations interact in the jurisdiction of interest? 
-After implementing AI solutions, who in an organization is responsible for monitoring AI regulatory changes?
+Organizations may face legal liability if they fail to implement adequate training and safeguards to protect against processing personal and confidential data from within the organization by AI systems.<br><br>
+How do data processing and AI abuse monitoring regulations interact in the jurisdiction of interest? <br><br>
+After implementing AI solutions, who in an organization is responsible for monitoring AI regulatory changes?<br><br>
 
 <br>
 <div style="height: 1px; width: min(800px, 100%); padding: 0 5px; box-sizing: border-box; background-color: lightgray;"></div>
