@@ -198,7 +198,7 @@ Below are some compliance considerations of fully autonomous AI solutions.
 <br>
 <br>
 <b>Liability and Accountability</b><br>
-When AI systems make autonomous decisions that result in harm or damages, determining liability becomes even more complicated compared to current user-implemented AI outputs. Who will be held responsible and will carry the liability - the AI developer, the organization implementing the AI, or the AI itself? Current legal frameworks struggle to address scenarios where there's no direct human decision-maker to hold accountable for untransparent outputs. 
+When AI systems make autonomous decisions that result in harm or damages, determining liability becomes even more complicated compared to current user-implemented AI outputs. Who will be held responsible and will carry the liability - the AI developer, the organization implementing the AI, or the AI itself? Current legal frameworks struggle to address scenarios where there's no direct human decision-maker to hold accountable for untransparent outputs. This is especially relevant for organizations engaged in International Trade, where understanding who bears liability is of utmost importance.
 <br>
 <br>
 <b>Transparency and Explainability</b><br>
@@ -218,7 +218,7 @@ If AI systems become more autonomous, ensuring they are compliant with evolving 
 <br>
 <br>
 <b>Intellectual Property Rights</b><br>
-According to the U.S. Copyright Office, a work is subject to copyright only when it is "fixed in a tangible medium of expression", in other words, when it is captured in a sufficiently permanent form that allows it to be perceived, reproduced, or communicated for more than a transitory duration. When AI systems create new works or innovations autonomously, legal questions arise about who owns the intellectual property rights, and what exactly constitutes a tangible medium. Could an entity utilizing generative AI to produce a multitude of creative outputs displayed on a website, for example, use this as a basis of a legal action on grounds of copyright infringement, if another organization commercially used media that appears similar the AI’s outputs? Current IP laws might be revised to address AI-generated content and inventions. 
+According to the U.S. Copyright Office, a work is subject to copyright only when it is "fixed in a tangible medium of expression", in other words, when it is captured in a sufficiently permanent form that allows it to be perceived, reproduced, or communicated for more than a transitory duration. When AI systems create new works or innovations autonomously, legal questions arise about who owns the intellectual property rights, and what exactly constitutes a tangible medium. Could an entity utilizing generative AI to produce a multitude of creative outputs displayed on a website, for example, use this as a basis of a legal action on grounds of copyright infringement, if another organization commercially used media that appears similar the AI’s outputs? Current IP laws might be revised to address AI-generated content and inventions. Organizations in International Trade that use AI systems to generate materials should be aware of the present risk with the specific AI systems implemented.
 <br>
 <br>
 <b>Contract Law</b><br>
