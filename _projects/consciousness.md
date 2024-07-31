@@ -19,4 +19,5 @@ The question of whether AI can be or is conscious is deeply related with one’s
 Up to this century intelligence and biology seemed intertwined. This could well be over.
 Learning from one’s environment and achieving optimal interactions is proving to be very powerful, with or without a subjective experience behind the data processing.
 
-
+<br>
+<br>
