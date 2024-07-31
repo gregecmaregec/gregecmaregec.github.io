@@ -30,8 +30,8 @@ class Particle {
         this.x = x;
         this.y = y;
         this.size = Math.random() * 5 + 1;
-        this.speedX = (Math.random() * 3 - 1.5) * 0.05;
-        this.speedY = (Math.random() * 3 - 1.5) * 0.05;
+        this.speedX = (Math.random() * 3 - 1.5) * 0.6;
+        this.speedY = (Math.random() * 3 - 1.5) * 0.6;
         this.color = `hsl(${Math.random() * 360}, 100%, 50%)`;
     }
 
