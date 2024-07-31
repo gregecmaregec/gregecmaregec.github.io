@@ -127,7 +127,7 @@ AI chatbots can assist in creating various types of content, such as scripts, im
 Quickly accessing and structuring relevant information, specific queries to SQL databases with instructions written in natural language – e.g. relating to a financing facility’s past performance or specific KPIs.
 
 <b>Sentiment analysis</b>
-Helping users to determining the emotional tone of text, giving feedback and second opinions on structured replies.
+Helping users to determine the emotional tone of text, giving feedback and second opinions on structured replies.
 
 <b>Presentation creation assistance</b>
 AI chatbots can be helpful in condensing content to help create presentations, potentially saving time and effort in constructing client engagement materials and other types of slide decks.
