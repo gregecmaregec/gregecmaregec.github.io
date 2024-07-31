@@ -1,6 +1,6 @@
 ---
 layout: page_itfa
-title: ITFA EL 24 submission
+title: ITFA EL 2024 submission
 permalink: /itfasubmission/
 nav: true
 nav_order: 6
