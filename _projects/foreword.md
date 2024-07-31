@@ -3,7 +3,7 @@ layout: page_itfa_subpage
 title: Foreword
 img: assets/itfa/foreword_thumbnail.jpg
 nav: true
-description: And a wordbook for AI terms used in the project
+description: And wordbook for AI terms used in this report
 importance: 1
 ---
 <br>
