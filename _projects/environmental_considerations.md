@@ -46,7 +46,7 @@ While training neural networks is energy intensive, it currently pales in compar
 
 #### Electricity generation trends
 
-Before drawing conclusions on whether it is responsible to utilize energy for incorporating AI solutions into facilitating international trade, a boarder context regarding electricity generation and consumption should be considered.
+Before drawing conclusions on whether it is responsible to utilize energy for incorporating AI solutions into facilitating International Trade, a boarder context regarding electricity generation and consumption should be considered.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
