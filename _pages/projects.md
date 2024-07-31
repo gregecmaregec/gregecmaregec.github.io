@@ -12,8 +12,9 @@ og_url: "https://gregormihelac.com/itfasubmission/"
 og_type: "website"
 ---
 <p style="font-size: 1.4rem;">For use cases in International Trade</p>
-
 <br>
+<p style="font-size: 1.4rem;">ITFA emerging leaders 2024 competition submission, writen June 2024</p>
+
 <!-- pages/projects.md -->
 <div class="projects">
 {% if site.enable_project_categories and page.display_categories %}
