@@ -14,9 +14,7 @@ Some argue that attributing intelligence, and with it the title of “AI” to L
 
 Each chapter of this report is designed to be complete when read on its own. Should you stumble upon an unfamiliar word of phrase, consider consulting the Wordbook.
 
-<br>
-<br>
-Each section in the outline of this work is designed to be complete when read on its own. 
+
 <br>
 <br>
 I hope you enjoy reading this report. Let me know any feedback at gregor.mihelac (at) outlook (dot) com
@@ -32,6 +30,7 @@ Special thanks to Silja Calac and Duarte Pedreira for their incredible mentorshi
 Thanks to: André Casterman; Caitlin MacNamara; Charlotte Russo; Pia Reyes; Sam Fowler-Holmes 
 <br>for engaging in meaningful conversation that helped me see this topic from a different perspective.
 <br>
+And thank you, for reading!
 
 <br>
 <div style="height: 1px; width: min(800px, 100%); padding: 0 5px; box-sizing: border-box; background-color: lightgray;"></div>
