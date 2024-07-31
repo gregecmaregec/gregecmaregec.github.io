@@ -108,7 +108,7 @@ canvas.addEventListener('mousemove', (event) => {
     mouse.x = (event.clientX - rect.left) * scaleX;
     mouse.y = (event.clientY - rect.top) * scaleY;
 
-        for (let i = 0; i < 3; i++) {
+        for (let i = 0; i < 1; i++) {
             particles.push(new Particle(mouse.x, mouse.y));
         }
 });
