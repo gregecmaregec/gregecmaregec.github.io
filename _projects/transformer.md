@@ -1,7 +1,7 @@
 ---
 layout: page_itfa_subpage
-title: The Transformer neural net architecture 
-description: What powers a large language model (LLM)?
+title: The Transformer neural net architecture - 
+description: what powers a large language model (LLM)?
 nav: true
 img: assets/itfa/transformer_thumbnail.jpg
 importance: 2
@@ -34,20 +34,22 @@ importance: 2
 
 <br>
 
-Neural networks used to be designed for specific use cases and tailored to a specific tasks. For example, different neural net designs were implemented for processing image, video, sound, code etc. The initial showcase for the Transformer in in Attention is All you Need was computerized translation. The authors reported state of the art results testing the Transformer on automated benchmarks and human evaluation scores, and indicated intentions to test the Transformer on “other tasks” in the future.
+The initial showcase for the Transformer in in Attention is All you Need was computerized translation. The authors reported state of the art results with the Transformer on automated benchmarks and human evaluation scores, and indicated intentions to test the Transformer on “other tasks” in the future.
 
-A mere year after the publication of Attention is All You Need, another milestone in the field of AI research was published: “Language Models are Unsupervised Multitask Learners” by Radford et al. (2018), where OpenAI showcased their state-of-the-art language model GPT-2. The GPT in OpenAI’s ChatGPT stands for generative pre-trained Transformer.
+A mere year after the publication of Attention is All You Need, another milestone in the field of AI research was published: “Language Models are Unsupervised Multitask Learners” by Radford et al. (2018), where OpenAI showcased their state-of-the-art language model named GPT-2. The GPT in OpenAI’s ChatGPT stands for generative pre-trained Transformer. 
 
-Text, images, code, ... – the Transformer even generates sound - e.g. Wav2Vec is a Transformer based AI, developed by Meta (formerly Facebook), able to generate natural sounding vocal speech of languages possessing no written form, such as Mboshi: a Bantu language spoken by approximately 150,000 people in the Republic of the Congo (Ji et al, 2022). 
+Neural networks used to be designed for specific use cases and tailored to a specific tasks. Different neural net designs were implemented for processing image, video, sound, code etc. The field of AI research is converging in recent years more and more towards one architecture for all types of data .
 
-The Transformer is a token-based prediction engine, not matter which data is tokenized.
-Many types of data can be broken down into tokens / tokenized. E.g. written English, tokens are usually 3-7 characters long.
+Text, images, code, ... – the Transformer even generates sound - e.g. Wav2Vec is a Transformer based AI, developed by Meta (formerly Facebook), able to generate natural sounding vocal speech of languages possessing no written form, such as Mboshi: a Bantu language spoken by approximately 150,000 people in the Republic of the Congo (Ji et al, 2022). The Transformer is a token-based prediction engine, not matter which data is tokenized.
+
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/itfa/tokens.jpg" title="tokenization" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
+
+Many types of data can be broken down into tokens / tokenized. E.g. written English, tokens are usually 3-7 characters long.
 
 <div style="max-width: 830px; margin: 1rem auto; padding: 0 1rem;">
   <blockquote style="background-color: transparent; border-left: 5px solid #d64a4a; padding: 0.7rem; padding-bottom: 0.1rem; margin: 0; border-radius: 0 8px 8px 0; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.2s ease-in-out;">
@@ -59,7 +61,7 @@ Many types of data can be broken down into tokens / tokenized. E.g. written Engl
 
 <br>
 
-LLMs output sentences that normally do not show up to the user all at once, but rather one token after another. This is due to the way the LLMs operate – they choose between tokens based on probabilities established in the training stage, and output the next token only when the sequence of previous tokens has been established – creating a stream of responses. 
+LLMs output sentences that normally do not show up to the user all at once, but rather one token after another. This is due to the way the LLMs operate – they choose between tokens based on probability weights obtained in the training stage, and output the next token only when the sequence of previous tokens has been established – creating a stream of responses.  
 
 <div class="caption">
     LLMs output tokens based on probabilities obtained in the training stage. 
