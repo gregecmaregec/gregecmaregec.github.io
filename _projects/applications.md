@@ -39,7 +39,7 @@ Presented as an introduction into this chapter is excerpt from a 2023 Interview 
 
 #### Large Language Models (LLMs) / AI chatbots 
 <br>
-The present offers of AI chatbots provide added value to trade finance and insurance industries, specifically in contributing added value to employees’ workflows.  There is a broad range of offers on the selling side of LLMs / AI chatbots to both consumers and corporate clients – e.g. ChatGPT, Claude, Llama, Perplexity etc.
+The present offers of AI chatbots provide added value to trade finance and insurance industries, specifically in contributing added value to workflows of trade finance professionals.  There is a broad range of offers on the selling side of LLMs / AI chatbots to both consumers and corporate clients – e.g. ChatGPT, Claude, Llama, Perplexity etc.
 
 A McKinsey study from 2015 found that 45% of employee time could be automated with then existing technologies. The same study however found that only 5% of employee time could be fully automated – meaning no input and output-checking by humans is required. The sophistication of technology for automation has increased in scope and scale since 2015, and current AI chatbots are great at helping design automation solutions for the 45% parts, yet not so much the 5% - at least not yet, as AI output validity is not reliable. Current market tendency is to not base critical processes on AI outputs. 
 
@@ -126,8 +126,7 @@ AI chatbots can assist in creating various types of content, such as scripts, im
 <br>
 <br>
 <div class="caption">
-    Example image generation with Midjourney. Midjourney pledges that the user that writes the prompt becomes the copyright owner of created images, and images generated with its model are allowed to be used commercially. 
-</div>
+    Example image generation with Midjourney.
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/itfa/applications/midjourney.jpg" title="LLMs making images" class="img-fluid2 rounded z-depth-1" %}
