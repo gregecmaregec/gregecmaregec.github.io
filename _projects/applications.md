@@ -126,7 +126,7 @@ AI chatbots can assist in creating various types of content, such as scripts, im
 <br>
 <br>
 <div class="caption">
-    Example image generation with Midjourney.
+    Example image generation with Midjourney.</div>
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/itfa/applications/midjourney.jpg" title="LLMs making images" class="img-fluid2 rounded z-depth-1" %}
