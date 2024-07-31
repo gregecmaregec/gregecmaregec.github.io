@@ -11,7 +11,7 @@ og_image: "https://gregormihelac.com/assets/itfa/foreword_thumbnail.jpg"
 og_url: "https://gregormihelac.com/itfasubmission/"
 og_type: "website"
 ---
-Overview of Artificial Intelligence (AI) and potential applications in the Trade Finance space
+For applications in International Trade
 
 <br>
 <!-- pages/projects.md -->
