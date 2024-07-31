@@ -56,7 +56,7 @@ let particles = [];
 const mouse = { x: null, y: null, radius: 150 };
 
 function createParticles() {
-    if (particles.length < 80) {
+    if (particles.length < 100) {
         particles.push(new Particle(
             Math.random() * TARGET_WIDTH,
             Math.random() * TARGET_HEIGHT
