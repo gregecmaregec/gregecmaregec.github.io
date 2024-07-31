@@ -47,10 +47,8 @@ ChatGPT for example, offers a disclaimer below their input box: “ChatGPT can m
 Claude from Anthropic presents a different version: “Claude can make mistakes. Please double-check responses.” 
 
 <br>
-<div style="height: 1px; width: min(800px, 100%); padding: 0 5px; box-sizing: border-box; background-color: lightgray;"></div>
-<br>
+<b>Some of the benefits of AI chatbots include:</b>
 
-#### Some of the benefits of AI chatbots include:
 <br>
 <b>Distillation of knowledge from the web</b>
 AI chatbots are trained on vast amounts of internet data - including Wikipedia and answers from search results, as well as on various papers and literature. ChatGPT 3 was trained on approximately 45 terabytes of data. Even when an AI Chatbot is not accessing live internet search results, it can summarize and work with a large knowledge base from information found on the internet. This includes a knowledge base about trade finance and its instruments.
