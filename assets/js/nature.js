@@ -30,8 +30,8 @@ class Particle {
         this.x = x;
         this.y = y;
         this.size = Math.random() * 3 + 1;
-        this.speedX = (Math.random() * 1 - 0.5) * 0.2;
-        this.speedY = (Math.random() * 1 - 0.5) * 0.2;
+        this.speedX = (Math.random() * 1 - 0.5) * 0.5;
+        this.speedY = (Math.random() * 1 - 0.5) * 0.5;
         this.color = `hsl(${Math.random() * 360}, 70%, 50%)`;
         this.lifespan = 300 + Math.random() * 200;
     }
@@ -107,7 +107,7 @@ canvas.addEventListener('mousemove', (event) => {
     mouse.x = (event.clientX - rect.left) * scaleX;
     mouse.y = (event.clientY - rect.top) * scaleY;
 
-    if (particles.length < 250) {
+    if (particles.length < 125) {
         for (let i = 0; i < 2; i++) {
             particles.push(new Particle(mouse.x, mouse.y));
         }
