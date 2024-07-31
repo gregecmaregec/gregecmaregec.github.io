@@ -4,8 +4,8 @@ document.body.appendChild(canvas);
 const ctx = canvas.getContext('2d');
 
 // Define the target size
-const TARGET_WIDTH = 820;
-const TARGET_HEIGHT = 300;
+const TARGET_WIDTH = 1148;
+const TARGET_HEIGHT = 420;
 
 // Function to set canvas size
 function setCanvasSize() {
@@ -20,7 +20,8 @@ function setCanvasSize() {
     canvas.style.margin = '20px auto';
 }
 
-// Call the function initially and on window resize
+// Call the function initially and on window resize 
+// thanik you claude ai for this beautiufl code below
 setCanvasSize();
 window.addEventListener('resize', setCanvasSize);
 
