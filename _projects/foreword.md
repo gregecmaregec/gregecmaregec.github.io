@@ -34,6 +34,10 @@ Thanks to: André Casterman; Caitlin MacNamara; Charlotte Russo; Pia Reyes; Sam 
 
 <br>
 
+<br>
+<div style="height: 1px; width: min(800px, 100%); padding: 0 5px; box-sizing: border-box; background-color: lightgray;"></div>
+<br>
+
 #### Wordbook
 
 <b>AI</b> - Artificial Intelligence; systems designed to mimic human intelligence and perform tasks autonomously.<br>
@@ -81,7 +85,11 @@ Thanks to: André Casterman; Caitlin MacNamara; Charlotte Russo; Pia Reyes; Sam 
 <b>Wav2Vec</b> - Self-supervised learning approach for speech recognition developed by Facebook AI.<br>
 
 
-Mentioned sources: 
+<br>
+<div style="height: 1px; width: min(800px, 100%); padding: 0 5px; box-sizing: border-box; background-color: lightgray;"></div>
+<br>
+
+#### Mentioned sources: 
 
 Goldman Sachs (2024) "AI is poised to drive 160% increase in data center power demand". Article.<br><br>
 Greshake et al. (2023) "Not what you've signed up for: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection". ArXiv 2302.12173v2<br><br>
