@@ -1,7 +1,7 @@
 ---
 layout: page_itfa_subpage
 title: Environmental considerations 
-description: As AI solutions seemare electricity intensive
+description: As AI solutions seem electricity intensive
 img: assets/img/itfa/esg_thumbnail.jpg
 nav: true
 importance: 6
