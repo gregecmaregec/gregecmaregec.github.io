@@ -1,5 +1,4 @@
 const inputBox = document.getElementById('inputBox');
-const sendButton = document.getElementById('sendButton');
 const initialHeight = 50; // Set the initial height in pixels
 inputBox.style.height = `${initialHeight}px`;
 
@@ -19,19 +18,10 @@ function adjustHeight() {
   }
 }
 
-function sendMessage() {
-  // Your existing send message logic here
-  console.log("Message sent:", inputBox.value);
-  inputBox.value = '';
-  adjustHeight();
-}
-
 inputBox.addEventListener('input', adjustHeight);
-
 inputBox.addEventListener('keydown', (event) => {
   if (event.key === 'Enter' && !event.shiftKey) {
-    event.preventDefault();
-    sendMessage();
+    event.preventDefault(); // Prevent default Enter behavior
   } else if (event.shiftKey && event.key === 'Enter') {
     event.preventDefault();
     const start = inputBox.selectionStart;
@@ -41,5 +31,3 @@ inputBox.addEventListener('keydown', (event) => {
     adjustHeight();
   }
 });
-
-sendButton.addEventListener('click', sendMessage);
