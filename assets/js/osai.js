@@ -2,13 +2,8 @@ let selectedModel = 'llama3.1'; // default model
 let messageHistory = []; // array to store previous messages
 
 function adjustTextareaHeight(textarea) {
-  const lineHeight = parseInt(window.getComputedStyle(textarea).lineHeight);
-  const padding = parseInt(window.getComputedStyle(textarea).paddingTop) + 
-                  parseInt(window.getComputedStyle(textarea).paddingBottom);
-  const lines = textarea.value.split('\n').length;
-  const newHeight = lines > 1 ? (lines * lineHeight + padding) : 50;
-
-  textarea.style.height = newHeight + 'px';
+  textarea.style.height = 'auto';
+  textarea.style.height = (textarea.scrollHeight) + 'px';
 }
 
 function modelChoice(choice, initial = false) {
@@ -37,17 +32,14 @@ document.addEventListener('DOMContentLoaded', function() {
   const inputBox = document.getElementById('inputBox');
   const outputBox = document.getElementById('outputBox');
   const loader = document.getElementById('loader');
+  const sendButton = document.getElementById('sendButton');
 
   // Set the initial model choice
   modelChoice('llama3.1', true);
 
   function handleInput() {
-    const lines = inputBox.value.split('\n');
-    if (lines.length > 1 || (lines.length === 1 && inputBox.scrollHeight > inputBox.clientHeight)) {
-      adjustTextareaHeight(inputBox);
-    } else {
-      inputBox.style.height = '50px';
-    }
+    adjustTextareaHeight(inputBox);
+    sendButton.style.display = inputBox.value.trim() ? 'block' : 'none';
   }
 
   function handleKeyDown(event) {
@@ -87,6 +79,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Show loader and disable input
     loader.style.display = 'block';
     inputBox.disabled = true;
+    sendButton.disabled = true;
 
     fetch("https://gmserver.xyz", {
       method: "POST",
@@ -108,11 +101,13 @@ document.addEventListener('DOMContentLoaded', function() {
       // Hide loader and enable input
       loader.style.display = 'none';
       inputBox.disabled = false;
+      sendButton.disabled = false;
     });
 
     // Clear and reset input box
     inputBox.value = '';
     inputBox.style.height = '50px';
+    sendButton.style.display = 'none';
   }
 
   function appendToOutput(sender, content, isError = false) {
@@ -154,4 +149,5 @@ document.addEventListener('DOMContentLoaded', function() {
 
   inputBox.addEventListener('input', handleInput);
   inputBox.addEventListener('keydown', handleKeyDown);
+  sendButton.addEventListener('click', sendMessage);
 });
