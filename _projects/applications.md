@@ -76,9 +76,6 @@ Condensing large texts and outlining relevant information.
 <b>Writing assistance</b><br>
 AI chatbots can help with various forms of writing, from creative to technical. Chatbots excel at recognizing and pointing out spelling and syntax mistakes in writings. With legal writings, such as distribution contracts, AI chatbots could provide real time feedback on deviations from market standards and the potential impact thereof.
 
-<br>
-<br>
-
 <b>Translation</b><br>
 AI chatbots excel in translating between numerous languages with high degree of accuracy, providing output rated higher in human evaluations scores compared to non-AI solutions. AI can also generate natural sounding speech in different languages, enabling real time voice-to-voice translation. E.g. OpenAI has recently announced the voice feature with ChatGPT 4o. This could prove useful in meetings held in a language not spoken fluently by all present parties.
 
