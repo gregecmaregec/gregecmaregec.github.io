@@ -23,7 +23,7 @@ Large language models require substantial electricity to produce and operate –
 
 AI systems are trained and hosted the biggest computer clusters in the world, i.e. datacentres. 
 
-The electrcity consumption by AI systems raises questions which could get more pressing in the future about the environmental impact and sustainability thereof. As we continue to advance these technologies, trade finance professional must grapple with the ethical implications of potentially exacerbating climate change in pursuit of workflow optimization.
+The electrcity consumption by AI systems raises questions on the impact of energy usage, which could get more pressing in the future. As AI technologies continue to advance , trade finance professional could grapple with the ethical implications of potentially exacerbating climate change in pursuit of workflow optimization.
 
 A Goldman Sachs report estimates that currently, data centres account for 1-2% of electricity usage worldwide, and project it to rise to 3-4% until 2030. Furthermore, the same report claims that Europe will need to spend $1 Trillion by 2030 to prepare its power grid for AI. A hefty sum.
 
