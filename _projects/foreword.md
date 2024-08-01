@@ -6,8 +6,11 @@ nav: true
 description: And wordbook for AI terms used in this report
 importance: 1
 ---
+
 <br>
 <br>
+#### Foreword
+
 While animals sometimes utilize sticks and stones as tools, humans have harnessed a sequence of transformative technologies: irrigation, levers, boats, guns, locomotives, electricity, transistors – and recently, scalable applications of artificial intelligence (AI). It could prove to be the most transformative yet.
 
 This project aims to demystify state-of-the-art AI to trade finance professionals, with the explicit goal to gain a better understanding of the landscape of opportunities in utilizing AI in trade finance. To achieve this, this report seeks to establish a foundational understanding of the mechanisms behind modern AI systems, as well as their current limitations and compliance considerations.
@@ -16,16 +19,8 @@ Some argue that attributing intelligence, and with it the title of “AI” to L
 
 Each chapter of this report is designed to be complete when read on its own. Should you stumble upon an unfamiliar word of phrase, consider consulting the Wordbook.
 
-
 <br>
 <br>
-For comments or inquiries you may reach me at gregor.mihelac (at) outlook (dot) com
-<br>
-<br>
-
-
-<br>
-
 #### Thanks ❤️
 Special thanks to Silja Calac and Duarte Pedreira for their incredible mentorship and energy.<br>
 <br>
@@ -100,6 +95,8 @@ Radford, A., et al. (2018) "Language Models are Unsupervised Multitask Learners"
 Vaswani, A., et al. (2017) "Attention Is All You Need ". ArXiv: 1706.03762.<br><br>
 Wei, et al. (2023) "Jailbroken: How Does LLM Safety Training Fail?". ArXiv: 2307.02483<br><br>
 
-
-
+<br>
+<br>
+For comments or inquiries you may reach me at gregor.mihelac (at) outlook (dot) com
+<br>
 <br>
