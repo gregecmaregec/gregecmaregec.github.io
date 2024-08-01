@@ -20,6 +20,11 @@ Each chapter of this report is designed to be complete when read on its own. Sho
 
 <br>
 <br>
+For comments or inquiries you may reach me at gregor.mihelac (at) outlook (dot) com
+<br>
+<br>
+<br>
+<br>
 #### Thanks ❤️
 Special thanks to Silja Calac and Duarte Pedreira for their incredible mentorship and energy.<br>
 <br>
@@ -28,11 +33,7 @@ Thanks to: André Casterman; Caitlin MacNamara; Charlotte Russo; Pia Reyes; Sam 
 <br><br>
 And thank you, for reading!
 
-<br>
-<br>
-For comments or inquiries you may reach me at gregor.mihelac (at) outlook (dot) com
-<br>
-<br>
+
 
 <br>
 <div style="height: 1px; width: min(800px, 100%); padding: 0 5px; box-sizing: border-box; background-color: lightgray;"></div>
