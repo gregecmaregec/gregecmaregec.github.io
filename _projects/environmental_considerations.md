@@ -1,7 +1,7 @@
 ---
 layout: page_itfa_subpage
 title: Environmental considerations 
-description: As AI solutions are electricity intensive
+description: How much electricity does AI use?
 img: assets/img/itfa/esg_thumbnail.jpg
 nav: true
 importance: 6
@@ -54,7 +54,7 @@ Before drawing conclusions on whether it is responsible to utilize energy for in
     </div>
 </div>
 
-Worthy of consideration is that the trend of total energy supply of the world is steadily rising, with or without AI.
+Worthy of consideration is the trend of total electricity production before AI.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
