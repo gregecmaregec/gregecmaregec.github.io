@@ -29,6 +29,12 @@ Thanks to: André Casterman; Caitlin MacNamara; Charlotte Russo; Pia Reyes; Sam 
 And thank you, for reading!
 
 <br>
+<br>
+For comments or inquiries you may reach me at gregor.mihelac (at) outlook (dot) com
+<br>
+<br>
+
+<br>
 <div style="height: 1px; width: min(800px, 100%); padding: 0 5px; box-sizing: border-box; background-color: lightgray;"></div>
 <br>
 
@@ -94,8 +100,5 @@ Radford, A., et al. (2018) "Language Models are Unsupervised Multitask Learners"
 Vaswani, A., et al. (2017) "Attention Is All You Need ". ArXiv: 1706.03762.<br><br>
 Wei, et al. (2023) "Jailbroken: How Does LLM Safety Training Fail?". ArXiv: 2307.02483<br><br>
 
-<br>
-<br>
-For comments or inquiries you may reach me at gregor.mihelac (at) outlook (dot) com
 <br>
 <br>
