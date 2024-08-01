@@ -53,8 +53,22 @@ Claude from Anthropic presents a different version: “Claude can make mistakes.
 <b>Distillation of knowledge from the web</b><br>
 AI chatbots are trained on vast amounts of internet data - including Wikipedia and answers from search results, as well as on various papers and literature. ChatGPT 3 was trained on approximately 45 terabytes of data. Even when an AI Chatbot is not accessing live internet search results, it can summarize and work with a large knowledge base from information found on the internet. This includes a knowledge base about trade finance and its instruments.
 
+
 <b>Question answering</b><br>
 Providing answers about a vast array of topics, including answers from user-uploaded proprietary data, e.g. specific trade documents or financing facility information.
+
+<br>
+<br>
+<div class="caption">
+    Example trade-finance related question with Anthropic’s Claude. 
+</div>
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/itfa/applications/claude.jpg" title="claude.ai" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<br>
+<br>
 
 <b>Text summarization and analysis</b><br>
 Condensing large texts and outlining relevant information.
