@@ -9,7 +9,6 @@ importance: 1
 
 <br>
 <br>
-#### Foreword
 
 While animals sometimes utilize sticks and stones as tools, humans have harnessed a sequence of transformative technologies: irrigation, levers, boats, guns, locomotives, electricity, transistors – and recently, scalable applications of artificial intelligence (AI). It could prove to be the most transformative yet.
 
