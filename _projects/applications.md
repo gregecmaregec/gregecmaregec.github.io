@@ -50,19 +50,22 @@ Claude from Anthropic presents a different version: “Claude can make mistakes.
 <b>Some of the benefits of AI chatbots include:</b>
 
 <br>
-<b>Distillation of knowledge from the web</b>
+<b>Distillation of knowledge from the web</b><br>
 AI chatbots are trained on vast amounts of internet data - including Wikipedia and answers from search results, as well as on various papers and literature. ChatGPT 3 was trained on approximately 45 terabytes of data. Even when an AI Chatbot is not accessing live internet search results, it can summarize and work with a large knowledge base from information found on the internet. This includes a knowledge base about trade finance and its instruments.
 
-<b>Question answering</b>
+<b>Question answering</b><br>
 Providing answers about a vast array of topics, including answers from user-uploaded proprietary data, e.g. specific trade documents or financing facility information.
 
-<b>Text summarization and analysis</b>
+<b>Text summarization and analysis</b><br>
 Condensing large texts and outlining relevant information.
 
-<b>Writing assistance</b>
+<b>Writing assistance</b><br>
 AI chatbots can help with various forms of writing, from creative to technical. Chatbots excel at recognizing and pointing out spelling and syntax mistakes in writings. With legal writings, such as distribution contracts, AI chatbots could provide real time feedback on deviations from market standards and the potential impact thereof.
 
-<b>Translation</b>
+<br>
+<br>
+
+<b>Translation</b><br>
 AI chatbots excel in translating between numerous languages with high degree of accuracy, providing output rated higher in human evaluations scores compared to non-AI solutions. AI can also generate natural sounding speech in different languages, enabling real time voice-to-voice translation. E.g. OpenAI has recently announced the voice feature with ChatGPT 4o. This could prove useful in meetings held in a language not spoken fluently by all present parties.
 
 <br>
@@ -78,7 +81,7 @@ AI chatbots excel in translating between numerous languages with high degree of 
 <br>
 <br>
 
-<b>Code generation and debugging</b>
+<b>Code generation and debugging</b><br>
  AI chatbots excel at generating code in multiple programming language - e.g. Python. This capability offers tremendous potential for trade finance professionals to automate repetitive tasks.
  
 <br>
@@ -95,7 +98,7 @@ AI chatbots excel in translating between numerous languages with high degree of 
 <br>
 
 
-<b>Program guides</b>
+<b>Program guides</b><br>
 AI chatbots can prove useful guides on how to complete complex tasks on many popular computer programs. They are trained on data relating to use of programs such as Adobe Photoshop, Microsoft’s Office Suite, PowerBI, video editing software, program specific APIs etc.
 
 <br>
@@ -111,16 +114,16 @@ AI chatbots can prove useful guides on how to complete complex tasks on many pop
 <br>
 <br>
 
-<b>Task planning and problem-solving</b>
+<b>Task planning and problem-solving</b><br>
 Brainstorming and outlining potential solutions to complex problems, e.g. structuring a financing facility that fits with a particular situation or a particular client.
 
-<b>Data analysis and interpretation</b>
+<b>Data analysis and interpretation</b><br>
 Examining vast datasets and crafting data analysis with visual aids.
 
-<b>Conversational AI</b>
+<b>Conversational AI</b><br>
 Engaging in coherent, context-aware dialogues.
 
-<b>Content generation</b>
+<b>Content generation</b><br>
 AI chatbots can assist in creating various types of content, such as scripts, images, articles, replies., etc. Useful for creating presentations and client engagement materials.
 
 <br>
@@ -135,13 +138,13 @@ AI chatbots can assist in creating various types of content, such as scripts, im
 <br>
 <br>
 
-<b>Information retrieval and organization</b>
+<b>Information retrieval and organization</b><br>
 Quickly accessing and structuring relevant information, specific queries to SQL databases with instructions written in natural language – e.g. relating to a financing facility’s past performance or specific KPIs.
 
-<b>Sentiment analysis</b>
+<b>Sentiment analysis</b><br>
 Helping users to determine the emotional tone of text, giving feedback and second opinions on structured replies.
 
-<b>Presentation creation assistance</b>
+<b>Presentation creation assistance</b><br>
 AI chatbots can be helpful in condensing content to help create presentations, potentially saving time and effort in constructing client engagement materials and other types of slide decks.
  
 <br>
