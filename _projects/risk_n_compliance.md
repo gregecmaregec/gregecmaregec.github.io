@@ -2,7 +2,7 @@
 layout: page_itfa_subpage
 title: Risk & Compliance considerations
 description:  of AI utilization in International Trade
-img: assets/itfa/risk_thumbnail.jpg
+img: assets/img/itfa/risk_thumbnail.jpg
 importance: 4
 nav: true
 ---
@@ -22,7 +22,7 @@ nav: true
 </div>
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/itfa/risks/chatgpt.jpg" title="LLM jailbreak" class="img-fluid rounded z-depth-1" style="width=50%"%}
+        {% include figure.liquid loading="eager" path="assets/img/itfa/risks/chatgpt.jpg" title="LLM jailbreak" class="img-fluid rounded z-depth-1" style="width=50%"%}
     </div>
 </div>
 
@@ -35,7 +35,7 @@ The above is an example of ChatGPT, which has been instructed specifically not t
 </div>
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/itfa/risks/claude.jpg" title="LLM jailbreak" class="img-fluid2 rounded z-depth-1" style="width=50%"%}
+        {% include figure.liquid loading="eager" path="assets/img/itfa/risks/claude.jpg" title="LLM jailbreak" class="img-fluid2 rounded z-depth-1" style="width=50%"%}
     </div>
 </div>
 
@@ -55,7 +55,7 @@ AI systems with access to confidential or personal data pose a liability risk of
 <br>
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/itfa/risks/sonice.jpg" title="LLM copyright violation" class="img-fluid2 rounded z-depth-1" style="width=50%"%}
+        {% include figure.liquid loading="eager" path="assets/img/itfa/risks/sonice.jpg" title="LLM copyright violation" class="img-fluid2 rounded z-depth-1" style="width=50%"%}
     </div>
 </div>
 
@@ -97,7 +97,7 @@ Are users of implemented AI systems appropriately aware about the risk of genera
 </div>
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/itfa/risks/copilot.jpg" title="LLM fraud" class="img-fluid2 rounded z-depth-1" style="width=50%"%}
+        {% include figure.liquid loading="eager" path="assets/img/itfa/risks/copilot.jpg" title="LLM fraud" class="img-fluid2 rounded z-depth-1" style="width=50%"%}
     </div>
 </div>
 
@@ -127,7 +127,7 @@ Excerpt from Microsoft’s data processing policy for the service, taken June 20
 </div>
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/itfa/risks/azure.jpg" title="AI regulations" class="img-fluid rounded z-depth-1" style="width=50%"%}
+        {% include figure.liquid loading="eager" path="assets/img/itfa/risks/azure.jpg" title="AI regulations" class="img-fluid rounded z-depth-1" style="width=50%"%}
     </div>
 </div>
 

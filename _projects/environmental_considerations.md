@@ -2,7 +2,7 @@
 layout: page_itfa_subpage
 title: Environmental considerations 
 description: As current AI solutions use a lot of energy
-img: assets/itfa/esg_thumbnail.jpg
+img: assets/img/itfa/esg_thumbnail.jpg
 nav: true
 importance: 6
 ---
@@ -17,7 +17,7 @@ Large language models use a lot of electricity to train and operate – and appr
 <br>
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/itfa/environment/electricity.jpg" title="Humans are burning a lot of fossil fuels" class="img-fluid2 rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/itfa/environment/electricity.jpg" title="Humans are burning a lot of fossil fuels" class="img-fluid2 rounded z-depth-1" %}
     </div>
 </div>
 
@@ -50,7 +50,7 @@ Before drawing conclusions on whether it is responsible to utilize energy for in
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/itfa/environment/power.jpg" title="Humans benefit from power" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/itfa/environment/power.jpg" title="Humans benefit from power" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 
@@ -58,7 +58,7 @@ Worthy of consideration is that the trend of total energy supply of the world is
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/itfa/environment/poverty.jpg" title="Human condition is improving" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/itfa/environment/poverty.jpg" title="Human condition is improving" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 

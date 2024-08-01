@@ -3,7 +3,7 @@ layout: page_itfa_subpage
 title: The Transformer neural net architecture
 description: What powers a large language model (LLM)?
 nav: true
-img: assets/itfa/transformer_thumbnail.jpg
+img: assets/img/itfa/transformer_thumbnail.jpg
 importance: 2
 ---
 
@@ -19,7 +19,7 @@ importance: 2
 </div>
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/itfa/transformer.jpg" title="transformer" class="img-fluid2 rounded z-depth-1" style="width=50%"%}
+        {% include figure.liquid loading="eager" path="assets/img/itfa/transformer.jpg" title="transformer" class="img-fluid2 rounded z-depth-1" style="width=50%"%}
     </div>
 </div>
 
@@ -45,7 +45,7 @@ Text, images, code, ... – the Transformer even generates sound - e.g. Wav2Vec 
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/itfa/tokens.jpg" title="tokenization" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/itfa/tokens.jpg" title="tokenization" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 
@@ -68,7 +68,7 @@ LLMs output sentences that normally do not show up to the user all at once, but 
 </div>
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/itfa/outputs.jpg" title="LLM outputs" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/itfa/outputs.jpg" title="LLM outputs" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 
@@ -79,7 +79,7 @@ Presented in 1) is a JSON-formatted output, a way of transmitting data across mu
 </div>
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/itfa/example1.jpg" title="LLM outputs" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/itfa/example1.jpg" title="LLM outputs" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 
@@ -88,7 +88,7 @@ Presented in 1) is a JSON-formatted output, a way of transmitting data across mu
 </div>
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/itfa/example2.jpg" title="LLM outputs" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/itfa/example2.jpg" title="LLM outputs" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 

@@ -1,7 +1,7 @@
 ---
 layout: page_itfa_subpage
 title: Is AI conscious?
-img: assets/itfa/con_thumbnail.jpg
+img: assets/img/itfa/con_thumbnail.jpg
 nav: true
 importance: 5
 ---

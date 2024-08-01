@@ -2,7 +2,7 @@
 layout: page_itfa_subpage
 title: Potential use cases of AI
 description: For trade finance professionals
-img: assets/itfa/applications_thumbail.jpg
+img: assets/img/itfa/applications_thumbail.jpg
 nav: true
 importance: 3
 ---
@@ -75,7 +75,7 @@ AI chatbots excel in translating between numerous languages with high degree of 
 </div>
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/itfa/applications/translation.jpg" title="LLMs translating" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/itfa/applications/translation.jpg" title="LLMs translating" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <br>
@@ -91,7 +91,7 @@ AI chatbots excel in translating between numerous languages with high degree of 
 </div>
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/itfa/applications/code.jpg" title="LLMs coding" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/itfa/applications/code.jpg" title="LLMs coding" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <br>
@@ -108,7 +108,7 @@ AI chatbots can prove useful guides on how to complete complex tasks on many pop
 </div>
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/itfa/applications/excel.jpg" title="LLMs helping with programs" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/itfa/applications/excel.jpg" title="LLMs helping with programs" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <br>
@@ -132,7 +132,7 @@ AI chatbots can assist in creating various types of content, such as scripts, im
     Example image generation with Midjourney.</div>
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/itfa/applications/midjourney.jpg" title="LLMs making images" class="img-fluid2 rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/itfa/applications/midjourney.jpg" title="LLMs making images" class="img-fluid2 rounded z-depth-1" %}
     </div>
 </div>
 <br>
@@ -154,7 +154,7 @@ AI chatbots can be helpful in condensing content to help create presentations, p
 </div>
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/itfa/applications/powerpoint.jpg" title="LLMs helping with slidedecks" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/itfa/applications/powerpoint.jpg" title="LLMs helping with slidedecks" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <br>
