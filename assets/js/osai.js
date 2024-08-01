@@ -11,10 +11,35 @@ function adjustTextareaHeight(textarea) {
   textarea.style.height = newHeight + 'px';
 }
 
+function modelChoice(choice, initial = false) {
+  selectedModel = choice;
+  const buttons = document.querySelectorAll('#modelSelectorContainer button');
+  buttons.forEach(button => {
+    if (button.getAttribute('data-model') === choice) {
+      button.style.borderBottom = '2px solid rgba(139, 0, 0, 0.8)';
+    } else {
+      button.style.border = '1px solid rgba(0, 0, 0, 0.3)';
+      button.style.borderBottom = '2px solid rgba(204, 204, 204, 0.3)';
+      button.style.borderRight = '1px solid rgba(68, 68, 68, 0.3)';
+    }
+  });
+
+  // If it's the initial load, scroll the button into view
+  if (initial) {
+    const selectedButton = document.querySelector(`button[data-model="${choice}"]`);
+    if (selectedButton) {
+      selectedButton.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+    }
+  }
+}
+
 document.addEventListener('DOMContentLoaded', function() {
   const inputBox = document.getElementById('inputBox');
   const outputBox = document.getElementById('outputBox');
   const loader = document.getElementById('loader');
+
+  // Set the initial model choice
+  modelChoice('llama3.1', true);
 
   function handleInput() {
     const lines = inputBox.value.split('\n');
@@ -130,17 +155,3 @@ document.addEventListener('DOMContentLoaded', function() {
   inputBox.addEventListener('input', handleInput);
   inputBox.addEventListener('keydown', handleKeyDown);
 });
-
-function modelChoice(choice) {
-  selectedModel = choice;
-  const buttons = document.querySelectorAll('#modelSelectorContainer button');
-  buttons.forEach(button => {
-    if (button.getAttribute('data-model') === choice) {
-      button.style.borderBottom = '2px solid rgba(139, 0, 0, 0.8)';
-    } else {
-      button.style.border = '1px solid rgba(0, 0, 0, 0.3)';
-      button.style.borderBottom = '2px solid rgba(204, 204, 204, 0.3)';
-      button.style.borderRight = '1px solid rgba(68, 68, 68, 0.3)';
-    }
-  });
-}
