@@ -2,27 +2,33 @@ const inputBox = document.getElementById('inputBox');
 const initialHeight = 50; // Set the initial height in pixels
 inputBox.style.height = `${initialHeight}px`;
 
-let isExpanded = false;
+let lastLine = '';
+let isOverflown = false;
 
 function adjustHeight() {
-  const currentScrollHeight = inputBox.scrollHeight;
   const lines = inputBox.value.split('\n');
+  const currentLine = lines[lines.length - 1];
+  const currentScrollHeight = inputBox.scrollHeight;
 
-  if (lines.length > 1 || currentScrollHeight > initialHeight) {
-    inputBox.style.height = 'auto';
-    inputBox.style.height = `${inputBox.scrollHeight}px`;
-    isExpanded = true;
-  } else if (isExpanded && lines.length === 1 && currentScrollHeight <= initialHeight) {
+  if (currentScrollHeight > initialHeight) {
+    if (currentLine.length > lastLine.length || isOverflown) {
+      // New character added or already overflown
+      inputBox.style.height = 'auto';
+      const scrollHeight = inputBox.scrollHeight;
+      inputBox.style.height = `${scrollHeight}px`;
+      isOverflown = true;
+    }
+  } else if (currentLine.length < lastLine.length && !isOverflown) {
+    // Character removed and not overflown
     inputBox.style.height = `${initialHeight}px`;
-    isExpanded = false;
   }
+
+  lastLine = currentLine;
 }
 
 inputBox.addEventListener('input', adjustHeight);
 inputBox.addEventListener('keydown', (event) => {
-  if (event.key === 'Enter' && !event.shiftKey) {
-    event.preventDefault(); // Prevent default Enter behavior
-  } else if (event.shiftKey && event.key === 'Enter') {
+  if (event.shiftKey && event.code === 'Enter') {
     event.preventDefault();
     const start = inputBox.selectionStart;
     const end = inputBox.selectionEnd;

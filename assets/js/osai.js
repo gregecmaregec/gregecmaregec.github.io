@@ -2,44 +2,27 @@ let selectedModel = 'llama3.1'; // default model
 let messageHistory = []; // array to store previous messages
 
 function adjustTextareaHeight(textarea) {
-  textarea.style.height = 'auto';
-  textarea.style.height = (textarea.scrollHeight) + 'px';
-}
+  const lineHeight = parseInt(window.getComputedStyle(textarea).lineHeight);
+  const padding = parseInt(window.getComputedStyle(textarea).paddingTop) + 
+                  parseInt(window.getComputedStyle(textarea).paddingBottom);
+  const lines = textarea.value.split('\n').length;
+  const newHeight = lines > 1 ? (lines * lineHeight + padding) : 50;
 
-function modelChoice(choice, initial = false) {
-  selectedModel = choice;
-  const buttons = document.querySelectorAll('#modelSelectorContainer button');
-  buttons.forEach(button => {
-    if (button.getAttribute('data-model') === choice) {
-      button.style.borderBottom = '2px solid rgba(139, 0, 0, 0.8)';
-    } else {
-      button.style.border = '1px solid rgba(0, 0, 0, 0.3)';
-      button.style.borderBottom = '2px solid rgba(204, 204, 204, 0.3)';
-      button.style.borderRight = '1px solid rgba(68, 68, 68, 0.3)';
-    }
-  });
-
-  // If it's the initial load, scroll the button into view
-  if (initial) {
-    const selectedButton = document.querySelector(`button[data-model="${choice}"]`);
-    if (selectedButton) {
-      selectedButton.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
-    }
-  }
+  textarea.style.height = newHeight + 'px';
 }
 
 document.addEventListener('DOMContentLoaded', function() {
   const inputBox = document.getElementById('inputBox');
   const outputBox = document.getElementById('outputBox');
   const loader = document.getElementById('loader');
-  const sendButton = document.getElementById('sendButton');
-
-  // Set the initial model choice
-  modelChoice('llama3.1', true);
 
   function handleInput() {
-    adjustTextareaHeight(inputBox);
-    sendButton.style.display = inputBox.value.trim() ? 'block' : 'none';
+    const lines = inputBox.value.split('\n');
+    if (lines.length > 1 || (lines.length === 1 && inputBox.scrollHeight > inputBox.clientHeight)) {
+      adjustTextareaHeight(inputBox);
+    } else {
+      inputBox.style.height = '50px';
+    }
   }
 
   function handleKeyDown(event) {
@@ -79,7 +62,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Show loader and disable input
     loader.style.display = 'block';
     inputBox.disabled = true;
-    sendButton.disabled = true;
 
     fetch("https://gmserver.xyz", {
       method: "POST",
@@ -101,13 +83,11 @@ document.addEventListener('DOMContentLoaded', function() {
       // Hide loader and enable input
       loader.style.display = 'none';
       inputBox.disabled = false;
-      sendButton.disabled = false;
     });
 
     // Clear and reset input box
     inputBox.value = '';
-    inputBox.style.height = '68px';
-    sendButton.style.display = 'none';
+    inputBox.style.height = '50px';
   }
 
   function appendToOutput(sender, content, isError = false) {
@@ -149,5 +129,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
   inputBox.addEventListener('input', handleInput);
   inputBox.addEventListener('keydown', handleKeyDown);
-  sendButton.addEventListener('click', sendMessage);
 });
+
+function modelChoice(choice) {
+  selectedModel = choice;
+  const buttons = document.querySelectorAll('#modelSelectorContainer button');
+  buttons.forEach(button => {
+    if (button.getAttribute('data-model') === choice) {
+      button.style.borderBottom = '2px solid rgba(139, 0, 0, 0.8)';
+    } else {
+      button.style.border = '1px solid rgba(0, 0, 0, 0.3)';
+      button.style.borderBottom = '2px solid rgba(204, 204, 204, 0.3)';
+      button.style.borderRight = '1px solid rgba(68, 68, 68, 0.3)';
+    }
+  });
+}
