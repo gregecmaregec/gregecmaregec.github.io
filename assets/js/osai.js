@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Clear and reset input box
     inputBox.value = '';
-    inputBox.style.height = '50px';
+    inputBox.style.height = '68px';
     sendButton.style.display = 'none';
   }
 
