@@ -11,7 +11,7 @@ importance: 2
 
 <b>Large Language Models (LLMs)</b> are, in essence, computational models predicting and generating next words in sentences. There have been variations of language models dating as far back as 2003.
 
-<b>The Transformer</b> is a neural net architecture, presented in the scientific paper – “Attention is All You Need” by Vaswani et al. (2017). It is the power engine behind modern day AI systems and LLMs. The Transformer architecture has been implemented at the centre of billion-dollar AI products the likes of ChatGPT, Copilot, Claude, Mistral, Grok, LLaMa etc. It is hard to overstate the impact of the Transformer on the AI services boom of 2023 and 2024, as well as on recent advances in AI, large language models, and neural nets.
+<b>The Transformer</b> is a neural net architecture, presented in the scientific paper – “Attention is All You Need” by Vaswani et al. (2017). It is the power engine behind modern day AI systems and LLMs. The Transformer architecture has been implemented at the centre of billion-dollar AI products the likes of OpenAI's ChatGPT, Microsoft's Copilot, Anthropic's Claude, Mistral.AI's Mistral, x.ai's Grok, Meta's LLaMa, Google's Gemini etc. It is hard to overstate the impact of the Transformer on the AI services boom of 2023 and 2024, as well as on recent advances in AI, large language models, and neural nets.
 
 
 <div class="caption">
@@ -34,9 +34,9 @@ importance: 2
 
 <br>
 
-The initial showcase for the Transformer in in Attention is All you Need was computerized translation. The authors reported state of the art results with the Transformer on automated benchmarks and human evaluation scores, and indicated intentions to test the Transformer on “other tasks” in the future.
+The initial showcase for the Transformer in in Attention is All you Need was computerized translation. The authors reported state of the art results with the Transformer on automated benchmarks and human evaluation scores, and indicated intentions to test the Transformer on “other tasks” in the future. 
 
-Only a year after the publication of Attention is All You Need, another milestone in the field of AI research was published: “Language Models are Unsupervised Multitask Learners” by Radford et al. (2018), where OpenAI showcased their state-of-the-art language model named GPT-2. The GPT in OpenAI’s ChatGPT stands for generative pre-trained Transformer. 
+Only a year after the publication of Attention is All You Need, another milestone in the field of AI research was published - “Language Models are Unsupervised Multitask Learners” Radford et al. (2018), where OpenAI showcased their state-of-the-art language model named GPT-2. The GPT in OpenAI’s ChatGPT stands for generative pre-trained Transformer. 
 
 Neural networks used to be designed for specific use cases and tailored to a specific tasks. Different neural net designs were implemented for processing image, video, sound, code etc. The field of AI research is converging in recent years more and more towards one architecture for all types of data.
 
