@@ -133,8 +133,13 @@ Excerpt from Microsoft’s data processing policy for the service, taken June 20
 
 Sharing confidential and personal data stored within a company with third-party service providers warrants an inquiry of what data is being processed, and what data the service provider can see in its unencrypted form. While Microsoft pledges not to use company data to further train their models, the regulatory landscape in certain jurisdictions could necessitate them to monitor their AI systems for abuse (yellow line square).
 
-Such a regulatory requirement for abuse monitoring could mandate an AI systems provider to gain access to unencrypted data shared with it through AI systems offered to organizations. Data processing regulations often address unencrypted sharing of personal data. EU’s GDPR states that Personal data are any information which are related to an identified or identifiable natural person. Under GDPR, data processing standards like data minimization could impact AI processing workflows, especially if an external service party can see the personal data in its unencrypted form.
+A regulatory requirement for abuse monitoring could mandate an AI systems provider to gain access to unencrypted data shared with it through AI systems offered to organizations. Data processing regulations wordlwide often address data processing of personal data specificially. E.g. EU’s GDPR states that Personal Data are any information which are related to an identified or identifiable natural person.   
 
+<b>Compliance consideration:</b><br><br>
+Organizations engaging in International Trade may face legal liability if they fail to implement adequate training and safeguards to protect against processing personal and confidential data from within the organization by AI systems.<br><br>
+
+<br>
+<br>
 
 <div style="max-width: 830px; margin: 1rem auto; padding: 0 1rem;">
   <blockquote style="background-color: transparent; border-left: 5px solid #d64a4a; padding: 0.7rem; padding-bottom: 0.1rem; margin: 0; border-radius: 0 8px 8px 0; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.2s ease-in-out;">
@@ -145,13 +150,16 @@ It also means that the EU industry will not have access to future multimodal ver
   </blockquote>
 </div>
 
+<br>
+<br>
+
 <b>Compliance considerations:</b><br><br>
-Organizations may face legal liability if they fail to implement adequate training and safeguards to protect against processing personal and confidential data from within the organization by AI systems.<br><br>
+Organizations engaging in International may face legal liability if they fail to implement adequate training and safeguards to protect against processing personal and confidential data from within the organization by AI systems.<br><br>
 How do data processing and AI abuse monitoring regulations interact in the jurisdiction of interest? <br><br>
 After implementing AI solutions, who in an organization is responsible for monitoring AI regulatory changes?<br><br>
 
 <br>
-<div style="height: 1px; width: min(800px, 100%); padding: 0 5px; box-sizing: border-box; background-color: lightgray;"></div>
+<div style="height: 1px; width: min(800px, 100%); padding: 0 5px; box-sizing: border-box; background-color: lightgray   ;"></div>
 <br>
 
 #### Hallucinating fake data
