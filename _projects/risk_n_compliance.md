@@ -15,7 +15,9 @@ nav: true
 <div style="height: 1px; width: min(800px, 100%); padding: 0 5px; box-sizing: border-box; background-color: lightgray;"></div>
 <br>
 
-This section starts with compliance considerations of trade finance professionals utilising current state-of-the-art AI systems such as Large Language Models / AI chatbots.
+This section starts with compliance considerations for trade finance professionals utilising current state-of-the-art AI systems such as Large Language Models / AI chatbots.
+
+<br>
 
 #### Prompt injections by users
 
