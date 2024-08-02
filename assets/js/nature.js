@@ -21,7 +21,7 @@ function setCanvasSize() {
 }
 
 // Call the function initially and on window resize 
-// thank you claude ai for this beautiufl code below
+// thank you claude ai for this beautiful code below
 setCanvasSize();
 window.addEventListener('resize', setCanvasSize);
 
