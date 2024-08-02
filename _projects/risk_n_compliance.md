@@ -218,7 +218,7 @@ Many AI systems, particularly those using the Transformer architecture, operate 
 <br>
 <br>
 <b>Data Privacy and Consent</b><br>
-Autonomous AI systems that process vast amounts of data to make decisions need to be structured to ensure compliance with an ever-increasing data privacy regulation landscape, such as GDPR. Remaining compliant with consent and data minimization sections of GDPR could become increasingly difficult with systems that function without human intervention. Being found in violation of data privacy laws can cause great reputational damage to organizations involved in International Trade, as trust is of extreme importance.
+Autonomous AI systems that process vast amounts of data to make decisions need to be structured to ensure compliance with an ever-increasing data privacy regulation landscape, such as GDPR. Remaining compliant with consent and data minimization sections of GDPR could become increasingly difficult with systems that function without human intervention. EU’s GDPR states that Personal Data are any information which are related to an identified or identifiable natural person. Being found in violation of data privacy laws can cause great reputational damage to organizations involved in International Trade, as trust is of extreme importance.
 <br>
 <br>
 <b>Regulatory Compliance</b><br>
