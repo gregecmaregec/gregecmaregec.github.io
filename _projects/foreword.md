@@ -65,6 +65,7 @@ And thank you, for reading!
 <b>Kernel</b> - Core component of an operating system that manages system resources.<br>
 <b>LLM</b> - Large Language Model; AI system trained on vast amounts of text data to understand and generate human-like language.<br>
 <b>Llama</b> - Open-source large language model developed by Meta.<br>
+<b>Machine Learning</b> - Branch of AI that enables systems to automatically learn and improve from experience without being explicitly programmed. It uses algorithms and statistical models to analyze patterns in data, make decisions, and predict outcomes based on infromation found in the traning data.<br>
 <b>Meta</b> - Technology company formerly known as Facebook, focused on social media and virtual reality.<br>
 <b>Midjourney</b> - AI-powered image generation tool.<br>
 <b>Multimodal</b> - AI systems capable of processing and generating multiple types of data (text, images, audio, etc.).<br>
