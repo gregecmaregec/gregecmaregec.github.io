@@ -15,6 +15,8 @@ nav: true
 <div style="height: 1px; width: min(800px, 100%); padding: 0 5px; box-sizing: border-box; background-color: lightgray;"></div>
 <br>
 
+This section starts with compliance considerations of trade finance professionals utilising current state-of-the-art AI systems such as Large Language Models / AI chatbots.
+
 #### Prompt injections by users
 
 <div class="caption">
@@ -182,7 +184,7 @@ IS it clear which party is liable for ensuring the factual validity of AI output
 
 Social engineering is the term used for manipulation techniques utilized by malicious actors seeking to exploit human psychology by tricking people into divulging confidential information or performing actions that compromise operational security. Social engineering relies on human error and deception rather than traditional computer hacking methods. Modern day encryption is uncrackable with our current technology, as it would take more than the age of the universe to decode the common SHA256 algorithm used for encrypting data sent through the internet. For this reason, hackers increasingly rely on deceiving humans to introduce malicious software from within of an organization.
 
-Estimates suggest that between 70-90% of all malicious breaches involve some form of social engineering. With the rise of AI, social engineering attacks could become more sophisticated, tailored to specific employees or organizations.
+Estimates suggest that between 70-90% of all malicious breaches involve some form of social engineering. With the rise of AI, social engineering attacks could become more sophisticated, tailored to specific employees or organizations. 
 
 
 Common social engineering tactics include:
@@ -208,7 +210,7 @@ Below are some compliance considerations of fully autonomous AI solutions.
 <br>
 <br>
 <b>Liability and Accountability</b><br>
-When AI systems make autonomous decisions that result in harm or damages, determining liability becomes even more complicated compared to current user-implemented AI outputs. Who will be held responsible and will carry the liability - the AI developer, the organization implementing the AI, or the AI itself? Current legal frameworks struggle to address scenarios where there's no direct human decision-maker to hold accountable for untransparent outputs. This is especially relevant for organizations engaged in International Trade, where understanding who bears liability is of great importance.
+When AI systems make autonomous decisions that result in harm or damages, determining liability becomes even more complicated compared to current user-implemented AI outputs. Who will be held responsible and will carry the liability - the AI developer, the organization implementing the AI, or the AI itself? Current legal frameworks struggle to address scenarios where there's no direct human decision-maker to hold accountable for untransparent outputs. This is especially relevant for organizations engaged in International Trade, as understanding who bears liability is of great importance.
 <br>
 <br>
 <b>Transparency and Explainability</b><br>
@@ -220,11 +222,11 @@ Autonomous AI systems that process vast amounts of data to make decisions need t
 <br>
 <br>
 <b>Regulatory Compliance</b><br>
-If AI systems become more autonomous, ensuring they are compliant with evolving AI regulations across different jurisdictions of operations in International Trade can become increasingly difficult. This is particularly relevant in highly regulated industries of finance and insurance. Ensuring implemented autonomous AI systems are following rules and regulations in trade finance is just as important, if not more important, as ensuring compliance of other systems used in facilitating International Trade.
+If AI systems become more autonomous, ensuring they are compliant with evolving AI regulations across different jurisdictions of operations in International Trade can become increasingly difficult. This is particularly relevant in highly regulated industries of finance and insurance, and with processing client data originating from multiple jurisdictions. Ensuring implemented autonomous AI systems are following rules and regulations in trade finance is just as important, if not more important, as ensuring compliance of other systems used in facilitating International Trade.
 <br>
 <br>
 <b>Intellectual Property Rights</b><br>
-According to the U.S. Copyright Office, a work is subject to copyright only when it is "fixed in a tangible medium of expression", in other words, when it is captured in a sufficiently permanent form that allows it to be perceived, reproduced, or communicated for more than a transitory duration. When AI systems create new works or innovations autonomously, legal questions arise about who owns the intellectual property rights, and what exactly constitutes a tangible medium. Could an entity utilizing generative AI to produce a multitude of creative outputs displayed on a website, for example, use this as a basis of a legal action on grounds of copyright infringement, if another organization commercially used media that appears similar the AI’s outputs? Current IP laws might be revised to address AI-generated content and inventions. Organizations in International Trade that use AI systems to generate materials should be aware of the present risk with the specific AI systems implemented.
+According to the U.S. Copyright Office, a work is subject to copyright only when it is "fixed in a tangible medium of expression", in other words, when it is captured in a sufficiently permanent form that allows it to be perceived, reproduced, or communicated for more than a transitory duration. When AI systems create new works or innovations autonomously, legal questions arise about who owns the intellectual property rights, and what exactly constitutes a tangible medium. Could an entity utilizing generative AI to produce a multitude of creative outputs displayed on a website, for example, use this as a basis of a legal action on grounds of copyright infringement, if another organization commercially used media that appears similar the AI’s outputs? Current IP laws might be revised to address AI-generated content and inventions. Organizations in International Trade that use AI systems to generate materials should make the users aware of the specific IP risks.
 <br>
 <br>
 <b>Contract Law</b><br>
@@ -232,7 +234,7 @@ AI systems engaging in autonomous negotiations or contract formations raise ques
 <br>
 <br>
 <b>Ethics and Human Rights</b><br>
-Autonomous AI decision-making in sensitive areas - e.g. assigning insurance covers or providing funding can raise ethical concerns and potentially infringe on human rights and non-discrimination regulation, necessitating novel legal frameworks to protect individuals and organizations. E.g. The EU’s AI act of 2024 classified social scoring: classifying people based on behaviour, socio-economic status or personal characteristics as unacceptable risk regarding to AI implementation and thus forbids the usage of AI on such.
+Autonomous AI decision-making in sensitive areas - e.g. assigning insurance covers or providing funding can raise ethical concerns and potentially infringe on human rights and non-discrimination regulation, necessitating novel legal frameworks to protect individuals and organizations. E.g. The EU’s AI act of 2024 classified social scoring: classifying people based on behaviour, socio-economic status or personal characteristics as unacceptable risk regarding to AI implementation and thus forbids the usage of AI on such. 
 <br>
 <br>
 <b>International Law and Jurisdiction</b><br>
@@ -240,7 +242,7 @@ With AI systems operating across borders, determining which laws apply and which
 <br>
 <br>
 <b>Algorithmic Governance:</b><br>
-There will likely updates to regulatory frameworks to address development, deployment, and operation of autonomous AI systems.
+There will likely be updates to regulatory frameworks to address development, deployment, and operation of autonomous AI systems.
 
 As AI continues to advance, legislators, legal experts, as well as in-house council will need to address these challenges, potentially leading to novel legal doctrines tailored to address the unique issues posed by autonomous AI systems and the decision-making process within organizations. Internaitonal Trade organizations using autonomous AI systems will need to monitor developments and potentially reassess their risk mitigation strategies. A risk of implementing autonomous AI processes in International Trade today is anticipating how new algorithmic governance will regulate their use, and how to implement autonomous AI processes as end-to-end solutions that can be updated in the future to adjust to new regulatory requirements.
 
