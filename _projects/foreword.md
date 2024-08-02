@@ -25,6 +25,8 @@ For comments or inquiries you may reach me at gregor.mihelac (at) outlook (dot) 
 <br>
 <br>
 <br>
+<br>
+<br>
 #### Thanks ❤️
 Special thanks to Silja Calac and Duarte Pedreira for their incredible mentorship and energy.<br>
 <br>
@@ -32,9 +34,7 @@ Thanks to: André Casterman; Caitlin MacNamara; Charlotte Russo; Pia Reyes; Sam 
 <br>for engaging in meaningful conversation that helped me see this topic from a different perspective.
 <br><br>
 And thank you, for reading!
-
-
-
+<br>
 <br>
 <div style="height: 1px; width: min(800px, 100%); padding: 0 5px; box-sizing: border-box; background-color: lightgray;"></div>
 <br>
