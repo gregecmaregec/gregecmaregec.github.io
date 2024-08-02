@@ -205,10 +205,6 @@ When AI systems make autonomous decisions that result in harm or damages, determ
 Many AI systems, particularly those using the Transformer architecture, operate as "black boxes," making it difficult to understand how and why they arrive at decisions they do. This lack of transparency can pose challenges in case of legal proceedings based on their outputs, as the rationale behind a decision can not to be explained and justified, as it is usually mandated.This is particularly relevant to highly regulated industries like finance and insurance.
 <br>
 <br>
-<b>Bias and Discrimination</b><br>
-LLMs have been shown to absorb and amplify societal biases present in their training data, converging on issues like racial and gender discrimination on a large scale. E.g. in 2017, machine translation on a post from a Palestinian man’s Facebook post where “Good morning” was written Arabic, was translated to “Attack them” in Hebrew, alerting Israeli authorities that later arrested the man. There exists a real danger for AI systems to build on top of and amplify harmful biases present in data they are trained on, which would influence autonomous decisions, and organizations engaged in International Trade might face legal liability should biases and harmful outputs be present in their AI systems - with potentially immense reputational damages.
-<br>
-<br>
 <b>Data Privacy and Consent</b><br>
 Autonomous AI systems that process vast amounts of data to make decisions need to be structured to ensure compliance with an ever-increasing data privacy regulation landscape, such as GDPR. Remaining compliant with consent and data minimization sections of GDPR could become increasingly difficult with systems that function without human intervention. Being found in violation of data privacy laws can cause great reputational damage to organizations involved in International Trade, as trust is of extreme importance.
 <br>
