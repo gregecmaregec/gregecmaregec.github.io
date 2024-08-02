@@ -133,7 +133,7 @@ Excerpt from Microsoft’s data processing policy for the service, taken June 20
 
 Sharing confidential and personal data stored within a company with third-party service providers warrants an inquiry of what data is being processed, and what data the service provider can see in its unencrypted form. While Microsoft pledges not to use company data to further train their models, the regulatory landscape in certain jurisdictions could necessitate them to monitor their AI systems for abuse (yellow line square).
 
-Such a regulatory requirement for abuse monitoring could mandate an AI systems provider to gain access to unencrypted data shared with it through AI systems offered to organizations. EU’s GDPR states that “Personal data are any information which are related to an identified or identifiable natural person”. 
+Such a regulatory requirement for abuse monitoring could mandate an AI systems provider to gain access to unencrypted data shared with it through AI systems offered to organizations. Data processing regulations often address unencrypted sharing of personal data. EU’s GDPR states that Personal data are any information which are related to an identified or identifiable natural person. Under GDPR, data processing standards like data minimization could impact AI processing workflows, especially if an external service party can see the personal data in its unencrypted form.
 
 
 <div style="max-width: 830px; margin: 1rem auto; padding: 0 1rem;">
