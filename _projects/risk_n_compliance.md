@@ -218,7 +218,7 @@ Many AI systems, particularly those using the Transformer architecture, operate 
 <br>
 <br>
 <b>Data Privacy and Consent</b><br>
-Autonomous AI systems that process vast amounts of data to make decisions need to be structured to ensure compliance with an ever-increasing data privacy regulation landscape, such as GDPR. Remaining compliant with consent and data minimization sections of GDPR could become increasingly difficult with systems that function without human intervention. EU’s GDPR states that Personal Data are any information which are related to an identified or identifiable natural person. Being found in violation of data privacy laws can cause great reputational damage to organizations involved in International Trade, as trust is of extreme importance.
+Autonomous AI systems that process vast amounts of data to make decisions need to be structured to ensure compliance with an ever-increasing data privacy regulation landscape, such as GDPR. Remaining compliant with consent and data minimization sections of GDPR could become increasingly difficult with systems that function without human intervention. EU’s GDPR states that Personal Data are any information which are related to an identified or identifiable natural person. Many jurisdictions have data processing regulations that target handling of Personal Data. Being found in violation of data privacy laws can cause great reputational damage to organizations involved in International Trade, where trust is of extreme importance.
 <br>
 <br>
 <b>Regulatory Compliance</b><br>
@@ -230,11 +230,11 @@ According to the U.S. Copyright Office, a work is subject to copyright only when
 <br>
 <br>
 <b>Contract Law</b><br>
-AI systems engaging in autonomous negotiations or contract formations raise questions about the validity of such agreements under current contract law, which typically assumes human understanding and intent. In International Trade, contract law is immensely important.
+AI systems engaging in autonomous negotiations or contract formations raise questions about the validity of such agreements under current contract law, which typically assumes human understanding and intent. In International Trade, observing contract law is immensely important.
 <br>
 <br>
 <b>Ethics and Human Rights</b><br>
-Autonomous AI decision-making in sensitive areas - e.g. assigning insurance covers or providing funding can raise ethical concerns and potentially infringe on human rights and non-discrimination regulation, necessitating novel legal frameworks to protect individuals and organizations. E.g. The EU’s AI act of 2024 classified social scoring: classifying people based on behaviour, socio-economic status or personal characteristics as unacceptable risk regarding to AI implementation and thus forbids the usage of AI on such. 
+Autonomous AI decision-making in sensitive areas - e.g. assigning insurance covers or providing funding can raise ethical concerns and potentially infringe on human rights and non-discrimination regulation, necessitating novel legal frameworks to protect individuals and competition. E.g. The EU’s AI act of 2024 classified social scoring: classifying people based on behaviour, socio-economic status or personal characteristics as unacceptable risk regarding to AI implementation and thus forbids the usage of AI on such. 
 <br>
 <br>
 <b>International Law and Jurisdiction</b><br>
@@ -242,7 +242,7 @@ With AI systems operating across borders, determining which laws apply and which
 <br>
 <br>
 <b>Algorithmic Governance:</b><br>
-There will likely be updates to regulatory frameworks to address development, deployment, and operation of autonomous AI systems.
+There will likely be more updates to regulatory frameworks to address development, deployment, and operation of autonomous AI systems.
 
 As AI continues to advance, legislators, legal experts, as well as in-house council will need to address these challenges, potentially leading to novel legal doctrines tailored to address the unique issues posed by autonomous AI systems and the decision-making process within organizations. Internaitonal Trade organizations using autonomous AI systems will need to monitor developments and potentially reassess their risk mitigation strategies. A risk of implementing autonomous AI processes in International Trade today is anticipating how new algorithmic governance will regulate their use, and how to implement autonomous AI processes as end-to-end solutions that can be updated in the future to adjust to new regulatory requirements.
 
