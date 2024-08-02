@@ -161,7 +161,7 @@ AIs in are known to fabricate data. In the AI community, the term "hallucinating
 The usage and implementation of the data outputted by AI systems bears significant scrutiny.
 
 <b>Compliance consideration:</b><br>
-which party is liable for ensuring the factual validity of AI outputs? 
+IS it clear which party is liable for ensuring the factual validity of AI outputs? 
 
 
 <br>
@@ -198,7 +198,7 @@ Below are some compliance considerations of fully autonomous AI solutions.
 <br>
 <br>
 <b>Liability and Accountability</b><br>
-When AI systems make autonomous decisions that result in harm or damages, determining liability becomes even more complicated compared to current user-implemented AI outputs. Who will be held responsible and will carry the liability - the AI developer, the organization implementing the AI, or the AI itself? Current legal frameworks struggle to address scenarios where there's no direct human decision-maker to hold accountable for untransparent outputs. This is especially relevant for organizations engaged in International Trade, where understanding who bears liability is of utmost importance.
+When AI systems make autonomous decisions that result in harm or damages, determining liability becomes even more complicated compared to current user-implemented AI outputs. Who will be held responsible and will carry the liability - the AI developer, the organization implementing the AI, or the AI itself? Current legal frameworks struggle to address scenarios where there's no direct human decision-maker to hold accountable for untransparent outputs. This is especially relevant for organizations engaged in International Trade, where understanding who bears liability is of great importance.
 <br>
 <br>
 <b>Transparency and Explainability</b><br>
@@ -222,7 +222,7 @@ AI systems engaging in autonomous negotiations or contract formations raise ques
 <br>
 <br>
 <b>Ethics and Human Rights</b><br>
-Autonomous AI decision-making in sensitive areas - e.g. assigning insurance covers or providing funding can raise ethical concerns and potentially infringe on human rights and non-discrimination regulation, necessitating novel legal frameworks to protect individuals and organizations. The EU’s AI act of 2024 classified social scoring: classifying people based on behaviour, socio-economic status or personal characteristics as unacceptable risk regarding to AI implementation and thus forbids the usage of AI on such. Such regulation could dampen the possibilities of AI implementation and could force withdrawal from already established AI systems in industries related to International Trade.
+Autonomous AI decision-making in sensitive areas - e.g. assigning insurance covers or providing funding can raise ethical concerns and potentially infringe on human rights and non-discrimination regulation, necessitating novel legal frameworks to protect individuals and organizations. E.g. The EU’s AI act of 2024 classified social scoring: classifying people based on behaviour, socio-economic status or personal characteristics as unacceptable risk regarding to AI implementation and thus forbids the usage of AI on such.
 <br>
 <br>
 <b>International Law and Jurisdiction</b><br>
@@ -230,7 +230,7 @@ With AI systems operating across borders, determining which laws apply and which
 <br>
 <br>
 <b>Algorithmic Governance:</b><br>
-There may be updates to regulatory frameworks to address development, deployment, and operation of autonomous AI systems.
+There will likely updates to regulatory frameworks to address development, deployment, and operation of autonomous AI systems.
 
 As AI continues to advance, legislators, legal experts, as well as in-house council will need to address these challenges, potentially leading to novel legal doctrines tailored to address the unique issues posed by autonomous AI systems and the decision-making process within organizations. Internaitonal Trade organizations using autonomous AI systems will need to monitor developments and potentially reassess their risk mitigation strategies. A risk of implementing autonomous AI processes in International Trade today is anticipating how new algorithmic governance will regulate their use, and how to implement autonomous AI processes as end-to-end solutions that can be updated in the future to adjust to new regulatory requirements.
 
