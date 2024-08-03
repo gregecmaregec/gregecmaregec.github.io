@@ -34,7 +34,7 @@ class Particle {
         this.speedX = (Math.random() * 1 - 0.5) * 0.4;
         this.speedY = (Math.random() * 1 - 0.5) * 0.4;
         this.color = `hsl(${Math.random() * 360}, 70%, 50%)`;
-        this.lifespan = 300 + Math.random() * 200;
+        this.lifespan = 300 + Math.random() * 150;
     }
 
     update() {
