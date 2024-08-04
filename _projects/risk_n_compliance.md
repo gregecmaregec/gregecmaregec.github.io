@@ -8,7 +8,7 @@ nav: true
 ---
 
 #### Disclaimer:
-<i>The content of this report is for general educational purposes only and does not constitute legal advice. The discussion of laws relating to AI systems and compliance considerations herein is based on research available at the time of writing and may not reflect current regulations or practices. Organizations dealing with AI systems should consult legal experts and compliance professionals for up-to-date guidance specific to their jurisdiction and use case. </i>
+<i>The content of this report is for general educational purposes only and does not constitute legal advice. The discussion of laws relating to AI systems and compliance considerations herein is based on research available at the time of writing and may not reflect current regulations or practices. The below list is not exhaustive. Organizations dealing with AI systems should consult legal experts and compliance professionals for up-to-date guidance specific to their jurisdiction and use case. </i>
 
 
 <br>
