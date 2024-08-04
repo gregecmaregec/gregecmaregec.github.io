@@ -38,7 +38,7 @@ The initial showcase in Attention is All you Need for the Transformer was comput
 
 Only a year after the publication of Attention is All You Need, another milestone in the field of AI research was published - “Language Models are Unsupervised Multitask Learners” Radford et al. (2018), where OpenAI showcased their state-of-the-art language model named GPT-2. The GPT in OpenAI’s ChatGPT stands for generative pre-trained Transformer. 
 
-Neural networks used to be designed for specific use cases and tailored to a specific tasks. Different neural net designs were implemented for processing image, video, sound, text, code etc. The field of AI research is converging in recent years more and more towards one architecture for all types of data.
+Neural networks used to be designed for specific use cases and tailored to specific tasks. Different neural net designs were implemented for processing image, video, sound, text, code etc. The field of AI research is converging in recent years more and more towards one architecture for all types of data.
 
 E.g. Wav2Vec is a Transformer based AI, developed by Meta (formerly Facebook), able to generate natural sounding vocal speech of languages possessing no written form, such as Mboshi: a Bantu language spoken by approximately 150,000 people in the Republic of the Congo (Ji et al, 2022). The Transformer is a token-based prediction engine, not matter which data is tokenized.
 
