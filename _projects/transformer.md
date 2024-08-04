@@ -34,7 +34,7 @@ importance: 2
 
 <br>
 
-The initial showcase in ttention is All you Need for the Transformer was computerized translation. The authors reported state of the art results when testing the Transformer on automated benchmarks and human evaluation scores, and indicated intentions to test the Transformer on “other tasks” than mere translation in the future. 
+The initial showcase in Attention is All you Need for the Transformer was computerized translation. The authors reported state of the art results when testing the Transformer on automated benchmarks and human evaluation scores, and indicated intentions to test the Transformer on “other tasks” than mere translation in the future. 
 
 Only a year after the publication of Attention is All You Need, another milestone in the field of AI research was published - “Language Models are Unsupervised Multitask Learners” Radford et al. (2018), where OpenAI showcased their state-of-the-art language model named GPT-2. The GPT in OpenAI’s ChatGPT stands for generative pre-trained Transformer. 
 
