@@ -9,7 +9,7 @@ nav_order: 2
 
 ---
 
-All code shown explicitly on /code/ is under the [MIT License.](https://github.com/gregecmaregec/gregecmaregec.github.io/blob/master/LICENSE) <br>
+All code shown explicitly on /code/ is under the [MIT License.](https://github.com/gregecmaregec/gregecmaregec.github.io/blob/master/LICENSE) <br><br>
 Feel free to copy the below working code to your own project under the conditions of the MIT license.
 
 <br>
