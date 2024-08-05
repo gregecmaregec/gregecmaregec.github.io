@@ -391,9 +391,9 @@ chsh <span class="nt">-s</span> /bin/rbash serverguest
     <span class="p">}</span>
 
     <span class="k">func</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
-        <span class="n">http</span><span class="o">.</span><span class="n">HandleFunc</span><span class="p">(</span><span class="s">"/"</span><span class="p">,</span> <span class="n">handler</span><span class="p">)</span> <span class="c">// Set the handler for the root path</span>
+        <span class="n">http</span><span class="o">.</span><span class="n">HandleFunc</span><span class="p">(</span><span class="s">"/"</span><span class="p">,</span> <span class="n">handler</span><span class="p">)</span> <span class="c">// sets the handler for the root path</span>
         <span class="n">log</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"Starting server on :8080..."</span><span class="p">)</span>
-        <span class="n">err</span> <span class="o">:=</span> <span class="n">http</span><span class="o">.</span><span class="n">ListenAndServe</span><span class="p">(</span><span class="s">":8080"</span><span class="p">,</span> <span class="no">nil</span><span class="p">)</span> <span class="c">// Listen on port 8080</span>
+        <span class="n">err</span> <span class="o">:=</span> <span class="n">http</span><span class="o">.</span><span class="n">ListenAndServe</span><span class="p">(</span><span class="s">":8080"</span><span class="p">,</span> <span class="no">nil</span><span class="p">)</span> <span class="c">// listens on port 8080</span>
         <span class="k">if</span> <span class="n">err</span> <span class="o">!=</span> <span class="no">nil</span> <span class="p">{</span>
             <span class="n">log</span><span class="o">.</span><span class="n">Fatal</span><span class="p">(</span><span class="s">"ListenAndServe: "</span><span class="p">,</span> <span class="n">err</span><span class="p">)</span>
         <span class="p">}</span>
