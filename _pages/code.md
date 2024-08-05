@@ -466,9 +466,9 @@ function drawGrid() {
     }
 
     func main() {
-        http.HandleFunc("/", handler) // Set the handler for the root path
+        http.HandleFunc("/", handler) // sets the handler for the root path
         log.Println("Starting server on :8080...")
-        err := http.ListenAndServe(":8080", nil) // Listen on port 8080
+        err := http.ListenAndServe(":8080", nil) // listens on port 8080
         if err != nil {
             log.Fatal("ListenAndServe: ", err)
         }
