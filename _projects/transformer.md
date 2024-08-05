@@ -64,7 +64,7 @@ Many types of data can be broken down into tokens / tokenized. E.g. written Engl
 
 <br>
 
-LLMs output sentences that normally do not show up to the user all at once, but rather one token after another. This is due to the way the LLMs operate – they choose between tokens based on probability weights obtained in the training stage, and output the next token only when the sequence of previous tokens has been established – creating a stream of responses.  
+LLMs output sentences that normally do not show up to the user all at once, but rather one token after another, or rather, one word after another. This is due to the way the LLMs operate – they choose between tokens based on probability weights obtained in the training stage, and output the next token only when the sequence of previous tokens has been established – creating a stream of responses.  
 
 <div class="caption">
     LLMs output tokens based on probabilities obtained in the training stage. 
