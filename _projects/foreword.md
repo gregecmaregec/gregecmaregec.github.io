@@ -43,7 +43,7 @@ And thank you, for reading!
 
 <b>AI</b> - Artificial Intelligence; systems designed to mimic human intelligence and perform tasks autonomously.<br>
 <b>AI chatbot</b> - Conversational software using AI to interact with users, often powered by large language models (LLMs)<br>
-<b>Anthropic</b> - AI research company, creator of Claude AI.<br>
+<b>Anthropic</b> - AI research company, creators of Claude AI.<br>
 <b>Attention</b> - Mechanism in neural networks that allows the model to focus on relevant parts of the input.<br>
 <b>Autonomous vehicles</b> - Vehicles capable of sensing their environment and operating without human involvement.<br>
 <b>Base64</b> - Encoding scheme that represents binary data in ASCII string format.<br>
