@@ -31,10 +31,10 @@ class Particle {
         this.x = x;
         this.y = y;
         this.size = Math.random() * 3 + 1;
-        this.speedX = (Math.random() * 1 - 0.5) * 0.5;
-        this.speedY = (Math.random() * 1 - 0.5) * 0.5;
+        this.speedX = (Math.random() * 1 - 0.75) * 0.5;
+        this.speedY = (Math.random() * 1 - 0.75) * 0.5;
         this.color = `hsl(${Math.random() * 360}, 70%, 50%)`;
-        this.lifespan = 300 + Math.random() * 200;
+        this.lifespan = 300 + Math.random() * 300;
     }
 
     update() {
