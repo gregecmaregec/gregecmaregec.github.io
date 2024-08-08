@@ -1,12 +1,12 @@
 ---
 
-layout: devops
+layout: osai
 permalink: /devops/
 title: devops
 nav: false
 
 ---
-`this is meant for internal testing`
+`this is meant for internal testing, you should not be here. not production grade. No WARRANTY express or implied.`
 
 <br> 
 <!-- enjoy a sample [game of life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) simulation<br>
