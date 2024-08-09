@@ -7,7 +7,7 @@ nav_order: 6
 horizontal: false
 og_title: "ITFA EL 2024 submission"
 og_description: "Demystifying AI for use cases in International Trade"
-og_image: "https://gregormihelac.com/assets/itfa/foreword_thumbnail.jpg"
+og_image: "https://gregormihelac.com/assets/img/itfa/foreword_thumbnail.jpg"
 og_url: "https://gregormihelac.com/itfasubmission/"
 og_type: "website"
 ---
