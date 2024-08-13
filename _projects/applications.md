@@ -8,7 +8,7 @@ importance: 3
 ---
 
 
-Presented as an introduction into this chapter is excerpt from a 2023 Interview between Dwarkesh Patel and Ilya Sutskever. Ilya Sutskever is the cofounder and former chief scientist of OpenAI, and was a lead contributor to the creation of ChatGPT. 
+Presented as an introduction into this chapter is excerpt from a 2023 Interview between Dwarkesh Patel and Ilya Sutskever. Ilya Sutskever is the cofounder and former chief scientist of OpenAI, and was a lead contributor in the creation of ChatGPT. 
 
 <br>
 
