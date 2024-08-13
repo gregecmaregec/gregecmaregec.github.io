@@ -15,7 +15,7 @@ Feel free to copy the below working code to your own project under the condition
 <br>
 <br>
 
-### particle crystal-nature simulation in natty JS
+### particle crystal-nature simulation in pure JS
 `javascript`
 
 ```javascript
