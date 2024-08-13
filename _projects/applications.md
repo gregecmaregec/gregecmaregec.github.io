@@ -8,7 +8,7 @@ importance: 3
 ---
 
 
-Presented as an introduction into this chapter is excerpt from a 2023 Interview between Dwarkesh Patel, a podcaster, and Ilya Sutskever, cofounder and former chief scientist of OpenAI and lead contributor to the creation of ChatGPT.
+Presented as an introduction into this chapter is excerpt from a 2023 Interview between Dwarkesh Patel and Ilya Sutskever. Ilya Sutskever is the cofounder and former chief scientist of OpenAI, and was a lead contributor to the creation of ChatGPT. 
 
 <br>
 
@@ -98,7 +98,7 @@ AI chatbots excel in translating between numerous languages with high degree of 
 <br>
 <br>
 <div class="caption">
-    Example natural language to python script with GitHub’s Copilot. 
+    Example natural language to Python script with GitHub’s Copilot. 
 </div>
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
