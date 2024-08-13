@@ -10,9 +10,9 @@ importance: 1
 <br>
 <br>
 
-While other animals at times utilize sticks and stones as tools, humans have harnessed a sequence of transformative technologies: irrigation, levers, boats, guns, locomotives, electricity, computers – and recently, scalable applications of artificial intelligence (AI). It could with time prove to be the most transformative yet.
+While other animals at times utilize sticks and stones as tools, humans have harnessed a sequence of transformative technologies: irrigation, levers, boats, guns, locomotives, electricity, computers – and recently, scalable applications of artificial intelligence (AI). It could turn our to be the most transformative yet.
 
-This project aims to demystify state-of-the-art AI to trade finance professionals, with the explicit goal for readers a better understanding of the landscape of opportunities in AI facilitating International Trade. To achieve this, I seek to establish a foundational understanding of the mechanisms behind modern AI systems in earlyer chapters, as well as their current limitations and compliance considerations later on.
+This project aims to demystify state-of-the-art AI to trade finance professionals, with the explicit goal for readers: an understanding of the landscape of opportunities in AI facilitating International Trade. To achieve this, I've seeked to establish a foundational understanding of the mechanisms behind modern AI systems in earlier chapters, as well as their current limitations and compliance considerations later on.
 
 Some argue that attributing intelligence, and with it the title of “AI” to Large Language Models (LLMs) such as ChatGPT is inappropriate. As per the real-world use of the word, LLMs have been bundled under the term Artificial Intelligence or at least AI-related in scientific literature, professional networks, regulatory policy, social media, in common discourse, by the creators of LLMs themselves, and by technology companies offering “AI” services. This report too, considers LLMs as a progression in the field of AI.
 <br>
