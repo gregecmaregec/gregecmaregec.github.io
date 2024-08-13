@@ -175,7 +175,7 @@ AIs in are known to fabricate data. In the AI community, the term "hallucinating
 The usage and implementation of the data outputted by AI systems bears significant scrutiny.
 
 <b>Compliance consideration:</b><br>
-IS it clear which party is liable for ensuring the factual validity of AI outputs? 
+Is it clear which party holds the liability for ensuring the factual validity of AI outputs used commercially? 
 
 
 <br>
