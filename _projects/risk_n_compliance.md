@@ -77,7 +77,7 @@ There is legal precedence for using computer software, e.g. Adobe Photoshop, to 
 </div>
 
 
-However, even with this commitment, bad faith use could be excluded. Microsoft, in the example above, could claim that the tool was used in bad faith and thus the user is in breach of the end user license agreement. It's important to note that the legal status of AI-generated content in relation to copyright law is in its infancy, evolving, and will vary by jurisdiction. 
+However, even with this commitment, bad faith use could be excluded. In the example with the blue bipedal hedgehog, the AI service provider could hypothetically raise the claim that the tool was used in bad faith and thus the liability lies with the user. It's important to note that the legal status of AI-generated content in relation to copyright law is in as of 2024 in its infancy, rapidly evolving, and will vary by jurisdiction. 
 
 
 
