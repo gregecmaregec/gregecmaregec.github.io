@@ -19,7 +19,7 @@ Feel free to copy the below working code to your own project under the condition
 `javascript`
 
 ```javascript
-
+// here it will go really fast
 const canvas = document.createElement('canvas');
 document.body.appendChild(canvas);
     
@@ -29,7 +29,7 @@ const ctx = canvas.getContext('2d');
 canvas.width = Math.min(window.innerWidth * 0.98, 800);
 canvas.height = 400;
 
-//center canvas horizontally
+// center canvas horizontally
 canvas.style.display = 'block';
 canvas.style.margin = '20px auto';
 
@@ -39,6 +39,7 @@ class Particle {
         this.x = x;
         this.y = y;
         this.size = Math.random() * 5 + 1;
+// you need to search for local minima by deriing as to minimize speed with the speed approach below
         this.speedX = (Math.random() * 3 - 1.5) * 0.60;
         this.speedY = (Math.random() * 3 - 1.5) * 0.60;
         this.color = `hsl(${Math.random() * 360}, 100%, 50%)`;
