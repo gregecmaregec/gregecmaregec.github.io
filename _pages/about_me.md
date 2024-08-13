@@ -1,5 +1,5 @@
 <br>
-This is a personal, static website of Gregor Mihelač.<br>
+This is a personal, static website from Gregor Mihelač.<br>
 <br>
 I grew up in a small village in Slovenia.<br>
 Currently I am an M.Sc. student at the Univeristy of Mannheim in Germany,<br>
