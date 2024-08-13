@@ -12,12 +12,14 @@ importance: 1
 
 While other animals at times utilize sticks and stones as tools, humans have harnessed a sequence of transformative technologies: irrigation, levers, boats, guns, locomotives, electricity, computers – and recently, scalable applications of artificial intelligence (AI). It could turn our to be the most transformative yet.
 
-This project aims to demystify state-of-the-art AI to trade finance professionals, with the explicit goal for readers: an understanding of the landscape of opportunities in AI facilitating International Trade, and for trade finance professionals to familiarize themselves with the technology. To achieve this, I have seeked to establish a foundational understanding of the mechanisms behind modern AI systems in earlier chapters, as well as their current limitations and compliance considerations later on. Each chapter is full when read on its own.
-
-Should you stumble upon an unfamiliar word of phrase, consider consulting the Wordbook.
-
 Some argue that attributing intelligence, and with it the title of “AI” to Large Language Models (LLMs) such as ChatGPT is inappropriate. As per the real-world use of the word, LLMs have been bundled under the term Artificial Intelligence or at least AI-related in scientific literature, professional networks, regulatory policy, social media, in common discourse, by the creators of LLMs themselves, and by technology companies offering “AI” services. This report too, considers LLMs as a progression in the field of AI.
+
+This project aims to showcase state of the art AI to trade finance professionals, with the explicit goal for readers: an understanding of the landscape of opportunities in AI facilitating International Trade, as well as for general use. To achieve this, I present a simplified foundational understanding of the mechanisms behind modern AI systems in earlier chapters, as well as their current use cases, limitation, and compliance considerations later on. 
+
 <br>
+
+Each chapter is designed to be complete in content when read on its own. You may start reading whichever section you would like first. Should you stumble upon an unfamiliar word of phrase, consider consulting the Wordbook below.
+
 
 <br>
 <br>
