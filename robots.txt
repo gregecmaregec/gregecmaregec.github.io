@@ -1,4 +1,6 @@
+permalink: /robots.txt
+---
 User-agent: *
-Disallow:
+Disallow: /
 
-Sitemap: https://gregecmaregec.github.io/sitemap.xml
+Sitemap: {{ site.baseurl | prepend: si:te.ur:l }}/sitemap.xml
