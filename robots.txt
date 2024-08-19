@@ -1,6 +1,7 @@
 permalink: /robots.txt
 ---
 User-agent: *
-Disallow: 
+Disallow: /cookies
+Disallow: /about
 
 Sitemap: {{ site.baseurl | prepend: si:te.ur:l }}/sitemap.xml
