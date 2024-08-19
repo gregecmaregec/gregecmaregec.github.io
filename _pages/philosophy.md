@@ -148,6 +148,11 @@ so that what comes next will be better?
 
 The more you explore something, the smaller it becomes. <br>
 
+`16`
+
+<br>
+Short term gratification is not a good long term strategy. <br>
+
 
 <br>
 <br>
@@ -155,6 +160,8 @@ The more you explore something, the smaller it becomes. <br>
 <br>
 
 ---
+
+<div style="height: 1px; width: min(800px, 100%); padding: 0 5px; box-sizing: border-box; background-color: lightgray;"></div>
 
 <small><i>The writings in this page are the products of my own mind, and in no way represent the views of any employer of mine,<br></i></small>
 <small><i>past, present, or future.</i></small><br>

@@ -1,7 +1,6 @@
----
 permalink: /robots.txt
 ---
 User-agent: *
-Disallow:
+Disallow: /
 
-Sitemap: {{ site.baseurl | prepend: site.url }}/sitemap.xml
+Sitemap: {{ site.baseurl | prepend: si:te.ur:l }}/sitemap.xml
