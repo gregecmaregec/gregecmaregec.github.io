@@ -18,7 +18,7 @@ As is common practice with almost all websites, this site uses cookies, which ar
 
 ## How I Use Cookies
 
-I use cookies for a variety of reasons, but usually the only cookie on this website will be used for setitng a dark/light theme by changing the value from one to antoher according to user's choice. You may confirm this in your browser's cookie viewer. Unfortunately, in most cases, there are no industry standard options for disabling cookies without completely disabling the functionality and features they add to this site. You may delete cookies at any time after visiting my website.
+I use cookies for a variety of reasons, but usually the only cookie on this website will be used for setitng a dark/light theme by changing the value according to user's choice. You may confirm this in your browser's cookie viewer. Unfortunately, in most cases, there are no industry standard options for disabling cookies without completely disabling the functionality and features they add to this site. You may delete cookies at any time after visiting this website.
 
 ## Disabling Cookies
 
@@ -30,4 +30,4 @@ Hopefully, that has clarified things for you. And, as was previously mentioned, 
 
 However, if you are still looking for more information, or you would like help with removing your cookies on this website completely, then you can contact me through:
 
-e-mail: gregor.mihelac (at)outlook (dot)com
+e-mail: gregor.mihelac (at) outlook (dot) com
