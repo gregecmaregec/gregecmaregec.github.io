@@ -1,7 +1,7 @@
 ---
 layout: page_itfa_subpage
 title: Risk & Compliance considerations
-description:  In utilising AI systems in facilitating International Trade
+description:  of utilising AI systems in facilitating International Trade
 img: assets/img/itfa/risk_thumbnail.jpg
 importance: 4
 nav: true
