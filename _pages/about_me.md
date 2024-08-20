@@ -20,5 +20,5 @@ this website is built using:<br>
 html ; ruby ; js ; css ; yaml ; liquid template language, jekyll
 <br>
 <br>
-server-side handling of os_ai is built with Go,<br>
+server-side handling of osai is built with Go,<br>
 data is encrypted end-to-end with Cloudflare
