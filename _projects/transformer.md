@@ -9,7 +9,7 @@ importance: 2
 
 <b>Neural net</b> refers to the makeup of computational models inspired by the structures and functions of neurons in brains. They are not new - their implementation into hardware and software dates as far back as 1953. 
 
-<b>Large Language Models (LLMs)</b> are, in essence, computational models predicting and generating next words in sentences. There have been variations of language models dating as far back as 2003.
+<b>Large Language Models (LLMs)</b> are, in essence, computational models predicting and generating next words in given sentences. There have been variations of language models dating as far back as 2003.
 
 <b>The Transformer</b> is a neural net architecture, presented in the scientific paper – “Attention is All You Need” by Vaswani et al. (2017). It is the power engine behind modern day AI systems and LLMs. The Transformer architecture has been implemented at the centre of billion-dollar AI products the likes of OpenAI's ChatGPT, Microsoft's Copilot, Anthropic's Claude, Mistral.AI's models, x.ai's Grok, Meta's LLaMa, Google's Gemini etc. It is hard to overstate the impact of the Transformer on the AI services boom of 2023 and 2024, as well as on recent advances in AI, large language models, and neural nets.
 
