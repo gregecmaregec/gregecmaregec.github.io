@@ -184,6 +184,7 @@ Is it clear which party holds the liability for ensuring the factual validity of
 
 #### Social engineering
 
+<br>
 Social engineering is the term used for manipulation techniques utilized by malicious actors seeking to exploit human psychology by tricking people into divulging confidential information or performing actions that compromise operational security. Social engineering relies on human error and deception rather than traditional computer hacking methods. Modern day encryption is uncrackable with our current technology, as it would take more than the age of the universe to decode the common SHA256 algorithm used for encrypting data sent through the internet. For this reason, hackers increasingly rely on deceiving humans to introduce malicious software from within of an organization.
 
 Estimates suggest that between 70-90% of all malicious breaches involve some form of social engineering. With the rise of AI, social engineering attacks could become more sophisticated, tailored to specific employees or organizations. 
@@ -204,6 +205,7 @@ Organizations may face legal liability if they fail to implement adequate traini
 
 #### Future compliance challenges: AI decision-making without human oversight
 
+<br>
 Previous sections discussed legal challenges involved with AI chatbots, current state-of-the-art AI systems already being put into use within organizations. 
 
 The output of these AI systems requires the human user to decide whether or not to implement the outputs presented by the AI. As artificial intelligence systems become more advanced and autonomous, significant legal challenges could arise in regard to AI making decisions without direct human oversight.
