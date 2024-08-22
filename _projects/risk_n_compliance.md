@@ -159,7 +159,7 @@ It also means that the EU industry will not have access to future multimodal ver
 <br>
 
 <b>Compliance considerations:</b><br><br>
-Organizations engaging in International may face legal liability if they fail to implement adequate training and safeguards to protect against processing personal and confidential data from within the organization by AI systems.<br><br>
+Organizations engaging in International Trade may face legal liability if they fail to implement adequate training and safeguards to protect against processing personal and confidential data from within the organization by AI systems.<br><br>
 How do data processing and AI abuse monitoring regulations interact in the jurisdiction of interest? <br><br>
 After implementing AI solutions, who in an organization is responsible for monitoring AI regulatory changes?<br><br>
 
