@@ -127,7 +127,7 @@ But in life, it is found in abundance.
 Albert Einstein said: “I think the most important question facing humanity is, is the universe a friendly place?”<br>
 
 It is to the optimist. It isn’t to a cynic.<br>
-The universe is what you make of it. You are the universe experiencing itself.
+The universe is what you make of it. For you are the universe experiencing itself.
 
 <br>
 `13`
@@ -158,12 +158,8 @@ Short term gratification is not a good long term strategy. <br>
 <br>
 <br>
 
-#### below are from unknwon auhors, and not me
+#### below is a selection of thoughts from unknwon auhors, not me
 
-<br>
-'1'
-
-There are no missed opportunities. Everything you missed was not yours
 
 <br>
 '2'
@@ -179,6 +175,10 @@ Keep, what's rare.
 Keep, what's unquestionable.
 Keep, what's good to you.
 
+<br>
+'1'
+
+There are no missed opportunities. Everything you missed was not yours
 
 
 <br>
