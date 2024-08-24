@@ -50,7 +50,7 @@ You should, too.
 <br>
 `5`
 
-Whoever understands the origin of the Universe as plasma, hydrogen, and heat, from which everything arose:<br>
+Whoever believes the origin of the Universe as hydrogen and heat, from which everything arose:<br>
 
 understands that either everything is conscious - <br>
 or nothing is.
@@ -58,7 +58,7 @@ or nothing is.
 <br>
 `6`
 
-Only when you understand there is no free will, <br>
+Only when you find out there is no free will, <br>
 through both deep meditation and exploration of the scientific method and analysis of its results,<br>
 only then can you notice your thoughts arising from the darkness,<br>
 and willfully begin to steer them.<br>
@@ -68,6 +68,9 @@ that humans are but a biological algorithm for processing data,<br>
 only then, can you experience free will for the first time.<br>
 
 True words seem paradoxical.
+
+
+
 
 <br>
 `7`
