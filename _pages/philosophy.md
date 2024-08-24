@@ -7,7 +7,7 @@ description: some observations on the way things seem to be
 nav: false
 
 ---
-### Some observations on the way things seem to be
+### some of my observations on the way are
 
 <br>
 <br>
@@ -148,10 +148,37 @@ so that what comes next will be better?
 
 The more you explore something, the smaller it becomes. <br>
 
+<br>
 `16`
 
-<br>
 Short term gratification is not a good long term strategy. <br>
+
+
+<br>
+<br>
+<br>
+
+#### below are from unknwon auhors, and not me
+
+<br>
+'1'
+
+There are no missed opportunities. Everything you missed was not yours
+
+<br>
+'2'
+
+Keep, what's consistent.
+Keep, what's respectful.
+Keep, what's worth your time.
+Keep, what's deserving.
+Keep, what's honest.
+Keep, what's healthy.
+Keep, what's genuine.
+Keep, what's rare.
+Keep, what's unquestionable.
+Keep, what's good to you.
+
 
 
 <br>
