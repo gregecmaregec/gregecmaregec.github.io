@@ -14,7 +14,7 @@ nav: false
 <br>
 `1`
 
-The self is not an illusion of the mind, in the way illusion is interpreted.<br>
+The self is not an illusion of the mind, in the way illusion is usually understood.<br>
 Much like an axe is not an illusion of the mind, since it can cut and shape a real tree.<br>
 
 So is the illusion of the self, not an illusion; <br>
