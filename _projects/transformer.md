@@ -11,7 +11,7 @@ importance: 2
 
 <b>Large Language Models (LLMs)</b> are, in essence, computational models predicting and generating next words in given sentences. There have been variations of language models dating as far back as 2003.
 
-<b>The Transformer</b> is a neural net architecture, presented in the scientific paper – “Attention is All You Need” by Vaswani et al. (2017). It is the power engine behind modern day AI systems and LLMs. The Transformer architecture has been implemented at the centre of billion-dollar AI products the likes of OpenAI's ChatGPT, Microsoft's Copilot, Anthropic's Claude, Mistral.AI's models, x.ai's Grok, Meta's LLaMa, Google's Gemini etc. It is hard to overstate the impact of the Transformer on the AI services boom of 2023 and 2024, as well as on recent advances in AI, large language models, and neural nets.
+<b>The Transformer</b> is a neural net architecture, presented in the paper – “Attention is All You Need” by Vaswani et al. (2017). It is the engine behind modern day AI systems and LLMs. The Transformer architecture has been implemented at the centre of billion-dollar AI products the likes of OpenAI's ChatGPT, Microsoft's Copilot, Anthropic's Claude, Mistral.AI's models, x.ai's Grok, Meta's LLaMa, Google's Gemini etc. It is hard to overstate the impact of the Transformer on the AI services boom of 2023 and 2024, as well as on recent advances in AI, large language models, and neural nets.
 
 
 <div class="caption">
@@ -34,14 +34,13 @@ importance: 2
 
 <br>
 
-The initial showcase in "Attention is All You Need" for the Transformer was computerized translation. The authors reported state of the art results when testing the Transformer on automated benchmarks and human evaluation scores, and indicated intentions to test the Transformer on “other tasks” than mere translation in the future. 
+The initial showcase in "Attention is All You Need" for the Transformer is computerized translation. The authors reported state of the art results testing the Transformer on automated benchmarks and human evaluation scores, and indicated the intent to test the Transformer on “other tasks” beyond translation in the future. 
 
-Only a year after the publication of Attention is All You Need, another milestone in the field of AI research was published - “Language Models are Unsupervised Multitask Learners” Radford et al. (2018), where OpenAI showcased their state-of-the-art language model named GPT-2. The GPT in OpenAI’s ChatGPT stands for generative pre-trained Transformer. 
+Only a year after the publication of Attention is All You Need, another milestone in the field of AI research was published - “Language Models are Unsupervised Multitask Learners” by Radford et al. (2018), where OpenAI showcased their state-of-the-art language model GPT-2. The GPT in OpenAI’s ChatGPT stands for generative pre-trained Transformer. 
 
-Neural networks used to be designed for specific use cases and tailored to specific tasks. Different neural net designs were implemented for processing image, video, sound, text, code etc. The field of AI research is converging in recent years more and more towards one architecture for all types of data.
+Neural networks used to be designed for specific use cases and tailored to specific tasks. Different neural net designs were implemented for processing image, video, sound, text, code etc. The field of AI research is converging in recent years more and more towards one architecture for all types of data. The Transformer is a token-based prediction engine, regardless of the type of data tokenized.
 
-E.g. Wav2Vec is a Transformer based AI, developed by Meta (formerly Facebook), able to generate natural sounding vocal speech of languages possessing no written form, such as Mboshi: a Bantu language spoken by approximately 150,000 people in the Republic of the Congo (Ji et al, 2022). The Transformer is a token-based prediction engine, not matter which data is tokenized.
-
+E.g. Wav2Vec is a Transformer based AI, developed by Meta (formerly Facebook), able to generate natural sounding vocal speech of languages possessing no written form, such as Mboshi: a Bantu language spoken by approximately 150,000 people in the Republic of the Congo (Ji et al, 2022). 
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -49,7 +48,7 @@ E.g. Wav2Vec is a Transformer based AI, developed by Meta (formerly Facebook), a
     </div>
 </div>
 
-Many types of data can be broken down into tokens / tokenized. E.g. written English, tokens are usually 3-7 characters long.
+Many types of data can be broken down into tokens / tokenized. E.g. written English, where tokens are usually 3-7 characters long.
 
 <br>
 <br>
@@ -64,7 +63,7 @@ Many types of data can be broken down into tokens / tokenized. E.g. written Engl
 
 <br>
 
-LLMs output sentences that normally do not show up to the user all at once, but rather one token after another, or rather, one word after another. This is due to the way the LLMs operate – they choose between tokens based on probability weights obtained in the training stage, and output the next token only when the sequence of previous tokens has been established – creating a stream of responses.  
+LLMs output sentences that usually do not show up to the user all at once, but rather one token after another, or rather, to the perception of an average user, one word after another. This is due to the way the LLMs operate – they choose between tokens based on probability weights obtained in the training stage, and output the next token only when the sequence of previous tokens has been established – creating a stream of responses.  
 
 <div class="caption">
     LLMs output tokens based on probabilities obtained in the training stage. 
@@ -75,7 +74,7 @@ LLMs output sentences that normally do not show up to the user all at once, but 
     </div>
 </div>
 
-Presented in 1) is a "JSON" output, a way of transmitting data across multiple programming languages. It is a mapping system, and carries with it multiple attributes, including the “response” of the LLM. In 2) the probabilities of the next tokens are shown. It is important to note that the highest probability output is not always chosen. Token “the” is the most probable output in the example above and has a 73.23% probability of being chosen - while the next highest-probability possible token “how” would have been chosen 16.72% of the time. For this reason, running the same instruction to an LLM will result in different outputs. This also makes LLMs “black box” systems, as the output is not known before execution. 
+Presented in 1) is a JSON-output, a way of transmitting data across multiple programming languages. It is a mapping system, and carries with it multiple attributes, including the “response” of the LLM. In 2) the probabilities of the next tokens are shown. It is important to note that the highest probability output is not always chosen. Token “the” is the most probable output in the example above and has a 73% probability of being chosen - while the next highest-probability possible token “how” would have been chosen 17% of the time. For this reason, running the same instruction to an LLM will result in different outputs. This also makes LLMs “black box” systems, as the output is not known before execution. 
 
 <div class="caption">
     Example 1:
