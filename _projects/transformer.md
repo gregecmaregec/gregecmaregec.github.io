@@ -74,7 +74,7 @@ LLMs output sentences that usually do not show up to the user all at once, but r
     </div>
 </div>
 
-Presented in 1) is a JSON-output, a way of transmitting data across multiple programming languages. It is a mapping system, and carries with it multiple attributes, including the “response” of the LLM. In 2) the probabilities of the next tokens are shown. It is important to note that the highest probability output is not always chosen. Token “the” is the most probable output in the example above and has a 73% probability of being chosen - while the next highest-probability possible token “how” would have been chosen 17% of the time. For this reason, running the same instruction to an LLM will result in different outputs. This also makes LLMs “black box” systems, as the output is not known before execution. 
+Presented in 1) is a JSON-output, a way of transmitting data across multiple programming languages. It is a mapping system, and carries with it multiple attributes, including the “response” of the LLM. In 2) illustrative probabilities of next tokens are shown. The next chosen token  will be added to the sentence. It is important to note that the highest probability output is not always chosen - token “the” is the most probable choice in the example above with a 73% probability of being chosen - while the next highest-probability possible token “how” would have been chosen 17% of the time. For this reason, running the same instruction to an LLM will result in different outputs. This also makes LLMs “black box” systems, as the output is not known before execution. 
 
 <div class="caption">
     Example 1:
