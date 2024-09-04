@@ -72,7 +72,13 @@ As countries become more developed, they tend to utilize more and more energy
 
 <br>
 
+<br>
+<div style="height: 1px; width: min(800px, 100%); padding: 0 5px; box-sizing: border-box; background-color: lightgray;"></div>
+<br>
+
 #### Is the clean energy problem unsolvable? 
+
+<br>
 
 No. 
  
