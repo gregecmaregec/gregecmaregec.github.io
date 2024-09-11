@@ -158,36 +158,11 @@ Short term gratification is not a good long term strategy. <br>
 
 
 <br>
-<br>
-<br>
+`17`
 
-#### below is a selection of thoughts from unknwon auhors, not me
-
-
-<br>
-'2'
-
-Keep, what's consistent.
-Keep, what's respectful.
-Keep, what's worth your time.
-Keep, what's deserving.
-Keep, what's honest.
-Keep, what's healthy.
-Keep, what's genuine.
-Keep, what's rare.
-Keep, what's unquestionable.
-Keep, what's good to you.
-
-<br>
-'1'
-
-There are no missed opportunities. Everything you missed was not yours
+There are no missed opportunities. Everything you missed wasn't yours to have.
 
 
-<br>
-<br>
-<br>
-<br>
 
 ---
 
