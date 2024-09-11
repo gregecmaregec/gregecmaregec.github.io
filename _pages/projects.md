@@ -69,6 +69,6 @@ og_type: "website"
 
 
 <div class="caption">
-    ITFA Emerging Leaders 2024 competition winner
+    This project won at the ITFA Cyprus 2024 Emerging Leaders Competition
     <br>Written June 2024 
 </div>
