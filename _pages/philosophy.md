@@ -7,7 +7,7 @@ description: some observations on the way things seem to be
 nav: true
 
 ---
-### some observations on the way are
+### Some observations on the way things are
 
 <br>
 <br>
