@@ -162,7 +162,9 @@ Short term gratification is not a good long term strategy. <br>
 
 There are no missed opportunities. Everything you missed wasn't yours to have.
 
-
+<br>
+<br>
+<br>
 
 ---
 
