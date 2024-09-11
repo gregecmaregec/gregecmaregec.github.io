@@ -2,8 +2,7 @@ function sendMessage() {
     // Get the user input value
     var userInput = document.getElementById('user-input').value;
 
-    // Send the user input to gmserver.xyz (you'll need to implement this)
-    // For example, using fetch API
+    // Send the user input to gmserver.xyz 
     fetch('https://gmserver.xyz', {
         method: 'GET',
         headers: {

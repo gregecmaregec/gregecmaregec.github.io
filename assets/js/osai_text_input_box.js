@@ -1,5 +1,5 @@
 const inputBox = document.getElementById('inputBox');
-const initialHeight = 50; // Set the initial height in pixels
+const initialHeight = 50; 
 inputBox.style.height = `${initialHeight}px`;
 
 let lastLine = '';
