@@ -50,10 +50,10 @@ You should, too.
 <br>
 `5`
 
-Whoever believes the origin of the Universe as hydrogen and heat, from which everything arose:<br>
+Whoever believes the origin of the Universe is hydrogen and heat, from which everything arose:<br>
 
-understands that either everything is conscious - <br>
-or nothing is.
+for that person, the realization looms that either everything is conscious - <br>
+or nothing is. 
 
 <br>
 `6`
@@ -68,7 +68,6 @@ that humans are but a biological algorithm for processing data,<br>
 only then, can you experience free will for the first time.<br>
 
 True words seem paradoxical.
-
 
 
 
