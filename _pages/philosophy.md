@@ -146,13 +146,9 @@ Reincarnation, and heaven and hell are fundamentally the same idea, told in diff
 Will you act according to your God’s ideals in this life, <br>
 so that what comes next will be better?
 
+
 <br>
 `15`
-
-The more you explore something, the smaller it becomes. <br>
-
-<br>
-`16`
 
 Short term gratification is not a good long term strategy. <br>
 
@@ -161,11 +157,12 @@ Short term gratification is not a good long term strategy. <br>
 
 Bitcoin is the capitalization of markets' trust in the SHA256 algorithm. <br>
 
-
 <br>
 `17`
 
-There are no missed opportunities. Everything you missed wasn't yours to have.
+The more you explore something, the smaller it becomes. <br>
+
+
 
 <br>
 <br>
