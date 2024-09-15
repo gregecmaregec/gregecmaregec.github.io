@@ -156,6 +156,11 @@ The more you explore something, the smaller it becomes. <br>
 
 Short term gratification is not a good long term strategy. <br>
 
+<br>
+`16`
+
+Bitcoin is the capitalization of markets' trust in the SHA256 algorithm. <br>
+
 
 <br>
 `17`
