@@ -36,25 +36,17 @@
         100% { transform: rotate(360deg); }
       }
 
-      /* Updated styles for buttons */
+      /* New styles for buttons and input box */
       .model-button {
         width: calc((800px - 30px) / 4);
         text-align: center;
         border-radius: 15px;
         background-color: transparent;
-        border: none;
+        border: 1px solid rgba(0, 0, 0, 0.3);
         border-bottom: 2px solid rgba(204, 204, 204, 0.3);
+        border-right: 1px solid rgba(68, 68, 68, 0.3);
         padding: 10px;
         color: inherit;
-        transition: border-bottom-color 0.3s ease;
-      }
-
-      .model-button:hover {
-        border-bottom-color: rgba(204, 204, 204, 0.6);
-      }
-
-      .model-button.selected {
-        border-bottom-color: #8b0000;
       }
 
       #modelSelectorContainer {
@@ -124,10 +116,10 @@
     <br>
 
     <div id="modelSelectorContainer">
-      <button class="model-button" data-model="llama3.1" onclick="modelChoice('llama3.1')">llama3.1</button>
+      <button class="model-button" data-model="llama3.1" onclick="modelChoice('llama3.1')" style="margin-left: 10px;">llama3.1</button>
       <button class="model-button" data-model="phi3" onclick="modelChoice('phi3')">phi3</button>
       <button class="model-button" data-model="qwen:7b" onclick="modelChoice('qwen:7b')">qwen</button>
-      <button class="model-button" data-model="gemma:7b" onclick="modelChoice('gemma:7b')">gemma</button>
+      <button class="model-button" data-model="gemma:7b" onclick="modelChoice('gemma:7b')" style="margin-right: 10px;">gemma</button>
     </div>
     
     <div id="inputBoxContainer">
