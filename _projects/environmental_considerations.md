@@ -62,7 +62,7 @@ The trend of total electricity production before AI.
     </div>
 </div>
 
-As countries become more developed, they tend to utilize more energy.
+As countries become more developed, they tend to utilise more energy.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
