@@ -1,6 +1,6 @@
 ---
 
-layout: osais
+layout: osai
 permalink: /osai/
 title: osai
 description: this house loves open source ai models
