@@ -17,9 +17,7 @@ Feel free to copy the below working code to your own project under the condition
 
 <details>
 <summary>### the blossom circles and scroll effect in /philosophy/</summary>
-`javascript`
-
-```javascript
+<pre><code class="language-javascript">
 // create a canvas element
 const canvas = document.createElement('canvas');
 document.body.appendChild(canvas);
@@ -122,7 +120,7 @@ function easeInOutQuad(progress) {
         return -1 + (4 - 2 * progress) * progress;
     }
 }
-```
+</code></pre>
 </details>
 
 <br>
@@ -135,9 +133,7 @@ function easeInOutQuad(progress) {
 
 <details>
 <summary>### particle crystal-nature simulation in pure JS</summary>
-`javascript`
-
-```javascript
+<pre><code class="language-javascript">
 // here it will go really fast
 const canvas = document.createElement('canvas');
 document.body.appendChild(canvas);
@@ -237,7 +233,7 @@ canvas.addEventListener('mousemove', (event) => {
 });
 
 animate();​​​​​
-```
+</code></pre>
 </details>
 
 <br>
@@ -250,9 +246,7 @@ animate();​​​​​
 
 <details>
 <summary>### bash script to load a guest directly to a program</summary>
-`bash script`
-
-```bash
+<pre><code class="language-bash">
 #!/bin/bash
 
 #let's assume your guest user is called 'serverguest'
@@ -286,7 +280,7 @@ fi
 # make serverguest have restricted bash by running
 chsh -s /bin/rbash serverguest
 # in the terminal as super user
-```
+</code></pre>
 </details>
 
 <br>
@@ -299,9 +293,7 @@ chsh -s /bin/rbash serverguest
 
 <details>
 <summary>### game of life simulation</summary>
-`javascript`
-
-```javascript
+<pre><code class="language-javascript">
 // create a canvas element
 const canvas = document.createElement('canvas');
 document.body.appendChild(canvas);
@@ -442,7 +434,7 @@ function drawGrid() {
 }
 
 // check wikipedia for game of life on more info
-```
+</code></pre>
 </details>
 
 <br>
@@ -455,31 +447,29 @@ function drawGrid() {
 
 <details>
 <summary>### simple http server using go-lang</summary>
-`go`
+<pre><code class="language-go">
+package main
+//all the below imports are included in default go installation
+import (
+    "fmt"
+    "log"
+    "net/http"
+)
 
-```go
-   package main
-    //all the below imports are included in default go installation
-    import (
-        "fmt"
-        "log"
-        "net/http"
-    )
+//this will be the response when you trigger the api
+func handler(w http.ResponseWriter, r *http.Request) {
+    fmt.Fprintf(w, "Hello, this is a response from your Go API!")
+}
 
-    //this will be the response when you trigger the api
-    func handler(w http.ResponseWriter, r *http.Request) {
-        fmt.Fprintf(w, "Hello, this is a response from your Go API!")
+func main() {
+    http.HandleFunc("/", handler) // sets the handler for the root path
+    log.Println("Starting server on :8080...")
+    err := http.ListenAndServe(":8080", nil) // listens on port 8080
+    if err != nil {
+        log.Fatal("ListenAndServe: ", err)
     }
-
-    func main() {
-        http.HandleFunc("/", handler) // sets the handler for the root path
-        log.Println("Starting server on :8080...")
-        err := http.ListenAndServe(":8080", nil) // listens on port 8080
-        if err != nil {
-            log.Fatal("ListenAndServe: ", err)
-        }
-    }
+}
 
 // you may now trigger your api by engaging with http://localhost:8080 
-```
+</code></pre>
 </details>
