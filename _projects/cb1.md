@@ -3,7 +3,7 @@ layout: page_cb_subpage
 title: Ni hao 
 description: Ni Hao
 nav: true
-img: assets/img/itfa/transformer_thumbnail.jpg
+img: assets/img/cb/cb-1.jpg
 importance: 2
 category: cb
 ---
