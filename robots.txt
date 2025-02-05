@@ -2,6 +2,6 @@ permalink: /robots.txt
 ---
 User-agent: *
 Disallow: /cookies
-Disallow: /about
+Disallow: /cb-application
 
 Sitemap: {{ site.baseurl | prepend: si:te.ur:l }}/sitemap.xml
