@@ -1,6 +1,6 @@
 ---
-layout: page_itfa
-title: CB Trainee 2025 application
+layout: page_cb
+title: Commerzbank Trainee 2025 application
 permalink: /cb-application/
 nav: false
 horizontal: false
