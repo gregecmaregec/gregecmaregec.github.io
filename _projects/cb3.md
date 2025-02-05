@@ -1,7 +1,6 @@
 ---
 layout: page_cb_subpage
-title: nochmal ni hao
-description:  of utilising AI systems in facilitating International Trade
+title: Motivation
 img: assets/img/cb/cb-3.jpg
 importance: 4
 nav: true

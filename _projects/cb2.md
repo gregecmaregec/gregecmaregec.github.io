@@ -1,7 +1,6 @@
 ---
 layout: page_cb_subpage
-title: nochmal ni hao
-description:  of utilising AI systems in facilitating International Trade
+title: Previous experience
 img: assets/img/cb/cb-2.jpg
 importance: 4
 nav: true

@@ -1,7 +1,6 @@
 ---
 layout: page_cb_subpage
-title: Ni hao 
-description: Ni Hao
+title: About me
 nav: true
 img: assets/img/cb/cb-1.jpg
 importance: 2
