@@ -1,7 +1,7 @@
 ---
 layout: page_itfa_subpage
-title: The Transformer neural net architecture
-description: What powers a large language model (LLM)?
+title: Ni hao motherfucker
+description: Ni Hao
 nav: true
 img: assets/img/itfa/transformer_thumbnail.jpg
 importance: 2
