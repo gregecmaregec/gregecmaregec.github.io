@@ -26,7 +26,7 @@
 
       <div class="collapse navbar-collapse text-right" id="navbarNav">
         <ul class="navbar-nav ml-auto flex-nowrap">
-          {% for page in site.projects_cb %}
+          {% for page in site.projects %}
             {% if page.permalink == '/' %} {% assign about_title = page.title %} {% endif %}
           {% endfor %}
 
@@ -41,7 +41,7 @@
           </li>
 
           <!-- Other pages -->
-          {% assign sorted_pages = site.projects_cb | sort: 'importance' %}
+          {% assign sorted_pages = site.projects | sort: 'importance' %}
           {% for p in sorted_pages %}
             {% if p.nav and p.autogen == null %}
               {% if p.dropdown %}
