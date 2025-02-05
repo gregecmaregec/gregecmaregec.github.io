@@ -1,6 +1,7 @@
 ---
 layout: page_cb_subpage
 title: About me
+description:  Get to know me!
 nav: true
 img: assets/img/cb/cb-1.jpg
 importance: 2

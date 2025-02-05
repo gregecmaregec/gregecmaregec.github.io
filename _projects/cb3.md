@@ -1,6 +1,7 @@
 ---
 layout: page_cb_subpage
 title: Motivation
+description:  Do my passions fit?
 img: assets/img/cb/cb-3.jpg
 importance: 4
 nav: true
