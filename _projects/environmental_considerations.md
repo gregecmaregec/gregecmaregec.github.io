@@ -5,6 +5,7 @@ description: How much electricity does AI use?
 img: assets/img/itfa/esg_thumbnail.jpg
 nav: true
 importance: 6
+category: itfa
 ---
 
 <br>

@@ -5,6 +5,7 @@ description: For trade finance professionals
 img: assets/img/itfa/applications_thumbail.jpg
 nav: true
 importance: 3
+category: itfa
 ---
 
 

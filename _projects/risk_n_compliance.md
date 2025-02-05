@@ -5,6 +5,7 @@ description:  of utilising AI systems in facilitating International Trade
 img: assets/img/itfa/risk_thumbnail.jpg
 importance: 4
 nav: true
+category: itfa
 ---
 
 #### Disclaimer:

@@ -4,6 +4,7 @@ title: Is AI conscious?
 img: assets/img/itfa/con_thumbnail.jpg
 nav: true
 importance: 5
+category: itfa
 ---
 <br>
 <br>

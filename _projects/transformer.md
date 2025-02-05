@@ -5,6 +5,7 @@ description: What powers a large language model (LLM)?
 nav: true
 img: assets/img/itfa/transformer_thumbnail.jpg
 importance: 2
+category: itfa
 ---
 
 <b>Neural net</b> refers to the makeup of computational models inspired by the structures and functions of neurons in brains. They are not new - their implementation into hardware and software dates as far back as 1953. 
