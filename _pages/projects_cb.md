@@ -19,7 +19,7 @@ og_type: "website"
   <a id="{{ category }}" href=".#{{ category }}">
     <h2 class="category">{{ category }}</h2>
   </a>
-  {% assign categorized_projects_cb = site.projects | where: "category", category %}
+  {% assign categorized_projects_cb = site.projects_cb | where: "category", category %}
   {% assign sorted_projects_cb = categorized_projects_cb| sort: "importance" %}
   <!-- Generate cards for each project -->
   {% if page.horizontal %}
@@ -43,7 +43,7 @@ og_type: "website"
 
 <!-- Display projects without categories -->
 
-{% assign sorted_projects_cb = site.projects | sort: "importance" %}
+{% assign sorted_projects_cb = site.projects_cb | sort: "importance" %}
 
   <!-- Generate cards for each project -->
 
