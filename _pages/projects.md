@@ -46,7 +46,7 @@ og_type: "website"
 
 <!-- Display projects without categories -->
 
-{% assign sorted_projects = site.projects | where_exp: "project", "project.category != 'cbb'" | sort: "importance" %}
+{% assign sorted_projects = site.projects | where_exp: "project", "project.category != 'cb'" | sort: "importance" %}
 
   <!-- Generate cards for each project -->
 
