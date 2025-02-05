@@ -45,7 +45,7 @@ og_type: "website"
 
 <!-- Display projects without categories -->
 
-{% assign sorted_projects_cb = site.projects | sort: "importance" %}
+{% assign sorted_projects = site.projects | where_exp: "project", "project.category != 'itfa'" | sort: "importance" %}
 
   <!-- Generate cards for each project -->
 
