@@ -16,7 +16,7 @@ og_type: "website"
 {% if site.enable_project_categories and page.display_categories %}
   <!-- Display categorized projects -->
   {% for category in page.display_categories %}
-  {% if category != "itfa" %}
+  {% if category != "cb" %}
   <a id="{{ category }}" href=".#{{ category }}">
     <h2 class="category">{{ category }}</h2>
   </a>
@@ -45,7 +45,7 @@ og_type: "website"
 
 <!-- Display projects without categories -->
 
-{% assign sorted_projects = site.projects | where_exp: "project", "project.category != 'itfa'" | sort: "importance" %}
+{% assign sorted_projects = site.projects | where_exp: "project", "project.category = 'cb'" | sort: "importance" %}
 
   <!-- Generate cards for each project -->
 
@@ -53,17 +53,27 @@ og_type: "website"
 
   <div class="container">
     <div class="row row-cols-1 row-cols-md-2">
-    {% for project in sorted_projects_cb %}
+    {% for project in sorted_projects %}
       {% include projects_horizontal.liquid %}
     {% endfor %}
     </div>
   </div>
   {% else %}
   <div class="row row-cols-1 row-cols-md-3">
-    {% for project in sorted_projects_cb %}
+    {% for project in sorted_projects %}
       {% include projects.liquid %}
     {% endfor %}
   </div>
   {% endif %}
 {% endif %}
+</div>
+
+<br>
+<div class="caption">
+    This project won ITFA 2024 Emerging Leaders competition in Cyprus
+</div>
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/itfa/itfa-logo.png" title="itfa" class="img-fluid3 rounded z-depth-1"%}
+    </div>
 </div>
