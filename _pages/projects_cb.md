@@ -68,12 +68,4 @@ og_type: "website"
 {% endif %}
 </div>
 
-<br>
-<div class="caption">
-    This project won ITFA 2024 Emerging Leaders competition in Cyprus
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/itfa/itfa-logo.png" title="itfa" class="img-fluid3 rounded z-depth-1"%}
-    </div>
-</div>
+

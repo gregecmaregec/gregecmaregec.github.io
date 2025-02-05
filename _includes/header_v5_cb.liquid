@@ -3,7 +3,7 @@
   <nav id="navbar" class="navbar navbar-light {% if site.navbar_fixed %}fixed-top{% else %}sticky-top{% endif %}" role="navigation">
     <div class="container">
       {% if page.permalink != '/' %}
-        <a class="navbar-brand title font-weight-lighter" href="{{ site.baseurl }}/itfasubmission/">Commerzbank application</a>
+        <a class="navbar-brand title font-weight-lighter" href="{{ site.baseurl }}/cb-application/">Commerzbank application</a>
       {% elsif site.enable_navbar_social %}
         <!-- Social Icons -->
         <div class="navbar-brand social">{% include social.liquid %}</div>
@@ -43,7 +43,7 @@
           <!-- Other pages -->
           {% assign sorted_pages = site.projects | sort: 'importance' %}
           {% for p in sorted_pages %}
-            {% if p.nav and p.autogen == null %}
+            {% if p.nav and p.autogen == null and p.category == 'cb' %}
               {% if p.dropdown %}
                 {% assign has_active_child = false %}
                 {% for child in p.children %}
