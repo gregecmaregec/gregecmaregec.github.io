@@ -2,7 +2,8 @@
   <footer class="fixed-bottom" role="contentinfo">
     <div class="container mt-0">
       <div style="width: 800px; height: 2px; background-color: orange; margin: 0 auto;"></div>
-      &copy; Copyright 2024 Gregor Mihelac. By using this website, you agree to the <a href="/cookies">Cookies Policy.</a><br>
+      &copy; Copyright 2024 Gregor Mihelac. By using this website, you agree to the <a href="/cookies">Cookies Policy.</a>
+      <br>
       {% if site.impressum_path %}
         <a href="{{ site.url }}{{ site.baseurl }}{{ site.impressum_path }}">Impressum</a>.
       {% endif %}
@@ -15,11 +16,6 @@
   <footer class="sticky-bottom mt-5" role="contentinfo">
     <div class="container">
       &copy; Copyright 2024 Gregor Mihelac. By using this website, you agree to the <a href="/cookies">Cookies Policy.</a><br>
-        <a href="{{ site.url }}{{ site.baseurl }}{{ site.impressum_path }}">Impressum</a>.
-      {% endif %}
-      {% if site.last_updated %}
-        Last updated: {{ 'now' | date: '%B %d, %Y' }}.
-      {% endif %}
     </div>
   </footer>
 {% endif %}
