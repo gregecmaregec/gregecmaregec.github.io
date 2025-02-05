@@ -69,8 +69,8 @@ og_type: "website"
 
 
 <div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/itfa/itfa-logo.png" title="itfa" class="img-fluid2 rounded z-depth-1" style="width=5%"%}
+    <div class="col-sm mt-sm md-sm">
+        {% include figure.liquid loading="eager" path="assets/img/itfa/itfa-logo.png" title="itfa" class="img-fluid3 rounded z-depth-1" style="width=5%"%}
     </div>
 </div>
 
