@@ -1,6 +1,6 @@
 ---
-layout: page_itfa_subpage
-title: Risk & Compliance considerations
+layout: page_cb_subpage
+title: nochmal ni hao
 description:  of utilising AI systems in facilitating International Trade
 img: assets/img/itfa/risk_thumbnail.jpg
 importance: 4
@@ -16,7 +16,7 @@ category: cb
 <div style="height: 1px; width: min(800px, 100%); padding: 0 5px; box-sizing: border-box; background-color: lightgray;"></div>
 <br>
 
-This section starts with compliance considerations for trade finance professionals utilising current state-of-the-art AI systems such as Large Language Models / AI chatbots.
+This section starts with compliance considerations for trade finance professi onals utilising current state-of-the-art AI systems such as Large Language Models / AI chatbots.
 
 <br>
 
