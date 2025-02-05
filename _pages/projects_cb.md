@@ -16,7 +16,7 @@ og_type: "website"
 {% if site.enable_project_categories and page.display_categories %}
   <!-- Display categorized projects -->
   {% for category in page.display_categories %}
-  {% if category = "cb" %}
+  {% if category == "cb" %}
   <a id="{{ category }}" href=".#{{ category }}">
     <h2 class="category">{{ category }}</h2>
   </a>
@@ -45,7 +45,7 @@ og_type: "website"
 
 <!-- Display projects without categories -->
 
-{% assign sorted_projects = site.projects | where_exp: "project", "project.category = 'cb'" | sort: "importance" %}
+{% assign sorted_projects = site.projects | where_exp: "project", "project.category == 'cb'" | sort: "importance" %}
 
   <!-- Generate cards for each project -->
 
