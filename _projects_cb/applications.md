@@ -1,6 +1,6 @@
 ---
 layout: page_itfa_subpage
-title: CB
+title: Potential use cases of AI
 description: For trade finance professionals
 img: assets/img/itfa/applications_thumbail.jpg
 nav: true
