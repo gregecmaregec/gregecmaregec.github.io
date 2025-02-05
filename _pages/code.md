@@ -15,7 +15,8 @@ Feel free to copy the below working code to your own project under the condition
 <br>
 <br>
 
-### the blossom circles and scroll effect in /philosophy/
+<details>
+<summary>### the blossom circles and scroll effect in /philosophy/</summary>
 `javascript`
 
 ```javascript
@@ -121,10 +122,9 @@ function easeInOutQuad(progress) {
         return -1 + (4 - 2 * progress) * progress;
     }
 }
-
-
-
 ```
+</details>
+
 <br>
 <br> 
 
@@ -133,7 +133,8 @@ function easeInOutQuad(progress) {
 <br>
 <br>
 
-### particle crystal-nature simulation in pure JS
+<details>
+<summary>### particle crystal-nature simulation in pure JS</summary>
 `javascript`
 
 ```javascript
@@ -236,8 +237,8 @@ canvas.addEventListener('mousemove', (event) => {
 });
 
 animate();​​​​​
-
 ```
+</details>
 
 <br>
 <br> 
@@ -247,7 +248,8 @@ animate();​​​​​
 <br>
 <br>
 
-### bash script to load a guest directly to a program
+<details>
+<summary>### bash script to load a guest directly to a program</summary>
 `bash script`
 
 ```bash
@@ -284,8 +286,8 @@ fi
 # make serverguest have restricted bash by running
 chsh -s /bin/rbash serverguest
 # in the terminal as super user
-
 ```
+</details>
 
 <br>
 <br>
@@ -295,7 +297,8 @@ chsh -s /bin/rbash serverguest
 <br>
 <br>
 
-### game of life simulation
+<details>
+<summary>### game of life simulation</summary>
 `javascript`
 
 ```javascript
@@ -439,8 +442,9 @@ function drawGrid() {
 }
 
 // check wikipedia for game of life on more info
-
 ```
+</details>
+
 <br>
 <br>
 
@@ -449,7 +453,8 @@ function drawGrid() {
 <br>
 <br>
 
-### simple http server using go-lang
+<details>
+<summary>### simple http server using go-lang</summary>
 `go`
 
 ```go
@@ -477,3 +482,4 @@ function drawGrid() {
 
 // you may now trigger your api by engaging with http://localhost:8080 
 ```
+</details>
