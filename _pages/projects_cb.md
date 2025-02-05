@@ -2,8 +2,7 @@
 layout: page_itfa
 title: CB Trainee 2025 application
 permalink: /cb-application/
-nav: true
-nav_order: 6
+nav: false
 horizontal: false
 og_title: "Commerzbank Application - GM"
 og_description: "Appliyng to a superb institution"
@@ -65,16 +64,4 @@ og_type: "website"
   </div>
   {% endif %}
 {% endif %}
-</div>
-
-
-<div class="row">
-    <div class="col-sm mt-sm md-sm">
-        {% include figure.liquid loading="eager" path="assets/img/itfa/itfa-logo.png" title="itfa" class="img-fluid3 rounded z-depth-1" style="width=5%"%}
-    </div>
-</div>
-
-<div class="caption">
-    This project won ITFA 2024 Emerging Leaders competition in Cyprus
-    <br>Written June 2024 
 </div>
