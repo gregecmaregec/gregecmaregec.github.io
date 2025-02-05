@@ -1,5 +1,5 @@
 ---
-layout: page_itfa_subpage
+layout: page_cb_subpage
 title: Ni hao motherfucker
 description: Ni Hao
 nav: true
