@@ -70,7 +70,7 @@ og_type: "website"
 
 <div class="row">
     <div class="col-sm mt-sm md-sm" style="width: 10%;">
-        {% include figure.liquid loading="eager" path="assets/img/itfa/itfa-logo.png" title="itfa" class="img-fluid2 rounded z-depth-1"%}
+        {% include figure.liquid loading="eager" path="assets/img/itfa/itfa-logo.png" title="itfa" class="img-fluid3 rounded z-depth-1"%}
     </div>
 </div>
 
