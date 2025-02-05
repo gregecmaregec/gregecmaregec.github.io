@@ -33,7 +33,7 @@ class Particle {
         this.size = Math.random() * 3 + 1;
         this.speedX = (Math.random() * 1 - 0.2) * 0.1;
         this.speedY = (Math.random() * 1 - 0.2) * 0.1;
-        const colors = ['#00414c', '#ffe907', '#e5a800'];
+        const colors = ['#00414c', '#00413c', '#ffe907', '#e5a800'];
         this.color = colors[Math.floor(Math.random() * colors.length)];
         this.lifespan = 300 + Math.random() * 200;
     }
