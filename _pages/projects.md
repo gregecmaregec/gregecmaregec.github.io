@@ -1,6 +1,6 @@
 ---
 layout: page_itfa
-title: Demystifying
+title: Demystifying AI
 permalink: /itfasubmission/
 nav: true
 nav_order: 6
