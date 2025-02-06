@@ -8,17 +8,18 @@ importance: 2
 category: cb
 ---
 
-<br>
-I grew up in a small village in Slovenia.<br>
 
-### SUMMARY
+
+#### SUMMARY
 
 <br>
 • I am currenntly 24 years old<br>
+<br>
+I grew up in a small village in Slovenia.<br>
 • Moved to Germany in break year out of self-initiative after completion of bachelor studies in Slovenia, with a headful of dreams. Started to work as a bartender while working as a remote working student for a Slovenian company, hoping to get the opportunity to study my Master degree in Germany and get career experience.<br>
 • During the break year: accepted to one of Germany’s top universities (University of Mannheim), awarded a scholarship to study in Germany (DAAD), and completed a traineeship at Banco Santander’s Trade Finance division in Frankfurt, working on some of the largest transactions in Europe. <br>
 <br>
-During Master studies:<br>
+During Master studies:<br><br>
 • Completed two internships: at big4 in IT audit, and in Germany’s best bank (Commerzbank!), area Software Development. <br>
 • Google Developer Groups on Campus Mannheim – main Tech Lead, host of programming lectures<br>
 • Mannheim Investment Club (MIC) – member of the education and investment teams, host of finance lectures<br>
