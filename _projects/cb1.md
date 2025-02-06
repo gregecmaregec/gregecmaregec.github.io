@@ -1,7 +1,7 @@
 ---
 layout: page_cb_subpage
 title: About me
-description:  Summary
+description:  Get to know me better.
 nav: true
 img: assets/img/cb/cb-1.jpg
 importance: 2
@@ -9,7 +9,7 @@ category: cb
 ---
 
 <div class="caption">
-    Me, in front of the University of Mannheim
+    Myself, in front of the University of Mannheim
 </div>
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
