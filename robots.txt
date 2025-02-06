@@ -3,5 +3,9 @@ permalink: /robots.txt
 User-agent: *
 Disallow: /cookies
 Disallow: /cb-application
+Disallow: /projects/cb-1
+Disallow: /projects/cb-2
+Disallow: /projects/cb-3
+
 
 Sitemap: {{ site.baseurl | prepend: si:te.ur:l }}/sitemap.xml

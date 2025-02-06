@@ -12,7 +12,8 @@ category: cb
 
 
 <br>
-• I am currenntly 24 years old<br>
+• I am 24 years old<br>
+<br>
 <br>
 • I grew up in a small village in Slovenia.<br>
 • Moved to Germany in break year out of self-initiative after completion of bachelor studies in Slovenia, with a headful of dreams. Started to work as a bartender while working as a remote working student for a Slovenian company, hoping to get the opportunity to study my Master degree in Germany and get career experience.<br><br>
