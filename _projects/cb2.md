@@ -12,8 +12,10 @@ category: cb
 <br>
 <br>
 
-You may check want to check my [Linkedin](https://linkedin.com/in/gregormihelac/) instead
+You may want to check my [Linkedin](https://linkedin.com/in/gregormihelac/) instead
 
+<br>
+<br>
 
 ### CV experience
 <br>
