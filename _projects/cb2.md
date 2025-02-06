@@ -61,14 +61,11 @@ Business Development (Internship)<br>
 Customer support (Working student during B.Sc. study)<br>
 •	Phone and text-based help with banking services for personal and corporate clients<br>
 
-
-<br>
-<br>
-<br>
-<br>
-
 <br>
 <div style="height: 1px; width: min(800px, 100%); padding: 0 5px; box-sizing: border-box; background-color: lightgray;"></div>
+<br>
+
+<br>
 <br>
 
 #### What previous employers have to say

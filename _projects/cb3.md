@@ -17,9 +17,6 @@ category: cb
 My two biggest interests are <u>finance</u> and <u>technology.</u>  This traineeship combines them very well. 
 
 <br>
-<br>
-
-<br>
 <div style="height: 1px; width: min(800px, 100%); padding: 0 5px; box-sizing: border-box; background-color: lightgray;"></div>
 <br>
 
@@ -65,11 +62,8 @@ here is a simple API written in Go:
 Cloud:<br> While cloud is just someone else’s computer, I have explored the dashboards of GCP and Azure and can bring a three tier application online on both, with a serverless or VM instance of a database (NoSQL or PostgreSQL).<br><br>
 AI & LLM:<br> I I have a burning interest in AI and machine learning – and have built my personal AI web chat which I serve from a locally built server that I brough online through my university network. <br><br>
 
-<br>Are all topics I have explored by myself, as I have a passion for building software.
+<br>These are all topics I have explored by myself, as I have a passion for building software.
   
-<br>
-<br>
-
 <br>
 <div style="height: 1px; width: min(800px, 100%); padding: 0 5px; box-sizing: border-box; background-color: lightgray;"></div>
 <br>
@@ -231,3 +225,5 @@ canvas.addEventListener('mousemove', (event) => {
 animate();
 ```
 
+<br>
+<br>

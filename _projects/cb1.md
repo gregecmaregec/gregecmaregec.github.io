@@ -12,10 +12,11 @@ category: cb
 
 
 <br>
-• I am 24 years old<br>
+I am 24 years old<br>
 <br>
 <br>
-• I grew up in a small village in Slovenia.<br>
+I grew up in a small village in Slovenia.<br>
+
 • Moved to Germany in break year out of self-initiative after completion of bachelor studies in Slovenia, with a headful of dreams. Started to work as a bartender while working as a remote working student for a Slovenian company, hoping to get the opportunity to study my Master degree in Germany and get career experience.<br><br>
 • During the break year: accepted to one of Germany’s top universities (University of Mannheim), awarded a scholarship to study in Germany (DAAD), and completed a traineeship at Banco Santander’s Trade Finance division in Frankfurt, working on some of the largest transactions in Europe. <br><br>
 <br>
