@@ -71,10 +71,10 @@ Customer support (Working student during B.Sc. study)<br>
 <div style="height: 1px; width: min(800px, 100%); padding: 0 5px; box-sizing: border-box; background-color: lightgray;"></div>
 <br>
 
-#### What previous employers are saying about me
+#### What previous employers have to say
 
 <div class="caption">
-    Note: the entirety of this webpage, alongside the whole application website, is manually excluded from being webcrawled in the robots.txt file
+    Note: the entirety of this webpage, alongside the whole trainee application website, is manually excluded from being webcrawled in the robots.txt file
 </div>
 
 <br>
@@ -108,7 +108,7 @@ Customer support (Working student during B.Sc. study)<br>
 </div>
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/cb/kpmg.jpg" title="kpmg" class="img-fluid rounded z-depth-1" style="width=50%"%}
+        {% include figure.liquid loading="eager" path="assets/img/cb/kpmg2.jpg" title="kpmg2" class="img-fluid rounded z-depth-1" style="width=50%"%}
     </div>
 </div>
 
