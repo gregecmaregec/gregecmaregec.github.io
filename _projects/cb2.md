@@ -17,10 +17,6 @@ My [Linkedin](https://linkedin.com/in/gregormihelac/)
 <br>
 <br>
 
-### CV experience
-<br>
-<br>
-
 <br><br>
 
 #### Commerzbank (Frankfurt am Main, Germany) <br>
