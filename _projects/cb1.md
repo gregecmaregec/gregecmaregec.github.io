@@ -8,7 +8,14 @@ importance: 2
 category: cb
 ---
 
-
+<div class="caption">
+    Me, in front of the University of Mannheim
+</div>
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/gregor.jpg" title="me" class="img-fluid4 rounded z-depth-1" style="width=50%"%}
+    </div>
+</div>
 
 
 <br>
@@ -20,7 +27,9 @@ I grew up in a small village in Slovenia.<br>
 • Moved to Germany in break year out of self-initiative after completion of bachelor studies in Slovenia, with a headful of dreams. Started to work as a bartender while working as a remote working student for a Slovenian company, hoping to get the opportunity to study my Master degree in Germany and get career experience.<br><br>
 • During the break year: accepted to one of Germany’s top universities (University of Mannheim), awarded a scholarship to study in Germany (DAAD), and completed a traineeship at Banco Santander’s Trade Finance division in Frankfurt, working on some of the largest transactions in Europe. <br><br>
 <br>
-During Master studies:<br><br>
+
+#### During Master studies:<br><br>
+
 • Completed two internships: at big4 in IT audit, and in Germany’s best bank (Commerzbank!), area Software Development. <br><br>
 • Google Developer Groups on Campus Mannheim – main Tech Lead, host of programming lectures<br><br>
 • Mannheim Investment Club (MIC) – member of the education and investment teams, host of finance lectures<br><br>
@@ -31,16 +40,6 @@ During Master studies:<br><br>
 
 <br>
 <br>
-
-<div class="caption">
-    Me, in front of the University of Mannheim
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/gregor.jpg" title="me" class="img-fluid4 rounded z-depth-1" style="width=50%"%}
-    </div>
-</div>
-
 <br>
 <br>
 
