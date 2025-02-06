@@ -13,14 +13,14 @@ category: cb
 <div style="height: 1px; width: min(800px, 100%); padding: 0 5px; box-sizing: border-box; background-color: lightgray;"></div>
 <br>
 
-#### 1 - Drive <br>
+#### Drive <br>
 My two biggest interests are <u>finance</u> and <u>technology.</u>  This traineeship combines them very well. 
 
 <br>
 <div style="height: 1px; width: min(800px, 100%); padding: 0 5px; box-sizing: border-box; background-color: lightgray;"></div>
 <br>
 
-#### 2 - Curiosity <br>
+#### Curiosity <br>
 
 From the traineeship description: 
 <br>
@@ -68,7 +68,7 @@ AI & LLM:<br> I I have a burning interest in AI and machine learning – and hav
 <div style="height: 1px; width: min(800px, 100%); padding: 0 5px; box-sizing: border-box; background-color: lightgray;"></div>
 <br>
 
-#### 3 - Ethics <br>
+#### Ethics <br>
 I have gathered previous experience during my studies in digital compliance at a Big4, so I am aware and believe it imperative how carefully sensitive data is to be handled – and this I saw reflected very deeply at Commerzbank’s data flows infrastructure during my first internship at your institution. <br><br>
 Not just in data flows, at Commerzbank I was impressed by the ethical considerations of your organization in every aspect of conducting business – dealing with customers, trainings, working conditions, and the opportunities your employees have in progression, and to learn. I sincerely hope to continue my career at Commerzbank.<br>
 
