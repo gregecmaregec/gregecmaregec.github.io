@@ -12,7 +12,7 @@ category: cb
 <br>
 <br>
 
-You may want to check my [Linkedin](https://linkedin.com/in/gregormihelac/) instead
+My [Linkedin](https://linkedin.com/in/gregormihelac/) 
 
 <br>
 <br>
@@ -62,12 +62,34 @@ Customer support (Working student during B.Sc. study)<br>
 •	Phone and text-based help with banking services for personal and corporate clients<br>
 
 
+<br>
+<br>
+<br>
+<br>
+
 
 #### What previous employers are saying about me
 
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/cb/cb.jpg" title="commerzbank" class="img-fluid2 rounded z-depth-1" style="width=50%"%}
+        {% include figure.liquid loading="eager" path="assets/img/cb/cb.jpg" title="commerzbank" class="img-fluid rounded z-depth-1" style="width=50%"%}
     </div>
 </div>
+
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/cb/sa.jpg" title="commerzbank" class="img-fluid rounded z-depth-1" style="width=50%"%}
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/cb/kpmg.jpg" title="commerzbank" class="img-fluid rounded z-depth-1" style="width=50%"%}
+    </div>
+</div>
+
+<br>
+<br>
