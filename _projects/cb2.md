@@ -19,6 +19,10 @@ My [Linkedin](https://linkedin.com/in/gregormihelac/)
 
 <br><br>
 
+<br>
+<div style="height: 1px; width: min(800px, 100%); padding: 0 5px; box-sizing: border-box; background-color: lightgray;"></div>
+<br>
+
 #### Commerzbank (Frankfurt am Main, Germany) <br>
 06/2024 – 09/2024 <br>
 Innovation & Development, Group Risk Management (Internship during M.Sc. study) <br>
@@ -63,6 +67,9 @@ Customer support (Working student during B.Sc. study)<br>
 <br>
 <br>
 
+<br>
+<div style="height: 1px; width: min(800px, 100%); padding: 0 5px; box-sizing: border-box; background-color: lightgray;"></div>
+<br>
 
 #### What previous employers are saying about me
 
