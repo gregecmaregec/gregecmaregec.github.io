@@ -31,15 +31,15 @@ During Master studies:<br><br>
 <br>
 
 <br>
-
+<div class="caption">
+    Me, in front of the University of Mannheim
+</div>
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/gregor.jpg" title="me" class="img-fluid4 rounded z-depth-1" style="width=50%"%}
     </div>
 </div>
-<div class="caption">
-    Me, in front of the University of Mannheim
-</div>
+
 <br>
 <br>
 <i>e-mail: gregor.mihelac (at) outlook (dot) com
