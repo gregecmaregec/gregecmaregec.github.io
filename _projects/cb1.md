@@ -35,7 +35,7 @@ During Master studies:<br><br>
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/gregor.jpg" title="me" class="img-fluid2 rounded z-depth-1" style="width=50%"%}
+        {% include figure.liquid loading="eager" path="assets/img/gregor.jpg" title="me" class="img-fluid4 rounded z-depth-1" style="width=50%"%}
     </div>
 </div>
 <br>
