@@ -16,7 +16,6 @@ category: cb
 #### Drive <br>
 My two biggest interests are <u>finance</u> and <u>technology.</u>  This traineeship combines them very well. 
 
-<br>
 <div style="height: 1px; width: min(800px, 100%); padding: 0 5px; box-sizing: border-box; background-color: lightgray;"></div>
 <br>
 
@@ -60,7 +59,7 @@ here is a simple API written in Go:
 <br>
 <br>
 Cloud:<br> While cloud is just someone else’s computer, I have explored the dashboards of GCP and Azure and can bring a three tier application online on both, with a serverless or VM instance of a database (NoSQL or PostgreSQL).<br><br>
-AI & LLM:<br> I I have a burning interest in AI and machine learning – and have built my personal AI web chat which I serve from a locally built server that I brough online through my university network. <br><br>
+AI & LLM:<br> I I have a burning interest in AI and machine learning – and have built my personal AI web chat which I serve from a locally built server that I brough online through my university network. <br>
 
 <br>These are all topics I have explored by myself, as I have a passion for building software.
   
@@ -71,9 +70,6 @@ AI & LLM:<br> I I have a burning interest in AI and machine learning – and hav
 #### Ethics <br>
 I have gathered previous experience during my studies in digital compliance at a Big4, so I am aware and believe it imperative how carefully sensitive data is to be handled – and this I saw reflected very deeply at Commerzbank’s data flows infrastructure during my first internship at your institution. <br><br>
 Not just in data flows, at Commerzbank I was impressed by the ethical considerations of your organization in every aspect of conducting business – dealing with customers, trainings, working conditions, and the opportunities your employees have in progression, and to learn. I sincerely hope to continue my career at Commerzbank.<br>
-
-<br>
-<br>
 
 <br>
 <div style="height: 1px; width: min(800px, 100%); padding: 0 5px; box-sizing: border-box; background-color: lightgray;"></div>
