@@ -4,7 +4,7 @@ layout: philosophy
 permalink: /philosophy/
 title: philosophy
 description: some observations on the way things seem to be
-nav: true
+nav: false
 nav_order: 5
 
 ---
