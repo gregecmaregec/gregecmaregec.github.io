@@ -1,7 +1,7 @@
 ---
 layout: page_cb_subpage
 title: About me
-description:  Get to know the applicant!
+description:  Summary
 nav: true
 img: assets/img/cb/cb-1.jpg
 importance: 2
@@ -10,7 +10,6 @@ category: cb
 
 
 
-#### SUMMARY
 
 <br>
 • I am currenntly 24 years old<br>
@@ -37,6 +36,9 @@ During Master studies:<br><br>
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/gregor.jpg" title="me" class="img-fluid4 rounded z-depth-1" style="width=50%"%}
     </div>
+</div>
+<div class="caption">
+    Me, in front of the University of Mannheim
 </div>
 <br>
 <br>
