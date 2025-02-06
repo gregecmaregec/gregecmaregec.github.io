@@ -39,7 +39,7 @@ here is a simple API written in Go:
 
     //this will be the response when you trigger the api
     func handler(w http.ResponseWriter, r *http.Request) {
-        fmt.Fprintf(w, "Hello, this is a response from your Go API!")
+        fmt.Fprintf(w, "Hello, dear Commerzbank reviewer!")
     }
 
     func main() {
