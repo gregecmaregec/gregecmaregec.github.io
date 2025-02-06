@@ -25,12 +25,11 @@ During Master studies:<br><br>
 • [ITFA EL Trade Financier of the year 2024](https://www.linkedin.com/posts/itfa-org_annualconference-cyprus-itfacyprus2024-activity-7240387292995977216-ai-y/)award in Cyprus, sponsored by Africa Global Trade Finance<br><br>
 • Built an [end-to-end encrypted AI chat tool](https://gregormihelac.com/osai/), serving private inference from a locally configured server setup. Note: it is not always available, due to the server also being my personal PC. Also: the API I built serving from gmserver.xyz is most likely blocked from your company devices.<br><br>
 • Improved German to fluent level (C1), started to learn Spanish, and Chinese at a conversational level.<br><br>
-• Fishing my master’s studies a semester earlier than the standard period of study (in March 2025).<br><br>
-<br>
+• Fishing my master’s studies a semester earlier than the standard period of study (in March 2025).<br>
 
 <br>
-
 <br>
+
 <div class="caption">
     Me, in front of the University of Mannheim
 </div>
@@ -42,6 +41,8 @@ During Master studies:<br><br>
 
 <br>
 <br>
+
+
 <i>e-mail: gregor.mihelac (at) outlook (dot) com
 <br>
 linkedin: [in/gregormihelac](https://www.linkedin.com/in/gregormihelac/)
@@ -52,7 +53,7 @@ github: [github.com/gregecmaregec](https://github.com/gregecmaregec)</i>
 <br>
 <br>
 this website is built using:<br>
-html ; ruby ; js ; css ; yaml ; liquid template language, jekyll
+html ; ruby ; js ; css/scss ; yaml ; .liquid, jekyll, boostrap min
 <br>
 <br>
 server-side handling of osai is built with Go,<br>
