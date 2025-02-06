@@ -18,11 +18,11 @@ category: cb
 </div>
 
 
-#### Passionate for Finance & Technology 
+# Passionate for Finance & Technology 
 
 
 <br>
-I am 24 years old<br>
+Currently 24 years old<br>
 <br>
 <br>
 I grew up in a small village in Slovenia.<br>
@@ -31,7 +31,7 @@ I grew up in a small village in Slovenia.<br>
 • During the break year: accepted to one of Germany’s top universities (University of Mannheim), awarded a scholarship to study in Germany (DAAD), and completed a traineeship at Banco Santander’s Trade Finance division in Frankfurt, working on some of the largest transactions in Europe. <br><br>
 <br>
 
-#### During Master studies at Uni Mannheim:<br><br>
+#### During Master studies at Universität Mannheim:<br><br>
 
 • Completed two internships: at big4 in IT audit, and in Germany’s best bank (Commerzbank!), area Software Development. <br><br>
 • Google Developer Groups on Campus Mannheim – main Tech Lead, host of programming lectures<br><br>
