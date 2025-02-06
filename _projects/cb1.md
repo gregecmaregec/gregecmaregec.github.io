@@ -17,12 +17,16 @@ category: cb
     </div>
 </div>
 
+<br>
+<br>
+<br>
+<br>
 
 # Passionate for Finance & Technology 
 
 
 <br>
-Currently 24 years old<br>
+24 years old<br>
 <br>
 <br>
 I grew up in a small village in Slovenia.<br>
