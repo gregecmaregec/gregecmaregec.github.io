@@ -20,4 +20,4 @@ Its 90 x 90 with the rules applied.
     </div>
 </div>
 
-<script src="{{ site.baseurl }}/assets/js/game_of_life_sim.js"></script>
+
