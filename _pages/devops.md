@@ -1,6 +1,6 @@
 ---
 
-layout: none
+layout: default_empty
 permalink: /devops/
 title: devops
 nav: false
