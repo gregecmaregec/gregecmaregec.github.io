@@ -92,7 +92,7 @@ linkedin: [in/gregormihelac](https://www.linkedin.com/in/gregormihelac/)
 
 
 
-Bonus: the JS effect on the [front page](https://gregormihelac.com/cb-application) of my applciation. You may use it as you wish under the conditions of the [MIT License](https://github.com/gregecmaregec/gregecmaregec.github.io/blob/master/LICENSE)
+Bonus: the JS effect on the [front page](https://gregormihelac.com/cb-application) of my application. You may use it as you wish under the conditions of the [MIT License](https://github.com/gregecmaregec/gregecmaregec.github.io/blob/master/LICENSE)
 
 
 <br>
