@@ -453,7 +453,6 @@ function drawGrid() {
 
 ### simple http server using go-lang
 
-<details>
 
 `go`
 
@@ -483,4 +482,4 @@ function drawGrid() {
 // you may now trigger your api by engaging with http://localhost:8080 
 ```
 
-</details>
+
