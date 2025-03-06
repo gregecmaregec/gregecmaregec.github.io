@@ -7,7 +7,7 @@ where I focus primarily on topics in IT and Finance.<br>
 <br>
 <br>
 <br>
-<i>e-mail: [gregor@mihelac.com](mailto:gregor@mihelac.com)<br>
+<i>e-mail: gregor@mihelac.com<br>
 <br>
 linkedin: [in/gregormihelac](https://www.linkedin.com/in/gregormihelac/)
 <br>
