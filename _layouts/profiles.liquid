@@ -60,16 +60,28 @@ layout: page
           'invert(30%) hue-rotate(200deg) saturate(200%)'
         ];
         
-        // Get a random filter
-        const randomFilter = filters[Math.floor(Math.random() * filters.length)];
+        // Apply a smooth transition
+        profileImage.style.transition = 'filter 0.7s ease-in-out';
         
-        // Apply the filter
-        profileImage.style.filter = randomFilter;
+        // Keep track of the current filter index
+        let currentFilterIndex = Math.floor(Math.random() * filters.length);
         
-        // Add a subtle transition
-        profileImage.style.transition = 'filter 0.3s ease-in-out';
-
-        console.log('Applied filter:', randomFilter); // Debug message
+        // Function to apply a random filter
+        function applyRandomFilter() {
+          // Move to next filter (or loop back to beginning)
+          currentFilterIndex = (currentFilterIndex + 1) % filters.length;
+          
+          // Apply the filter
+          profileImage.style.filter = filters[currentFilterIndex];
+          
+          console.log('Applied filter:', filters[currentFilterIndex]); // Debug message
+        }
+        
+        // Apply initial random filter
+        applyRandomFilter();
+        
+        // Change filter every 3 seconds
+        setInterval(applyRandomFilter, 3000);
       }
     }
   });
