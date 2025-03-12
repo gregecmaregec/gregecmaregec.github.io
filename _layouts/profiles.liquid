@@ -57,10 +57,11 @@ layout: page
           'hue-rotate(90deg) saturate(140%)',
           'sepia(60%) hue-rotate(200deg)',
           'brightness(90%) sepia(30%) contrast(140%) saturate(200%)',
+          'invert(30%) hue-rotate(200deg) saturate(200%)',
         ];
         
-        // Apply a smooth transition
-        profileImage.style.transition = 'filter 0.7s ease-in-out';
+        // Apply a smoother transition with longer duration and cubic-bezier curve
+        profileImage.style.transition = 'filter 1.5s cubic-bezier(0.4, 0, 0.2, 1)';
         
         // Keep track of the current filter index
         let currentFilterIndex = Math.floor(Math.random() * filters.length);
@@ -80,7 +81,7 @@ layout: page
         applyRandomFilter();
         
         // Change filter every 3 seconds
-        setInterval(applyRandomFilter, 3000);
+        setInterval(applyRandomFilter, 2200);
       }
     }
   });
