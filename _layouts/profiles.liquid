@@ -72,59 +72,26 @@ layout: page
         
         // Keep track of the current filter index
         let currentFilterIndex = Math.floor(Math.random() * filters.length);
-        let nextFilterIndex = (currentFilterIndex + 1) % filters.length;
-        let transitionInProgress = false;
-        
-        // Function to apply a smooth transition between filters
-        function transitionToNextFilter() {
-          if (transitionInProgress) return;
-          transitionInProgress = true;
-          
-          // Store the next filter index
-          nextFilterIndex = (currentFilterIndex + 1) % filters.length;
-          
-          // Create a clone of the image for the transition effect
-          const clonedImage = profileImage.cloneNode(true);
-          clonedImage.style.position = 'absolute';
-          clonedImage.style.top = '0';
-          clonedImage.style.left = '0';
-          clonedImage.style.width = '100%';
-          clonedImage.style.height = '100%';
-          clonedImage.style.opacity = '1';
-          clonedImage.style.transition = 'opacity 1.5s cubic-bezier(0.4, 0, 0.2, 1)';
-          clonedImage.style.filter = filters[currentFilterIndex];
-          
-          // Position the container relatively if it's not already
-          if (getComputedStyle(profileImage.parentNode).position === 'static') {
-            profileImage.parentNode.style.position = 'relative';
-          }
-          
-          // Add the cloned image on top
-          profileImage.parentNode.appendChild(clonedImage);
-          
-          // Apply the next filter to the original image
-          profileImage.style.filter = filters[nextFilterIndex];
-          
-          // Fade out the cloned image
-          setTimeout(() => {
-            clonedImage.style.opacity = '0';
-          }, 50);
-          
-          // Remove the clone after transition and update current filter
-          setTimeout(() => {
-            clonedImage.remove();
-            currentFilterIndex = nextFilterIndex;
-            transitionInProgress = false;
-          }, 1550);
-          
-          console.log('Transitioned from', filters[currentFilterIndex], 'to', filters[nextFilterIndex]);
-        }
         
         // Apply initial filter without transition
         profileImage.style.filter = filters[currentFilterIndex];
         
-        // Change filter every 3 seconds to allow for transition time
-        setInterval(transitionToNextFilter, 3000);
+        // Function to apply a filter with transition
+        function applyNextFilter() {
+          // Get next filter index
+          const nextFilterIndex = (currentFilterIndex + 1) % filters.length;
+          
+          // Apply new filter (transition will happen automatically due to the CSS transition property)
+          profileImage.style.filter = filters[nextFilterIndex];
+          
+          // Update current filter index
+          currentFilterIndex = nextFilterIndex;
+          
+          console.log('Applied filter:', filters[currentFilterIndex]);
+        }
+        
+        // Change filter every 3 seconds
+        setInterval(applyNextFilter, 3000);
       }
     }
   });
