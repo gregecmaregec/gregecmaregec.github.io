@@ -15,7 +15,38 @@ layout: page
               {% assign profile_image_class = 'img-fluid z-depth-1 rounded' %}
             {% endif %}
             {% capture sizes %}(min-width: {{site.max_width}}) {{ site.max_width | divided_by: 2 | minus: 15 }}px, (min-width: 576px) 30vw, 50vw"{% endcapture %}
-            {% include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=profile.image %}
+            {% include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=profile.image id="profile-photo" %}
+            
+            <script>
+              document.addEventListener('DOMContentLoaded', function() {
+                // Get the profile image
+                const profileImage = document.getElementById('profile-photo').querySelector('img');
+                
+                // Define photobooth-style filters
+                const filters = [
+                  'sepia(100%)',
+                  'grayscale(100%)',
+                  'contrast(150%) brightness(120%)',
+                  'hue-rotate(180deg)',
+                  'invert(80%)',
+                  'brightness(110%) contrast(110%) hue-rotate(30deg) saturate(150%)',
+                  'brightness(120%) contrast(120%) sepia(30%) saturate(140%)',
+                  'grayscale(100%) brightness(120%) contrast(120%)',
+                  'hue-rotate(90deg) saturate(140%)',
+                  'sepia(60%) hue-rotate(200deg)',
+                  'brightness(90%) sepia(30%) contrast(140%) saturate(200%)',
+                ];
+                
+                // Get a random filter
+                const randomFilter = filters[Math.floor(Math.random() * filters.length)];
+                
+                // Apply the filter
+                profileImage.style.filter = randomFilter;
+                
+                // Add a subtle transition
+                profileImage.style.transition = 'filter 0.3s ease-in-out';
+              });
+            </script>
           {% endif %}
           {% if profile.more_info %}
             <div class="more-info">{{ profile.more_info }}</div>
@@ -34,65 +65,3 @@ layout: page
     {% endif %}
   </article>
 </div>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    // Target the profile image using its class and container structure
-    // This is more reliable than using an ID in Jekyll templates
-    const profileContainer = document.querySelector('.profile');
-    if (profileContainer) {
-      const profileImage = profileContainer.querySelector('img');
-      
-      if (profileImage) {
-        // Define photobooth-style filters
-        const filters = [
-          'sepia(100%)',
-          'grayscale(100%)',
-          'contrast(150%) brightness(120%)',
-          'hue-rotate(180deg)',
-          'invert(80%)',
-          'brightness(110%) contrast(110%) hue-rotate(30deg) saturate(150%)',
-          'brightness(120%) contrast(120%) sepia(30%) saturate(140%)',
-          'grayscale(100%) brightness(120%) contrast(120%)',
-          'hue-rotate(90deg) saturate(140%)',
-          'sepia(60%) hue-rotate(200deg)',
-          'brightness(90%) sepia(30%) contrast(140%) saturate(200%)',
-          'invert(30%) hue-rotate(200deg) saturate(200%)',
-          // Additional creative photobooth filters
-          'contrast(120%) brightness(100%) saturate(150%) sepia(30%)',
-          'hue-rotate(270deg) saturate(110%) brightness(110%)',
-          'grayscale(80%) brightness(120%) contrast(130%)',
-          'sepia(50%) contrast(140%) brightness(110%) hue-rotate(10deg)',
-          'brightness(105%) contrast(105%) saturate(130%) hue-rotate(350deg)',
-          'contrast(130%) brightness(110%) sepia(20%) hue-rotate(300deg)'
-        ];
-        
-        // Apply a smoother transition with longer duration and cubic-bezier curve
-        profileImage.style.transition = 'filter 1.5s cubic-bezier(0.4, 0, 0.2, 1)';
-        
-        // Keep track of the current filter index
-        let currentFilterIndex = Math.floor(Math.random() * filters.length);
-        
-        // Apply initial filter without transition
-        profileImage.style.filter = filters[currentFilterIndex];
-        
-        // Function to apply a filter with transition
-        function applyNextFilter() {
-          // Get next filter index
-          const nextFilterIndex = (currentFilterIndex + 1) % filters.length;
-          
-          // Apply new filter (transition will happen automatically due to the CSS transition property)
-          profileImage.style.filter = filters[nextFilterIndex];
-          
-          // Update current filter index
-          currentFilterIndex = nextFilterIndex;
-          
-          console.log('Applied filter:', filters[currentFilterIndex]);
-        }
-        
-        // Change filter every 3 seconds
-        setInterval(applyNextFilter, 3000);
-      }
-    }
-  });
-</script>
