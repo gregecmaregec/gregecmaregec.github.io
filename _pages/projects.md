@@ -1,8 +1,8 @@
 ---
 layout: page_itfa
-title: Demystifying AI
+title: ITFA2024 Project
 permalink: /itfasubmission/
-nav: false
+nav: true
 nav_order: 6
 horizontal: false
 og_title: "ITFA EL 2024 submission"
