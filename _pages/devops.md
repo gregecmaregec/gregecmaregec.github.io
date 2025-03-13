@@ -8,7 +8,7 @@ nav: false
 ---
 
 <br> 
-enjoy a sample [game of life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) simulation QiaoLin!
+enjoy a sample [game of life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) !
 Its 90 x 90 with the rules applied.
 
 
