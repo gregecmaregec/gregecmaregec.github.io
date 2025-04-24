@@ -4,7 +4,7 @@ layout: philosophy
 permalink: /philosophy/
 title: philosophy
 description: some observations on the way things seem to be
-nav: true
+nav: false
 nav_order: 5
 
 ---
@@ -170,11 +170,4 @@ The more you explore something, the smaller it becomes. <br>
 
 ---
 
-<div style="height: 1px; width: min(800px, 100%); padding: 0 5px; box-sizing: border-box; background-color: lightgray;"></div>
-
-<small><i>The writings in this page are the products of my own mind, and in no way represent the views of any employer of mine,<br></i></small>
-<small><i>past, present, or future.</i></small><br>
-<br>
-<small><i>The writings in this page are not covered under the MIT license. © 2024 Gregor Mihelac. All rights reserved .</i></small>
-<br>
 
