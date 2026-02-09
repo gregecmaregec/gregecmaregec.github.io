@@ -31,15 +31,7 @@ Let's break it down: this is possible thanks to [Jekyll Jupyter Notebook plugin]
 
 The plugin takes as input the path to the notebook, but it assumes the file exists. If you want to check if the file exists before calling the plugin, you can use the `file_exists` filter. This avoids getting a 404 error from the plugin and ending up displaying the main page inside of it instead. If the file does not exist, you can output a message to the user. The code displayed above outputs the following:
 
-{::nomarkdown}
-{% assign jupyter_path = "assets/jupyter/blog.ipynb" | relative_url %}
-{% capture notebook_exists %}{% file_exists assets/jupyter/blog.ipynb %}{% endcapture %}
-{% if notebook_exists == "true" %}
-{% jupyter_notebook jupyter_path %}
-{% else %}
-
-<p>Sorry, the notebook you are looking for does not exist.</p>
-{% endif %}
-{:/nomarkdown}
+<!-- jupyter_notebook plugin disabled for local dev -->
+<p><em>Jupyter notebook rendering is disabled in local development (requires jupyter to be installed).</em></p>
 
 Note that the jupyter notebook supports both light and dark themes.
