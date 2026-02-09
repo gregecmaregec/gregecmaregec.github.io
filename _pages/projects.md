@@ -71,7 +71,9 @@ og_type: "website"
 
 <br>
 <div class="caption">
-    This project won me a prize by ITFA 2024 award in Cyprus
+    This project won ITFA EL 2024 award in Cyprus<br>
+    Many thanks to Africa Global Trade Finance for my accomodation & ticket to event as part of the top 3 contestant sponsorship<br>
+    Diamond sponsors of event JP Morgan & Deutsche Bank
 </div>
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
