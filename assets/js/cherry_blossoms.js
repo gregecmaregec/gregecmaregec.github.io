@@ -10,7 +10,7 @@ const leaves = [];
 
 // keeping canvas at 0.99 of the window size prevents overflow
 canvas.width = window.innerWidth * 0.99;
-canvas.height = window.innerHeight * 0.99;
+canvas.height = window.innerHeight * 0.5;
 
 // balls are called Leaf (dont ask me why)
 class Leaf {

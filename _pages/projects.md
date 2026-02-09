@@ -71,7 +71,7 @@ og_type: "website"
 
 <br>
 <div class="caption">
-    This project won ITFA 2024 Emerging Leaders competition in Cyprus
+    This project won me a prize by ITFA 2024 award in Cyprus. Some trade-finance realted thoughts inside.
 </div>
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
