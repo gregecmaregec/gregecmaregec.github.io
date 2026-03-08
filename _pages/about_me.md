@@ -10,11 +10,11 @@ Now, I am something else entirely. Probably talking to computers somewhere<br>
 <br>
 linkedin: [in/gregormihelac](https://www.linkedin.com/in/gregormihelac/)
 <br>
-github: [github.com/gregecmaregec](https://github.com/gregecmaregec)</i>
+github: [github.com/gregecmaregec](https://github.com/gregecmaregec)
 <br>
-Insta: [github.com/gregecmaregec](https://www.instagram.com/gregormihelac/)</i>
+Insta: [github.com/gregecmaregec](https://www.instagram.com/gregormihelac/)
 <br>
-X: [x.com/GMihelac](https://x.com/GMihelac) </i>
+X: [x.com/GMihelac](https://x.com/GMihelac)</i>
 <br>
 this website is built using:<br>
 html ; ruby ; js ; css ; yaml ; liquid template language, jekyll
