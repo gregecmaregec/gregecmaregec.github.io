@@ -16,6 +16,9 @@ Insta: [github.com/gregecmaregec](https://www.instagram.com/gregormihelac/)
 <br>
 X: [x.com/GMihelac](https://x.com/GMihelac)</i>
 <br>
+
+<br>
+<br>
 this website is proudly built using:<br>
 Ruby♦️, sass, Jekyll, Liquid (template language)
 <br>
