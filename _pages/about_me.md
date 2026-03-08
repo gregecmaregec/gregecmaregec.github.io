@@ -6,7 +6,7 @@ Now, I am something else entirely. Probably talking to computers somewhere<br>
 <br>
 <br>
 <br>
-<i>e-mail: gregor@mihelac.com<br>
+<i>e-mail: gm@xtilia.com<br>
 <br>
 linkedin: [in/gregormihelac](https://www.linkedin.com/in/gregormihelac/)
 <br>
