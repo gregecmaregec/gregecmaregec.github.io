@@ -12,8 +12,9 @@ linkedin: [in/gregormihelac](https://www.linkedin.com/in/gregormihelac/)
 <br>
 github: [github.com/gregecmaregec](https://github.com/gregecmaregec)</i>
 <br>
+Insta: [github.com/gregecmaregec](https://www.instagram.com/gregormihelac/)</i>
 <br>
-<br>
+X: [x.com/GMihelac](https://x.com/GMihelac) </i>
 <br>
 this website is built using:<br>
 html ; ruby ; js ; css ; yaml ; liquid template language, jekyll
