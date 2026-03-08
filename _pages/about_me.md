@@ -17,7 +17,7 @@ Insta: [github.com/gregecmaregec](https://www.instagram.com/gregormihelac/)
 X: [x.com/GMihelac](https://x.com/GMihelac)</i>
 <br>
 this website is proudly built using:<br>
-Ruby♦️, sass, Jekyll
+Ruby♦️, sass, Jekyll, Liquid (template language)
 <br>
 <br>
 server-side handling of osai is built with Go,<br>
