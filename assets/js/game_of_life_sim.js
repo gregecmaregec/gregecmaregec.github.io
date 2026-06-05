@@ -35,7 +35,8 @@
   // The live canvas is fixed (out of flow), so reserve the footprint the old
   // in-flow square used to take. Keeps the gap between the page content and the
   // footer exactly as it was: a centred max-500px square with a 3rem tail.
-  if (root) {
+  // Skipped on the immersive showroom, where the layout fills the viewport.
+  if (root && !document.body.classList.contains("fullscreen-showroom")) {
     Object.assign(root.style, {
       display: "block",
       width: "100%",

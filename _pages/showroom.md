@@ -3,6 +3,7 @@
 layout: about
 permalink: /
 title: showroom
+fullscreen: true
 
 ---
 

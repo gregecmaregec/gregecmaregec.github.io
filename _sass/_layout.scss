@@ -22,16 +22,33 @@ body.fixed-top-nav {
   padding-top: 56px;
 }
 
-// On phones, let the navbar scroll away instead of pinning to the top. With
-// nothing sticky up there, iOS Safari can use the full viewport (under the
-// notch / address bar). Kept as vanilla as possible.
-@media (max-width: 575.98px) {
+// The showroom (landing page) is a single-screen, immersive experience: the
+// Game of Life canvas fills the viewport, the navbar is not pinned, and the
+// footer rests at the very bottom — no scrolling. Every other page keeps its
+// normal sticky navbar and natural scroll.
+body.fullscreen-showroom {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100dvh;
+  max-height: 100vh;
+  max-height: 100dvh;
+  overflow: hidden;
+
+  // Navbar joins the normal flow at the top instead of pinning, so iOS Safari
+  // can use the full viewport (under the notch / address bar).
   #navbar.fixed-top {
     position: static;
   }
 
-  body.fixed-top-nav {
+  &.fixed-top-nav {
     padding-top: 0;
+  }
+
+  // Main content grows so the footer is pushed to the very bottom.
+  [role="main"] {
+    flex: 1 1 auto;
+    min-height: 0;
   }
 }
 
