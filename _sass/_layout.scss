@@ -22,6 +22,19 @@ body.fixed-top-nav {
   padding-top: 56px;
 }
 
+// On phones, let the navbar scroll away instead of pinning to the top. With
+// nothing sticky up there, iOS Safari can use the full viewport (under the
+// notch / address bar). Kept as vanilla as possible.
+@media (max-width: 575.98px) {
+  #navbar.fixed-top {
+    position: static;
+  }
+
+  body.fixed-top-nav {
+    padding-top: 0;
+  }
+}
+
 body.sticky-bottom-footer {
   // Remove padding below footer.
   padding-bottom: 0;

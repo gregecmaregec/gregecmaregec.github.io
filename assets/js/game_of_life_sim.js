@@ -54,9 +54,16 @@
     cols: 1,
     rows: 1,
     grid: new Uint8Array(0),
+    oneAgo: null,
+    twoAgo: null,
+    stagnant: 0,
     rafId: null,
     lastTick: 0,
   };
+
+  // Generations of a settled board to tolerate before reseeding the centre
+  // square, so the animation never freezes for good. ~6s at SPEED_MS.
+  const STAGNANT_LIMIT = 60;
 
   init();
   state.rafId = requestAnimationFrame(tick);
@@ -68,6 +75,13 @@
   });
   window.addEventListener("beforeunload", () => {
     cancelAnimationFrame(state.rafId);
+  });
+
+  // Tap / click anywhere to sprinkle a fresh patch of life under the pointer.
+  // Ignore clicks on real interactive elements so links and buttons still work.
+  window.addEventListener("click", (event) => {
+    if (event.target.closest && event.target.closest("a, button, input, select, textarea, label")) return;
+    stampAt(event.clientX, event.clientY);
   });
 
   function init() {
@@ -179,7 +193,51 @@
       }
     }
 
+    // A frame identical to two generations ago means the board has settled
+    // (still lifes / period-2 oscillators). Let it sit briefly, then reseed
+    // the same centre square so life begins again — forever.
+    state.stagnant = state.twoAgo && gridsEqual(next, state.twoAgo) ? state.stagnant + 1 : 0;
+    state.twoAgo = state.oneAgo;
+    state.oneAgo = state.grid;
     state.grid = next;
+
+    if (state.stagnant >= STAGNANT_LIMIT) reseed();
+  }
+
+  function reseed() {
+    state.grid = new Uint8Array(state.cols * state.rows);
+    state.oneAgo = null;
+    state.twoAgo = null;
+    state.stagnant = 0;
+    seedCenter();
+  }
+
+  // Add a small soup patch centred on a viewport point (only turns cells on,
+  // so it feeds the existing pattern rather than wiping it).
+  function stampAt(clientX, clientY) {
+    const radius = 14;
+    const centerX = Math.floor(clientX / state.cell);
+    const centerY = Math.floor(clientY / state.cell);
+
+    for (let dy = -radius; dy <= radius; dy += 1) {
+      for (let dx = -radius; dx <= radius; dx += 1) {
+        const x = centerX + dx;
+        const y = centerY + dy;
+        if (x < 0 || x >= state.cols || y < 0 || y >= state.rows) continue;
+        if (Math.random() < DENSITY) state.grid[y * state.cols + x] = 1;
+      }
+    }
+
+    state.stagnant = 0;
+    draw();
+  }
+
+  function gridsEqual(a, b) {
+    if (a.length !== b.length) return false;
+    for (let i = 0; i < a.length; i += 1) {
+      if (a[i] !== b[i]) return false;
+    }
+    return true;
   }
 
   function countNeighbors(x, y) {
