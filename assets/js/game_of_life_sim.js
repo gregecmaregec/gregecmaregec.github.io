@@ -41,7 +41,7 @@
       width: "100%",
       maxWidth: "500px",
       aspectRatio: "1 / 1",
-      margin: "0 auto 3rem",
+      margin: "100px auto",
     });
   }
 
