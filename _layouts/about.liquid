@@ -51,11 +51,11 @@ layout: default
     {% comment %}
     {% endcomment %}
     <!-- game of life sim -->
-    <script src="{{ site.baseurl }}/assets/js/game_of_life_sim.js"></script>
+    <script src="{{ '/assets/js/game_of_life_sim.js' | relative_url | bust_file_cache }}"></script>
 
     {% comment %}
     <!-- nature sym -->
-    <script src="{{ site.baseurl }}/assets/js/nature.js"></script>
+    <script src="{{ '/assets/js/nature.js' | relative_url | bust_file_cache }}"></script>
     {% endcomment %}
 
 
