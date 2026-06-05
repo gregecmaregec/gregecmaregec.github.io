@@ -540,6 +540,13 @@ footer.sticky-bottom {
   }
 }
 
+// The name — and only the name, wherever it appears (landing-page title and
+// the navbar brand) — is set in Iowan Old Style, with graceful serif fallbacks
+// for non-Apple platforms.
+.name-display {
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+}
+
 .post-list {
   margin: 0;
   margin-bottom: 40px;
