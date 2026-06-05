@@ -1,138 +1,216 @@
-// create a canvas element
-const canvas = document.createElement('canvas');
-document.body.appendChild(canvas);
+// Conway's Game of Life — landing-page background.
+//
+// Opinionated on purpose: same colours, same speed, same starting square the
+// original sketch used. The only new trick is that the grid is no longer boxed
+// in. The simulation seeds in the exact same centred square, then is free to
+// march outwards across the whole viewport.
+(() => {
+  const root = document.getElementById("game-of-life-app");
 
-// get the 2D rendering context
-const ctx = canvas.getContext('2d');
+  // The original landing-page defaults. Kept verbatim so it "starts where it
+  // starts" — 90x90 seed, 30% density, 100ms per generation, sakura pink.
+  const SEED_COLS = readInt(root, "defaultWidth", 90);
+  const SEED_ROWS = readInt(root, "defaultHeight", 90);
+  const SPEED_MS = readInt(root, "defaultSpeed", 100);
+  const DENSITY = readInt(root, "defaultDensity", 30) / 100;
+  const LIVE_COLOR = readColor(root, "--life-live-cell", "#ffb7c5");
 
-// dimensions of the game!
-const numBlocksX = 90;
-const numBlocksY = 90;
+  // Build the canvas in JS and pin it behind the page content, edge to edge.
+  const canvas = document.createElement("canvas");
+  canvas.setAttribute("aria-hidden", "true");
+  Object.assign(canvas.style, {
+    position: "fixed",
+    top: "0",
+    left: "0",
+    width: "100%",
+    height: "100%",
+    maxWidth: "none",
+    margin: "0",
+    display: "block",
+    zIndex: "-1",
+    pointerEvents: "none",
+  });
+  document.body.appendChild(canvas);
 
-// calculate the maximum dimension of the display
-const maxDimension = Math.min(window.innerWidth, window.innerHeight);
+  const ctx = canvas.getContext("2d");
 
-// set the canvas size to be macDimension pixels
-const canvasSize = Math.min(maxDimension, 500);
-canvas.width = canvasSize;
-canvas.height = canvasSize;
-// below sets the canvas to be centered on the page
-canvas.style.marginLeft = `${(window.innerWidth - canvasSize) / 2}px`;
+  const state = {
+    vw: 1,
+    vh: 1,
+    cell: 1,
+    cols: 1,
+    rows: 1,
+    grid: new Uint8Array(0),
+    rafId: null,
+    lastTick: 0,
+  };
 
-// calculate the size of each block in the grid based on the maximum dimension
-const blockSize = canvasSize / Math.max(numBlocksX, numBlocksY);
+  init();
+  state.rafId = requestAnimationFrame(tick);
 
-// create a 2D array to store the grid state
-let grid = createGrid();
+  let resizeTimer = null;
+  window.addEventListener("resize", () => {
+    window.clearTimeout(resizeTimer);
+    resizeTimer = window.setTimeout(resize, 150);
+  });
+  window.addEventListener("beforeunload", () => {
+    cancelAnimationFrame(state.rafId);
+  });
 
-// create the initial grid state
-initializeGrid();
+  function init() {
+    measure();
+    state.cell = cellSize(state.vw);
+    state.cols = Math.max(1, Math.ceil(state.vw / state.cell));
+    state.rows = Math.max(1, Math.ceil(state.vh / state.cell));
+    state.grid = new Uint8Array(state.cols * state.rows);
+    seedCenter();
+    fitCanvas();
+    draw();
+  }
 
-// run the game immediately upon site load
-animate();
+  // Cell size of the original centred square: min(500px, 90vw) / 90 columns.
+  function cellSize(viewportWidth) {
+    return Math.max(1, Math.min(500, viewportWidth * 0.9) / SEED_COLS);
+  }
 
-// Stop the animation after n minutes
-setTimeout(() => {
-    cancelAnimationFrame(animationId);
-}, 6 * 60 * 1000);
+  // Drop the random soup into the centre square only; the rest starts empty so
+  // there is room to expand into.
+  function seedCenter() {
+    const blockCols = Math.min(SEED_COLS, state.cols);
+    const blockRows = Math.min(SEED_ROWS, state.rows);
+    const startX = Math.floor((state.cols - blockCols) / 2);
+    const startY = Math.floor((state.rows - blockRows) / 2);
 
-let animationId;
-
-function createGrid() {
-    const grid = new Array(numBlocksX);
-    for (let x = 0; x < numBlocksX; x++) {
-        grid[x] = new Array(numBlocksY);
+    for (let y = 0; y < blockRows; y += 1) {
+      for (let x = 0; x < blockCols; x += 1) {
+        const index = (startY + y) * state.cols + (startX + x);
+        state.grid[index] = Math.random() < DENSITY ? 1 : 0;
+      }
     }
-    return grid;
-}
+  }
 
-function initializeGrid() {
-    for (let x = 0; x < numBlocksX; x++) {
-        for (let y = 0; y < numBlocksY; y++) {
-            // randomly set each block to be alive or dead
-            grid[x][y] = Math.random() < 0.3 ? 1 : 0;
+  // On resize / orientation change, regrid but keep the living cells (centred)
+  // so the simulation keeps running instead of restarting.
+  function resize() {
+    measure();
+    const cell = cellSize(state.vw);
+    const cols = Math.max(1, Math.ceil(state.vw / cell));
+    const rows = Math.max(1, Math.ceil(state.vh / cell));
+
+    if (cols === state.cols && rows === state.rows) {
+      fitCanvas();
+      draw();
+      return;
+    }
+
+    const next = new Uint8Array(cols * rows);
+    const offX = Math.floor((cols - state.cols) / 2);
+    const offY = Math.floor((rows - state.rows) / 2);
+
+    for (let y = 0; y < state.rows; y += 1) {
+      const ny = y + offY;
+      if (ny < 0 || ny >= rows) continue;
+
+      for (let x = 0; x < state.cols; x += 1) {
+        const nx = x + offX;
+        if (nx < 0 || nx >= cols) continue;
+
+        next[ny * cols + nx] = state.grid[y * state.cols + x];
+      }
+    }
+
+    state.cell = cell;
+    state.cols = cols;
+    state.rows = rows;
+    state.grid = next;
+    fitCanvas();
+    draw();
+  }
+
+  function measure() {
+    const rect = canvas.getBoundingClientRect();
+    state.vw = Math.max(1, rect.width);
+    state.vh = Math.max(1, rect.height);
+  }
+
+  function fitCanvas() {
+    const ratio = window.devicePixelRatio || 1;
+    canvas.width = Math.round(state.vw * ratio);
+    canvas.height = Math.round(state.vh * ratio);
+    ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
+  }
+
+  function tick(timestamp) {
+    if (!state.lastTick || timestamp - state.lastTick >= SPEED_MS) {
+      step();
+      draw();
+      state.lastTick = timestamp;
+    }
+
+    state.rafId = requestAnimationFrame(tick);
+  }
+
+  // Classic Conway rules (B3/S23), unchanged.
+  function step() {
+    const { cols, rows, grid } = state;
+    const next = new Uint8Array(cols * rows);
+
+    for (let y = 0; y < rows; y += 1) {
+      for (let x = 0; x < cols; x += 1) {
+        const index = y * cols + x;
+        const neighbors = countNeighbors(x, y);
+
+        next[index] = grid[index]
+          ? Number(neighbors === 2 || neighbors === 3)
+          : Number(neighbors === 3);
+      }
+    }
+
+    state.grid = next;
+  }
+
+  function countNeighbors(x, y) {
+    const { cols, rows, grid } = state;
+    let total = 0;
+
+    for (let dy = -1; dy <= 1; dy += 1) {
+      for (let dx = -1; dx <= 1; dx += 1) {
+        if (dx === 0 && dy === 0) continue;
+
+        const nx = x + dx;
+        const ny = y + dy;
+        if (nx < 0 || nx >= cols || ny < 0 || ny >= rows) continue;
+
+        total += grid[ny * cols + nx];
+      }
+    }
+
+    return total;
+  }
+
+  function draw() {
+    const { cols, rows, cell, grid } = state;
+    const size = Math.ceil(cell);
+
+    ctx.clearRect(0, 0, state.vw, state.vh);
+    ctx.fillStyle = LIVE_COLOR;
+
+    for (let y = 0; y < rows; y += 1) {
+      for (let x = 0; x < cols; x += 1) {
+        if (grid[y * cols + x]) {
+          ctx.fillRect(x * cell, y * cell, size, size);
         }
+      }
     }
-}
+  }
 
-let timerId;
+  function readInt(el, key, fallback) {
+    const value = el ? parseInt(el.dataset[key], 10) : NaN;
+    return Number.isFinite(value) ? value : fallback;
+  }
 
-function animate() {
-    updateGrid();
-    drawGrid();
-    timerId = setTimeout(animate, 100);
-    
-}
-
-setTimeout(() => {
-    clearTimeout(timerId);
-}, 120000);
-
-function updateGrid() {
-    const newGrid = createGrid();
-
-    for (let x = 0; x < numBlocksX; x++) {
-        for (let y = 0; y < numBlocksY; y++) {
-            const neighbors = countNeighbors(x, y);
-            const isAlive = grid[x][y] === 1;
-
-            if (isAlive && (neighbors < 2 || neighbors > 3)) {
-                // cell dies due to underpopulation or overpopulation
-                newGrid[x][y] = 0;
-            } else if (!isAlive && neighbors === 3) {
-                // cell becomes alive due to reproduction
-                newGrid[x][y] = 1;
-            } else {
-                // cell remains in its current state
-                newGrid[x][y] = grid[x][y];
-            }
-        }
-    }
-
-    grid = newGrid;
-}
-
-function countNeighbors(x, y) {
-    let count = 0;
-
-    for (let i = -1; i <= 1; i++) {
-        for (let j = -1; j <= 1; j++) {
-            if (i === 0 && j === 0) continue;
-
-            const neighborX = x + i;
-            const neighborY = y + j;
-
-            if (
-                neighborX >= 0 &&
-                neighborX < numBlocksX &&
-                neighborY >= 0 &&
-                neighborY < numBlocksY
-            ) {
-                count += grid[neighborX][neighborY];
-            }
-        }
-    }
-
-    return count;
-}
-
-function drawGrid() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-    for (let x = 0; x < numBlocksX; x++) {
-        for (let y = 0; y < numBlocksY; y++) {
-            const isAlive = grid[x][y] === 1;
-
-            if (isAlive) {
-                ctx.fillStyle = '#ffb7c5'; // cherry blossom color with 80% opacity
-            } else {
-                ctx.fillStyle = 'rgba(0, 0, 0, 0)'; // completely transparent
-            }
-
-            const posX = x * blockSize;
-            const posY = y * blockSize;
-
-            ctx.fillRect(posX, posY, blockSize, blockSize);
-        }
-    }
-}
+  function readColor(el, token, fallback) {
+    const source = el || document.documentElement;
+    return getComputedStyle(source).getPropertyValue(token).trim() || fallback;
+  }
+})();

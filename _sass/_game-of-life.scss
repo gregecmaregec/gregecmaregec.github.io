@@ -1,0 +1,86 @@
+.life-app {
+  --life-live-cell: #ffb7c5;
+
+  max-width: 500px;
+  margin: 0 auto 3rem;
+}
+
+.life-board-wrap {
+  width: 100%;
+}
+
+.life-canvas {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  cursor: crosshair;
+  touch-action: none;
+}
+
+.life-controls {
+  border-top: 1px solid var(--global-divider-color);
+  padding-top: 0.75rem;
+}
+
+.life-controls label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-size: 0.9rem;
+}
+
+.life-controls output {
+  float: right;
+  color: var(--global-text-color-light);
+  font-family: monospace;
+  font-size: 0.85rem;
+}
+
+.life-wrap-switch {
+  padding-top: 0.35rem;
+}
+
+.life-help-text {
+  padding-left: 2.25rem;
+}
+
+.life-rule-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.35rem;
+}
+
+.life-rule-buttons .life-rule-button.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-width: 0;
+  min-height: 2rem;
+  padding: 0;
+  line-height: 1;
+}
+
+.life-rule-buttons .life-rule-button.active,
+.life-rule-buttons .life-rule-button.active:focus,
+.life-rule-buttons .life-rule-button.active:hover {
+  border-color: var(--life-live-cell);
+  background-color: rgba(255, 183, 197, 0.35);
+  color: var(--global-text-color);
+}
+
+.life-controls-toggle .btn,
+.life-controls .btn,
+.life-controls .custom-select {
+  box-shadow: none;
+}
+
+@media (max-width: 575.98px) {
+  .life-app {
+    max-width: 90vw;
+  }
+
+  .life-controls label {
+    font-size: 1rem;
+  }
+}
