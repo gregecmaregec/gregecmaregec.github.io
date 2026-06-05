@@ -4,7 +4,7 @@
     <div class="container">
       {% if page.permalink != '/' %}
         <a class="navbar-brand title name-display font-weight-lighter" href="{{ site.baseurl }}/">
-          {{- site.last_name -}}
+          {{ site.first_name }}{% if site.middle_name %} {{ site.middle_name }}{% endif %} {{ site.last_name }}
         </a>
       {% elsif site.enable_navbar_social %}
         <!-- Social Icons -->
