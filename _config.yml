@@ -3,11 +3,11 @@
 # -----------------------------------------------------------------------------
 
 title: Gregor Mihelac # the website title (if blxank, full name will be used instead)
-first_name: gregor
+first_name: Gregor
 middle_name: 
-last_name: mihelac
+last_name: Mihelac
 description: |+ # the ">" symbol means to ignore newlines until "footer_text:"
-  Personal website of Gregor Mihelac, born 2000 in Slovenia
+  Personal website, GM born 2000 in Slovenia
 footer_text: |+
   This website is open source under the MIT License. ✨<a href="https://github.com/gregecmaregec/gregecmaregec.github.io">Find the source code here.</a>
   <br>
