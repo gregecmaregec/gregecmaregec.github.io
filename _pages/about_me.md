@@ -12,7 +12,7 @@ linkedin: [in/gregormihelac](https://www.linkedin.com/in/gregormihelac/)
 <br>
 github: [github.com/gregecmaregec](https://github.com/gregecmaregec)
 <br>
-Insta: [github.com/gregecmaregec](https://www.instagram.com/gregormihelac/)
+Insta: [instagram.com/gregormihelac](https://www.instagram.com/gregormihelac/)
 <br>
 X: [x.com/GMihelac](https://x.com/GMihelac)</i>
 <br>
