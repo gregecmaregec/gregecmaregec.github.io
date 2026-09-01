@@ -1,9 +1,19 @@
 <!-- Name-lockup intro gate. Has to be inline in the head and run before first
      paint, otherwise the sweep starts and gets cut off mid-flight — same reason
-     theme.js lives up here. It plays on the first document of a visit and on
-     any reload, and stays quiet for link clicks and back/forward within the
-     visit. Navigation Timing is what separates a reload from a link click;
-     sessionStorage is what remembers the visit across the link clicks. -->
+     theme.js lives up here.
+
+     The name appears in two places that never share a page: large on the
+     landing page, and small in the navbar everywhere else. Each gets its own
+     one-shot, so a visit sees the sweep at most once per context — land on the
+     home page and it plays there, click through to any other page and it plays
+     again in the navbar, and after that both stay quiet however you navigate.
+     Arriving in the other order works the same way.
+
+     A reload clears both and starts the visit over. Navigation Timing is what
+     separates a reload from a link click; sessionStorage carries the flags
+     across the link clicks. The flags are set later, by common.js, which can
+     see which context actually rendered — this script runs before the body
+     exists and cannot know. -->
 <script>
   (function () {
     var reloaded = false;
@@ -17,10 +27,14 @@
     }
 
     try {
-      if (!reloaded && sessionStorage.getItem("name-intro-played") === "1") {
-        document.documentElement.setAttribute("data-name-intro", "done");
-      }
-      sessionStorage.setItem("name-intro-played", "1");
+      ["landing", "navbar"].forEach(function (context) {
+        var key = "name-intro-" + context;
+        if (reloaded) {
+          sessionStorage.removeItem(key);
+        } else if (sessionStorage.getItem(key) === "1") {
+          document.documentElement.setAttribute("data-name-intro-" + context, "done");
+        }
+      });
     } catch (e) {
       // Storage blocked (private mode, cookies-off). Let it play; harmless.
     }

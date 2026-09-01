@@ -1,16 +1,30 @@
 $(document).ready(function () {
-  // Keep the name/icon sequence one-shot. Whether it runs at all is decided
-  // before first paint by the inline head script: it plays on the first
-  // document of a visit and on any reload, and is suppressed for link clicks
-  // in between, so all this has to do is retire the lockup once its sweep has
-  // finished.
+  // The name sweep is one-shot per context per visit — see the inline gate in
+  // _includes/head.liquid, which decides before first paint whether it runs.
+  //
+  // Two jobs here. Record that a context has now been seen, which only this
+  // side can do: the head script runs before the body exists, so it cannot know
+  // whether this page carries the landing name or the navbar one. And retire
+  // each lockup once its sweep finishes, so it cannot replay in place.
+  const nameContext = (lockup) => (lockup.classList.contains("navbar-brand") ? "navbar" : "landing");
+
+  document.querySelectorAll(".name-lockup").forEach((lockup) => {
+    try {
+      sessionStorage.setItem("name-intro-" + nameContext(lockup), "1");
+    } catch (e) {
+      // Storage blocked. The sweep just replays; nothing breaks.
+    }
+  });
+
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const introSuppressed = document.documentElement.dataset.nameIntro === "done";
   document.querySelectorAll('.name-lockup[data-animation-state="playing"]').forEach((lockup) => {
     const completeAnimation = () => {
       lockup.dataset.animationState = "complete";
     };
     const nameSweep = lockup.querySelector(".name-gradient-sweep");
+    const introSuppressed =
+      document.documentElement.dataset["nameIntro" + nameContext(lockup).replace(/^./, (c) => c.toUpperCase())] ===
+      "done";
 
     if (introSuppressed || prefersReducedMotion || !nameSweep) {
       completeAnimation();
