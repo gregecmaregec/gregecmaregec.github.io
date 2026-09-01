@@ -561,7 +561,7 @@ footer.sticky-bottom {
 // the navbar brand) — is set in Iowan Old Style, with graceful serif fallbacks
 // for non-Apple platforms.
 .name-display {
-  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+  font-family: $serif-display-font;
 }
 
 .name-lockup {

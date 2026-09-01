@@ -73,6 +73,16 @@ jobs:
           valueFile: "_config.yml"
           propertyPath: "giscus.repo"
           value: ${{ github.repository }}
+      # jekyll-imagemagick shells out to `convert`. The ubuntu-latest runner
+      # stopped shipping ImageMagick, and the plugin fails silently when it is
+      # missing: the build still succeeds, but emits no resized variants, so
+      # every <source srcset> figure.liquid writes ends up pointing at a 404
+      # and the browser falls back to the full-size original.
+      - name: Install ImageMagick 🖼️
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y imagemagick
+          convert --version
       - name: Install and Build 🔧
         run: |
           pip3 install --upgrade jupyter

@@ -38,5 +38,9 @@ $black-color: #000000 !default;
 $code-bg-color-light: rgba($purple-color, 0.05);
 $code-bg-color-dark: #2c3237 !default;
 
+// The display serif used for the name lockup and the portfolio card titles.
+// Iowan Old Style is an Apple system face, so the fallbacks matter elsewhere.
+$serif-display-font: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+
 // Font awesome location
 $fa-font-path: "../webfonts";

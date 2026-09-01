@@ -7,15 +7,13 @@ nav: true
 nav_order: 3
 ---
 I've built and am building fraud & anomaly detection systems in Tier1 Banks.
-
 <br>
-Below are selected side-projects I've worked on in personal capactiy. 
+Below are selected side-projects I've worked on in personal capacity. 
+<br><br>
 
-<div class="projects">
-  {% assign portfolio_projects = site.data.portfolio | sort: "importance" %}
-  <div class="row row-cols-1 row-cols-md-3">
-    {% for project in portfolio_projects %}
-      {% include projects.liquid %}
-    {% endfor %}
-  </div>
+{% assign portfolio_projects = site.data.portfolio | sort: "importance" %}
+<div class="pf-grid">
+  {% for project in portfolio_projects %}
+    {% include portfolio_card.liquid %}
+  {% endfor %}
 </div>

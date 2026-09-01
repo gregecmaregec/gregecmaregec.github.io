@@ -1,37 +1,42 @@
-- title: ai-xtilia-ui
-  description: A model-agnostic conversation interface with expressive themes and deliberate model routing.
+- title: Xtilia AI Chat
+  bg_img: assets/img/itfa/transformer_thumbnail.jpg
+  description: Opinionated AI-Chat UI built from scratch. Free to use. 
   img: assets/img/portfolio/thumbnails/ai-xtilia-ui.png
   img_width: 720
   img_height: 440
   url: /portfolio/ai-xtilia-ui/
   importance: 1
 
-- title: interface
-  description: An editorial workspace for planning, structuring, and publishing stories.
+- title: WP CMS
+  bg_img: assets/img/itfa/foreword_thumbnail.jpg
+  description: AI-powered CMS for use on top of WordPress.
   img: assets/img/portfolio/thumbnails/interface.png
   img_width: 720
   img_height: 440
   url: /portfolio/interface/
   importance: 2
 
-- title: participation
-  description: A focused operating workspace for trade-finance participation.
+- title: Participation
+  bg_img: assets/img/itfa/applications_thumbail.jpg
+  description: An idea aimed at the trade finance distribution niche.
   img: assets/img/portfolio/thumbnails/participation.png
   img_width: 720
   img_height: 440
   url: /portfolio/participation/
   importance: 3
 
-- title: ttp
-  description: The publishing and public reading experience for Trade Treasury Payments.
+- title: TTP Article
+  bg_img: assets/img/itfa/con_thumbnail.jpg
+  description: Designed Article experience on Trade Treasury Payments.
   img: assets/img/portfolio/thumbnails/ttp.png
   img_width: 720
   img_height: 440
   url: /portfolio/ttp/
   importance: 4
 
-- title: tf-cop
-  description: A public initiative site for closing the global trade-finance gap.
+- title: TF COP
+  bg_img: assets/img/itfa/esg_thumbnail.jpg
+  description: Website for an initiative targeting the $2.5 Trillion gap
   img: assets/img/portfolio/thumbnails/tf-cop.png
   img_width: 720
   img_height: 440
@@ -39,6 +44,7 @@
   importance: 5
 
 - title: demo charts
-  description: Interactive data views for trade-finance markets and regional comparisons.
+  bg_img: assets/img/itfa/risk_thumbnail.jpg
+  description: An exploration of how to make interactive web charts.
   url: /portfolio/demo-charts/
   importance: 6

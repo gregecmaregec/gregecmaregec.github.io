@@ -343,6 +343,9 @@ external_links:
 imagemagick:
   enabled: true # enables responsive images for your site (recommended, see https://github.com/alshedivat/al-folio/issues/537)
   widths:
+    # 250 covers the portfolio cards at 1x (they render ~260px wide at the
+    # 820px max content width); 480 covers the same cards at 2x.
+    - 250
     - 480
     - 800
     - 1400
