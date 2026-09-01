@@ -1,4 +1,28 @@
 $(document).ready(function () {
+  // Keep the name/icon sequence one-shot for this document. Reloading or
+  // opening a route directly creates a new document whose markup starts in
+  // the `playing` state, while the completed state cannot replay in place.
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  document.querySelectorAll('.name-lockup[data-animation-state="playing"]').forEach((lockup) => {
+    const completeAnimation = () => {
+      lockup.dataset.animationState = "complete";
+    };
+    const nameSweep = lockup.querySelector(".name-gradient-sweep");
+
+    if (prefersReducedMotion || !nameSweep) {
+      completeAnimation();
+      return;
+    }
+
+    nameSweep.addEventListener(
+      "animationend",
+      (event) => {
+        if (event.animationName === "name-gradient-sweep") completeAnimation();
+      },
+      { once: true }
+    );
+  });
+
   // add toggle functionality to abstract and bibtex buttons
   $("a.abstract").click(function () {
     $(this).parent().parent().find(".abstract.hidden").toggleClass("open");

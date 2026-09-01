@@ -1,0 +1,47 @@
+<header>
+  <nav id="navbar" class="navbar navbar-light {% if site.navbar_fixed %}fixed-top{% else %}sticky-top{% endif %}" role="navigation">
+    <div class="container">
+      <a class="navbar-brand title font-weight-lighter" href="{{ '/portfolio/' | relative_url }}">portfolio</a>
+
+      <button
+        class="navbar-toggler collapsed"
+        type="button"
+        data-toggle="collapse"
+        data-target="#portfolioNavbarNav"
+        aria-controls="portfolioNavbarNav"
+        aria-expanded="false"
+        aria-label="Toggle portfolio navigation"
+      >
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar top-bar"></span>
+        <span class="icon-bar middle-bar"></span>
+        <span class="icon-bar bottom-bar"></span>
+      </button>
+
+      <div class="collapse navbar-collapse text-right" id="portfolioNavbarNav">
+        <ul class="navbar-nav ml-auto flex-nowrap">
+          <li class="nav-item">
+            <a class="nav-link" href="{{ '/portfolio/' | relative_url }}">all projects</a>
+          </li>
+          {% assign portfolio_projects = site.data.portfolio | sort: "importance" %}
+          {% for project in portfolio_projects %}
+            <li class="nav-item {% if page.permalink == project.url %}active{% endif %}">
+              <a class="nav-link" href="{{ project.url | relative_url }}">
+                {{- project.title -}}
+                {% if page.permalink == project.url %}<span class="sr-only">(current)</span>{% endif %}
+              </a>
+            </li>
+          {% endfor %}
+          {% if site.enable_darkmode %}
+            <li class="toggle-container">
+              <button id="light-toggle" title="Change theme">
+                <i class="fa-solid fa-moon"></i>
+                <i class="fa-solid fa-sun"></i>
+              </button>
+            </li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>

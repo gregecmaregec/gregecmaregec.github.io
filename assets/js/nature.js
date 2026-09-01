@@ -1,6 +1,12 @@
 //crystal-nature simulation
-const canvas = document.createElement('canvas');
-document.body.appendChild(canvas);
+// Reuse a server-rendered canvas when a layout provides one. This reserves the
+// animation's space before the script downloads and prevents a cold-load jump.
+const existingCanvas = document.getElementById('nature-canvas');
+const canvas = existingCanvas || document.createElement('canvas');
+if (!existingCanvas) {
+    document.body.appendChild(canvas);
+}
+canvas.setAttribute('aria-hidden', 'true');
 const ctx = canvas.getContext('2d');
 
 // Define the target size

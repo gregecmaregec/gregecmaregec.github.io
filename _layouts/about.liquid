@@ -4,12 +4,23 @@ layout: default
 <div class="post">
   <header class="post-header">
     <h1 class="post-title">
-      {% if site.title == 'blank' %}
-        <span class="name-display"><span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
-        {{ site.last_name }}</span>
-      {% else %}
-        <span class="name-display">{{ site.title }}</span>
-      {% endif %}
+      <span class="name-lockup" data-animation-state="playing">
+        <span class="name-lockup-icon" aria-hidden="true">
+          <img
+            class="name-lockup-icon-image"
+            src="{{ '/assets/img/gm-ico.png' | relative_url | bust_file_cache }}"
+            width="171"
+            height="171"
+            alt=""
+          >
+        </span>
+        {% if site.title == 'blank' %}
+          <span class="name-display name-gradient-sweep"><span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
+          {{ site.last_name }}</span>
+        {% else %}
+          <span class="name-display name-gradient-sweep">{{ site.title }}</span>
+        {% endif %}
+      </span>
     </h1>
     <p class="desc">{{ page.subtitle }}</p>
   </header>

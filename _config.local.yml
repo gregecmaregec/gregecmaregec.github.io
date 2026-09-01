@@ -1,0 +1,23 @@
+# Local development overrides. Production keeps the settings in _config.yml.
+exclude:
+  - assets/jupyter
+  - bin
+  - CONTRIBUTING.md
+  - CUSTOMIZE.md
+  - docker-compose.yml
+  - Dockerfile
+  - FAQ.md
+  - Gemfile
+  - Gemfile.lock
+  - INSTALL.md
+  - LICENSE
+  - package.json
+  - package-lock.json
+  - purgecss.config.js
+  - README.md
+  - vendor
+
+# Keep localhost independent of optional system binaries.
+imagemagick:
+  enabled: false
+

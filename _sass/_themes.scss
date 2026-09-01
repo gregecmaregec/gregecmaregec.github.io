@@ -16,6 +16,11 @@
   --global-distill-app-color: #{$grey-color};
   --global-divider-color: hsla(0, 0%, 100%, 0);
   --global-card-bg-color: #{$white-color};
+  --global-name-sweep-color-1: #{$cyan-color};
+  --global-name-sweep-color-2: #{$blue-color-dark};
+  --global-name-sweep-color-3: #{$purple-color};
+  --global-name-sweep-color-4: #{$gregor-pink-color-light-theme};
+  --global-name-sweep-color-5: #{$orange-color};
 
   --global-tip-block: #42b983;
   --global-tip-block-bg: #e2f5ec;
@@ -61,6 +66,11 @@ html[data-theme="dark"] {
   --global-distill-app-color: #{$grey-color-light};
   --global-divider-color: #ffffff00;
   --global-card-bg-color: #{$grey-900};
+  --global-name-sweep-color-1: #{$light-cyan-color};
+  --global-name-sweep-color-2: #{$blue-color};
+  --global-name-sweep-color-3: #{$light-purple-color};
+  --global-name-sweep-color-4: #{$gregor-pink-color};
+  --global-name-sweep-color-5: #{$yellow-color};
 
   --global-tip-block: #42b983;
   --global-tip-block-bg: #e2f5ec;

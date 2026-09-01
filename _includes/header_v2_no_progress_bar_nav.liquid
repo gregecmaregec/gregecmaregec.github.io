@@ -3,8 +3,19 @@
   <nav id="navbar" class="navbar navbar-light navbar-expand-sm {% if site.navbar_fixed %}fixed-top{% else %}sticky-top{% endif %}" role="navigation">
     <div class="container">
       {% if page.permalink != '/' %}
-        <a class="navbar-brand title name-display font-weight-lighter" href="{{ site.baseurl }}/">
-          {{ site.first_name }}{% if site.middle_name %} {{ site.middle_name }}{% endif %} {{ site.last_name }}
+        <a class="navbar-brand title name-lockup font-weight-lighter" href="{{ site.baseurl }}/" data-animation-state="playing">
+          <span class="name-lockup-icon" aria-hidden="true">
+            <img
+              class="name-lockup-icon-image"
+              src="{{ '/assets/img/gm-ico.png' | relative_url | bust_file_cache }}"
+              width="171"
+              height="171"
+              alt=""
+            >
+          </span>
+          <span class="name-display name-gradient-sweep">
+            {{- site.first_name }}{% if site.middle_name %} {{ site.middle_name }}{% endif %} {{ site.last_name -}}
+          </span>
         </a>
       {% elsif site.enable_navbar_social %}
         <!-- Social Icons -->

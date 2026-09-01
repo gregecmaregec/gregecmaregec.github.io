@@ -2,7 +2,7 @@
 layout: page_itfa
 title: ITFA2024 Project
 permalink: /itfasubmission/
-nav: true
+nav: false
 nav_order: 6
 horizontal: false
 og_title: "ITFA EL 2024 submission"
