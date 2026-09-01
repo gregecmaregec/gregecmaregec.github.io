@@ -2,7 +2,13 @@
 layout: default_portfolio
 ---
 <div class="post">
-  <header class="post-header">
+  {%- comment -%}
+    The portfolio index carries its own visual identity, so the page title and
+    description are hidden from sight — but kept in the markup, and in the
+    accessibility tree, so crawlers still index them and screen readers still
+    announce the page. See `.visually-hidden` in _sass/_base.scss.
+  {%- endcomment -%}
+  <header class="post-header visually-hidden">
     <h1 class="post-title">{{ page.title }}</h1>
     <p class="post-description">{{ page.description }}</p>
   </header>

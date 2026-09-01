@@ -1,15 +1,18 @@
 $(document).ready(function () {
-  // Keep the name/icon sequence one-shot for this document. Reloading or
-  // opening a route directly creates a new document whose markup starts in
-  // the `playing` state, while the completed state cannot replay in place.
+  // Keep the name/icon sequence one-shot. Whether it runs at all is decided
+  // before first paint by the inline head script: it plays on the first
+  // document of a visit and on any reload, and is suppressed for link clicks
+  // in between, so all this has to do is retire the lockup once its sweep has
+  // finished.
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const introSuppressed = document.documentElement.dataset.nameIntro === "done";
   document.querySelectorAll('.name-lockup[data-animation-state="playing"]').forEach((lockup) => {
     const completeAnimation = () => {
       lockup.dataset.animationState = "complete";
     };
     const nameSweep = lockup.querySelector(".name-gradient-sweep");
 
-    if (prefersReducedMotion || !nameSweep) {
+    if (introSuppressed || prefersReducedMotion || !nameSweep) {
       completeAnimation();
       return;
     }

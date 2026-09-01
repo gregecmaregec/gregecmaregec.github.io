@@ -227,6 +227,23 @@ ul.task-list input[type="checkbox"] {
   }
 }
 
+// Removes an element from the visual layout while leaving it in the DOM, the
+// document outline, and the accessibility tree — so crawlers still index it and
+// screen readers still announce it. `display: none` and `visibility: hidden`
+// would strip it from both, which is why neither is used here.
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  clip-path: inset(50%) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
 .post-description {
   margin-bottom: 3.5rem;
   font-size: 1.75rem;
@@ -681,10 +698,13 @@ footer.sticky-bottom {
   }
 }
 
-// JavaScript moves each lockup to this terminal state after its one-shot
-// sequence. A new document starts at `playing`, so direct visits and reloads
-// replay it without persisting anything between page loads.
-.name-lockup[data-animation-state="complete"] {
+// Two ways into the terminal state. JavaScript moves a lockup here after its
+// one-shot sequence finishes on the page that played it, and the inline head
+// script stamps `data-name-intro="done"` on any document reached by a link
+// click later in the same visit, so the sweep is settled before the first
+// paint rather than started and cut short. Reloads are never stamped.
+.name-lockup[data-animation-state="complete"],
+html[data-name-intro="done"] .name-lockup {
   .name-lockup-icon {
     opacity: 1;
     animation: none;

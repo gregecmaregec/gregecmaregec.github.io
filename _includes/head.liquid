@@ -1,3 +1,32 @@
+<!-- Name-lockup intro gate. Has to be inline in the head and run before first
+     paint, otherwise the sweep starts and gets cut off mid-flight — same reason
+     theme.js lives up here. It plays on the first document of a visit and on
+     any reload, and stays quiet for link clicks and back/forward within the
+     visit. Navigation Timing is what separates a reload from a link click;
+     sessionStorage is what remembers the visit across the link clicks. -->
+<script>
+  (function () {
+    var reloaded = false;
+    try {
+      var nav = performance.getEntriesByType("navigation")[0];
+      reloaded = nav
+        ? nav.type === "reload"
+        : !!(performance.navigation && performance.navigation.type === 1);
+    } catch (e) {
+      // No Navigation Timing: fall back to the visit-scoped rule alone.
+    }
+
+    try {
+      if (!reloaded && sessionStorage.getItem("name-intro-played") === "1") {
+        document.documentElement.setAttribute("data-name-intro", "done");
+      }
+      sessionStorage.setItem("name-intro-played", "1");
+    } catch (e) {
+      // Storage blocked (private mode, cookies-off). Let it play; harmless.
+    }
+  })();
+</script>
+
 <!-- Metadata, OpenGraph and Schema.org -->
 {% include metadata.liquid %}
 
