@@ -10,6 +10,12 @@
   If a variant is missing the img's onerror drops that picture's <source>s and
   reloads, so the original is served instead of a broken image. It is scoped to
   the one picture and needs no jQuery, unlike figure.liquid's page-wide hack.
+
+  The first row is loaded eagerly: a lazy image cannot be found by the preload
+  scanner, so the browser has to finish layout before it even starts the fetch,
+  which is what makes above-the-fold images visibly pop in. Everything below the
+  fold stays lazy. portfolio.md then holds the grid until these eager images
+  have decoded, so the cards arrive complete.
 {%- endcomment -%}
 
 {%- assign bg_base = project.bg_img | remove: '.jpg' | remove: '.jpeg' | remove: '.png' | remove: '.tiff' | remove: '.gif' -%}
@@ -19,6 +25,13 @@
   class="pf-card"
   href="{% if project.redirect %}{{ project.redirect }}{% else %}{{ project.url | relative_url }}{% endif %}"
 >
+  {%- comment -%}First row is above the fold at common viewport sizes.{%- endcomment -%}
+  {%- if include.index and include.index <= 3 -%}
+    {%- assign img_loading = "eager" -%}{%- assign img_priority = "high" -%}
+  {%- else -%}
+    {%- assign img_loading = "lazy" -%}{%- assign img_priority = "auto" -%}
+  {%- endif -%}
+
   <div class="pf-card__panel"{% if project.bg %} style="--pf-card-panel: {{ project.bg }};"{% endif %}>
     {% if project.bg_img %}
       <picture>
@@ -35,7 +48,8 @@
           src="{{ project.bg_img | relative_url }}"
           alt=""
           aria-hidden="true"
-          loading="lazy"
+          loading="{{ img_loading }}"
+          fetchpriority="{{ img_priority }}"
           decoding="async"
           onerror="this.onerror=null;var p=this.parentNode;if(p&&p.tagName==='PICTURE'){p.querySelectorAll('source').forEach(function(s){s.remove()});this.src=this.src;}"
         >
@@ -56,7 +70,8 @@
           <img
             src="{{ project.img | relative_url }}"
             alt=""
-            loading="lazy"
+            loading="{{ img_loading }}"
+            fetchpriority="{{ img_priority }}"
             decoding="async"
             {% if project.img_width %}width="{{ project.img_width }}"{% endif %}
             {% if project.img_height %}height="{{ project.img_height }}"{% endif %}

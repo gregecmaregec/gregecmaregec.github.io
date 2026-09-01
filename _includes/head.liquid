@@ -46,12 +46,24 @@
 {% endif %}
 
 <!-- Fonts & Icons -->
+<!-- Both origins are needed before a webfont can start downloading: the CSS
+     comes from fonts.googleapis.com and the font files from fonts.gstatic.com.
+     Without these, each one costs a fresh DNS + TCP + TLS round trip, which is
+     what makes the fallback-to-Roboto swap long enough to see. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link defer rel="stylesheet" href="{{ '/assets/css/academicons.min.css' | relative_url | bust_file_cache }}">
+<!-- display=optional, not swap. `swap` paints in the fallback and then
+     re-renders in Roboto whenever it arrives, and the two have different
+     metrics, so the text visibly resizes. `optional` gives the font a short
+     block period and then commits for that page load: it either renders in
+     Roboto from the start or stays in the fallback, and never swaps midway.
+     Roboto Slab and Material Icons were dropped -- nothing referenced them,
+     and they were 5 and 1 further families to fetch. -->
 <link
-  defer
   rel="stylesheet"
   type="text/css"
-  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&display=swap"
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=optional"
 >
 
 <!-- Code Syntax Highlighting -->

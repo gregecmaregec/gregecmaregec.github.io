@@ -21,6 +21,8 @@
   --pf-card-surface: var(--global-card-bg-color);
   --pf-card-panel: var(--global-card-bg-color);
   --pf-card-line: rgba(128, 128, 128, 0.22);
+  // Hover-only wash over the artwork. Darkens in dark mode, lightens in light.
+  --pf-card-scrim: rgba(0, 0, 0, 0.45);
 
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -36,6 +38,10 @@
   @media (min-width: 992px) {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
+}
+
+html[data-theme="light"] .pf-grid {
+  --pf-card-scrim: rgba(255, 255, 255, 0.4);
 }
 
 .pf-card {
@@ -100,6 +106,33 @@
   height: 100%;
 }
 
+// _base.scss caps every img at 90vw. On mobile the panel is wider than that,
+// so without this the artwork stopped short and left bare surface down the
+// right-hand edge of every card.
+.pf-card__panel img {
+  max-width: none;
+}
+
+// Layer two: the hover wash. It sits above the artwork and below the
+// screenshot, so hovering dims the backdrop while the product shot stays bright
+// and slides forward. The z-indexes carry that ordering — as a pseudo-element
+// this paints last by default and would dim the screenshot too.
+.pf-card__panel::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  pointer-events: none;
+  background-color: var(--pf-card-scrim);
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+
+.pf-card:hover .pf-card__panel::after,
+.pf-card:focus-visible .pf-card__panel::after {
+  opacity: 1;
+}
+
 // Layer one: the ITFA artwork, filling the panel edge to edge.
 .pf-card__bg {
   position: absolute;
@@ -112,7 +145,7 @@
   object-position: center;
 }
 
-// Layer two: the product screenshot.
+// Layer three: the product screenshot, above the wash.
 .pf-card__screen {
   // Percentages, so the bleed keeps its proportions at every card width. The
   // negative right/bottom are what push it off the panel; both must stay larger
@@ -191,10 +224,18 @@
   opacity: 0.03;
 }
 
+// Held by script until the above-the-fold images have decoded, so the cards
+// arrive complete rather than filling in. `visibility` rather than `display`
+// keeps the layout reserved, so revealing shifts nothing.
+.pf-grid--holding {
+  visibility: hidden;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .pf-card,
   .pf-card__screen,
-  .pf-card__wash {
+  .pf-card__wash,
+  .pf-card__panel::after {
     transition: none;
   }
 
