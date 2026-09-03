@@ -4,6 +4,10 @@
 
 // Typography
 
+body {
+  font-family: "Roboto", sans-serif;
+}
+
 p,
 h1,
 h2,
@@ -714,8 +718,10 @@ footer.sticky-bottom {
   }
 }
 
-// Settle the lockup after its intro animation finishes.
-.name-lockup[data-animation-state="complete"] {
+// Settle an animation after it finishes or if it has already played.
+.name-lockup[data-animation-state="complete"],
+html[data-name-intro-navbar="done"] .name-lockup.navbar-brand,
+html[data-name-intro-landing="done"] .name-lockup:not(.navbar-brand) {
   .name-lockup-icon {
     opacity: 1;
     animation: none;

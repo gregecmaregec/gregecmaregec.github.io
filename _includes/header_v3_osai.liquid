@@ -1,8 +1,21 @@
- <!-- Nav Bar -->
+<header>
+  <!-- Nav Bar -->
   <nav id="navbar" class="navbar navbar-light navbar-expand-sm {% if site.navbar_fixed %}fixed-top{% else %}sticky-top{% endif %}" role="navigation" style="z-index: 9999;">
     <div class="container">
       {% if page.permalink != '/' %}
-        <a class="navbar-brand title font-weight-lighter" href="{{ site.baseurl }}/">
+        <a class="navbar-brand title name-lockup font-weight-lighter" href="{{ site.baseurl }}/" data-animation-state="playing">
+          <span class="name-lockup-icon" aria-hidden="true">
+            <img
+              class="name-lockup-icon-image"
+              src="{{ '/assets/img/gm-ico.png' | relative_url | bust_file_cache }}"
+              width="171"
+              height="171"
+              alt=""
+            >
+          </span>
+          <span class="name-display name-gradient-sweep">
+            {{- site.first_name }}{% if site.middle_name %} {{ site.middle_name }}{% endif %} {{ site.last_name -}}
+          </span>
         </a>
       {% endif %}
       <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -14,20 +27,6 @@
 
       <div class="collapse navbar-collapse text-right" id="navbarNav">
         <ul class="navbar-nav ml-auto flex-nowrap">
-          {% for page in site.pages %}
-            {% if page.permalink == '/' %} {% assign about_title = page.title %} {% endif %}
-          {% endfor %}
-
-          <!-- About -->
-          <li class="nav-item {% if page.permalink == '/' %}active{% endif %}">
-            <a class="nav-link" href="{{ '/' | relative_url }}">
-              {{- about_title }}
-              {% if page.permalink == '/' %}
-                <span class="sr-only">(current)</span>
-              {% endif %}
-            </a>
-          </li>
-
           <!-- Other pages -->
           {% assign sorted_pages = site.pages | sort: 'nav_order' %}
           {% for p in sorted_pages %}

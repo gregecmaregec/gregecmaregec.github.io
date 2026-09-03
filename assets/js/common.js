@@ -1,12 +1,21 @@
 $(document).ready(function () {
+  const nameContext = (lockup) => (lockup.classList.contains("navbar-brand") ? "navbar" : "landing");
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   document.querySelectorAll('.name-lockup[data-animation-state="playing"]').forEach((lockup) => {
     const completeAnimation = () => {
       lockup.dataset.animationState = "complete";
     };
     const nameSweep = lockup.querySelector(".name-gradient-sweep");
+    const context = nameContext(lockup);
+    const introSuppressed = document.documentElement.getAttribute("data-name-intro-" + context) === "done";
 
-    if (prefersReducedMotion || !nameSweep) {
+    try {
+      localStorage.setItem("name-intro-" + context, "1");
+    } catch (e) {
+      // Storage blocked. The animation can still play.
+    }
+
+    if (introSuppressed || prefersReducedMotion || !nameSweep) {
       completeAnimation();
       return;
     }

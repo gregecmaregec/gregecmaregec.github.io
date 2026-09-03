@@ -1,3 +1,19 @@
+<!-- Play the landing and navbar name animations once each. This runs before
+     first paint so an animation that has already played is never restarted. -->
+<script>
+  (function () {
+    try {
+      ["landing", "navbar"].forEach(function (context) {
+        if (localStorage.getItem("name-intro-" + context) === "1") {
+          document.documentElement.setAttribute("data-name-intro-" + context, "done");
+        }
+      });
+    } catch (e) {
+      // Storage blocked. The animation can still play.
+    }
+  })();
+</script>
+
 <!-- Metadata, OpenGraph and Schema.org -->
 {% include metadata.liquid %}
 
