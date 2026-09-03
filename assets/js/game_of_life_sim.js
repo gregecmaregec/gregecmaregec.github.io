@@ -66,6 +66,11 @@
   // square, so the animation never freezes for good. ~6s at SPEED_MS.
   const STAGNANT_LIMIT = 60;
 
+  // The tap-to-sprinkle patch, as a radius in CSS pixels: 14 cells at the
+  // desktop cell size (500 / 90). Pinned this way so shrinking the cells on a
+  // phone does not shrink the target you are actually aiming at.
+  const STAMP_RADIUS_PX = 14 * (500 / SEED_COLS);
+
   init();
   state.rafId = requestAnimationFrame(tick);
 
@@ -96,9 +101,22 @@
     draw();
   }
 
-  // Cell size of the original centred square: min(500px, 90vw) / 90 columns.
+  // Cell size of the original centred square: min(500px, 90vw) / 90 columns,
+  // times whatever `--life-cell-scale` says.
+  //
+  // The scale is the zoom, not the crop: the seed is still the same 90x90 block
+  // of cells, still centred, each one just drawn smaller. A phone is narrow
+  // enough that at scale 1 those 90 columns span ~90% of the screen and the
+  // simulation opens as a wall; shrunk, it reads as the centred square it is on
+  // a desktop and still marches out across the whole viewport.
+  //
+  // Read fresh on every call (init + each debounced resize) so crossing the
+  // breakpoint — or turning the phone — picks up the new value. It is a CSS
+  // custom property rather than a width test in here because the breakpoint
+  // belongs with the other breakpoints, in the stylesheet.
   function cellSize(viewportWidth) {
-    return Math.max(1, Math.min(500, viewportWidth * 0.9) / SEED_COLS);
+    const scale = readNumber(root, "--life-cell-scale", 1);
+    return Math.max(1, (Math.min(500, viewportWidth * 0.9) / SEED_COLS) * scale);
   }
 
   // Drop the random soup into the centre square only; the rest starts empty so
@@ -216,7 +234,10 @@
   // Add a small soup patch centred on a viewport point (only turns cells on,
   // so it feeds the existing pattern rather than wiping it).
   function stampAt(clientX, clientY) {
-    const radius = 14;
+    // Measured in CSS pixels, not cells, so the patch stays the same size under
+    // a finger however small the cells are. On desktop this works out at
+    // exactly the 14 cells it has always been.
+    const radius = Math.max(3, Math.round(STAMP_RADIUS_PX / state.cell));
     const centerX = Math.floor(clientX / state.cell);
     const centerY = Math.floor(clientY / state.cell);
 
@@ -279,6 +300,15 @@
   function readInt(el, key, fallback) {
     const value = el ? parseInt(el.dataset[key], 10) : NaN;
     return Number.isFinite(value) ? value : fallback;
+  }
+
+  // Same contract as readColor: the landing page mounts the sim with no root
+  // element at all, so both fall back to :root rather than to the element.
+  function readNumber(el, token, fallback) {
+    const source = el || document.documentElement;
+    const raw = getComputedStyle(source).getPropertyValue(token).trim();
+    const value = parseFloat(raw);
+    return Number.isFinite(value) && value > 0 ? value : fallback;
   }
 
   function readColor(el, token, fallback) {

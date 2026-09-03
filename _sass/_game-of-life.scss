@@ -1,3 +1,15 @@
+// How big one cell of the background simulation is drawn, as a multiple of its
+// natural size (assets/js/game_of_life_sim.js reads this on load and on every
+// resize). It is the zoom, not the crop — the seed is the same 90x90 block of
+// cells either way, still centred, and life still marches out across the whole
+// viewport. Lives here so the breakpoint sits with the other breakpoints.
+//
+// On :root rather than on the app element because the landing page mounts the
+// simulation with no `#game-of-life-app` element at all.
+:root {
+  --life-cell-scale: 1;
+}
+
 .life-app {
   --life-live-cell: #ffb7c5;
 
@@ -76,6 +88,14 @@
 }
 
 @media (max-width: 575.98px) {
+  // A phone is narrow enough that 90 columns at full size span almost the whole
+  // screen, so the simulation opens as a wall of pink rather than the centred
+  // square it is on a desktop. Half size puts it back at roughly the share of
+  // the screen it takes there. Desktop is deliberately left alone.
+  :root {
+    --life-cell-scale: 0.5;
+  }
+
   .life-app {
     max-width: 90vw;
   }
