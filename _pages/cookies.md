@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /cookies/
-title: No cookies. No analytics. No ads. No tracking.
+title: I set no cookies. I use no analytics, ads or tracking.
 nav: false
 ---
 
