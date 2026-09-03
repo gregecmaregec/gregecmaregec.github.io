@@ -60,6 +60,22 @@ img {
   max-width: 90vw;
 }
 
+// The cap above lands on only one of a comparison slider's two slotted figures
+// — the component positions the other itself — so on a narrow screen the two
+// halves came out different widths and the seam did not line up. Both halves
+// have to fill the slider exactly for the wipe to read as one image.
+img-comparison-slider {
+  display: block;
+  width: 100%;
+
+  figure,
+  img {
+    max-width: none;
+    width: 100%;
+    margin: 0;
+  }
+}
+
 blockquote {
   background: var(--global-bg-color);
   border-left: 5px solid var(--global-theme-color);

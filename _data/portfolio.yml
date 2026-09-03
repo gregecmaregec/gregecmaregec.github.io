@@ -1,6 +1,6 @@
 - title: Xtilia AI Chat
   bg_img: assets/img/itfa/transformer_thumbnail.jpg
-  description: Opinionated AI-Chat UI built from scratch. Free to use. 
+  description: A chat interface for several AI providers, built from scratch. Free to use.
   img: assets/img/portfolio/thumbnails/ai-xtilia-ui.png
   img_width: 720
   img_height: 440
@@ -9,7 +9,7 @@
 
 - title: WP CMS
   bg_img: assets/img/itfa/foreword_thumbnail.jpg
-  description: AI-powered CMS for use on top of WordPress.
+  description: An editing and publishing workspace that runs on top of WordPress.
   img: assets/img/portfolio/thumbnails/interface.png
   img_width: 720
   img_height: 440
@@ -18,7 +18,7 @@
 
 - title: Participation
   bg_img: assets/img/itfa/applications_thumbail.jpg
-  description: An idea aimed at the trade finance distribution niche.
+  description: A concept for a trade-finance distribution workspace.
   img: assets/img/portfolio/thumbnails/participation.png
   img_width: 720
   img_height: 440
@@ -27,7 +27,7 @@
 
 - title: TTP Article
   bg_img: assets/img/itfa/con_thumbnail.jpg
-  description: Designed Article experience on Trade Treasury Payments.
+  description: Article pages and publishing controls for Trade Treasury Payments.
   img: assets/img/portfolio/thumbnails/ttp.png
   img_width: 720
   img_height: 440
@@ -36,15 +36,9 @@
 
 - title: TF COP
   bg_img: assets/img/itfa/esg_thumbnail.jpg
-  description: Website for an initiative targeting the $2.5 Trillion gap
+  description: A site for an initiative on the $2.5 trillion trade-finance gap.
   img: assets/img/portfolio/thumbnails/tf-cop.png
   img_width: 720
   img_height: 440
   url: /portfolio/tf-cop/
   importance: 5
-
-- title: demo charts
-  bg_img: assets/img/itfa/risk_thumbnail.jpg
-  description: An exploration of how to make interactive web charts.
-  url: /portfolio/demo-charts/
-  importance: 6

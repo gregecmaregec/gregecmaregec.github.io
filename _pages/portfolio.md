@@ -2,13 +2,13 @@
 layout: page_portfolio
 title: portfolio
 permalink: /portfolio/
-description: selected personal-project interfaces and websites
+description: interfaces and websites I built on my own time
 nav: true
 nav_order: 3
 ---
-I've built and am building fraud & anomaly detection systems in Tier1 Banks.
+I build fraud and anomaly detection systems at Tier 1 banks.
 <br>
-Below are selected side-projects I've worked on in personal capacity. 
+Below are side projects I built on my own time.
 <br><br>
 
 {% assign portfolio_projects = site.data.portfolio | sort: "importance" %}
