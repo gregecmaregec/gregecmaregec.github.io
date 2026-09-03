@@ -24,20 +24,44 @@
   // Hover-only wash over the artwork. Darkens in dark mode, lightens in light.
   --pf-card-scrim: rgba(0, 0, 0, 0.45);
 
-  display: grid;
-  grid-template-columns: repeat(1, minmax(0, 1fr));
-  gap: 1.25rem;
+  --pf-gap: 1.25rem;
+  // One card per row, so the basis is the full width until a breakpoint
+  // narrows it. Kept as a variable because the flex-basis below has to do the
+  // column arithmetic itself.
+  --pf-cols: 1;
+
+  // Flex rather than grid so a partly-filled last row centres instead of
+  // hanging off the left edge: five cards in three columns used to leave the
+  // final two aligned under the first two, with a gap where the third would
+  // be. `justify-content: center` only does anything to a row that is not
+  // full, so complete rows are laid out exactly as the grid laid them out.
+  //
+  // This is count-independent on purpose -- the cards come from
+  // _data/portfolio.yml, so any number of them has to look deliberate.
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--pf-gap);
   margin: 0 0 3.5rem;
   padding: 0;
   list-style: none;
 
   @media (min-width: 576px) {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    --pf-cols: 2;
   }
 
   @media (min-width: 992px) {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    --pf-cols: 3;
   }
+}
+
+// Fixed width per breakpoint rather than a growing `flex: 1` -- a stretching
+// last row would make two cards each half the page wide, which is the thing
+// centring is meant to avoid. The gaps subtracted are the ones *between*
+// columns, hence one fewer than the column count.
+.pf-grid > .pf-card {
+  flex: 0 0 calc((100% - (var(--pf-cols) - 1) * var(--pf-gap)) / var(--pf-cols));
+  max-width: calc((100% - (var(--pf-cols) - 1) * var(--pf-gap)) / var(--pf-cols));
 }
 
 html[data-theme="light"] .pf-grid {
