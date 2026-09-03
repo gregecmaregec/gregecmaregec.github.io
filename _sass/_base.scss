@@ -714,15 +714,8 @@ footer.sticky-bottom {
   }
 }
 
-// Two ways into the terminal state. JavaScript moves a lockup here after its
-// one-shot sequence finishes on the page that played it, and the inline head
-// script stamps the document once a context has already had its turn this
-// visit, so the sweep is settled before the first paint rather than started
-// and cut short. The landing name and the navbar name are stamped separately:
-// one having played must not silence the other. Reloads stamp neither.
-.name-lockup[data-animation-state="complete"],
-html[data-name-intro-navbar="done"] .name-lockup.navbar-brand,
-html[data-name-intro-landing="done"] .name-lockup:not(.navbar-brand) {
+// Settle the lockup after its intro animation finishes.
+.name-lockup[data-animation-state="complete"] {
   .name-lockup-icon {
     opacity: 1;
     animation: none;

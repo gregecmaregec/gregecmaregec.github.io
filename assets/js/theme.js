@@ -2,13 +2,13 @@
 
 let toggleTheme = (theme) => {
   if (theme == "dark") {
-    setTheme("light");
+    setTheme("light", true);
   } else {
-    setTheme("dark");
+    setTheme("dark", true);
   }
 };
 
-let setTheme = (theme) => {
+let setTheme = (theme, persist = false) => {
   transTheme();
   setHighlight(theme);
   setGiscusTheme(theme);
@@ -62,7 +62,9 @@ let setTheme = (theme) => {
     document.documentElement.removeAttribute("data-theme");
   }
 
-  localStorage.setItem("theme", theme);
+  if (persist) {
+    localStorage.setItem("theme", theme);
+  }
 
   // Updates the background of medium-zoom overlay.
   if (typeof medium_zoom !== "undefined") {
@@ -200,6 +202,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const mode_toggle = document.getElementById("light-toggle");
 
   mode_toggle.addEventListener("click", function () {
-    toggleTheme(localStorage.getItem("theme"));
+    toggleTheme(document.documentElement.getAttribute("data-theme"));
   });
 });

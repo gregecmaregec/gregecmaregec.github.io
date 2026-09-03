@@ -1,17 +1,12 @@
 ---
 layout: page
 permalink: /cookies/
-title: cookies
-description: What this site stores on your device, and what it doesn't.
+title: No cookies. No analytics. No ads. No tracking.
 nav: false
 ---
 
-# Cookies
+Cloudflare delivers and secures this site. jsDelivr delivers its JavaScript and CSS. Your browser sends both standard request data, including your IP address. I do not receive or keep their request logs.
 
-<br>
+Your theme choice stays in your browser.
 
-This site sets no cookies and uses no analytics, ads, or tracking.
-It stores your theme in `localStorage` and whether the name animation has played in `sessionStorage`.
-Neither value identifies you or leaves your browser.
-Cloudflare serves the site and jsDelivr hosts some libraries, so both receive your IP address when your browser requests files from them.
-Clear this site's data in your browser to remove the stored values.
+[Cloudflare privacy](https://www.cloudflare.com/privacypolicy/) · [jsDelivr privacy](https://www.jsdelivr.com/terms/privacy-policy/)
