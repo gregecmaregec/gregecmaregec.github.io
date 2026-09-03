@@ -11,7 +11,7 @@ description: |+ # the ">" symbol means to ignore newlines until "footer_text:"
 footer_text: |+
   This website is open source under the MIT License. ✨<a href="https://github.com/gregecmaregec/gregecmaregec.github.io">Find the source code here.</a>
   <br>
-  The only cookie used is for dark/white theme selection. By using this website, you agree to the <a href="/cookies">Cookies Policy.</a><br>
+  No cookies, no analytics, no tracking. <a href="/cookies">What this site stores.</a><br>
 keywords: jekyll, jekyll-theme, academic-website, portfolio-website # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: favicon.png # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
@@ -307,10 +307,15 @@ scholar:
   group_order: descending
 
 # Display different badges withs stats for your publications
+# All off. There is no publications page on this site, but al-folio loads the
+# Altmetric and Dimensions scripts from _includes/scripts/badges.liquid on
+# *every* page regardless, so each visit was handing an IP to two third parties
+# for a feature that does not exist here. The Google Scholar badge pulls an
+# image from img.shields.io on the same terms.
 enable_publication_badges:
-  altmetric: true # Altmetric badge (https://www.altmetric.com/products/altmetric-badges/)
-  dimensions: true # Dimensions badge (https://badge.dimensions.ai/)
-  google_scholar: true # Google Scholar badge (https://scholar.google.com/intl/en/scholar/citations.html)
+  altmetric: false # Altmetric badge (https://www.altmetric.com/products/altmetric-badges/)
+  dimensions: false # Dimensions badge (https://badge.dimensions.ai/)
+  google_scholar: false # Google Scholar badge (https://scholar.google.com/intl/en/scholar/citations.html)
 
 # Filter out certain bibtex entry keywords used internally from the bib output
 filtered_bibtex_keywords:

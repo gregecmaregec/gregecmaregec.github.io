@@ -1,33 +1,86 @@
 ---
 layout: page
 permalink: /cookies/
-description:
+title: cookies
+description: What this site stores on your device, and what it doesn't.
 nav: false
 ---
 
-# Cookie Policy 
+# Cookies
 
 <br>
-<br>
 
+**This site sets no cookies.** Not one — not for analytics, not for advertising,
+not for sessions. There is nothing to consent to and nothing to opt out of, so
+you will never see a cookie banner here.
 
+That is worth stating plainly, because most pages that say something like this
+still set a few. You can check mine: open your browser's developer tools,
+look under Storage, and the cookie list for this domain will be empty.
 
-## What Is a Cookie?
+## What is stored
 
-As is common practice with almost all websites, this site uses cookies, which are tiny files that are downloaded to your computer to improve your experience. I will also share how you can prevent these cookies from being stored; however, this may downgrade or 'break' certain elements of the site's functionality.
+Two things, both in your browser's own storage rather than in cookies, both
+first-party, and neither one an identifier. Nothing here is sent to me or to
+anyone else — it is read only by your own browser, to render the page you asked
+for.
 
-## How I Use Cookies
+| Key            | Where          | What it is                                                                                     | How long it lasts       |
+| -------------- | -------------- | ---------------------------------------------------------------------------------------------- | ----------------------- |
+| `theme`        | localStorage   | `light` or `dark`, so the site does not flash the wrong colours on your next visit             | Until you clear it      |
+| `name-intro-*` | sessionStorage | A flag saying the animation of my name has already played, so it does not replay on every page | Until you close the tab |
 
-I use cookies for a variety of reasons, but usually the only cookie on this website will be used for setitng a dark/light theme by changing the value according to user's choice. You may confirm this in your browser's cookie viewer. Unfortunately, in most cases, there are no industry standard options for disabling cookies without completely disabling the functionality and features they add to this site. You may delete cookies at any time after visiting this website.
+The `theme` value is written on your first visit, before you touch anything: it
+starts as whatever your operating system already says it prefers, and changes
+only if you use the toggle.
 
-## Disabling Cookies
+To remove both, clear site data for this domain in your browser settings. The
+site works normally afterwards — you will just get the animation once more and
+your theme back at the system default.
 
-You can prevent the setting of cookies by adjusting the settings on your browser (see your browser Help for how to do this). Be aware that disabling cookies will affect the functionality of this and many other websites that you visit. Disabling cookies will usually result in also disabling certain functionality and features of this site. 
+## Why there is no consent banner
 
-## More Information
+EU law here is the ePrivacy Directive, Article 5(3), which is about storing or
+reading information on your device. It is deliberately technology-neutral, so
+it covers localStorage just as it covers cookies — "it's not a cookie" is not
+a defence, and I am not making that argument.
 
-Hopefully, that has clarified things for you. And, as was previously mentioned, if there is something that you aren't sure whether you need or not, it's usually safer to leave cookies enabled in case they do interact with one of the features you use on my site.
+The reason no consent is needed is the exemption for storage that is strictly
+necessary for a service you asked for. The Article 29 Working Party's [Opinion
+04/2012](https://ec.europa.eu/justice/article-29/documentation/opinion-recommendation/files/2012/wp194_en.pdf)
+names user-interface preferences as an example. A theme setting and a
+"do not replay this animation" flag are that and nothing more: no identifier,
+no profile, no third party reading them, no way to follow you anywhere.
 
-However, if you are still looking for more information, or you would like help with removing your cookies on this website completely, then you can contact me through:
+## Analytics
+
+There are none. No Google Analytics, no Plausible, no Matomo, no Cloudflare
+Web Analytics, no tracking pixels, no advertising or affiliate scripts, and no
+comment system. Nothing on this site profiles you or measures you.
+
+## What still reaches a third party
+
+Loading any page on the internet reveals your IP address to whoever serves it.
+Being straight about who that is here:
+
+- **Cloudflare** serves this site, so it processes requests, including IP
+  addresses, in order to deliver the page.
+- **jsDelivr** hosts a handful of open-source libraries the pages load
+  (jQuery, MathJax, Masonry, medium-zoom and MDBootstrap), so requesting them
+  discloses your IP to that CDN.
+
+Fonts used to be in that list and are not any more: Roboto is served from this
+domain rather than from Google's, so no request goes to Google when you open a
+page here. Two publication-badge scripts, from Altmetric and Dimensions, used
+to load on every page as a leftover of the theme this site is built on; they
+are switched off.
+
+## Source
+
+Every claim above is checkable — this site is open source, so you do not have
+to take my word for any of it.
+[Read the code](https://github.com/gregecmaregec/gregecmaregec.github.io).
+
+## Questions
 
 e-mail: gregor.mihelac (at) outlook (dot) com
