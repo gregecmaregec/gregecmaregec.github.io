@@ -10,9 +10,9 @@ $(document).ready(function () {
     const introSuppressed = document.documentElement.getAttribute("data-name-intro-" + context) === "done";
 
     try {
-      localStorage.setItem("name-intro-" + context, "1");
+      sessionStorage.setItem("name-intro-" + context, "1");
     } catch (e) {
-      // Storage blocked. The animation can still play.
+      // Storage is unavailable. The animation can still play.
     }
 
     if (introSuppressed || prefersReducedMotion || !nameSweep) {

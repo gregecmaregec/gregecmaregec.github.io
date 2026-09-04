@@ -1,15 +1,28 @@
-<!-- Play the landing and navbar name animations once each. This runs before
-     first paint so an animation that has already played is never restarted. -->
+<!-- Play the landing and navbar name animations once each per visit.
+     A refresh starts a new visit. -->
 <script>
   (function () {
+    var reloaded = false;
+    try {
+      var nav = performance.getEntriesByType("navigation")[0];
+      reloaded = nav
+        ? nav.type === "reload"
+        : !!(performance.navigation && performance.navigation.type === 1);
+    } catch (e) {
+      // Navigation Timing is unavailable. Keep the current visit state.
+    }
+
     try {
       ["landing", "navbar"].forEach(function (context) {
-        if (localStorage.getItem("name-intro-" + context) === "1") {
+        var key = "name-intro-" + context;
+        if (reloaded) {
+          sessionStorage.removeItem(key);
+        } else if (sessionStorage.getItem(key) === "1") {
           document.documentElement.setAttribute("data-name-intro-" + context, "done");
         }
       });
     } catch (e) {
-      // Storage blocked. The animation can still play.
+      // Storage is unavailable. The animation can still play.
     }
   })();
 </script>
