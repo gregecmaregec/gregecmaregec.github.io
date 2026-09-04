@@ -1,26 +1,41 @@
 /*******************************************************************************
- * Instrument Sans, self-hosted.
- * Latin Extended includes the characters used in Mihelač.
+ * Roboto, self-hosted.
+ *
+ * Previously pulled from fonts.googleapis.com + fonts.gstatic.com, which means
+ * every visitor's IP reaches Google before the page paints. LG Muenchen I,
+ * 20 Jan 2022 (3 O 17493/20) awarded damages for exactly that, so the files
+ * live here instead. Nothing about the rendered type changes.
+ *
+ * Roboto v51 ships as a variable font: one file per subset covers the whole
+ * 100-900 axis, so the four weights the site used (300/400/500/700) are two
+ * downloads rather than eight. 62 KB total, and same-origin, so there is no
+ * third-party DNS + TCP + TLS handshake in front of them either.
+ *
+ * Paths are absolute rather than Liquid-built: Sass inlines this partial
+ * before Jekyll's Liquid pass ever sees it, so `relative_url` would not be
+ * rendered. Correct while `baseurl` is blank, which it is.
+ *
+ * Subsets are latin and latin-ext, the same two Google served. latin-ext is
+ * not optional -- the site's own name, Mihelač, needs U+010D.
  ******************************************************************************/
 
 @font-face {
-  font-family: "Instrument Sans";
+  font-family: "Roboto";
   font-style: normal;
-  font-weight: 400 700;
-  font-stretch: 75% 100%;
+  // The full variable axis, so 300/400/500/700 all resolve to this one file.
+  font-weight: 100 900;
   font-display: swap;
-  src: url("/assets/fonts/instrument-sans/instrument-sans-latin-ext.woff2") format("woff2");
+  src: url("/assets/fonts/roboto/roboto-latin-ext.woff2") format("woff2");
   unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF,
     U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 
 @font-face {
-  font-family: "Instrument Sans";
+  font-family: "Roboto";
   font-style: normal;
-  font-weight: 400 700;
-  font-stretch: 75% 100%;
+  font-weight: 100 900;
   font-display: swap;
-  src: url("/assets/fonts/instrument-sans/instrument-sans-latin.woff2") format("woff2");
+  src: url("/assets/fonts/roboto/roboto-latin.woff2") format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191,
     U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }

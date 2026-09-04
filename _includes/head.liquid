@@ -46,21 +46,18 @@
 {% endif %}
 
 <!-- Fonts & Icons -->
-<!-- Instrument Sans is self-hosted. The @font-face rules ride in main.css,
-     so the Latin file is preloaded here.
+<!-- Roboto is self-hosted, so no request leaves for Google when a page opens
+     (see _sass/_fonts.scss for why). The @font-face rules ride in main.css,
+     which is linked far enough down this file that the browser would not
+     discover the font until that stylesheet had parsed, so the latin file is
+     preloaded here instead.
 
      `crossorigin` is required even though the file is same-origin: fonts are
      always fetched in CORS mode, and without it the preload is not reused and
      the file downloads twice. latin-ext is deliberately not preloaded -- it
      carries the accented characters only, and its unicode-range already keeps
      it off the pages that never need it. -->
-<link
-  rel="preload"
-  as="font"
-  type="font/woff2"
-  href="{{ '/assets/fonts/instrument-sans/instrument-sans-latin.woff2' | relative_url }}"
-  crossorigin
->
+<link rel="preload" as="font" type="font/woff2" href="{{ '/assets/fonts/roboto/roboto-latin.woff2' | relative_url }}" crossorigin>
 <link defer rel="stylesheet" href="{{ '/assets/css/academicons.min.css' | relative_url | bust_file_cache }}">
 
 <!-- Code Syntax Highlighting -->
