@@ -26,9 +26,15 @@
 
   --pf-gap: 1.25rem;
   // One card per row, so the basis is the full width until a breakpoint
-  // narrows it. Kept as a variable because the flex-basis below has to do the
-  // column arithmetic itself.
-  --pf-cols: 1;
+  // narrows it. Each breakpoint below writes its own literal column count
+  // straight into the calc() rather than through a `--pf-cols` variable --
+  // a custom property referenced as a calc() operand next to a `-` has
+  // tripped up CSS tooling in this pipeline before (a nested
+  // `var(--pf-cols) - 1` came out of a production build as
+  // `var( -  - pf - cols)`, silently invalidating the declaration and
+  // collapsing every card onto its own full-width row). Literal numbers
+  // sidestep that class of bug entirely.
+  --pf-basis: 100%;
 
   // Flex rather than grid so a partly-filled last row centres instead of
   // hanging off the left edge: five cards in three columns used to leave the
@@ -46,22 +52,24 @@
   padding: 0;
   list-style: none;
 
+  // The gap subtracted at each breakpoint is the *between-column* total, one
+  // fewer than the column count, spelled out as a literal for the same
+  // reason as --pf-basis above.
   @media (min-width: 576px) {
-    --pf-cols: 2;
+    --pf-basis: calc((100% - var(--pf-gap)) / 2);
   }
 
   @media (min-width: 992px) {
-    --pf-cols: 3;
+    --pf-basis: calc((100% - 2 * var(--pf-gap)) / 3);
   }
 }
 
 // Fixed width per breakpoint rather than a growing `flex: 1` -- a stretching
 // last row would make two cards each half the page wide, which is the thing
-// centring is meant to avoid. The gaps subtracted are the ones *between*
-// columns, hence one fewer than the column count.
+// centring is meant to avoid.
 .pf-grid > .pf-card {
-  flex: 0 0 calc((100% - (var(--pf-cols) - 1) * var(--pf-gap)) / var(--pf-cols));
-  max-width: calc((100% - (var(--pf-cols) - 1) * var(--pf-gap)) / var(--pf-cols));
+  flex: 0 0 var(--pf-basis);
+  max-width: var(--pf-basis);
 }
 
 html[data-theme="light"] .pf-grid {
