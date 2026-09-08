@@ -26,14 +26,16 @@
 
   --pf-gap: 1.25rem;
   // One card per row, so the basis is the full width until a breakpoint
-  // narrows it. Each breakpoint below writes its own literal column count
-  // straight into the calc() rather than through a `--pf-cols` variable --
-  // a custom property referenced as a calc() operand next to a `-` has
-  // tripped up CSS tooling in this pipeline before (a nested
-  // `var(--pf-cols) - 1` came out of a production build as
-  // `var( -  - pf - cols)`, silently invalidating the declaration and
-  // collapsing every card onto its own full-width row). Literal numbers
-  // sidestep that class of bug entirely.
+  // narrows it. Each breakpoint below writes a fully-literal calc() --
+  // no `var()` of any kind inside it, not even --pf-gap. Something in
+  // this pipeline's production build mangles a custom property reference
+  // that sits inside a calc() subtraction (either side of the `-`):
+  // `var(--pf-cols)` in `(var(--pf-cols) - 1)` came out as
+  // `var( -  - pf - cols)`, and after that was rewritten to hide the
+  // custom property, `var(--pf-gap)` in `(100% - var(--pf-gap))` came out
+  // the same way. Both silently invalidated the declaration and collapsed
+  // every card back onto its own full-width row. A calc() built entirely
+  // from literals has nothing left for that bug to reach.
   --pf-basis: 100%;
 
   // Flex rather than grid so a partly-filled last row centres instead of
@@ -53,14 +55,14 @@
   list-style: none;
 
   // The gap subtracted at each breakpoint is the *between-column* total, one
-  // fewer than the column count, spelled out as a literal for the same
-  // reason as --pf-basis above.
+  // fewer than the column count, times --pf-gap's own 1.25rem written out
+  // longhand (see the note above on why it can't be var(--pf-gap) here).
   @media (min-width: 576px) {
-    --pf-basis: calc((100% - var(--pf-gap)) / 2);
+    --pf-basis: calc((100% - 1.25rem) / 2);
   }
 
   @media (min-width: 992px) {
-    --pf-basis: calc((100% - 2 * var(--pf-gap)) / 3);
+    --pf-basis: calc((100% - 2.5rem) / 3);
   }
 }
 
