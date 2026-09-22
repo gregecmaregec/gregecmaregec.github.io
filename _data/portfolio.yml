@@ -7,15 +7,6 @@
   url: /portfolio/ai-xtilia-ui/
   importance: 1
 
-- title: WP CMS
-  bg_img: assets/img/itfa/foreword_thumbnail.jpg
-  description: An editing and publishing workspace that runs on top of WordPress.
-  img: assets/img/portfolio/thumbnails/interface.png
-  img_width: 720
-  img_height: 440
-  url: /portfolio/interface/
-  importance: 2
-
 - title: Participation
   bg_img: assets/img/itfa/applications_thumbail.jpg
   description: A concept for a trade-finance distribution workspace.
