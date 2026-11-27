@@ -590,70 +590,6 @@ footer.sticky-bottom {
   gap: 0.35em;
 }
 
-.name-lockup-icon {
-  position: relative;
-  width: 0.75em;
-  height: 0.75em;
-  flex: 0 0 auto;
-  opacity: 0;
-  animation-name: name-icon-appear;
-  animation-duration: 0.65s;
-  animation-delay: 0.5s;
-  animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
-  animation-timing-function: linear(0, 0.33 10%, 0.5 20%, 0.615 30%, 0.702 40%, 0.772 50%, 0.83 60%, 0.881 70%, 0.925 80%, 0.965 90%, 1);
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-}
-
-.name-lockup-icon-image {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-.name-lockup-icon::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: linear-gradient(
-    135deg,
-    transparent 0,
-    transparent 33.33%,
-    var(--global-name-sweep-color-1) 40%,
-    var(--global-name-sweep-color-2) 45%,
-    var(--global-name-sweep-color-3) 50%,
-    var(--global-name-sweep-color-4) 55%,
-    var(--global-name-sweep-color-5) 60%,
-    transparent 66.67%,
-    transparent
-  );
-  background-position: 0 0;
-  background-size: 300% 300%;
-  mix-blend-mode: screen;
-  pointer-events: none;
-  -webkit-mask-image: url("../img/gm-ico.png");
-  mask-image: url("../img/gm-ico.png");
-  -webkit-mask-position: center;
-  mask-position: center;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-size: contain;
-  mask-size: contain;
-  animation-name: name-icon-color-sweep;
-  animation-duration: 0.65s;
-  animation-delay: 0.5s;
-  animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
-  animation-timing-function: linear(0, 0.33 10%, 0.5 20%, 0.615 30%, 0.702 40%, 0.772 50%, 0.83 60%, 0.881 70%, 0.925 80%, 0.965 90%, 1);
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-}
-
-.post-title .name-lockup-icon {
-  width: 0.8em;
-  height: 0.8em;
-}
-
 // One-shot gradient reveal for the name lockup. The 300%-wide strip is
 // transparent in its final third, carries the theme palette through its middle,
 // and resolves to the regular foreground color in its first third.
@@ -686,26 +622,6 @@ footer.sticky-bottom {
   animation-fill-mode: forwards;
 }
 
-@keyframes name-icon-appear {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes name-icon-color-sweep {
-  from {
-    background-position: 0 0;
-  }
-
-  to {
-    background-position: 100% 100%;
-  }
-}
-
 @keyframes name-gradient-sweep {
   from {
     background-position: 100% 0;
@@ -722,15 +638,6 @@ footer.sticky-bottom {
 .name-lockup[data-animation-state="complete"],
 html[data-name-intro-navbar="done"] .name-lockup.navbar-brand,
 html[data-name-intro-landing="done"] .name-lockup:not(.navbar-brand) {
-  .name-lockup-icon {
-    opacity: 1;
-    animation: none;
-  }
-
-  .name-lockup-icon::after {
-    display: none;
-  }
-
   .name-gradient-sweep {
     background-position: 0 0;
     filter: blur(0);
@@ -743,15 +650,6 @@ html[data-name-intro-landing="done"] .name-lockup:not(.navbar-brand) {
     background-position: 0 0;
     filter: blur(0);
     animation: none;
-  }
-
-  .name-lockup-icon {
-    opacity: 1;
-    animation: none;
-  }
-
-  .name-lockup-icon::after {
-    display: none;
   }
 }
 
