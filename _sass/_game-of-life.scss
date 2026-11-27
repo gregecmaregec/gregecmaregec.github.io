@@ -88,14 +88,6 @@
 }
 
 @media (max-width: 575.98px) {
-  // A phone is narrow enough that 90 columns at full size span almost the whole
-  // screen, so the simulation opens as a wall of pink rather than the centred
-  // square it is on a desktop. Half size puts it back at roughly the share of
-  // the screen it takes there. Desktop is deliberately left alone.
-  :root {
-    --life-cell-scale: 0.5;
-  }
-
   .life-app {
     max-width: 90vw;
   }
