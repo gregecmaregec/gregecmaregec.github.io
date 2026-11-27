@@ -362,20 +362,38 @@ ul.task-list input[type="checkbox"] {
   }
 }
 
+// A slim hamburger whose bars fold into a centred X. No side padding, so its
+// right edge sits on the page margin, in line with the menu items below it.
 .navbar-toggler {
+  padding: 8px 0;
+  border: 0;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 1px solid var(--global-divider-color);
+    outline-offset: 4px;
+  }
+
   .icon-bar {
     display: block;
-    width: 22px;
-    height: 2px;
+    width: 20px;
+    height: 1.5px;
     background-color: var(--global-text-color);
     border-radius: 1px;
-    margin-bottom: 4px;
-    transition: all 0.2s;
+    transition:
+      transform 0.2s ease,
+      opacity 0.2s ease;
+  }
+
+  .icon-bar + .icon-bar {
+    margin-top: 5px;
   }
 
   .top-bar {
-    transform: rotate(45deg);
-    transform-origin: 10% 10%;
+    transform: translateY(6.5px) rotate(45deg);
   }
 
   .middle-bar {
@@ -383,22 +401,39 @@ ul.task-list input[type="checkbox"] {
   }
 
   .bottom-bar {
-    transform: rotate(-45deg);
-    transform-origin: 10% 90%;
+    transform: translateY(-6.5px) rotate(-45deg);
   }
 }
 
 .navbar-toggler.collapsed {
-  .top-bar {
-    transform: rotate(0);
+  .top-bar,
+  .bottom-bar {
+    transform: none;
   }
 
   .middle-bar {
     opacity: 1;
   }
+}
 
-  .bottom-bar {
-    transform: rotate(0);
+// The collapsed (phone) menu: compact rows whose text, the X above them and
+// the theme icon all end on the same right edge — the page margin.
+@media (max-width: 575.98px) {
+  .navbar.navbar-light .navbar-nav {
+    padding: 0.5rem 0 0.75rem;
+
+    .nav-item .nav-link {
+      padding: 0.35rem 0;
+    }
+  }
+
+  .navbar-nav .toggle-container {
+    padding-top: 0.5rem;
+
+    #light-toggle .fa-sun,
+    #light-toggle .fa-moon {
+      padding: 0;
+    }
   }
 }
 
