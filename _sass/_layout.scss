@@ -2,6 +2,17 @@
  * Content
  ******************************************************************************/
 
+// Always reserve the scrollbar's width, so the centred layout and navbar
+// don't shift sideways between pages that scroll and pages that don't.
+// The full-screen landing page never scrolls, so it keeps the whole width.
+html {
+  scrollbar-gutter: stable;
+}
+
+html:has(body.fullscreen-showroom) {
+  scrollbar-gutter: auto;
+}
+
 body {
   padding-bottom: 70px;
   color: var(--global-text-color);
